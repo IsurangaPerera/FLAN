@@ -1,0 +1,33 @@
+<?php
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Table(name="project")
+ * @ORM\Entity(repositoryClass="AppBundle\Entity\ProjectRepository")
+ */
+class Project
+{
+	/**
+	 * @ORM\Column(type="integer")
+	 * @ORM\Id
+	 * @ORM\GeneratedValue(strategy="AUTO")
+	 */
+	private $projectId;
+
+	/**
+	 * @ORM\Column(type="integer")
+	 */
+	private $userId;
+
+	/**
+	 * @ORM\Column(type="string", length=50)
+	 */
+	private $type;
+
+	/**
+	 * @ORM\Column(type="string", length=100)
+	 */
+	private $description;
+}

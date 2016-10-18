@@ -1,0 +1,49 @@
+<?php
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Table(name="project_budget")
+ * @ORM\Entity(repositoryClass="AppBundle\Entity\ProjectBudgetRepository")
+ */
+class ProjectBudget
+{
+	/**
+	 * @ORM\Column(type="integer")
+	 * @ORM\Id
+	 */
+	private $projectId;
+
+	/**
+	 * @ORM\Column(type="string", length=10)
+	 */
+	private $type;
+
+	/**
+	 * @ORM\Column(type="string", length=10)
+	 */
+	private $currency;
+
+	/**
+	 * @ORM\Column(type="float")
+	 */
+	private $budget_min;
+
+	/**
+	 * @ORM\Column(type="float")
+	 */
+	private $budget_max;
+
+	/**
+	 * @ORM\Column(type="string", length=50)
+	 */
+	private $duration;
+
+	/**
+	 * @ORM\Column(type="string", length=60)
+	 */
+	private $work_hours;
+
+
+}

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Freelancer</title>
+
+{% stylesheets 'bundles/app/css/*' filter='cssrewrite' %}
+<link rel="stylesheet" href="{{ asset_url }}" />
+{% endstylesheets %}
+
+{% stylesheets 'bundles/app/css/bootstrap/bootstrap.css'
+'bundles/app/css/bootstrap/bootstrap-fixes.css'
+filter='cssrewrite' %}
+<link rel="stylesheet" href="{{ asset_url }}" />
+{% endstylesheets %}
+
+{% javascripts 'bundles/app/js/jquery.min.js'
+'bundles/app/js/bootstrap.min.js'
+'bundles/app/js/jquery-migrate.min.js'
+'bundles/app/js/jquery.carouFredSel-6.1.0.js'
+'bundles/app/js/font-awesome-icons.js'
+'bundles/app/js/layerslider.transitions.js'
+'bundles/app/js/index_script.js'
+'bundles/app/js/greensock.js'
+'bundles/app/js/layerslider.kreaturamedia.jquery.js'%}
+<script src="{{ asset_url }}"></script>
+{% endjavascripts %}
+
+</head>
+
+<body class="home page page-id-50 page-template page-template-tmp-no-title page-template-tmp-no-title-php wpb-js-composer js-comp-ver-4.12 vc_responsive">
+	<div class="main_wrapper">
+
+<!-- HEADER
+	================================================== -->
+	<header>
+		<div class="navbartop-wrapper" >
+			<div class="container">
+				<div class="search-wrapper">
+					<ul class="social-media">
+						<li><a target="_blank" class="facebook"href="#">facebook</a></li>
+            <li><a target="_blank" class="twitter" href="#">twitter</a></li>
+            <li><a target="_blank" class="google" href="#">google</a></li>
+            <li><a target="_blank" class="skype" href="skype:#?add">skype</a></li>
+          </ul>
+        </div>
+        <div class="top-right">
+          <a href="#myModalR" role="button" class="register-top" data-toggle="modal"><i class="fa fa-lock" aria-hidden="true"></i> Register</a>
+          <a href="#" id="login" role="button" class="login-top" data-toggle="modal"><i class="fa fa-key" aria-hidden="true"></i> Login</a>
+        </div>
+      </div><!-- top right -->
+    </div><!-- Container -->
+
+    <!-- NAVBAR
+    ================================================== -->
+    <div class="navbar-wrapper navtransparent">
+    	<!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+    	<div class="container">
+    		<div class="logo-wrapper">
+    			<a href="#"> <img src="http://skywarriorthemes.com/fundingpress/wp-content/themes/fundingpress/img/logo.png" alt="logo"  /> </a>
+    		</div>
+    		<div class="navbar navbar-inverse navbar-static-top " role="navigation">
+
+    			<div class="navbar-header">
+
+    				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+    					<span class="sr-only">Toggle navigation</span>
+    					<span class="fa fa-bars"></span>
+    				</button>
+
+    			</div>
+    			<div class="navbar-collapse collapse">
+    				<div class="menu-menu-1-container">
+              <ul  class="nav navbar-nav"><li id="menu-item-2574" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-50 current_page_item menu-item-2574"><a href="#">Homepage</a></li>
+               <li id="menu-item-2914" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2914"><a href="#">how it works</a></li>
+               <li id="menu-item-2592" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2592"><a href="#">Post a project</a></li>
+               <li id="menu-item-2947" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2947"><a href="#">Contact</a></li>
+             </ul>
+           </div>                	                                
+           <div class="clear"></div>
+         </div><!--/.nav-collapse -->
+         <div class="clear"></div>
+
+         <div class="clear"></div>
+       </div>
+
+     </div> <!-- /.container -->
+   </div>
+    <!-- NAVBAR
+    ================================================== -->   
+  </header>
+<!-- HEADER
+	================================================== -->
+
+     <div class="modal fade login" id="myModal">
+          <div class="modal-dialog login animated">
+              <div class="modal-content">
+                 <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Login with</h4>
+                    </div>
+                    <div class="modal-body">  
+                        <div class="box">
+                             <div class="content">
+                                <div class="social">
+                                    <a class="circle github" href="/auth/github">
+                                        <i class="fa fa-github fa-fw"></i>
+                                    </a>
+                                    <a id="google_login" class="circle google" href="/auth/google_oauth2">
+                                        <i class="fa fa-google-plus fa-fw"></i>
+                                    </a>
+                                    <a id="facebook_login" class="circle facebook" href="/auth/facebook">
+                                        <i class="fa fa-facebook fa-fw"></i>
+                                    </a>
+                                </div>
+                                <div class="division">
+                                    <div class="line l"></div>
+                                      <span>or</span>
+                                    <div class="line r"></div>
+                                </div>
+                                <div class="error"></div>
+                                <div class="form loginBox">
+                                    <form method="post" action="/login" accept-charset="UTF-8">
+                                    <input id="email" class="form-control" type="text" placeholder="Email" name="email">
+                                    <input id="password" class="form-control" type="password" placeholder="Password" name="password">
+                                    <input class="btn btn-default btn-login" type="button" value="Login" onclick="loginAjax()">
+                                    </form>
+                                </div>
+                             </div>
+                        </div>
+                        <div class="box">
+                            <div class="content registerBox" style="display:none;">
+                             <div class="form">
+                                <form method="post" html="{:multipart=>true}" data-remote="true" action="/register" accept-charset="UTF-8">
+                                <input id="email" class="form-control" type="text" placeholder="Email" name="email">
+                                <input id="password" class="form-control" type="password" placeholder="Password" name="password">
+                                <input id="password_confirmation" class="form-control" type="password" placeholder="Repeat Password" name="password_confirmation">
+                                <input class="btn btn-default btn-register" type="submit" value="Create account" name="commit">
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="forgot login-footer">
+                            <span>Looking to 
+                                 <a href="javascript: showRegisterForm();">create an account</a>
+                            ?</span>
+                        </div>
+                        <div class="forgot register-footer" style="display:none">
+                             <span>Already have an account?</span>
+                             <a href="javascript: showLoginForm();">Login</a>
+                        </div>
+                    </div>        
+              </div>
+          </div>
+      </div>
+
+{% stylesheets 'bundles/app/css/login/login-register.css' filter='cssrewrite' %}
+<link rel="stylesheet" href="{{ asset_url }}" />
+{% endstylesheets %}
+
+<script type="text/javascript">
+
+$("#login").click(function(){
+  $("#myModal").modal({backdrop: "static"});
+});
+
+</script>
+
+
+<div class="page normal-page container-wrap">
+  <div class="container">
+   <div class="row">
+    <div class="col-md-12 col-sm-12">
+
+     <div class="vc_row wpb_row vc_row-fluid vc_custom_1472740031226"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper">
+      <div class="wpb_text_column wpb_content_element  vc_custom_1472742663895">
+       <div class="wpb_wrapper">
+        <script data-cfasync="false" type="text/javascript">var lsjQuery = jQuery;</script><script data-cfasync="false" type="text/javascript">
+        lsjQuery(document).ready(function() {
+         if(typeof lsjQuery.fn.layerSlider == "undefined") { lsShowNotice('layerslider_1','jquery'); }
+         else {
+          lsjQuery("#layerslider_1").layerSlider({responsiveUnder: 1300, layersContainer: 1300, navPrevNext: false, hoverPrevNext: false, navStartStop: false, navButtons: false, showCircleTimer: false, autoPlayVideos: false, imgPreload: false, lazyLoad: false, skinsPath: 'http://skywarriorthemes.com/fundingpress/wp-content/plugins/LayerSlider/static/skins/'})
+        }
+      });
+        </script>
+        <div class="ls-wp-fullwidth-container" style="height:725px;">
+          <div class="ls-wp-fullwidth-helper">
+            <div id="layerslider_1" class="ls-wp-container" style="width:100%;height:725px;margin:0 auto;margin-bottom: 0px;padding: 0px">
+              <div class="ls-slide" data-ls=" transition2d: all;">
+
+
+                <img src="http://skywarriorthemes.com/fundingpress/wp-content/uploads/2016/09/bg.jpg" class="ls-bg" alt="bg" />
+
+                <h1 class="ls-l" style="top:273px;left:45px; text-transform: capitalize;width:;height:;padding-top:15px;padding-right:15px;padding-bottom:15px;padding-left:15px;border-top:;border-right:;border-bottom:;border-left:;font-family:;font-size:55px;line-height:;color:#ffffff;background:;border-radius:;white-space: nowrap;">Hire expert freelancers for your online job</h1>
+
+                <h2 class="ls-l" style="top:351px;left:59px; text-transform: capitalize; font-weight:normal;width:;height:;padding-top:15px;padding-right:15px;padding-bottom:15px;padding-left:15px;border-top:;border-right:;border-bottom:;border-left:;font-family:;font-size:24px;line-height:;color:#ffffff;background:;border-radius:;white-space: nowrap;">Watch your dream become reality</h2>
+
+                <a href="#" target="_blank" class="ls-l" style="top:420px;left:72px; margin-right:0px;">
+                  <p class="button-medium" style="text-shadow: rgba(0, 0, 0, 0.498039) 0px 0px 5px;width:;height:;padding-top:15px;padding-right:40px;padding-bottom:15px ;padding-left:40px;border-top:;border-right:;border-bottom:;border-left:;font-family:;font-size:14px;line-height:;color:;background:;border-radius:;white-space: nowrap;">
+                    <i style="margin-right:5px" class="fa fa-th" aria-hidden="true"></i>I want to Hire
+                  </p>
+                </a>
+
+                <a href="#" target="_blank" class="ls-l" style="top:420px;left:296px;margin-left:0px;">
+                  <p class="button-medium" style="text-shadow: rgba(0, 0, 0, 0) 0px 0px 5px;width:;height:;padding-top:15px;padding-right:40px;padding-bottom:15px ;padding-left:40px;border-top:;border-right:;border-bottom:;border-left:;font-family:;font-size:14px;line-height:;color:#333333;background:#e7e7e7;border-radius:;white-space: nowrap;">
+                    <i style="margin-right:5px" class="fa fa-users" aria-hidden="true"></i>I want to Work
+                  </p>
+                </a>
+              
+              </div></div></div></div>
+            </div>
+          </div>
+        </div></div></div></div>
+
+      </div></div></div></div>
+    </div>
+  </body>
+  </html>
