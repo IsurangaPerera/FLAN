@@ -20,12 +20,12 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("login/", name="hhomepage")
+     * @Route("howitworks/", name="howitworks")
      */
     public function test(Request $request)
     {
-        // replace this example code with whatever you need
-        return $this->render('default/index.html.twig', array(
+
+        return $this->render('default/howItWorks.html.twig', array(
             'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
         ));
     }

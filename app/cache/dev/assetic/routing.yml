@@ -2,4 +2,4 @@ _assetic:
     resource: .
     type: assetic
 _app:
-    resource: 'G:\projects\ongoing\freeLan\FLAN\app/config/routing_dev.yml'
+    resource: /home/isurangaperera/FLAN/app/config/routing_dev.yml

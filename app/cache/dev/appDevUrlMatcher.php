@@ -244,13 +244,13 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);
         }
 
-        // hhomepage
-        if (rtrim($pathinfo, '/') === '/login') {
+        // howitworks
+        if (rtrim($pathinfo, '/') === '/howitworks') {
             if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'hhomepage');
+                return $this->redirect($pathinfo.'/', 'howitworks');
             }
 
-            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::test',  '_route' => 'hhomepage',);
+            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::test',  '_route' => 'howitworks',);
         }
 
         // PostProject
