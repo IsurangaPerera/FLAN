@@ -282,12 +282,6 @@
                 <form id="project-form" action="/buyers/onverifycreate.php"
                 method="POST" enctype="multipart/form-data" class="fl-form has-numbers large-form PostProject-form">
                 <input type="hidden" id="thm_session" name="thm_session" value="82031db0eefbdbcf008f3b1e65479778544e7aa61099ff9287f3be7d6773728deffd88ee7976d038">
-                <script type="text/javascript">
-                if (typeof window.tags_session_id != 'undefined') {
-                    var thm_input_element = window.document.getElementById('thm_session');
-                    thm_input_element.setAttribute('value', window.tags_session_id);
-                }
-                </script>
 
                 <input type="hidden" name="id" value="">
                 <input type="hidden" name="submitAction" value="publish project">
@@ -342,26 +336,13 @@
                                         <option value="-1" selected="selected">Select a category of work (optional)</option>
                                     </select>
                                 </li>
+                               
                                 <li class="form-step secondary-category is-hidden">
                                     <select id="project-sub-category" name="skill_subcategory">
                                         <option>Select a job</option>
                                     </select>
                                 </li>
-                                <li class="form-step hide">
-                                    <li class="form-step hide">
-                                        <div class="ContestUpsell contest-upsell">
-                                            <div class="ContestUpsell-cta">
-                                                <a id="dismiss-upsell" href="#" class="btn btn-plain ContestUpsell-btn">No Thanks</a>
-                                                <a id="contest-upsell-link" href="#" class="btn btn-success ContestUpsell-btn">Get Started</a>
-                                            </div>
-                                            <div class="ContestUpsell-content">
-                                                <h5 class="ContestUpsell-heading">Why not create a Design Contest?</h5>
-                                                <p class="ContestUpsell-desc">Get your perfect result or your money back guaranteed! Start a contest, review hundreds of entries and pay for the one you love.</p>
-                                            </div>
-                                        </div>
-
-                                    </li>
-                                </li>
+                                
                             </ol>
                         </fieldset>
                     </li>
@@ -371,12 +352,6 @@
                             <ol>
                                 <li class="form-step">
                                     <label for="project-name" class="PostProject-stepLabel">Project Name:
-                                        <span class="fl-icon-question-sign hoverable"
-                                        data-toggle="popover"
-                                        data-original-title="Project Name"
-                                        data-content="Your project name is important as it is what attracts freelancers to bid on your project.
-                                        You should clearly describe what you need in as few words as possible.">
-                                    </span>
                                 </label>
 
                                 <input type="text"
@@ -395,12 +370,6 @@
                             <label for="online-project" class="PostProject-stepLabel">
                                 Does your project require a local freelancer?
                             </label>
-                            <span class="fl-icon-question-sign hoverable"
-                            data-toggle="popover"
-                            data-original-title="Project Location"
-                            data-placement="right"
-                            data-content="Select this option if you need the freelancer to complete this project in a specific location. Typical examples include things like House Cleaning or Wedding Photography.">
-                        </span>
                         <input type="checkbox" class="custom-checkbox" id="online-project" name="online-project"
                         data-qtsb-label="click_Local_Job_Checkbox" >
                         <label class="custom-checkbox" for="online-project"></label>

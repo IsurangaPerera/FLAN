@@ -15,8 +15,8 @@ class __TwigTemplate_76cc1dec13759902917d88adc882372d119c0b587bf8e0f44ac1c3c2186
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_6966e9ff485d81c7d137546591e11efc824245cc67574f12ca4a2db14f14ea7a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_6966e9ff485d81c7d137546591e11efc824245cc67574f12ca4a2db14f14ea7a->enter($__internal_6966e9ff485d81c7d137546591e11efc824245cc67574f12ca4a2db14f14ea7a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/postProject.html.twig"));
+        $__internal_c90cd6cf033aa0621b3ff1b66b9df031c434ea78b0d70c6b7b00134b9898e369 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_c90cd6cf033aa0621b3ff1b66b9df031c434ea78b0d70c6b7b00134b9898e369->enter($__internal_c90cd6cf033aa0621b3ff1b66b9df031c434ea78b0d70c6b7b00134b9898e369_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/postProject.html.twig"));
 
         // line 1
         echo "
@@ -303,12 +303,6 @@ class __TwigTemplate_76cc1dec13759902917d88adc882372d119c0b587bf8e0f44ac1c3c2186
                 <form id=\"project-form\" action=\"/buyers/onverifycreate.php\"
                 method=\"POST\" enctype=\"multipart/form-data\" class=\"fl-form has-numbers large-form PostProject-form\">
                 <input type=\"hidden\" id=\"thm_session\" name=\"thm_session\" value=\"82031db0eefbdbcf008f3b1e65479778544e7aa61099ff9287f3be7d6773728deffd88ee7976d038\">
-                <script type=\"text/javascript\">
-                if (typeof window.tags_session_id != 'undefined') {
-                    var thm_input_element = window.document.getElementById('thm_session');
-                    thm_input_element.setAttribute('value', window.tags_session_id);
-                }
-                </script>
 
                 <input type=\"hidden\" name=\"id\" value=\"\">
                 <input type=\"hidden\" name=\"submitAction\" value=\"publish project\">
@@ -363,26 +357,13 @@ class __TwigTemplate_76cc1dec13759902917d88adc882372d119c0b587bf8e0f44ac1c3c2186
                                         <option value=\"-1\" selected=\"selected\">Select a category of work (optional)</option>
                                     </select>
                                 </li>
+                               
                                 <li class=\"form-step secondary-category is-hidden\">
                                     <select id=\"project-sub-category\" name=\"skill_subcategory\">
                                         <option>Select a job</option>
                                     </select>
                                 </li>
-                                <li class=\"form-step hide\">
-                                    <li class=\"form-step hide\">
-                                        <div class=\"ContestUpsell contest-upsell\">
-                                            <div class=\"ContestUpsell-cta\">
-                                                <a id=\"dismiss-upsell\" href=\"#\" class=\"btn btn-plain ContestUpsell-btn\">No Thanks</a>
-                                                <a id=\"contest-upsell-link\" href=\"#\" class=\"btn btn-success ContestUpsell-btn\">Get Started</a>
-                                            </div>
-                                            <div class=\"ContestUpsell-content\">
-                                                <h5 class=\"ContestUpsell-heading\">Why not create a Design Contest?</h5>
-                                                <p class=\"ContestUpsell-desc\">Get your perfect result or your money back guaranteed! Start a contest, review hundreds of entries and pay for the one you love.</p>
-                                            </div>
-                                        </div>
-
-                                    </li>
-                                </li>
+                                
                             </ol>
                         </fieldset>
                     </li>
@@ -596,91 +577,6 @@ class __TwigTemplate_76cc1dec13759902917d88adc882372d119c0b587bf8e0f44ac1c3c2186
                     <option value=\"1\" title=\"\$\"
                     selected >USD
                 </option>
-
-                <option value=\"3\" title=\"\$\"
-                >AUD
-            </option>
-
-            <option value=\"9\" title=\"\$\"
-            >CAD
-        </option>
-
-        <option value=\"8\" title=\"€\"
-        >EUR
-    </option>
-
-    <option value=\"4\" title=\"£\"
-    >GBP
-</option>
-
-<option value=\"21\" title=\"￥\"
->CNY
-</option>
-
-<option value=\"5\" title=\"\$\"
->HKD
-</option>
-
-<option value=\"11\" title=\"₹\"
->INR
-</option>
-
-<option value=\"12\" title=\"\$\"
->JMD
-</option>
-
-<option value=\"13\" title=\"\$\"
->CLP
-</option>
-
-<option value=\"17\" title=\"kr\"
->SEK
-</option>
-
-<option value=\"18\" title=\"¥\"
->JPY
-</option>
-
-<option value=\"16\" title=\"RM\"
->MYR
-</option>
-
-<option value=\"15\" title=\"Rp\"
->IDR
-</option>
-
-<option value=\"14\" title=\"\$\"
->MXN
-</option>
-
-<option value=\"2\" title=\"\$\"
->NZD
-</option>
-
-<option value=\"7\" title=\"₱\"
->PHP
-</option>
-
-<option value=\"19\" title=\"zł\"
->PLN
-</option>
-
-<option value=\"6\" title=\"\$\"
->SGD
-</option>
-
-<option value=\"20\" title=\"R\$\"
->BRL
-</option>
-
-<option value=\"23\" title=\"₫\"
->VND
-</option>
-
-<option value=\"10\" title=\"R\"
->ZAR
-</option>
-
 </select>
 </div>
 <div class=\"form-step-fieldContainer\">
@@ -1205,7 +1101,7 @@ class=\"upgrade-listing-upgrade js-upgrade project-upgrade-item\" data-robots=\"
 
 ";
         
-        $__internal_6966e9ff485d81c7d137546591e11efc824245cc67574f12ca4a2db14f14ea7a->leave($__internal_6966e9ff485d81c7d137546591e11efc824245cc67574f12ca4a2db14f14ea7a_prof);
+        $__internal_c90cd6cf033aa0621b3ff1b66b9df031c434ea78b0d70c6b7b00134b9898e369->leave($__internal_c90cd6cf033aa0621b3ff1b66b9df031c434ea78b0d70c6b7b00134b9898e369_prof);
 
     }
 
@@ -1505,12 +1401,6 @@ class=\"upgrade-listing-upgrade js-upgrade project-upgrade-item\" data-robots=\"
                 <form id=\"project-form\" action=\"/buyers/onverifycreate.php\"
                 method=\"POST\" enctype=\"multipart/form-data\" class=\"fl-form has-numbers large-form PostProject-form\">
                 <input type=\"hidden\" id=\"thm_session\" name=\"thm_session\" value=\"82031db0eefbdbcf008f3b1e65479778544e7aa61099ff9287f3be7d6773728deffd88ee7976d038\">
-                <script type=\"text/javascript\">
-                if (typeof window.tags_session_id != 'undefined') {
-                    var thm_input_element = window.document.getElementById('thm_session');
-                    thm_input_element.setAttribute('value', window.tags_session_id);
-                }
-                </script>
 
                 <input type=\"hidden\" name=\"id\" value=\"\">
                 <input type=\"hidden\" name=\"submitAction\" value=\"publish project\">
@@ -1565,26 +1455,13 @@ class=\"upgrade-listing-upgrade js-upgrade project-upgrade-item\" data-robots=\"
                                         <option value=\"-1\" selected=\"selected\">Select a category of work (optional)</option>
                                     </select>
                                 </li>
+                               
                                 <li class=\"form-step secondary-category is-hidden\">
                                     <select id=\"project-sub-category\" name=\"skill_subcategory\">
                                         <option>Select a job</option>
                                     </select>
                                 </li>
-                                <li class=\"form-step hide\">
-                                    <li class=\"form-step hide\">
-                                        <div class=\"ContestUpsell contest-upsell\">
-                                            <div class=\"ContestUpsell-cta\">
-                                                <a id=\"dismiss-upsell\" href=\"#\" class=\"btn btn-plain ContestUpsell-btn\">No Thanks</a>
-                                                <a id=\"contest-upsell-link\" href=\"#\" class=\"btn btn-success ContestUpsell-btn\">Get Started</a>
-                                            </div>
-                                            <div class=\"ContestUpsell-content\">
-                                                <h5 class=\"ContestUpsell-heading\">Why not create a Design Contest?</h5>
-                                                <p class=\"ContestUpsell-desc\">Get your perfect result or your money back guaranteed! Start a contest, review hundreds of entries and pay for the one you love.</p>
-                                            </div>
-                                        </div>
-
-                                    </li>
-                                </li>
+                                
                             </ol>
                         </fieldset>
                     </li>
@@ -1798,91 +1675,6 @@ class=\"upgrade-listing-upgrade js-upgrade project-upgrade-item\" data-robots=\"
                     <option value=\"1\" title=\"\$\"
                     selected >USD
                 </option>
-
-                <option value=\"3\" title=\"\$\"
-                >AUD
-            </option>
-
-            <option value=\"9\" title=\"\$\"
-            >CAD
-        </option>
-
-        <option value=\"8\" title=\"€\"
-        >EUR
-    </option>
-
-    <option value=\"4\" title=\"£\"
-    >GBP
-</option>
-
-<option value=\"21\" title=\"￥\"
->CNY
-</option>
-
-<option value=\"5\" title=\"\$\"
->HKD
-</option>
-
-<option value=\"11\" title=\"₹\"
->INR
-</option>
-
-<option value=\"12\" title=\"\$\"
->JMD
-</option>
-
-<option value=\"13\" title=\"\$\"
->CLP
-</option>
-
-<option value=\"17\" title=\"kr\"
->SEK
-</option>
-
-<option value=\"18\" title=\"¥\"
->JPY
-</option>
-
-<option value=\"16\" title=\"RM\"
->MYR
-</option>
-
-<option value=\"15\" title=\"Rp\"
->IDR
-</option>
-
-<option value=\"14\" title=\"\$\"
->MXN
-</option>
-
-<option value=\"2\" title=\"\$\"
->NZD
-</option>
-
-<option value=\"7\" title=\"₱\"
->PHP
-</option>
-
-<option value=\"19\" title=\"zł\"
->PLN
-</option>
-
-<option value=\"6\" title=\"\$\"
->SGD
-</option>
-
-<option value=\"20\" title=\"R\$\"
->BRL
-</option>
-
-<option value=\"23\" title=\"₫\"
->VND
-</option>
-
-<option value=\"10\" title=\"R\"
->ZAR
-</option>
-
 </select>
 </div>
 <div class=\"form-step-fieldContainer\">

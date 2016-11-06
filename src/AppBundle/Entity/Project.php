@@ -5,7 +5,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Table(name="project")
- * @ORM\Entity(repositoryClass="AppBundle\Entity\ProjectRepository")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\ProjectRepository")
  */
 class Project
 {
@@ -25,6 +25,11 @@ class Project
 	 * @ORM\Column(type="string", length=50)
 	 */
 	private $type;
+
+    /**
+     * @ORM\Column(type="string", length=100)
+     */
+    private $name;
 
 	/**
 	 * @ORM\Column(type="string", length=100)

@@ -862,3 +862,10 @@ e88da1,127.0.0.1,GET,http://127.0.0.1:9090/ajax/_general_vars.php,1478442544,312
 a0caf9,127.0.0.1,GET,http://127.0.0.1:9090/ajax/_general_vars.php,1478442599,,404
 ee9d69,127.0.0.1,GET,http://127.0.0.1:9090/ajax/count-24h.php,1478442599,6fdc10,200
 6fdc10,127.0.0.1,GET,http://127.0.0.1:9090/ajax/count-24h.php,1478442599,,404
+3f8ca7,127.0.0.1,GET,http://127.0.0.1:9090/post,1478445137,,200
+0c0e72,127.0.0.1,GET,http://127.0.0.1:9090/ajax/count-24h.php,1478445138,24b1fd,200
+24b1fd,127.0.0.1,GET,http://127.0.0.1:9090/ajax/count-24h.php,1478445138,,404
+e54314,127.0.0.1,GET,http://127.0.0.1:9090/ajax/_general_vars.php,1478445139,edfd2f,200
+edfd2f,127.0.0.1,GET,http://127.0.0.1:9090/ajax/_general_vars.php,1478445139,,404
+262b23,127.0.0.1,GET,http://127.0.0.1:9090/ajax/count-24h.php,1478445139,136451,200
+136451,127.0.0.1,GET,http://127.0.0.1:9090/ajax/count-24h.php,1478445139,,404
