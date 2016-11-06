@@ -15,8 +15,8 @@ class __TwigTemplate_5cdd2ecfe2f66d124cf15ada0d95d1f21a8a1dc51888322c4bfa55643d0
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_b4359c1d83ae6ca6d3593d0683f13f31e6a7f9f384325a79e515038083aadf56 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_b4359c1d83ae6ca6d3593d0683f13f31e6a7f9f384325a79e515038083aadf56->enter($__internal_b4359c1d83ae6ca6d3593d0683f13f31e6a7f9f384325a79e515038083aadf56_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/howItWorks.html.twig"));
+        $__internal_c739b55de0bf7d04fa09331e89ef7ea2745bfe1007c0ce3577b187759a8c9a48 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_c739b55de0bf7d04fa09331e89ef7ea2745bfe1007c0ce3577b187759a8c9a48->enter($__internal_c739b55de0bf7d04fa09331e89ef7ea2745bfe1007c0ce3577b187759a8c9a48_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/howItWorks.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -105,10 +105,6 @@ class __TwigTemplate_5cdd2ecfe2f66d124cf15ada0d95d1f21a8a1dc51888322c4bfa55643d0
           </a>
         </div>
 
-
-
-
-
         <!-- Primary nav (logged out) -->
 
         <nav class=\"primary-navigation\">
@@ -190,9 +186,6 @@ class __TwigTemplate_5cdd2ecfe2f66d124cf15ada0d95d1f21a8a1dc51888322c4bfa55643d0
           </ul>
         </nav>
 
-
-
-
         <!-- Login section -->
 
         <div class=\"LoginSection\">
@@ -214,11 +207,7 @@ class __TwigTemplate_5cdd2ecfe2f66d124cf15ada0d95d1f21a8a1dc51888322c4bfa55643d0
       </button>
 
       <a id=\"header-post-project\" href=\"/buyers/create.php\"
-      class=\"btn btn-small LoginSection-btnPost
-
-      btn-primary
-
-      \"
+      class=\"btn btn-small LoginSection-btnPost btn-primary\"  
       fl-analytics=\"PostAProjectButton\"
       data-qtsb-section=\"NavBar\"
       data-qtsb-label=\"GoToPostProject\">
@@ -241,17 +230,12 @@ class __TwigTemplate_5cdd2ecfe2f66d124cf15ada0d95d1f21a8a1dc51888322c4bfa55643d0
 
 <!-- login/signup module -->
 
-
 </div>
 
 <fl-modal-container class=\"pinky-template\"></fl-modal-container>
 
-
-
 <div class=\"pinky-template\">
   <div id=\"main\" class=\"main-content\" aria-label=\"Content\">
-
-
 
     <div class=\"HowItWorks\">
 
@@ -425,15 +409,11 @@ class __TwigTemplate_5cdd2ecfe2f66d124cf15ada0d95d1f21a8a1dc51888322c4bfa55643d0
             </div>
           </div>
 
-          <script defer src=\"https://www.f-cdn.com/polyfills-7a93d50e.js\"></script>
-          <script defer id=\"systemjs-loader\" src=\"https://www.f-cdn.com/systemjs-1699e4db.js\"></script>
-          <script defer id=\"systemjs-config\" src=\"https://www.f-cdn.com/systemjs-config-6a253666.js\"></script>
-
         </body>
         </html>
 ";
         
-        $__internal_b4359c1d83ae6ca6d3593d0683f13f31e6a7f9f384325a79e515038083aadf56->leave($__internal_b4359c1d83ae6ca6d3593d0683f13f31e6a7f9f384325a79e515038083aadf56_prof);
+        $__internal_c739b55de0bf7d04fa09331e89ef7ea2745bfe1007c0ce3577b187759a8c9a48->leave($__internal_c739b55de0bf7d04fa09331e89ef7ea2745bfe1007c0ce3577b187759a8c9a48_prof);
 
     }
 
@@ -535,10 +515,6 @@ class __TwigTemplate_5cdd2ecfe2f66d124cf15ada0d95d1f21a8a1dc51888322c4bfa55643d0
           </a>
         </div>
 
-
-
-
-
         <!-- Primary nav (logged out) -->
 
         <nav class=\"primary-navigation\">
@@ -620,9 +596,6 @@ class __TwigTemplate_5cdd2ecfe2f66d124cf15ada0d95d1f21a8a1dc51888322c4bfa55643d0
           </ul>
         </nav>
 
-
-
-
         <!-- Login section -->
 
         <div class=\"LoginSection\">
@@ -644,11 +617,7 @@ class __TwigTemplate_5cdd2ecfe2f66d124cf15ada0d95d1f21a8a1dc51888322c4bfa55643d0
       </button>
 
       <a id=\"header-post-project\" href=\"/buyers/create.php\"
-      class=\"btn btn-small LoginSection-btnPost
-
-      btn-primary
-
-      \"
+      class=\"btn btn-small LoginSection-btnPost btn-primary\"  
       fl-analytics=\"PostAProjectButton\"
       data-qtsb-section=\"NavBar\"
       data-qtsb-label=\"GoToPostProject\">
@@ -671,17 +640,12 @@ class __TwigTemplate_5cdd2ecfe2f66d124cf15ada0d95d1f21a8a1dc51888322c4bfa55643d0
 
 <!-- login/signup module -->
 
-
 </div>
 
 <fl-modal-container class=\"pinky-template\"></fl-modal-container>
 
-
-
 <div class=\"pinky-template\">
   <div id=\"main\" class=\"main-content\" aria-label=\"Content\">
-
-
 
     <div class=\"HowItWorks\">
 
@@ -854,10 +818,6 @@ class __TwigTemplate_5cdd2ecfe2f66d124cf15ada0d95d1f21a8a1dc51888322c4bfa55643d0
 
             </div>
           </div>
-
-          <script defer src=\"https://www.f-cdn.com/polyfills-7a93d50e.js\"></script>
-          <script defer id=\"systemjs-loader\" src=\"https://www.f-cdn.com/systemjs-1699e4db.js\"></script>
-          <script defer id=\"systemjs-config\" src=\"https://www.f-cdn.com/systemjs-config-6a253666.js\"></script>
 
         </body>
         </html>
