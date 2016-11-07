@@ -31,7 +31,6 @@ function postProject(){
 	fillProject();
 	fillBudget();
 	fillSkills();
-	doPost();
 }
 
 function fillProject(){
@@ -85,18 +84,4 @@ function fillBudget(){
 
 function fillSkills() {
 
-}
-
-function doPost() {
-	$.ajax({
-		type: "POST",
-		url: "../project/post",
-		data: JSON.stringify(objectO),
-		success: function( data, textStatus, jQxhr ){
-			alert("Success");
-		},
-		error: function( jqXhr, textStatus, errorThrown ){
-			alert( errorThrown );
-		}
-	});
 }

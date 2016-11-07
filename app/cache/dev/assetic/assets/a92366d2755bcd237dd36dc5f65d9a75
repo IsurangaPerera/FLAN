@@ -31,7 +31,6 @@ function postProject(){
 	fillProject();
 	fillBudget();
 	fillSkills();
-	doPost();
 }
 
 function fillProject(){
