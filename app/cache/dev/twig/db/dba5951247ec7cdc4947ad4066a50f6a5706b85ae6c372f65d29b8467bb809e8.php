@@ -15,8 +15,8 @@ class __TwigTemplate_76cc1dec13759902917d88adc882372d119c0b587bf8e0f44ac1c3c2186
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_99f05c0c52cd1c27bf39b017f14eecbd8061d6d5b37a3a553417f312fb80f386 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_99f05c0c52cd1c27bf39b017f14eecbd8061d6d5b37a3a553417f312fb80f386->enter($__internal_99f05c0c52cd1c27bf39b017f14eecbd8061d6d5b37a3a553417f312fb80f386_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/postProject.html.twig"));
+        $__internal_6b1a12a791065662888b69d783ed7b78b2279cafeeba3a7a9079e12a3828d6b6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_6b1a12a791065662888b69d783ed7b78b2279cafeeba3a7a9079e12a3828d6b6->enter($__internal_6b1a12a791065662888b69d783ed7b78b2279cafeeba3a7a9079e12a3828d6b6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/postProject.html.twig"));
 
         // line 1
         echo "
@@ -35,6 +35,8 @@ class __TwigTemplate_76cc1dec13759902917d88adc882372d119c0b587bf8e0f44ac1c3c2186
     <link href=\"https://cdn2.f-cdn.com/build/css/flux/base.css?v=22d78e710e51c71919013de0d743d927&amp;m=6\" type=\"text/css\" rel=\"stylesheet\" />
     
     <link href=\"https://cdn6.f-cdn.com/build/css/abtests/20150907/post-project.css?v=a6a02fc08c66041f6818cddd64960bc4&amp;m=6\" type=\"text/css\" rel=\"stylesheet\" />
+
+    <link href=\"https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css\" rel=\"stylesheet\" />
     
     <!-- Prevent FOUC by hiding the body. This is similar to ng-cloak however not all layouts have angularjs-yet -->
     <style type=\"text/css\">
@@ -42,11 +44,11 @@ class __TwigTemplate_76cc1dec13759902917d88adc882372d119c0b587bf8e0f44ac1c3c2186
     </style>
     
     ";
-        // line 23
+        // line 25
         if (isset($context['assetic']['debug']) && $context['assetic']['debug']) {
             // asset "3490027_0"
             $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_3490027_0") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("_controller/js/3490027_jquery.min_1.js");
-            // line 28
+            // line 30
             echo "    <script src=\"";
             echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : $this->getContext($context, "asset_url")), "html", null, true);
             echo "\"></script>
@@ -84,9 +86,11 @@ class __TwigTemplate_76cc1dec13759902917d88adc882372d119c0b587bf8e0f44ac1c3c2186
     ";
         }
         unset($context["asset_url"]);
-        // line 30
+        // line 32
         echo "
     <script src=\"https://cdn6.f-cdn.com/build/js/pinky/utils/jquery-ui.custom.min.js?v=c96d46b5e81832f80c3d06b6de18fea4&amp;m=6\" type=\"text/javascript\"></script>
+
+    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js\"></script>
 
 
 </head>
@@ -141,7 +145,7 @@ class __TwigTemplate_76cc1dec13759902917d88adc882372d119c0b587bf8e0f44ac1c3c2186
                         <!-- Signup Fields -->
                         <fieldset id=\"projectLoginUserCreate\" class=\"AuthForm-fields \">
                             <ol class=\"AuthForm-group\">
-                             <li class=\"form-step\">
+                               <li class=\"form-step\">
                                 <label for=\"new-email\" class=\"PostProject-stepLabel\">Email address:</label>
                                 <input type=\"text\" id=\"new-email\" name=\"email\" value=\"\">
                                 <div class=\"form-error\">
@@ -368,9 +372,15 @@ class __TwigTemplate_76cc1dec13759902917d88adc882372d119c0b587bf8e0f44ac1c3c2186
                         <li class=\"form-step select2-form-step\">
                             <label for=\"project-skills\" class=\"PostProject-stepLabel\">What skills are required?
                             </label>
-                            <select id=\"project-skills\" class=\"project-skills\" multiple=\"multiple\" name=\"skill_input\">
-                                <option>Enter skills that relate to the project:</option>
+                            
+                            <select id=\"project-skills\" class=\"js-example-basic-multiple\" multiple=\"multiple\">
+                                <option>Algorithm</option>
+                                <option>Web design</option>
                             </select>
+                             <script type=\"text/javascript\">
+                            \$(\".js-example-basic-multiple\").select2();
+                            </script>
+                            
                             <div class=\"skill-suggestion-widget\">
                                 <header class=\"skill-suggestion-head\">Skill Suggestions (add 5 more)</header>
                                 <ul class=\"skill-suggestion-list\">
@@ -598,7 +608,7 @@ class __TwigTemplate_76cc1dec13759902917d88adc882372d119c0b587bf8e0f44ac1c3c2186
 
 ";
         
-        $__internal_99f05c0c52cd1c27bf39b017f14eecbd8061d6d5b37a3a553417f312fb80f386->leave($__internal_99f05c0c52cd1c27bf39b017f14eecbd8061d6d5b37a3a553417f312fb80f386_prof);
+        $__internal_6b1a12a791065662888b69d783ed7b78b2279cafeeba3a7a9079e12a3828d6b6->leave($__internal_6b1a12a791065662888b69d783ed7b78b2279cafeeba3a7a9079e12a3828d6b6_prof);
 
     }
 
@@ -614,7 +624,7 @@ class __TwigTemplate_76cc1dec13759902917d88adc882372d119c0b587bf8e0f44ac1c3c2186
 
     public function getDebugInfo()
     {
-        return array (  88 => 30,  50 => 28,  46 => 23,  22 => 1,);
+        return array (  90 => 32,  52 => 30,  48 => 25,  22 => 1,);
     }
 
     public function getSource()
@@ -635,6 +645,8 @@ class __TwigTemplate_76cc1dec13759902917d88adc882372d119c0b587bf8e0f44ac1c3c2186
     <link href=\"https://cdn2.f-cdn.com/build/css/flux/base.css?v=22d78e710e51c71919013de0d743d927&amp;m=6\" type=\"text/css\" rel=\"stylesheet\" />
     
     <link href=\"https://cdn6.f-cdn.com/build/css/abtests/20150907/post-project.css?v=a6a02fc08c66041f6818cddd64960bc4&amp;m=6\" type=\"text/css\" rel=\"stylesheet\" />
+
+    <link href=\"https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css\" rel=\"stylesheet\" />
     
     <!-- Prevent FOUC by hiding the body. This is similar to ng-cloak however not all layouts have angularjs-yet -->
     <style type=\"text/css\">
@@ -650,6 +662,8 @@ class __TwigTemplate_76cc1dec13759902917d88adc882372d119c0b587bf8e0f44ac1c3c2186
     {% endjavascripts %}
 
     <script src=\"https://cdn6.f-cdn.com/build/js/pinky/utils/jquery-ui.custom.min.js?v=c96d46b5e81832f80c3d06b6de18fea4&amp;m=6\" type=\"text/javascript\"></script>
+
+    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js\"></script>
 
 
 </head>
@@ -704,7 +718,7 @@ class __TwigTemplate_76cc1dec13759902917d88adc882372d119c0b587bf8e0f44ac1c3c2186
                         <!-- Signup Fields -->
                         <fieldset id=\"projectLoginUserCreate\" class=\"AuthForm-fields \">
                             <ol class=\"AuthForm-group\">
-                             <li class=\"form-step\">
+                               <li class=\"form-step\">
                                 <label for=\"new-email\" class=\"PostProject-stepLabel\">Email address:</label>
                                 <input type=\"text\" id=\"new-email\" name=\"email\" value=\"\">
                                 <div class=\"form-error\">
@@ -931,9 +945,15 @@ class __TwigTemplate_76cc1dec13759902917d88adc882372d119c0b587bf8e0f44ac1c3c2186
                         <li class=\"form-step select2-form-step\">
                             <label for=\"project-skills\" class=\"PostProject-stepLabel\">What skills are required?
                             </label>
-                            <select id=\"project-skills\" class=\"project-skills\" multiple=\"multiple\" name=\"skill_input\">
-                                <option>Enter skills that relate to the project:</option>
+                            
+                            <select id=\"project-skills\" class=\"js-example-basic-multiple\" multiple=\"multiple\">
+                                <option>Algorithm</option>
+                                <option>Web design</option>
                             </select>
+                             <script type=\"text/javascript\">
+                            \$(\".js-example-basic-multiple\").select2();
+                            </script>
+                            
                             <div class=\"skill-suggestion-widget\">
                                 <header class=\"skill-suggestion-head\">Skill Suggestions (add 5 more)</header>
                                 <ul class=\"skill-suggestion-list\">

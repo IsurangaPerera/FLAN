@@ -85,7 +85,7 @@ function fillBudget(){
 
 function fillSkills() {
 	skills = $("#project-skills").val();
-	objectO.skill = skills;
+	objectO.skills = skills;
 }
 
 function doPost() {

@@ -14,6 +14,8 @@
     <link href="https://cdn2.f-cdn.com/build/css/flux/base.css?v=22d78e710e51c71919013de0d743d927&amp;m=6" type="text/css" rel="stylesheet" />
     
     <link href="https://cdn6.f-cdn.com/build/css/abtests/20150907/post-project.css?v=a6a02fc08c66041f6818cddd64960bc4&amp;m=6" type="text/css" rel="stylesheet" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
     
     <!-- Prevent FOUC by hiding the body. This is similar to ng-cloak however not all layouts have angularjs-yet -->
     <style type="text/css">
@@ -29,6 +31,8 @@
     {% endjavascripts %}
 
     <script src="https://cdn6.f-cdn.com/build/js/pinky/utils/jquery-ui.custom.min.js?v=c96d46b5e81832f80c3d06b6de18fea4&amp;m=6" type="text/javascript"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
 
 
 </head>
@@ -83,7 +87,7 @@
                         <!-- Signup Fields -->
                         <fieldset id="projectLoginUserCreate" class="AuthForm-fields ">
                             <ol class="AuthForm-group">
-                             <li class="form-step">
+                               <li class="form-step">
                                 <label for="new-email" class="PostProject-stepLabel">Email address:</label>
                                 <input type="text" id="new-email" name="email" value="">
                                 <div class="form-error">
@@ -310,9 +314,15 @@
                         <li class="form-step select2-form-step">
                             <label for="project-skills" class="PostProject-stepLabel">What skills are required?
                             </label>
-                            <select id="project-skills" class="project-skills" multiple="multiple" name="skill_input">
-                                <option>Enter skills that relate to the project:</option>
+                            
+                            <select id="project-skills" class="js-example-basic-multiple" multiple="multiple">
+                                <option>Algorithm</option>
+                                <option>Web design</option>
                             </select>
+                             <script type="text/javascript">
+                            $(".js-example-basic-multiple").select2();
+                            </script>
+                            
                             <div class="skill-suggestion-widget">
                                 <header class="skill-suggestion-head">Skill Suggestions (add 5 more)</header>
                                 <ul class="skill-suggestion-list">
