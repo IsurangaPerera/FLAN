@@ -289,9 +289,17 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::test',  '_route' => 'howitworks',);
         }
 
-        // PostProject
-        if ($pathinfo === '/post') {
-            return array (  '_controller' => 'AppBundle\\Controller\\PostProjectController::indexAction',  '_route' => 'PostProject',);
+        if (0 === strpos($pathinfo, '/p')) {
+            // PostProject
+            if ($pathinfo === '/post') {
+                return array (  '_controller' => 'AppBundle\\Controller\\PostProjectController::indexAction',  '_route' => 'PostProject',);
+            }
+
+            // app_postproject_post
+            if ($pathinfo === '/project/post') {
+                return array (  '_controller' => 'AppBundle\\Controller\\PostProjectController::postAction',  '_route' => 'app_postproject_post',);
+            }
+
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
