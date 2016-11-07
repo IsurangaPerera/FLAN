@@ -1,0 +1,37 @@
+$(document).ready(function(){
+	alert("HEELLLL");
+});
+$("select").on('change', function(e){
+	if($("#project-budget option:selected").html() == "Customize budget"){
+		alert(123);
+		$("#min-budget-group").prop("hidden", false);
+		$("#max-budget-group").prop("hidden", false);
+	}
+});
+
+var objectO = {
+	"project" : [],
+	"skill"   : [],
+	"budget"  : []
+}
+
+function postProject(){
+	fillProject();
+}
+
+function fillProject(){
+	type = $("#project-category option:selected").html();
+	name = $("#project-name").val();
+	description = $("#project-description").val();
+
+	objectO.project.push({
+		"type" : type,
+		"name" : name,
+		"description" : description
+	});
+}
+
+function fillBudget(){
+	min_budget = ("#project-custom-min-budget").val();
+	max_budget = ("#project-custom-max-budget").val();
+}

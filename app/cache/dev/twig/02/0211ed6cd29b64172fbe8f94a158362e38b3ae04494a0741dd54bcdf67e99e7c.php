@@ -15,8 +15,8 @@ class __TwigTemplate_5cdd2ecfe2f66d124cf15ada0d95d1f21a8a1dc51888322c4bfa55643d0
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c739b55de0bf7d04fa09331e89ef7ea2745bfe1007c0ce3577b187759a8c9a48 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_c739b55de0bf7d04fa09331e89ef7ea2745bfe1007c0ce3577b187759a8c9a48->enter($__internal_c739b55de0bf7d04fa09331e89ef7ea2745bfe1007c0ce3577b187759a8c9a48_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/howItWorks.html.twig"));
+        $__internal_1eff37f34fbd34a701839b491524e1a6f0eb4ad74e9b39e5688e4b1fab64be4b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_1eff37f34fbd34a701839b491524e1a6f0eb4ad74e9b39e5688e4b1fab64be4b->enter($__internal_1eff37f34fbd34a701839b491524e1a6f0eb4ad74e9b39e5688e4b1fab64be4b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/howItWorks.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -105,8 +105,6 @@ class __TwigTemplate_5cdd2ecfe2f66d124cf15ada0d95d1f21a8a1dc51888322c4bfa55643d0
           </a>
         </div>
 
-        <!-- Primary nav (logged out) -->
-
         <nav class=\"primary-navigation\">
           <ul class=\"primary-navigation-list\">
             <li>
@@ -186,8 +184,6 @@ class __TwigTemplate_5cdd2ecfe2f66d124cf15ada0d95d1f21a8a1dc51888322c4bfa55643d0
           </ul>
         </nav>
 
-        <!-- Login section -->
-
         <div class=\"LoginSection\">
           <button class=\"LoginSection-btn\" id=\"login-normal\"
           data-toggle=\"modal\" fl-analytics=\"LoginButton\"
@@ -216,19 +212,12 @@ class __TwigTemplate_5cdd2ecfe2f66d124cf15ada0d95d1f21a8a1dc51888322c4bfa55643d0
 
   </div>
 
-
 </div>
 </div>
-
-<!-- Secondary nav (logged out) -->
-
 
 </header>
 
-<!-- login/signup modals placeholder -->
 <div id=\"default-modal-placeholder\"></div>
-
-<!-- login/signup module -->
 
 </div>
 
@@ -238,8 +227,6 @@ class __TwigTemplate_5cdd2ecfe2f66d124cf15ada0d95d1f21a8a1dc51888322c4bfa55643d0
   <div id=\"main\" class=\"main-content\" aria-label=\"Content\">
 
     <div class=\"HowItWorks\">
-
-
       <section class=\"HowItWorks-hero\">
         <div class=\"HowItWorks-hero-inner\">
           <h1 class=\"HowItWorks-hero-title\">Need work done?</h1>
@@ -270,7 +257,6 @@ class __TwigTemplate_5cdd2ecfe2f66d124cf15ada0d95d1f21a8a1dc51888322c4bfa55643d0
           <a class=\"HowItWorks-hero-cta btn btn-primary btn-xlarge\" href=\"/post-project\">Post a Project</a>
         </div>
       </section>
-
 
       <section class=\"HowItWorks-info\">
         <ul class=\"HowItWorks-infoSections\">
@@ -395,25 +381,22 @@ class __TwigTemplate_5cdd2ecfe2f66d124cf15ada0d95d1f21a8a1dc51888322c4bfa55643d0
                       </div>
                     </li>
                   </ul>
-                </section>
-
-                <section class=\"HowItWorks-cta\">
-                  <div class=\"HowItWorks-ctaInner\">
-                    <h2 class=\"HowItWorks-ctaTitle\">So what are you waiting for?</h2>
-                    <p class=\"HowItWorks-ctaCopy\">Post a project today and get bids from talented freelancers</p>
-                    <a class=\"HowItWorks-heroCta btn btn-primary btn-xlarge\" href=\"/post-project\">Post a Project</a>
-                  </div>
-                </section>
-              </div>
-
+            </section>
+           <section class=\"HowItWorks-cta\">
+              <div class=\"HowItWorks-ctaInner\">
+              <h2 class=\"HowItWorks-ctaTitle\">So what are you waiting for?</h2>
+              <p class=\"HowItWorks-ctaCopy\">Post a project today and get bids from talented freelancers</p>
+              <a class=\"HowItWorks-heroCta btn btn-primary btn-xlarge\" href=\"/post-project\">Post a Project</a>
             </div>
-          </div>
-
-        </body>
-        </html>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
 ";
         
-        $__internal_c739b55de0bf7d04fa09331e89ef7ea2745bfe1007c0ce3577b187759a8c9a48->leave($__internal_c739b55de0bf7d04fa09331e89ef7ea2745bfe1007c0ce3577b187759a8c9a48_prof);
+        $__internal_1eff37f34fbd34a701839b491524e1a6f0eb4ad74e9b39e5688e4b1fab64be4b->leave($__internal_1eff37f34fbd34a701839b491524e1a6f0eb4ad74e9b39e5688e4b1fab64be4b_prof);
 
     }
 
@@ -515,8 +498,6 @@ class __TwigTemplate_5cdd2ecfe2f66d124cf15ada0d95d1f21a8a1dc51888322c4bfa55643d0
           </a>
         </div>
 
-        <!-- Primary nav (logged out) -->
-
         <nav class=\"primary-navigation\">
           <ul class=\"primary-navigation-list\">
             <li>
@@ -596,8 +577,6 @@ class __TwigTemplate_5cdd2ecfe2f66d124cf15ada0d95d1f21a8a1dc51888322c4bfa55643d0
           </ul>
         </nav>
 
-        <!-- Login section -->
-
         <div class=\"LoginSection\">
           <button class=\"LoginSection-btn\" id=\"login-normal\"
           data-toggle=\"modal\" fl-analytics=\"LoginButton\"
@@ -626,19 +605,12 @@ class __TwigTemplate_5cdd2ecfe2f66d124cf15ada0d95d1f21a8a1dc51888322c4bfa55643d0
 
   </div>
 
-
 </div>
 </div>
-
-<!-- Secondary nav (logged out) -->
-
 
 </header>
 
-<!-- login/signup modals placeholder -->
 <div id=\"default-modal-placeholder\"></div>
-
-<!-- login/signup module -->
 
 </div>
 
@@ -648,8 +620,6 @@ class __TwigTemplate_5cdd2ecfe2f66d124cf15ada0d95d1f21a8a1dc51888322c4bfa55643d0
   <div id=\"main\" class=\"main-content\" aria-label=\"Content\">
 
     <div class=\"HowItWorks\">
-
-
       <section class=\"HowItWorks-hero\">
         <div class=\"HowItWorks-hero-inner\">
           <h1 class=\"HowItWorks-hero-title\">Need work done?</h1>
@@ -680,7 +650,6 @@ class __TwigTemplate_5cdd2ecfe2f66d124cf15ada0d95d1f21a8a1dc51888322c4bfa55643d0
           <a class=\"HowItWorks-hero-cta btn btn-primary btn-xlarge\" href=\"/post-project\">Post a Project</a>
         </div>
       </section>
-
 
       <section class=\"HowItWorks-info\">
         <ul class=\"HowItWorks-infoSections\">
@@ -805,22 +774,19 @@ class __TwigTemplate_5cdd2ecfe2f66d124cf15ada0d95d1f21a8a1dc51888322c4bfa55643d0
                       </div>
                     </li>
                   </ul>
-                </section>
-
-                <section class=\"HowItWorks-cta\">
-                  <div class=\"HowItWorks-ctaInner\">
-                    <h2 class=\"HowItWorks-ctaTitle\">So what are you waiting for?</h2>
-                    <p class=\"HowItWorks-ctaCopy\">Post a project today and get bids from talented freelancers</p>
-                    <a class=\"HowItWorks-heroCta btn btn-primary btn-xlarge\" href=\"/post-project\">Post a Project</a>
-                  </div>
-                </section>
-              </div>
-
+            </section>
+           <section class=\"HowItWorks-cta\">
+              <div class=\"HowItWorks-ctaInner\">
+              <h2 class=\"HowItWorks-ctaTitle\">So what are you waiting for?</h2>
+              <p class=\"HowItWorks-ctaCopy\">Post a project today and get bids from talented freelancers</p>
+              <a class=\"HowItWorks-heroCta btn btn-primary btn-xlarge\" href=\"/post-project\">Post a Project</a>
             </div>
-          </div>
-
-        </body>
-        </html>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
 ";
     }
 }
