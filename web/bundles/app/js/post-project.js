@@ -73,7 +73,10 @@ function fillBudget(){
 	commitment = $("#project-commitment").val();
 	commitment_type = $("#project-commitment-type option:selected").html();
 
+	currency = $("#project-currency option:selected").html();
+
 	objectO.budget.push({
+		"currency"		  : currency,	
 		"budget_type"     : budget_type,
 		"duration"        : duration,
 		"min_budget"  	  : min_budget,
