@@ -6,9 +6,9 @@ $("select").on('change', function(e){
 
 	if($("#project-category option:selected").val() == "-1")
 		$("#project-sub-category").show(500);
-	else 
+	else
 		$("#project-sub-category").hide(500);
-	
+
 });
 
 $('input:radio[name="budget-type"]').change(function(){
@@ -35,12 +35,12 @@ function postProject(){
 }
 
 function fillProject(){
-	
+
 	if($("#project-category option:selected").val() == "-1")
 		type = $("#project-sub-category").val();
 	else
 		type = $("#project-category option:selected").html();
-	
+
 	name = $("#project-name").val();
 	description = $("#project-description").val();
 
@@ -52,7 +52,7 @@ function fillProject(){
 }
 
 function fillBudget(){
-	if($("#budget-hourly").is(":checked")) 
+	if($("#budget-hourly").is(":checked"))
 		budget_type = "hourly";
 	else
 		budget_type = "fixed";
@@ -76,7 +76,7 @@ function fillBudget(){
 	currency = $("#project-currency option:selected").html();
 
 	objectO.budget.push({
-		"currency"		  : currency,	
+		"currency"		  : currency,
 		"budget_type"     : budget_type,
 		"duration"        : duration,
 		"min_budget"  	  : min_budget,
@@ -97,7 +97,8 @@ function doPost() {
 		url: "../project/post",
 		data: JSON.stringify(objectO),
 		success: function( data, textStatus, jQxhr ){
-			alert("Success");
+			//alert("Success");
+			window.location.href='/proposal';
 		},
 		error: function( jqXhr, textStatus, errorThrown ){
 			alert( errorThrown );

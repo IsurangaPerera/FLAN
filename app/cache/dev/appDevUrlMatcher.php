@@ -301,9 +301,66 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                     return array (  '_controller' => 'AppBundle\\Controller\\PostProjectController::postAction',  '_route' => 'app_postproject_post',);
                 }
 
-                // proposal
-                if ($pathinfo === '/proposals') {
-                    return array (  '_controller' => 'AppBundle\\Controller\\ProposalController::indexAction',  '_route' => 'proposal',);
+                if (0 === strpos($pathinfo, '/proposal')) {
+                    // proposal_index
+                    if (rtrim($pathinfo, '/') === '/proposal') {
+                        if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                            $allow = array_merge($allow, array('GET', 'HEAD'));
+                            goto not_proposal_index;
+                        }
+
+                        if (substr($pathinfo, -1) !== '/') {
+                            return $this->redirect($pathinfo.'/', 'proposal_index');
+                        }
+
+                        return array (  '_controller' => 'AppBundle\\Controller\\ProposalController::indexAction',  '_route' => 'proposal_index',);
+                    }
+                    not_proposal_index:
+
+                    // proposal_new
+                    if ($pathinfo === '/proposal/new') {
+                        if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                            $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                            goto not_proposal_new;
+                        }
+
+                        return array (  '_controller' => 'AppBundle\\Controller\\ProposalController::newAction',  '_route' => 'proposal_new',);
+                    }
+                    not_proposal_new:
+
+                    // proposal_show
+                    if (preg_match('#^/proposal/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                        if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                            $allow = array_merge($allow, array('GET', 'HEAD'));
+                            goto not_proposal_show;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'proposal_show')), array (  '_controller' => 'AppBundle\\Controller\\ProposalController::showAction',));
+                    }
+                    not_proposal_show:
+
+                    // proposal_edit
+                    if (preg_match('#^/proposal/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                        if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                            $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                            goto not_proposal_edit;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'proposal_edit')), array (  '_controller' => 'AppBundle\\Controller\\ProposalController::editAction',));
+                    }
+                    not_proposal_edit:
+
+                    // proposal_delete
+                    if (preg_match('#^/proposal/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                        if ($this->context->getMethod() != 'DELETE') {
+                            $allow[] = 'DELETE';
+                            goto not_proposal_delete;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'proposal_delete')), array (  '_controller' => 'AppBundle\\Controller\\ProposalController::deleteAction',));
+                    }
+                    not_proposal_delete:
+
                 }
 
             }

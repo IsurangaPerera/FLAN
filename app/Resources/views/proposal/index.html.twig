@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Proposals list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Description</th>
+                <th>Createdat</th>
+                <th>Updatedat</th>
+                <th>Userid</th>
+                <th>Projectid</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for proposal in proposals %}
+            <tr>
+                <td><a href="{{ path('proposal_show', { 'id': proposal.id }) }}">{{ proposal.id }}</a></td>
+                <td>{{ proposal.description }}</td>
+                <td>{% if proposal.createdAt %}{{ proposal.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if proposal.updatedAt %}{{ proposal.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ proposal.userId }}</td>
+                <td>{{ proposal.projectId }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('proposal_show', { 'id': proposal.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('proposal_edit', { 'id': proposal.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('proposal_new') }}">Create a new proposal</a>
+        </li>
+    </ul>
+{% endblock %}

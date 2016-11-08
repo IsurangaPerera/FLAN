@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Proposal</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ proposal.id }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ proposal.description }}</td>
+            </tr>
+            <tr>
+                <th>Createdat</th>
+                <td>{% if proposal.createdAt %}{{ proposal.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Updatedat</th>
+                <td>{% if proposal.updatedAt %}{{ proposal.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Userid</th>
+                <td>{{ proposal.userId }}</td>
+            </tr>
+            <tr>
+                <th>Projectid</th>
+                <td>{{ proposal.projectId }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('proposal_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('proposal_edit', { 'id': proposal.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
