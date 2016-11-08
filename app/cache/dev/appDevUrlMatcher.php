@@ -295,9 +295,17 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'AppBundle\\Controller\\PostProjectController::indexAction',  '_route' => 'PostProject',);
             }
 
-            // app_postproject_post
-            if ($pathinfo === '/project/post') {
-                return array (  '_controller' => 'AppBundle\\Controller\\PostProjectController::postAction',  '_route' => 'app_postproject_post',);
+            if (0 === strpos($pathinfo, '/pro')) {
+                // app_postproject_post
+                if ($pathinfo === '/project/post') {
+                    return array (  '_controller' => 'AppBundle\\Controller\\PostProjectController::postAction',  '_route' => 'app_postproject_post',);
+                }
+
+                // proposal
+                if ($pathinfo === '/proposals') {
+                    return array (  '_controller' => 'AppBundle\\Controller\\ProposalController::indexAction',  '_route' => 'proposal',);
+                }
+
             }
 
         }
