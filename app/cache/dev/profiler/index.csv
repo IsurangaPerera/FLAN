@@ -167,3 +167,17 @@ a61038,127.0.0.1,GET,http://localhost:8000/api/projects/0.1/projects/12016250/?a
 194613,127.0.0.1,GET,http://localhost:8000/api/projects/0.1/projects/12016250/?attachment_details=true&compact=true&full_description=true&hireme_details=true&job_details=true&location_details=true&selected_bids=true&upgrade_details=true,1478625501,dfafce,200
 dfafce,127.0.0.1,GET,http://localhost:8000/api/projects/0.1/projects/12016250/?attachment_details=true&compact=true&full_description=true&hireme_details=true&job_details=true&location_details=true&selected_bids=true&upgrade_details=true,1478625501,,404
 c2d070,127.0.0.1,GET,http://localhost:8000/post,1478625502,,200
+90b841,127.0.0.1,GET,http://localhost:8000/,1478629502,,200
+9a30ab,127.0.0.1,GET,http://localhost:8000/post,1478629528,,200
+7332bc,127.0.0.1,POST,http://localhost:8000/project/post,1478629599,,200
+758f83,127.0.0.1,GET,http://localhost:8000/proposals,1478629712,,200
+020450,127.0.0.1,GET,http://localhost:8000/ajax/count-24h.php,1478629715,aecfaf,200
+aecfaf,127.0.0.1,GET,http://localhost:8000/ajax/count-24h.php,1478629716,,404
+24aebe,127.0.0.1,GET,http://localhost:8000/static/icons/ui-chevron-up.svg,1478629717,6df033,200
+6df033,127.0.0.1,GET,http://localhost:8000/static/icons/ui-chevron-up.svg,1478629717,,404
+71a53b,127.0.0.1,GET,http://localhost:8000/ajax/timestamp.php,1478629718,505d80,200
+505d80,127.0.0.1,GET,http://localhost:8000/ajax/timestamp.php,1478629718,,404
+8f57ee,127.0.0.1,GET,http://localhost:8000/ajax/_general_vars.php,1478629719,aa7ec2,200
+aa7ec2,127.0.0.1,GET,http://localhost:8000/ajax/_general_vars.php,1478629719,,404
+004bef,127.0.0.1,GET,http://localhost:8000/static/icons/flicon-other.svg,1478629720,786b09,200
+786b09,127.0.0.1,GET,http://localhost:8000/static/icons/flicon-other.svg,1478629720,,404
