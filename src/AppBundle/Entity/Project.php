@@ -39,7 +39,7 @@ class Project
     /**
      * Get projectId
      *
-     * @return integer 
+     * @return integer
      */
     public function getProjectId()
     {
@@ -62,7 +62,7 @@ class Project
     /**
      * Get userId
      *
-     * @return integer 
+     * @return integer
      */
     public function getUserId()
     {
@@ -85,7 +85,7 @@ class Project
     /**
      * Get type
      *
-     * @return string 
+     * @return string
      */
     public function getType()
     {
@@ -108,7 +108,7 @@ class Project
     /**
      * Get description
      *
-     * @return string 
+     * @return string
      */
     public function getDescription()
     {
@@ -131,7 +131,7 @@ class Project
     /**
      * Get name
      *
-     * @return string 
+     * @return string
      */
     public function getName()
     {

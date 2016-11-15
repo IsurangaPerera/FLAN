@@ -3,6 +3,7 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Proposal;
+use AppBundle\Entity\Project;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
@@ -25,9 +26,10 @@ class ProposalController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $proposals = $em->getRepository('AppBundle:Proposal')->findAll();
+        $project = $em->getRepository('AppBundle:Project')->findAll();
 
         return $this->render('default/proposal.html.twig', array(
-            'proposals' => $proposals,
+            'proposals' => $proposals,'myProject'=> $project,
         ));
     }
 
