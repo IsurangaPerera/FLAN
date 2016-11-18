@@ -15,8 +15,8 @@ class __TwigTemplate_76cc1dec13759902917d88adc882372d119c0b587bf8e0f44ac1c3c2186
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_571355f3500993e2320c174e056cdd2014c1f5b89d192332fc81ba7dc63e0c41 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_571355f3500993e2320c174e056cdd2014c1f5b89d192332fc81ba7dc63e0c41->enter($__internal_571355f3500993e2320c174e056cdd2014c1f5b89d192332fc81ba7dc63e0c41_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/postProject.html.twig"));
+        $__internal_3edc0aec508e2f66e2f2d6b67723a8f10759378d8badc70ff129f2f5c5f66a37 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_3edc0aec508e2f66e2f2d6b67723a8f10759378d8badc70ff129f2f5c5f66a37->enter($__internal_3edc0aec508e2f66e2f2d6b67723a8f10759378d8badc70ff129f2f5c5f66a37_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/postProject.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -247,93 +247,33 @@ class __TwigTemplate_76cc1dec13759902917d88adc882372d119c0b587bf8e0f44ac1c3c2186
                 <div class=\"form-step-fieldContainer\">
                     <select id=\"project-currency\" name=\"currency\">
 
-                        <option value=\"1\" title=\"\$\"
-                        selected >USD
-                    </option>
+                        <option value=\"1\" title=\"\$\"selected >USD</option>
 
-                    <option value=\"3\" title=\"\$\"
-                    >AUD
-                </option>
+                    <option value=\"3\" title=\"\$\">AUD</option>
 
-                <option value=\"9\" title=\"\$\"
-                >CAD
-            </option>
+                <option value=\"9\" title=\"\$\">CAD</option>
 
-            <option value=\"8\" title=\"€\"
-            >EUR
-        </option>
+            <option value=\"8\" title=\"€\">EUR</option>
 
-        <option value=\"4\" title=\"£\"
-        >GBP
-    </option>
+        <option value=\"4\" title=\"£\">GBP</option>
 
-    <option value=\"21\" title=\"￥\"
-    >CNY
-</option>
+    <option value=\"21\" title=\"￥\">CNY</option>
 
-<option value=\"5\" title=\"\$\"
->HKD
-</option>
+<option value=\"5\" title=\"\$\">HKD</option>
 
-<option value=\"11\" title=\"₹\"
->INR
-</option>
+<option value=\"11\" title=\"₹\">INR</option>
 
-<option value=\"12\" title=\"\$\"
->JMD
-</option>
+<option value=\"12\" title=\"\$\">JMD</option>
 
-<option value=\"13\" title=\"\$\"
->CLP
-</option>
+<option value=\"13\" title=\"\$\">CLP</option>
 
-<option value=\"17\" title=\"kr\"
->SEK
-</option>
+<option value=\"17\" title=\"kr\">SEK</option>
 
-<option value=\"18\" title=\"¥\"
->JPY
-</option>
+<option value=\"18\" title=\"¥\">JPY</option>
 
-<option value=\"16\" title=\"RM\"
->MYR
-</option>
+<option value=\"16\" title=\"RM\">MYR</option>
 
-<option value=\"15\" title=\"Rp\"
->IDR
-</option>
-
-<option value=\"14\" title=\"\$\"
->MXN
-</option>
-
-<option value=\"2\" title=\"\$\"
->NZD
-</option>
-
-<option value=\"7\" title=\"₱\"
->PHP
-</option>
-
-<option value=\"19\" title=\"zł\"
->PLN
-</option>
-
-<option value=\"6\" title=\"\$\"
->SGD
-</option>
-
-<option value=\"20\" title=\"R\$\"
->BRL
-</option>
-
-<option value=\"23\" title=\"₫\"
->VND
-</option>
-
-<option value=\"10\" title=\"R\"
->ZAR
-</option>
+<option value=\"15\" title=\"Rp\">IDR</option>
 
 </select>
 </div>
@@ -493,7 +433,7 @@ class __TwigTemplate_76cc1dec13759902917d88adc882372d119c0b587bf8e0f44ac1c3c2186
 </html>
 ";
         
-        $__internal_571355f3500993e2320c174e056cdd2014c1f5b89d192332fc81ba7dc63e0c41->leave($__internal_571355f3500993e2320c174e056cdd2014c1f5b89d192332fc81ba7dc63e0c41_prof);
+        $__internal_3edc0aec508e2f66e2f2d6b67723a8f10759378d8badc70ff129f2f5c5f66a37->leave($__internal_3edc0aec508e2f66e2f2d6b67723a8f10759378d8badc70ff129f2f5c5f66a37_prof);
 
     }
 
@@ -705,93 +645,33 @@ class __TwigTemplate_76cc1dec13759902917d88adc882372d119c0b587bf8e0f44ac1c3c2186
                 <div class=\"form-step-fieldContainer\">
                     <select id=\"project-currency\" name=\"currency\">
 
-                        <option value=\"1\" title=\"\$\"
-                        selected >USD
-                    </option>
+                        <option value=\"1\" title=\"\$\"selected >USD</option>
 
-                    <option value=\"3\" title=\"\$\"
-                    >AUD
-                </option>
+                    <option value=\"3\" title=\"\$\">AUD</option>
 
-                <option value=\"9\" title=\"\$\"
-                >CAD
-            </option>
+                <option value=\"9\" title=\"\$\">CAD</option>
 
-            <option value=\"8\" title=\"€\"
-            >EUR
-        </option>
+            <option value=\"8\" title=\"€\">EUR</option>
 
-        <option value=\"4\" title=\"£\"
-        >GBP
-    </option>
+        <option value=\"4\" title=\"£\">GBP</option>
 
-    <option value=\"21\" title=\"￥\"
-    >CNY
-</option>
+    <option value=\"21\" title=\"￥\">CNY</option>
 
-<option value=\"5\" title=\"\$\"
->HKD
-</option>
+<option value=\"5\" title=\"\$\">HKD</option>
 
-<option value=\"11\" title=\"₹\"
->INR
-</option>
+<option value=\"11\" title=\"₹\">INR</option>
 
-<option value=\"12\" title=\"\$\"
->JMD
-</option>
+<option value=\"12\" title=\"\$\">JMD</option>
 
-<option value=\"13\" title=\"\$\"
->CLP
-</option>
+<option value=\"13\" title=\"\$\">CLP</option>
 
-<option value=\"17\" title=\"kr\"
->SEK
-</option>
+<option value=\"17\" title=\"kr\">SEK</option>
 
-<option value=\"18\" title=\"¥\"
->JPY
-</option>
+<option value=\"18\" title=\"¥\">JPY</option>
 
-<option value=\"16\" title=\"RM\"
->MYR
-</option>
+<option value=\"16\" title=\"RM\">MYR</option>
 
-<option value=\"15\" title=\"Rp\"
->IDR
-</option>
-
-<option value=\"14\" title=\"\$\"
->MXN
-</option>
-
-<option value=\"2\" title=\"\$\"
->NZD
-</option>
-
-<option value=\"7\" title=\"₱\"
->PHP
-</option>
-
-<option value=\"19\" title=\"zł\"
->PLN
-</option>
-
-<option value=\"6\" title=\"\$\"
->SGD
-</option>
-
-<option value=\"20\" title=\"R\$\"
->BRL
-</option>
-
-<option value=\"23\" title=\"₫\"
->VND
-</option>
-
-<option value=\"10\" title=\"R\"
->ZAR
-</option>
+<option value=\"15\" title=\"Rp\">IDR</option>
 
 </select>
 </div>

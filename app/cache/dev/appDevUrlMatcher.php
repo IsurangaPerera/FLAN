@@ -172,98 +172,36 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        if (0 === strpos($pathinfo, '/js')) {
-            if (0 === strpos($pathinfo, '/js/3490027')) {
-                // _assetic_3490027
-                if ($pathinfo === '/js/3490027.js') {
-                    return array (  '_controller' => 'assetic.controller:render',  'name' => 3490027,  'pos' => NULL,  '_format' => 'js',  '_route' => '_assetic_3490027',);
-                }
-
-                if (0 === strpos($pathinfo, '/js/3490027_')) {
-                    // _assetic_3490027_0
-                    if ($pathinfo === '/js/3490027_jquery.min_1.js') {
-                        return array (  '_controller' => 'assetic.controller:render',  'name' => 3490027,  'pos' => 0,  '_format' => 'js',  '_route' => '_assetic_3490027_0',);
-                    }
-
-                    // _assetic_3490027_1
-                    if ($pathinfo === '/js/3490027_bootstrap.min_2.js') {
-                        return array (  '_controller' => 'assetic.controller:render',  'name' => 3490027,  'pos' => 1,  '_format' => 'js',  '_route' => '_assetic_3490027_1',);
-                    }
-
-                    // _assetic_3490027_2
-                    if ($pathinfo === '/js/3490027_jquery-migrate.min_3.js') {
-                        return array (  '_controller' => 'assetic.controller:render',  'name' => 3490027,  'pos' => 2,  '_format' => 'js',  '_route' => '_assetic_3490027_2',);
-                    }
-
-                    // _assetic_3490027_3
-                    if ($pathinfo === '/js/3490027_font-awesome-icons_4.js') {
-                        return array (  '_controller' => 'assetic.controller:render',  'name' => 3490027,  'pos' => 3,  '_format' => 'js',  '_route' => '_assetic_3490027_3',);
-                    }
-
-                    // _assetic_3490027_4
-                    if ($pathinfo === '/js/3490027_post-project_5.js') {
-                        return array (  '_controller' => 'assetic.controller:render',  'name' => 3490027,  'pos' => 4,  '_format' => 'js',  '_route' => '_assetic_3490027_4',);
-                    }
-
-                }
-
+        if (0 === strpos($pathinfo, '/js/3490027')) {
+            // _assetic_3490027
+            if ($pathinfo === '/js/3490027.js') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 3490027,  'pos' => NULL,  '_format' => 'js',  '_route' => '_assetic_3490027',);
             }
 
-            if (0 === strpos($pathinfo, '/js/bfe5279')) {
-                // _assetic_bfe5279
-                if ($pathinfo === '/js/bfe5279.js') {
-                    return array (  '_controller' => 'assetic.controller:render',  'name' => 'bfe5279',  'pos' => NULL,  '_format' => 'js',  '_route' => '_assetic_bfe5279',);
+            if (0 === strpos($pathinfo, '/js/3490027_')) {
+                // _assetic_3490027_0
+                if ($pathinfo === '/js/3490027_jquery.min_1.js') {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => 3490027,  'pos' => 0,  '_format' => 'js',  '_route' => '_assetic_3490027_0',);
                 }
 
-                if (0 === strpos($pathinfo, '/js/bfe5279_')) {
-                    // _assetic_bfe5279_0
-                    if ($pathinfo === '/js/bfe5279_jquery.min_1.js') {
-                        return array (  '_controller' => 'assetic.controller:render',  'name' => 'bfe5279',  'pos' => 0,  '_format' => 'js',  '_route' => '_assetic_bfe5279_0',);
-                    }
+                // _assetic_3490027_1
+                if ($pathinfo === '/js/3490027_bootstrap.min_2.js') {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => 3490027,  'pos' => 1,  '_format' => 'js',  '_route' => '_assetic_3490027_1',);
+                }
 
-                    // _assetic_bfe5279_1
-                    if ($pathinfo === '/js/bfe5279_bootstrap.min_2.js') {
-                        return array (  '_controller' => 'assetic.controller:render',  'name' => 'bfe5279',  'pos' => 1,  '_format' => 'js',  '_route' => '_assetic_bfe5279_1',);
-                    }
+                // _assetic_3490027_2
+                if ($pathinfo === '/js/3490027_jquery-migrate.min_3.js') {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => 3490027,  'pos' => 2,  '_format' => 'js',  '_route' => '_assetic_3490027_2',);
+                }
 
-                    if (0 === strpos($pathinfo, '/js/bfe5279_jquery')) {
-                        // _assetic_bfe5279_2
-                        if ($pathinfo === '/js/bfe5279_jquery-migrate.min_3.js') {
-                            return array (  '_controller' => 'assetic.controller:render',  'name' => 'bfe5279',  'pos' => 2,  '_format' => 'js',  '_route' => '_assetic_bfe5279_2',);
-                        }
+                // _assetic_3490027_3
+                if ($pathinfo === '/js/3490027_font-awesome-icons_4.js') {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => 3490027,  'pos' => 3,  '_format' => 'js',  '_route' => '_assetic_3490027_3',);
+                }
 
-                        // _assetic_bfe5279_3
-                        if ($pathinfo === '/js/bfe5279_jquery.carouFredSel-6.1.0_4.js') {
-                            return array (  '_controller' => 'assetic.controller:render',  'name' => 'bfe5279',  'pos' => 3,  '_format' => 'js',  '_route' => '_assetic_bfe5279_3',);
-                        }
-
-                    }
-
-                    // _assetic_bfe5279_4
-                    if ($pathinfo === '/js/bfe5279_font-awesome-icons_5.js') {
-                        return array (  '_controller' => 'assetic.controller:render',  'name' => 'bfe5279',  'pos' => 4,  '_format' => 'js',  '_route' => '_assetic_bfe5279_4',);
-                    }
-
-                    // _assetic_bfe5279_5
-                    if ($pathinfo === '/js/bfe5279_layerslider.transitions_6.js') {
-                        return array (  '_controller' => 'assetic.controller:render',  'name' => 'bfe5279',  'pos' => 5,  '_format' => 'js',  '_route' => '_assetic_bfe5279_5',);
-                    }
-
-                    // _assetic_bfe5279_6
-                    if ($pathinfo === '/js/bfe5279_index_script_7.js') {
-                        return array (  '_controller' => 'assetic.controller:render',  'name' => 'bfe5279',  'pos' => 6,  '_format' => 'js',  '_route' => '_assetic_bfe5279_6',);
-                    }
-
-                    // _assetic_bfe5279_7
-                    if ($pathinfo === '/js/bfe5279_greensock_8.js') {
-                        return array (  '_controller' => 'assetic.controller:render',  'name' => 'bfe5279',  'pos' => 7,  '_format' => 'js',  '_route' => '_assetic_bfe5279_7',);
-                    }
-
-                    // _assetic_bfe5279_8
-                    if ($pathinfo === '/js/bfe5279_layerslider.kreaturamedia.jquery_9.js') {
-                        return array (  '_controller' => 'assetic.controller:render',  'name' => 'bfe5279',  'pos' => 8,  '_format' => 'js',  '_route' => '_assetic_bfe5279_8',);
-                    }
-
+                // _assetic_3490027_4
+                if ($pathinfo === '/js/3490027_post-project_5.js') {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => 3490027,  'pos' => 4,  '_format' => 'js',  '_route' => '_assetic_3490027_4',);
                 }
 
             }
