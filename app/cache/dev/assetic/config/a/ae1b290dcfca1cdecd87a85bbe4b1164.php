@@ -45,7 +45,7 @@ return array (
       ),
     ),
   ),
-  'bfe5279' => 
+  'ed61d72' => 
   array (
     0 => 
     array (
@@ -58,14 +58,16 @@ return array (
       6 => 'bundles/app/js/index_script.js',
       7 => 'bundles/app/js/greensock.js',
       8 => 'bundles/app/js/layerslider.kreaturamedia.jquery.js',
+      9 => 'bundles/app/js/wsse.js',
+      10 => 'bundles/app/js/loginAjax.js',
     ),
     1 => 
     array (
     ),
     2 => 
     array (
-      'output' => '_controller/js/bfe5279.js',
-      'name' => 'bfe5279',
+      'output' => '_controller/js/ed61d72.js',
+      'name' => 'ed61d72',
       'debug' => NULL,
       'combine' => NULL,
       'vars' => 

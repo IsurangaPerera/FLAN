@@ -1,12 +1,11 @@
 <?php
-
 namespace AppBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-
+use Symfony\Component\HttpFoundation\Session\Session;
 
 class DefaultController extends Controller
 {
@@ -29,5 +28,15 @@ class DefaultController extends Controller
         return $this->render('default/howItWorks.html.twig', array(
             'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
         ));
+    }
+
+    /**
+     * @Route("login/", name="login")
+     */
+    public function login(Request $request)
+    {
+        $session = new Session();
+        $session->start();
+        return new Response($this->generateUrl('howitworks'));
     }
 }

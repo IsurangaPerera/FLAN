@@ -7,7 +7,7 @@ services:
     wsse.security.authentication.provider:
         class: AppBundle\Security\Authentication\Provider\WsseProvider
         arguments:
-            - '' # User Provider
+            - our_db_provider
             - '@cache.app'
         public: false
 

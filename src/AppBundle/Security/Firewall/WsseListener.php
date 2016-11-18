@@ -36,25 +36,19 @@ class WsseListener implements ListenerInterface
         $token->nonce    = $matches[3];
         $token->created  = $matches[4];
 
+        $d;
+
         try {
             $authToken = $this->authenticationManager->authenticate($token);
             $this->tokenStorage->setToken($authToken);
 
             return;
         } catch (AuthenticationException $failed) {
-            // ... you might log something here
 
-            // To deny the authentication clear the token. This will redirect to the login page.
-            // Make sure to only clear your token, not those of other authentication listeners.
-            // $token = $this->tokenStorage->getToken();
-            // if ($token instanceof WsseUserToken && $this->providerKey === $token->getProviderKey()) {
-            //     $this->tokenStorage->setToken(null);
-            // }
-            // return;
         }
 
         // By default deny authorization
-        $response = new Response();
+        $response = new Response($d);
         $response->setStatusCode(Response::HTTP_FORBIDDEN);
         $event->setResponse($response);
     }

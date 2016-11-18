@@ -11,7 +11,6 @@
       <parameter key="AsseticBundle">Symfony\Bundle\AsseticBundle\AsseticBundle</parameter>
       <parameter key="FrameworkBundle">Symfony\Bundle\FrameworkBundle\FrameworkBundle</parameter>
       <parameter key="SecurityBundle">Symfony\Bundle\SecurityBundle\SecurityBundle</parameter>
-      <parameter key="EscapeWSSEAuthenticationBundle">Escape\WSSEAuthenticationBundle\EscapeWSSEAuthenticationBundle</parameter>
       <parameter key="TwigBundle">Symfony\Bundle\TwigBundle\TwigBundle</parameter>
       <parameter key="MonologBundle">Symfony\Bundle\MonologBundle\MonologBundle</parameter>
       <parameter key="SwiftmailerBundle">Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle</parameter>
@@ -55,7 +54,6 @@
       <parameter>AsseticBundle</parameter>
       <parameter>FrameworkBundle</parameter>
       <parameter>SecurityBundle</parameter>
-      <parameter>EscapeWSSEAuthenticationBundle</parameter>
       <parameter>TwigBundle</parameter>
       <parameter>MonologBundle</parameter>
       <parameter>SwiftmailerBundle</parameter>
@@ -141,11 +139,6 @@
     <parameter key="security.authentication.session_strategy.strategy">migrate</parameter>
     <parameter key="security.access.always_authenticate_before_granting">false</parameter>
     <parameter key="security.authentication.hide_user_not_found">true</parameter>
-    <parameter key="escape_wsse_authentication.provider.class">Escape\WSSEAuthenticationBundle\Security\Core\Authentication\Provider\Provider</parameter>
-    <parameter key="escape_wsse_authentication.listener.class">Escape\WSSEAuthenticationBundle\Security\Http\Firewall\Listener</parameter>
-    <parameter key="escape_wsse_authentication.entry_point.class">Escape\WSSEAuthenticationBundle\Security\Http\EntryPoint\EntryPoint</parameter>
-    <parameter key="escape_wsse_authentication.encoder.class">Symfony\Component\Security\Core\Encoder\MessageDigestPasswordEncoder</parameter>
-    <parameter key="escape_wsse_authentication.nonce_cache.class">Doctrine\Common\Cache\PhpFileCache</parameter>
     <parameter key="twig.exception_listener.controller">twig.controller.exception:showAction</parameter>
     <parameter key="twig.form.resources" type="collection">
       <parameter>form_div_layout.html.twig</parameter>
@@ -536,33 +529,6 @@
                   <argument type="service" id="templating.loader"/>
                   <argument>SecurityBundle</argument>
                   <argument>/home/isurangaperera/FLAN/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/views</argument>
-                  <argument>/\.[^.]+\.twig$/</argument>
-                </service>
-              </argument>
-            </argument>
-          </service>
-        </argument>
-        <argument>twig</argument>
-      </call>
-      <call method="addResource">
-        <argument type="service">
-          <service class="Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource" public="false">
-            <tag name="assetic.templating.twig"/>
-            <tag name="assetic.formula_resource" loader="twig"/>
-            <argument type="collection">
-              <argument type="service">
-                <service class="%assetic.directory_resource.class%" public="false">
-                  <argument type="service" id="templating.loader"/>
-                  <argument>EscapeWSSEAuthenticationBundle</argument>
-                  <argument>/home/isurangaperera/FLAN/app/Resources/EscapeWSSEAuthenticationBundle/views</argument>
-                  <argument>/\.[^.]+\.twig$/</argument>
-                </service>
-              </argument>
-              <argument type="service">
-                <service class="%assetic.directory_resource.class%" public="false">
-                  <argument type="service" id="templating.loader"/>
-                  <argument>EscapeWSSEAuthenticationBundle</argument>
-                  <argument>/home/isurangaperera/FLAN/vendor/escapestudios/wsse-authentication-bundle/Escape/WSSEAuthenticationBundle/Resources/views</argument>
                   <argument>/\.[^.]+\.twig$/</argument>
                 </service>
               </argument>
@@ -1010,7 +976,7 @@
                   <tag name="cache.pool"/>
                   <argument>lTU5r9ubPh</argument>
                   <argument>0</argument>
-                  <argument>roltPiLNCjMsooxgaRE7EQ</argument>
+                  <argument>LcaDASJjE+33hlB2dR1HDw</argument>
                   <argument>/home/isurangaperera/FLAN/app/cache/dev/pools</argument>
                   <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
                   <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -1023,7 +989,7 @@
                   <tag name="cache.pool"/>
                   <argument>BdzC1qcGA3</argument>
                   <argument>0</argument>
-                  <argument>roltPiLNCjMsooxgaRE7EQ</argument>
+                  <argument>LcaDASJjE+33hlB2dR1HDw</argument>
                   <argument>/home/isurangaperera/FLAN/app/cache/dev/pools</argument>
                   <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
                   <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -1355,7 +1321,7 @@
       <tag name="cache.pool"/>
       <argument>Frg9hQ5pNq</argument>
       <argument>0</argument>
-      <argument>roltPiLNCjMsooxgaRE7EQ</argument>
+      <argument>LcaDASJjE+33hlB2dR1HDw</argument>
       <argument>/home/isurangaperera/FLAN/app/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -2107,14 +2073,20 @@
     <service id="security.authentication.manager" class="Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager" public="false">
       <argument type="collection">
         <argument type="service">
+          <service class="AppBundle\Security\Authentication\Provider\WsseProvider" public="false">
+            <argument type="service" id="security.user.provider.concrete.our_db_provider"/>
+            <argument type="service" id="cache.app"/>
+          </service>
+        </argument>
+        <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>582ade8ac58b34.28701067</argument>
+            <argument>582f273e588099.54029243</argument>
           </service>
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider" public="false">
             <argument type="service" id="security.user.provider.concrete.our_db_provider"/>
-            <argument type="service" id="security.user_checker.main"/>
+            <argument type="service" id="security.user_checker.wsse_secured"/>
             <argument>default</argument>
             <argument type="service" id="security.encoder_factory"/>
             <argument>true</argument>
@@ -2122,7 +2094,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>582ade8ac58b34.28701067</argument>
+            <argument>582f273e588099.54029243</argument>
           </service>
         </argument>
       </argument>
@@ -2147,6 +2119,11 @@
         <service class="Symfony\Bundle\SecurityBundle\Security\FirewallMap" public="false">
           <argument type="service" id="service_container"/>
           <argument type="collection">
+            <argument key="security.firewall.map.context.wsse_secured" type="service">
+              <service class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
+                <argument>^/login/</argument>
+              </service>
+            </argument>
             <argument key="security.firewall.map.context.dev" type="service">
               <service class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
                 <argument>^/(_(profiler|wdt)|css|images|js)/</argument>
@@ -2184,7 +2161,19 @@
       </argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
     </service>
-    <service id="security.access_map" class="Symfony\Component\Security\Http\AccessMap" public="false"/>
+    <service id="security.access_map" class="Symfony\Component\Security\Http\AccessMap" public="false">
+      <call method="add">
+        <argument type="service">
+          <service class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
+            <argument>^/login/</argument>
+          </service>
+        </argument>
+        <argument type="collection">
+          <argument>ROLE_USER</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+    </service>
     <service id="security.access_listener" class="Symfony\Component\Security\Http\Firewall\AccessListener" public="false">
       <tag name="monolog.logger" channel="security"/>
       <argument type="service" id="security.token_storage"/>
@@ -2249,6 +2238,31 @@
       <argument>null</argument>
     </service>
     <service id="security.user.provider.concrete.in_memory" class="Symfony\Component\Security\Core\User\InMemoryUserProvider" public="false"/>
+    <service id="security.firewall.map.context.wsse_secured" class="Symfony\Bundle\SecurityBundle\Security\FirewallContext">
+      <argument type="collection">
+        <argument type="service" id="security.channel_listener"/>
+        <argument type="service">
+          <service class="AppBundle\Security\Firewall\WsseListener" public="false">
+            <argument type="service" id="security.token_storage"/>
+            <argument type="service" id="security.authentication.manager"/>
+          </service>
+        </argument>
+        <argument type="service" id="security.access_listener"/>
+      </argument>
+      <argument type="service">
+        <service class="Symfony\Component\Security\Http\Firewall\ExceptionListener" public="false">
+          <argument type="service" id="security.token_storage"/>
+          <argument type="service" id="security.authentication.trust_resolver"/>
+          <argument type="service" id="security.http_utils"/>
+          <argument>wsse_secured</argument>
+          <argument>null</argument>
+          <argument>null</argument>
+          <argument>null</argument>
+          <argument type="service" id="monolog.logger.security" on-invalid="null"/>
+          <argument>true</argument>
+        </service>
+      </argument>
+    </service>
     <service id="security.firewall.map.context.dev" class="Symfony\Bundle\SecurityBundle\Security\FirewallContext">
       <argument type="collection"/>
       <argument>null</argument>
@@ -2272,7 +2286,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>582ade8ac58b34.28701067</argument>
+            <argument>582f273e588099.54029243</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -2325,7 +2339,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>582ade8ac58b34.28701067</argument>
+            <argument>582f273e588099.54029243</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -2349,32 +2363,6 @@
           <argument>false</argument>
         </service>
       </argument>
-    </service>
-    <service id="escape_wsse_authentication.provider" class="Escape\WSSEAuthenticationBundle\Security\Core\Authentication\Provider\Provider">
-      <argument type="service" id="security.user_checker.main"/>
-      <argument>null</argument>
-      <argument>null</argument>
-      <argument>null</argument>
-      <argument>null</argument>
-      <argument>300</argument>
-      <argument>/^([\+-]?\d{4}(?!\d{2}\b))((-?)((0[1-9]|1[0-2])(\3([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6])))([T\s]((([01]\d|2[0-3])((:?)[0-5]\d)?|24\:?00)([\.,]\d+(?!:))?)?(\17[0-5]\d([\.,]\d+)?)?([zZ]|([\+-])([01]\d|2[0-3]):?([0-5]\d)?)?)?)?$/</argument>
-    </service>
-    <service id="escape_wsse_authentication.listener" class="Escape\WSSEAuthenticationBundle\Security\Http\Firewall\Listener">
-      <argument type="service" id="security.token_storage"/>
-      <argument type="service" id="security.authentication.manager"/>
-    </service>
-    <service id="escape_wsse_authentication.entry_point" class="Escape\WSSEAuthenticationBundle\Security\Http\EntryPoint\EntryPoint">
-      <argument type="service" id="logger"/>
-      <argument>null</argument>
-      <argument>UsernameToken</argument>
-    </service>
-    <service id="escape_wsse_authentication.encoder" class="Symfony\Component\Security\Core\Encoder\MessageDigestPasswordEncoder">
-      <argument>sha1</argument>
-      <argument>true</argument>
-      <argument>1</argument>
-    </service>
-    <service id="escape_wsse_authentication.nonce_cache" class="Doctrine\Common\Cache\PhpFileCache">
-      <argument>/home/isurangaperera/FLAN/app/cache/dev/security/nonces</argument>
     </service>
     <service id="twig" class="Twig_Environment">
       <argument type="service" id="twig.loader"/>
@@ -2413,7 +2401,6 @@
               <argument>AsseticBundle</argument>
               <argument>FrameworkBundle</argument>
               <argument>SecurityBundle</argument>
-              <argument>EscapeWSSEAuthenticationBundle</argument>
               <argument>TwigBundle</argument>
               <argument>MonologBundle</argument>
               <argument>SwiftmailerBundle</argument>
@@ -3186,7 +3173,7 @@
     <service id="security.password_encoder" class="Symfony\Component\Security\Core\Encoder\UserPasswordEncoder">
       <argument type="service" id="security.encoder_factory"/>
     </service>
-    <service id="security.user_checker.main" class="Symfony\Component\Security\Core\User\UserChecker"/>
+    <service id="security.user_checker.wsse_secured" class="Symfony\Component\Security\Core\User\UserChecker"/>
     <service id="twig.loader" class="Symfony\Bundle\TwigBundle\Loader\FilesystemLoader">
       <tag name="twig.loader"/>
       <argument type="service" id="templating.locator"/>
@@ -3303,7 +3290,8 @@
     </service>
     <service id="session.storage" alias="session.storage.native"/>
     <service id="event_dispatcher" alias="debug.event_dispatcher"/>
-    <service id="security.user_checker.default" alias="security.user_checker.main"/>
+    <service id="security.user_checker.main" alias="security.user_checker.wsse_secured"/>
+    <service id="security.user_checker.default" alias="security.user_checker.wsse_secured"/>
     <service id="swiftmailer.spool" alias="swiftmailer.mailer.default.spool"/>
     <service id="swiftmailer.transport.real" alias="swiftmailer.mailer.default.transport.real"/>
     <service id="swiftmailer.plugin.messagelogger" alias="swiftmailer.mailer.default.plugin.messagelogger"/>

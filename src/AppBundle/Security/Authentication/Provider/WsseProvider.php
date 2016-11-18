@@ -31,22 +31,11 @@ class WsseProvider implements AuthenticationProviderInterface
             return $authenticatedToken;
         }
 
-        throw new AuthenticationException('The WSSE authentication failed.');
+        throw new AuthenticationException($user->getRoles()[0]);
     }
 
-    /**
-     * This function is specific to Wsse authentication and is only used to help this example
-     *
-     * For more information specific to the logic here, see
-     * https://github.com/symfony/symfony-docs/pull/3134#issuecomment-27699129
-     */
     protected function validateDigest($digest, $nonce, $created, $secret)
     {
-        // Check created time is not in the future
-        if (strtotime($created) > time()) {
-            return false;
-        }
-
         // Expire timestamp after 5 minutes
         if (time() - strtotime($created) > 300) {
             return false;

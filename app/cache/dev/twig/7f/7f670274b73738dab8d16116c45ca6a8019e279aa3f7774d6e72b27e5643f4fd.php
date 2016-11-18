@@ -15,8 +15,8 @@ class __TwigTemplate_9d917eae04f0490f69fb18251cd21506f03c3aa4c78a416d4ed75e8be64
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_891f663ba511ca69e7e8cbac5738fe526868d0f826bfe4203ed70815b71a62c0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_891f663ba511ca69e7e8cbac5738fe526868d0f826bfe4203ed70815b71a62c0->enter($__internal_891f663ba511ca69e7e8cbac5738fe526868d0f826bfe4203ed70815b71a62c0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/index.html.twig"));
+        $__internal_305abf865dfe04766e541187979a09bc162e99a1ea6ebf426f8bd7e7cfa5a2c0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_305abf865dfe04766e541187979a09bc162e99a1ea6ebf426f8bd7e7cfa5a2c0->enter($__internal_305abf865dfe04766e541187979a09bc162e99a1ea6ebf426f8bd7e7cfa5a2c0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/index.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -100,71 +100,83 @@ class __TwigTemplate_9d917eae04f0490f69fb18251cd21506f03c3aa4c78a416d4ed75e8be64
 ";
         // line 17
         if (isset($context['assetic']['debug']) && $context['assetic']['debug']) {
-            // asset "bfe5279_0"
-            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_bfe5279_0") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("_controller/js/bfe5279_jquery.min_1.js");
-            // line 26
+            // asset "ed61d72_0"
+            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_ed61d72_0") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("_controller/js/ed61d72_jquery.min_1.js");
+            // line 28
             echo "<script src=\"";
             echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : $this->getContext($context, "asset_url")), "html", null, true);
             echo "\"></script>
 ";
-            // asset "bfe5279_1"
-            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_bfe5279_1") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("_controller/js/bfe5279_bootstrap.min_2.js");
+            // asset "ed61d72_1"
+            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_ed61d72_1") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("_controller/js/ed61d72_bootstrap.min_2.js");
             echo "<script src=\"";
             echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : $this->getContext($context, "asset_url")), "html", null, true);
             echo "\"></script>
 ";
-            // asset "bfe5279_2"
-            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_bfe5279_2") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("_controller/js/bfe5279_jquery-migrate.min_3.js");
+            // asset "ed61d72_2"
+            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_ed61d72_2") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("_controller/js/ed61d72_jquery-migrate.min_3.js");
             echo "<script src=\"";
             echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : $this->getContext($context, "asset_url")), "html", null, true);
             echo "\"></script>
 ";
-            // asset "bfe5279_3"
-            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_bfe5279_3") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("_controller/js/bfe5279_jquery.carouFredSel-6.1.0_4.js");
+            // asset "ed61d72_3"
+            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_ed61d72_3") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("_controller/js/ed61d72_jquery.carouFredSel-6.1.0_4.js");
             echo "<script src=\"";
             echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : $this->getContext($context, "asset_url")), "html", null, true);
             echo "\"></script>
 ";
-            // asset "bfe5279_4"
-            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_bfe5279_4") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("_controller/js/bfe5279_font-awesome-icons_5.js");
+            // asset "ed61d72_4"
+            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_ed61d72_4") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("_controller/js/ed61d72_font-awesome-icons_5.js");
             echo "<script src=\"";
             echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : $this->getContext($context, "asset_url")), "html", null, true);
             echo "\"></script>
 ";
-            // asset "bfe5279_5"
-            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_bfe5279_5") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("_controller/js/bfe5279_layerslider.transitions_6.js");
+            // asset "ed61d72_5"
+            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_ed61d72_5") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("_controller/js/ed61d72_layerslider.transitions_6.js");
             echo "<script src=\"";
             echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : $this->getContext($context, "asset_url")), "html", null, true);
             echo "\"></script>
 ";
-            // asset "bfe5279_6"
-            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_bfe5279_6") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("_controller/js/bfe5279_index_script_7.js");
+            // asset "ed61d72_6"
+            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_ed61d72_6") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("_controller/js/ed61d72_index_script_7.js");
             echo "<script src=\"";
             echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : $this->getContext($context, "asset_url")), "html", null, true);
             echo "\"></script>
 ";
-            // asset "bfe5279_7"
-            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_bfe5279_7") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("_controller/js/bfe5279_greensock_8.js");
+            // asset "ed61d72_7"
+            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_ed61d72_7") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("_controller/js/ed61d72_greensock_8.js");
             echo "<script src=\"";
             echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : $this->getContext($context, "asset_url")), "html", null, true);
             echo "\"></script>
 ";
-            // asset "bfe5279_8"
-            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_bfe5279_8") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("_controller/js/bfe5279_layerslider.kreaturamedia.jquery_9.js");
+            // asset "ed61d72_8"
+            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_ed61d72_8") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("_controller/js/ed61d72_layerslider.kreaturamedia.jquery_9.js");
+            echo "<script src=\"";
+            echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : $this->getContext($context, "asset_url")), "html", null, true);
+            echo "\"></script>
+";
+            // asset "ed61d72_9"
+            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_ed61d72_9") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("_controller/js/ed61d72_wsse_10.js");
+            echo "<script src=\"";
+            echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : $this->getContext($context, "asset_url")), "html", null, true);
+            echo "\"></script>
+";
+            // asset "ed61d72_10"
+            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_ed61d72_10") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("_controller/js/ed61d72_loginAjax_11.js");
             echo "<script src=\"";
             echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : $this->getContext($context, "asset_url")), "html", null, true);
             echo "\"></script>
 ";
         } else {
-            // asset "bfe5279"
-            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_bfe5279") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("_controller/js/bfe5279.js");
+            // asset "ed61d72"
+            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_ed61d72") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("_controller/js/ed61d72.js");
             echo "<script src=\"";
             echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : $this->getContext($context, "asset_url")), "html", null, true);
             echo "\"></script>
 ";
         }
         unset($context["asset_url"]);
-        // line 28
+        // line 30
         echo "
 </head>
 
@@ -261,8 +273,8 @@ class __TwigTemplate_9d917eae04f0490f69fb18251cd21506f03c3aa4c78a416d4ed75e8be64
                                 <div class=\"error\"></div>
                                 <div class=\"form loginBox\">
                                     <form method=\"post\" action=\"/login\" accept-charset=\"UTF-8\">
-                                    <input id=\"email\" class=\"form-control\" type=\"text\" placeholder=\"Email\" name=\"email\">
-                                    <input id=\"password\" class=\"form-control\" type=\"password\" placeholder=\"Password\" name=\"password\">
+                                    <input id=\"email1\" class=\"form-control\" type=\"text\" placeholder=\"Email\">
+                                    <input id=\"password1\" class=\"form-control\" type=\"password\" placeholder=\"Password\">
                                     <input class=\"btn btn-default btn-login\" type=\"button\" value=\"Login\" onclick=\"loginAjax()\">
                                     </form>
                                 </div>
@@ -297,11 +309,11 @@ class __TwigTemplate_9d917eae04f0490f69fb18251cd21506f03c3aa4c78a416d4ed75e8be64
       </div>
 
 ";
-        // line 159
+        // line 161
         if (isset($context['assetic']['debug']) && $context['assetic']['debug']) {
             // asset "66e182f_0"
             $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_66e182f_0") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("_controller/css/66e182f_login-register_1.css");
-            // line 160
+            // line 162
             echo "<link rel=\"stylesheet\" href=\"";
             echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : $this->getContext($context, "asset_url")), "html", null, true);
             echo "\" />
@@ -315,7 +327,7 @@ class __TwigTemplate_9d917eae04f0490f69fb18251cd21506f03c3aa4c78a416d4ed75e8be64
 ";
         }
         unset($context["asset_url"]);
-        // line 162
+        // line 164
         echo "
 <script type=\"text/javascript\">
 
@@ -354,7 +366,7 @@ class __TwigTemplate_9d917eae04f0490f69fb18251cd21506f03c3aa4c78a416d4ed75e8be64
 
                 <h2 class=\"ls-l\" style=\"top:351px;left:59px; text-transform: capitalize; font-weight:normal;width:;height:;padding-top:15px;padding-right:15px;padding-bottom:15px;padding-left:15px;border-top:;border-right:;border-bottom:;border-left:;font-family:;font-size:24px;line-height:;color:#ffffff;background:;border-radius:;white-space: nowrap;\">Watch your dream become reality</h2>
 
-                <a href=\"#\" target=\"_blank\" class=\"ls-l\" style=\"top:420px;left:72px; margin-right:0px;\">
+                <a href=\"/post\" target=\"_blank\" class=\"ls-l\" style=\"top:420px;left:72px; margin-right:0px;\">
                   <p class=\"button-medium\" style=\"text-shadow: rgba(0, 0, 0, 0.498039) 0px 0px 5px;width:;height:;padding-top:15px;padding-right:40px;padding-bottom:15px ;padding-left:40px;border-top:;border-right:;border-bottom:;border-left:;font-family:;font-size:14px;line-height:;color:;background:;border-radius:;white-space: nowrap;\">
                     <i style=\"margin-right:5px\" class=\"fa fa-th\" aria-hidden=\"true\"></i>I want to Hire
                   </p>
@@ -377,7 +389,7 @@ class __TwigTemplate_9d917eae04f0490f69fb18251cd21506f03c3aa4c78a416d4ed75e8be64
   </html>
 ";
         
-        $__internal_891f663ba511ca69e7e8cbac5738fe526868d0f826bfe4203ed70815b71a62c0->leave($__internal_891f663ba511ca69e7e8cbac5738fe526868d0f826bfe4203ed70815b71a62c0_prof);
+        $__internal_305abf865dfe04766e541187979a09bc162e99a1ea6ebf426f8bd7e7cfa5a2c0->leave($__internal_305abf865dfe04766e541187979a09bc162e99a1ea6ebf426f8bd7e7cfa5a2c0_prof);
 
     }
 
@@ -393,7 +405,7 @@ class __TwigTemplate_9d917eae04f0490f69fb18251cd21506f03c3aa4c78a416d4ed75e8be64
 
     public function getDebugInfo()
     {
-        return array (  319 => 162,  305 => 160,  301 => 159,  168 => 28,  106 => 26,  102 => 17,  99 => 16,  79 => 14,  75 => 11,  72 => 10,  34 => 8,  30 => 7,  22 => 1,);
+        return array (  331 => 164,  317 => 162,  313 => 161,  180 => 30,  106 => 28,  102 => 17,  99 => 16,  79 => 14,  75 => 11,  72 => 10,  34 => 8,  30 => 7,  22 => 1,);
     }
 
     public function getSource()
@@ -422,7 +434,9 @@ filter='cssrewrite' %}
 'bundles/app/js/layerslider.transitions.js'
 'bundles/app/js/index_script.js'
 'bundles/app/js/greensock.js'
-'bundles/app/js/layerslider.kreaturamedia.jquery.js'%}
+'bundles/app/js/layerslider.kreaturamedia.jquery.js'
+'bundles/app/js/wsse.js'
+'bundles/app/js/loginAjax.js'%}
 <script src=\"{{ asset_url }}\"></script>
 {% endjavascripts %}
 
@@ -521,8 +535,8 @@ filter='cssrewrite' %}
                                 <div class=\"error\"></div>
                                 <div class=\"form loginBox\">
                                     <form method=\"post\" action=\"/login\" accept-charset=\"UTF-8\">
-                                    <input id=\"email\" class=\"form-control\" type=\"text\" placeholder=\"Email\" name=\"email\">
-                                    <input id=\"password\" class=\"form-control\" type=\"password\" placeholder=\"Password\" name=\"password\">
+                                    <input id=\"email1\" class=\"form-control\" type=\"text\" placeholder=\"Email\">
+                                    <input id=\"password1\" class=\"form-control\" type=\"password\" placeholder=\"Password\">
                                     <input class=\"btn btn-default btn-login\" type=\"button\" value=\"Login\" onclick=\"loginAjax()\">
                                     </form>
                                 </div>
@@ -597,7 +611,7 @@ filter='cssrewrite' %}
 
                 <h2 class=\"ls-l\" style=\"top:351px;left:59px; text-transform: capitalize; font-weight:normal;width:;height:;padding-top:15px;padding-right:15px;padding-bottom:15px;padding-left:15px;border-top:;border-right:;border-bottom:;border-left:;font-family:;font-size:24px;line-height:;color:#ffffff;background:;border-radius:;white-space: nowrap;\">Watch your dream become reality</h2>
 
-                <a href=\"#\" target=\"_blank\" class=\"ls-l\" style=\"top:420px;left:72px; margin-right:0px;\">
+                <a href=\"/post\" target=\"_blank\" class=\"ls-l\" style=\"top:420px;left:72px; margin-right:0px;\">
                   <p class=\"button-medium\" style=\"text-shadow: rgba(0, 0, 0, 0.498039) 0px 0px 5px;width:;height:;padding-top:15px;padding-right:40px;padding-bottom:15px ;padding-left:40px;border-top:;border-right:;border-bottom:;border-left:;font-family:;font-size:14px;line-height:;color:;background:;border-radius:;white-space: nowrap;\">
                     <i style=\"margin-right:5px\" class=\"fa fa-th\" aria-hidden=\"true\"></i>I want to Hire
                   </p>

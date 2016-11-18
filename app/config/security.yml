@@ -15,6 +15,11 @@ security:
             memory: ~
 
     firewalls:
+        wsse_secured:
+            pattern:   ^/login/
+            stateless: true
+            wsse:      true
+            provider: our_db_provider
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
@@ -25,3 +30,5 @@ security:
             http_basic: ~
             #provider: our_db_provider
             anonymous: ~
+    access_control:
+        - { path: ^/login/, roles: ROLE_USER }

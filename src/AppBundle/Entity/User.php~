@@ -6,7 +6,7 @@ use Symfony\Component\Security\Core\User\AdvancedUserInterface;
 
 /**
  * @ORM\Table(name="user")
- * @ORM\Entity(repositoryClass="AppBundle\Entity\UserRepository")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\User")
  */
 class User implements AdvancedUserInterface, \Serializable
 {
@@ -26,11 +26,6 @@ class User implements AdvancedUserInterface, \Serializable
      * @ORM\Column(type="string", length=64)
      */
     private $password;
-
-    /**
-     * @ORM\Column(type="string", length=60, unique=true)
-     */
-    private $email;
 
     /**
      * @ORM\Column(name="is_active", type="boolean")

@@ -35,5 +35,15 @@ class WsseFactory implements SecurityFactoryInterface
 
     public function addConfiguration(NodeDefinition $node)
     {
+       $node
+        ->children()
+        ->scalarNode('lifetime')->defaultValue(300)
+        ->end()
+        ->scalarNode('date_format')->defaultValue('Y-m-d\TH:i:s\Z')
+        ->end()
+        ->scalarNode('realm')->defaultValue('secure-api')
+        ->end()
+        ->scalarNode('profile')->defaultValue('sample')
+        ->end();
     }
 }
