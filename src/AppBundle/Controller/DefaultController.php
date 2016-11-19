@@ -42,6 +42,19 @@ class DefaultController extends Controller
         $session = new Session();
         $session->set('user_id', $id);
 
-        return new Response('331');
+        return new Response('200');
+    }
+
+    /**
+     * @Route("checksession/", name="sessionCheck")
+     */
+    public function sessionCheck()
+    {       
+        $session = new Session();
+        $user_id = $session->get('user_id');
+
+        if($user_id != '')
+            return new Response($user_id);
+        return new Response();
     }
 }

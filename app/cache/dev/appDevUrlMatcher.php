@@ -308,6 +308,15 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'login')), array (  '_controller' => 'AppBundle\\Controller\\DefaultController::login',));
         }
 
+        // sessionCheck
+        if (rtrim($pathinfo, '/') === '/checksession') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'sessionCheck');
+            }
+
+            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::sessionCheck',  '_route' => 'sessionCheck',);
+        }
+
         if (0 === strpos($pathinfo, '/p')) {
             // PostProject
             if ($pathinfo === '/post') {
