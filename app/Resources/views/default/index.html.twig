@@ -46,10 +46,16 @@ filter='cssrewrite' %}
             <li><a target="_blank" class="skype" href="skype:#?add">skype</a></li>
           </ul>
         </div>
-        <div class="top-right">
+       
+        <div class="top-right" id="tright">
           <a href="#myModalR" role="button" class="register-top" data-toggle="modal"><i class="fa fa-lock" aria-hidden="true"></i> Register</a>
           <a href="#" id="login" role="button" class="login-top" data-toggle="modal"><i class="fa fa-key" aria-hidden="true"></i> Login</a>
         </div>
+
+        <div class="top-right" id="tright2" hidden>
+          <a href="#" id="user_name" role="button" class="login-top" data-toggle="modal"></a>
+        </div>
+      
       </div><!-- top right -->
     </div><!-- Container -->
 
@@ -120,7 +126,6 @@ filter='cssrewrite' %}
                                       <span>or</span>
                                     <div class="line r"></div>
                                 </div>
-                                <div class="error"></div>
                                 <div class="form loginBox">
                                     <form method="post" action="/login" accept-charset="UTF-8">
                                     <input id="email1" class="form-control" type="text" placeholder="Email">

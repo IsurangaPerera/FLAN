@@ -34,13 +34,14 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("login/", name="login")
+     * Matches /login/*
+     * @Route("login/{id}/", name="login")
      */
-    public function login(Request $request)
+    public function login($id)
     {       
         $session = new Session();
-        $session->set('name', 'Isuranga');
-        
-        return new Response($session->getId());
+        $session->set('user_id', $id);
+
+        return new Response('331');
     }
 }

@@ -15,8 +15,8 @@ class __TwigTemplate_9d917eae04f0490f69fb18251cd21506f03c3aa4c78a416d4ed75e8be64
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_949b4eed8acb34e6306a486c7d321e1d4a71ef58721267828290d58ef7cec9d9 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_949b4eed8acb34e6306a486c7d321e1d4a71ef58721267828290d58ef7cec9d9->enter($__internal_949b4eed8acb34e6306a486c7d321e1d4a71ef58721267828290d58ef7cec9d9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/index.html.twig"));
+        $__internal_145f149b8b50063e592f9d3c491195f92b8d504e864471d3eb96388442b81a51 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_145f149b8b50063e592f9d3c491195f92b8d504e864471d3eb96388442b81a51->enter($__internal_145f149b8b50063e592f9d3c491195f92b8d504e864471d3eb96388442b81a51_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/index.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -196,10 +196,16 @@ class __TwigTemplate_9d917eae04f0490f69fb18251cd21506f03c3aa4c78a416d4ed75e8be64
             <li><a target=\"_blank\" class=\"skype\" href=\"skype:#?add\">skype</a></li>
           </ul>
         </div>
-        <div class=\"top-right\">
+       
+        <div class=\"top-right\" id=\"tright\">
           <a href=\"#myModalR\" role=\"button\" class=\"register-top\" data-toggle=\"modal\"><i class=\"fa fa-lock\" aria-hidden=\"true\"></i> Register</a>
           <a href=\"#\" id=\"login\" role=\"button\" class=\"login-top\" data-toggle=\"modal\"><i class=\"fa fa-key\" aria-hidden=\"true\"></i> Login</a>
         </div>
+
+        <div class=\"top-right\" id=\"tright2\" hidden>
+          <a href=\"#\" id=\"user_name\" role=\"button\" class=\"login-top\" data-toggle=\"modal\"></a>
+        </div>
+      
       </div><!-- top right -->
     </div><!-- Container -->
 
@@ -270,7 +276,6 @@ class __TwigTemplate_9d917eae04f0490f69fb18251cd21506f03c3aa4c78a416d4ed75e8be64
                                       <span>or</span>
                                     <div class=\"line r\"></div>
                                 </div>
-                                <div class=\"error\"></div>
                                 <div class=\"form loginBox\">
                                     <form method=\"post\" action=\"/login\" accept-charset=\"UTF-8\">
                                     <input id=\"email1\" class=\"form-control\" type=\"text\" placeholder=\"Email\">
@@ -309,11 +314,11 @@ class __TwigTemplate_9d917eae04f0490f69fb18251cd21506f03c3aa4c78a416d4ed75e8be64
       </div>
 
 ";
-        // line 161
+        // line 166
         if (isset($context['assetic']['debug']) && $context['assetic']['debug']) {
             // asset "66e182f_0"
             $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_66e182f_0") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("_controller/css/66e182f_login-register_1.css");
-            // line 162
+            // line 167
             echo "<link rel=\"stylesheet\" href=\"";
             echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : $this->getContext($context, "asset_url")), "html", null, true);
             echo "\" />
@@ -327,7 +332,7 @@ class __TwigTemplate_9d917eae04f0490f69fb18251cd21506f03c3aa4c78a416d4ed75e8be64
 ";
         }
         unset($context["asset_url"]);
-        // line 164
+        // line 169
         echo "
 <script type=\"text/javascript\">
 
@@ -389,7 +394,7 @@ class __TwigTemplate_9d917eae04f0490f69fb18251cd21506f03c3aa4c78a416d4ed75e8be64
   </html>
 ";
         
-        $__internal_949b4eed8acb34e6306a486c7d321e1d4a71ef58721267828290d58ef7cec9d9->leave($__internal_949b4eed8acb34e6306a486c7d321e1d4a71ef58721267828290d58ef7cec9d9_prof);
+        $__internal_145f149b8b50063e592f9d3c491195f92b8d504e864471d3eb96388442b81a51->leave($__internal_145f149b8b50063e592f9d3c491195f92b8d504e864471d3eb96388442b81a51_prof);
 
     }
 
@@ -405,7 +410,7 @@ class __TwigTemplate_9d917eae04f0490f69fb18251cd21506f03c3aa4c78a416d4ed75e8be64
 
     public function getDebugInfo()
     {
-        return array (  331 => 164,  317 => 162,  313 => 161,  180 => 30,  106 => 28,  102 => 17,  99 => 16,  79 => 14,  75 => 11,  72 => 10,  34 => 8,  30 => 7,  22 => 1,);
+        return array (  336 => 169,  322 => 167,  318 => 166,  180 => 30,  106 => 28,  102 => 17,  99 => 16,  79 => 14,  75 => 11,  72 => 10,  34 => 8,  30 => 7,  22 => 1,);
     }
 
     public function getSource()
@@ -458,10 +463,16 @@ filter='cssrewrite' %}
             <li><a target=\"_blank\" class=\"skype\" href=\"skype:#?add\">skype</a></li>
           </ul>
         </div>
-        <div class=\"top-right\">
+       
+        <div class=\"top-right\" id=\"tright\">
           <a href=\"#myModalR\" role=\"button\" class=\"register-top\" data-toggle=\"modal\"><i class=\"fa fa-lock\" aria-hidden=\"true\"></i> Register</a>
           <a href=\"#\" id=\"login\" role=\"button\" class=\"login-top\" data-toggle=\"modal\"><i class=\"fa fa-key\" aria-hidden=\"true\"></i> Login</a>
         </div>
+
+        <div class=\"top-right\" id=\"tright2\" hidden>
+          <a href=\"#\" id=\"user_name\" role=\"button\" class=\"login-top\" data-toggle=\"modal\"></a>
+        </div>
+      
       </div><!-- top right -->
     </div><!-- Container -->
 
@@ -532,7 +543,6 @@ filter='cssrewrite' %}
                                       <span>or</span>
                                     <div class=\"line r\"></div>
                                 </div>
-                                <div class=\"error\"></div>
                                 <div class=\"form loginBox\">
                                     <form method=\"post\" action=\"/login\" accept-charset=\"UTF-8\">
                                     <input id=\"email1\" class=\"form-control\" type=\"text\" placeholder=\"Email\">

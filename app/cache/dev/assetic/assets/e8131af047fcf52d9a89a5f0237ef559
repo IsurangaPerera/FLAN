@@ -11,7 +11,7 @@ function loginAjax(){
         	if(data == '331') {
         		$("#myModal").modal('hide');
         		$("#tright").prop("hidden", true);
-        		$("#user_name").html('<i class="fa fa-desktop" aria-hidden="true"></i>' + email);
+        		$("#user_name").html('<i class="fa fa-key" aria-hidden="true"></i>' + email);
         		$("#tright2").prop("hidden", false);
         	}
     	}

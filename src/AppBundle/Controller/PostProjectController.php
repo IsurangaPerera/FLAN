@@ -27,12 +27,14 @@ class PostProjectController extends Controller
      */
     public function postAction(Request $request)
     {
+        $session = new Session();
+
         $data = $request->getContent();
         $data =  json_decode($data, true);
 
         $project = new Project();
         
-        $project->setUserId(345);
+        $project->setUserId($session->get('user_id'));
         $project->setType($data["project"][0]["type"]);
         $project->setName($data["project"][0]["name"]);
         $project->setDescription($data["project"][0]["description"]);
@@ -42,21 +44,6 @@ class PostProjectController extends Controller
     	$em->persist($project);
 
     	$em->flush();
-        print_r($this->get('session'));
-    	return new Response();
-       
+    	return new Response();  
     }
-
-    /**
-     * @Route("/ppp")
-     */
-    public function ppp(Request $request)
-    {
-
-        $session = new Session();
-        return new Response($session->get('name'));
-       
-    }
-
-   
 }
