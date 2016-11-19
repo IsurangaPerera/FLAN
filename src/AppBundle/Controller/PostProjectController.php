@@ -16,8 +16,8 @@ class PostProjectController extends Controller
     public function indexAction(Request $request)
     {
         // replace this example code with whatever you need
-        return $this->render('default/postProject.html.twig'); 
-        
+        return $this->render('default/postProject.html.twig');
+
     }
 
     /**
@@ -40,8 +40,8 @@ class PostProjectController extends Controller
 
     	$em->flush();
     	return new Response("os");
-       
+
     }
 
-   
+
 }

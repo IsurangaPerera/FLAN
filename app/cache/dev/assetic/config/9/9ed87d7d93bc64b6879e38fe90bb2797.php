@@ -118,4 +118,28 @@ return array (
       ),
     ),
   ),
+  '4bb0af4' => 
+  array (
+    0 => 
+    array (
+      0 => 'bundles/app/js/jquery.min.js',
+      1 => 'bundles/app/js/bootstrap.min.js',
+      2 => 'bundles/app/js/jquery-migrate.min.js',
+      3 => 'bundles/app/js/font-awesome-icons.js',
+      4 => 'bundles/app/js/load-proposals.js',
+    ),
+    1 => 
+    array (
+    ),
+    2 => 
+    array (
+      'output' => '_controller/js/4bb0af4.js',
+      'name' => '4bb0af4',
+      'debug' => NULL,
+      'combine' => NULL,
+      'vars' => 
+      array (
+      ),
+    ),
+  ),
 );

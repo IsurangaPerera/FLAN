@@ -7,6 +7,7 @@ use AppBundle\Entity\Project;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 /**
  * Proposal controller.
@@ -23,14 +24,43 @@ class ProposalController extends Controller
      */
     public function indexAction()
     {
-        $em = $this->getDoctrine()->getManager();
+      $em = $this->getDoctrine()->getManager();
 
-        $proposals = $em->getRepository('AppBundle:Proposal')->findAll();
-        $project = $em->getRepository('AppBundle:Project')->findAll();
 
-        return $this->render('default/proposal.html.twig', array(
-            'proposals' => $proposals,'myProject'=> $project,
-        ));
+      $project = $em->getRepository('AppBundle:Project')->findAll();
+
+      return $this->render('default/proposal.html.twig', array(
+          'myProject'=> $project,
+      ));
+
+    }
+
+
+    /**
+     * Lists all proposal entities.
+     *
+     * @Route("/show", name="view all")
+     * @Method("GET")
+     */
+    public function show(Request $request)
+    {
+
+      $proposal = $this->getDoctrine()
+                    ->getManager()
+                   ->getRepository('AppBundle:Proposal')
+                   ->findAll();
+      $arrayCollection = array();
+
+      foreach($proposal as $item) {
+          $arrayCollection[] = array(
+              'id' => $item->getId(),
+              'description'=> $item->getDescription(),
+
+          );
+      }
+
+      return new JsonResponse($arrayCollection);
+
     }
 
     /**

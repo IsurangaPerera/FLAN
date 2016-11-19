@@ -15,34 +15,34 @@ class __TwigTemplate_1bc7197e97d46d72478a048d045a18fb816d7ebe01852a997c3e677e199
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a1809f00f44f5848b23982369116892b8d88f0492b55d9af1cbef4732a41703c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_a1809f00f44f5848b23982369116892b8d88f0492b55d9af1cbef4732a41703c->enter($__internal_a1809f00f44f5848b23982369116892b8d88f0492b55d9af1cbef4732a41703c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/postProject.html.twig"));
+        $__internal_9639b4e0abf63d34ff7cb691dfaa4b09a33e9c058c3e0d6910a10ea2b0aa7da6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_9639b4e0abf63d34ff7cb691dfaa4b09a33e9c058c3e0d6910a10ea2b0aa7da6->enter($__internal_9639b4e0abf63d34ff7cb691dfaa4b09a33e9c058c3e0d6910a10ea2b0aa7da6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/postProject.html.twig"));
 
         // line 1
         echo "
 <!DOCTYPE html>
 <html class=\" is-responsive\" lang=\"en\">
 <head>
-    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/> 
-    
+    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>
+
     <meta name=\"viewport\" content=\"width=device-width\"/>
 
     <title>Post a Project | Freelancer</title>
 
     <!-- css section -->
     <link href=\"https://cdn5.f-cdn.com/build/css/js-plugins/jquery.fileupload-ui.css?v=cd7ec3a496ae786928f334b389815dd4&amp;m=6\" type=\"text/css\" rel=\"stylesheet\" />
-    
+
     <link href=\"https://cdn2.f-cdn.com/build/css/flux/base.css?v=22d78e710e51c71919013de0d743d927&amp;m=6\" type=\"text/css\" rel=\"stylesheet\" />
-    
+
     <link href=\"https://cdn6.f-cdn.com/build/css/abtests/20150907/post-project.css?v=a6a02fc08c66041f6818cddd64960bc4&amp;m=6\" type=\"text/css\" rel=\"stylesheet\" />
 
     <link href=\"https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css\" rel=\"stylesheet\" />
-    
+
     <!-- Prevent FOUC by hiding the body. This is similar to ng-cloak however not all layouts have angularjs-yet -->
     <style type=\"text/css\">
     .no-fouc { display: none;}
     </style>
-    
+
     ";
         // line 25
         if (isset($context['assetic']['debug']) && $context['assetic']['debug']) {
@@ -133,7 +133,7 @@ class __TwigTemplate_1bc7197e97d46d72478a048d045a18fb816d7ebe01852a997c3e677e199
                                 </li>
                                 <li class=\"RadioTabs-item authTypeBtn\">
                                     <input type=\"radio\" value=\"userTypeReturning\" id=\"userTypeReturning\" name=\"userType\"
-                                    class=\"CustomRadio\" 
+                                    class=\"CustomRadio\"
                                     data-qtsb-label=\"click_To_Display_Login\">
                                     <label for=\"userTypeReturning\" class=\"CustomRadio\">
                                         <span class=\"CustomRadio-textLabel PostProject-stepLabel\">I am a returning User</span>
@@ -372,7 +372,7 @@ class __TwigTemplate_1bc7197e97d46d72478a048d045a18fb816d7ebe01852a997c3e677e199
                         <li class=\"form-step select2-form-step\">
                             <label for=\"project-skills\" class=\"PostProject-stepLabel\">What skills are required?
                             </label>
-                            
+
                             <select id=\"project-skills\" class=\"js-example-basic-multiple\" multiple=\"multiple\">
                                 <option>Algorithm</option>
                                 <option>Web design</option>
@@ -380,7 +380,7 @@ class __TwigTemplate_1bc7197e97d46d72478a048d045a18fb816d7ebe01852a997c3e677e199
                              <script type=\"text/javascript\">
                             \$(\".js-example-basic-multiple\").select2();
                             </script>
-                            
+
                             <div class=\"skill-suggestion-widget\">
                                 <header class=\"skill-suggestion-head\">Skill Suggestions (add 5 more)</header>
                                 <ul class=\"skill-suggestion-list\">
@@ -603,12 +603,9 @@ class __TwigTemplate_1bc7197e97d46d72478a048d045a18fb816d7ebe01852a997c3e677e199
 </div>
 </body>
 </html>
-
-
-
 ";
         
-        $__internal_a1809f00f44f5848b23982369116892b8d88f0492b55d9af1cbef4732a41703c->leave($__internal_a1809f00f44f5848b23982369116892b8d88f0492b55d9af1cbef4732a41703c_prof);
+        $__internal_9639b4e0abf63d34ff7cb691dfaa4b09a33e9c058c3e0d6910a10ea2b0aa7da6->leave($__internal_9639b4e0abf63d34ff7cb691dfaa4b09a33e9c058c3e0d6910a10ea2b0aa7da6_prof);
 
     }
 
@@ -633,26 +630,26 @@ class __TwigTemplate_1bc7197e97d46d72478a048d045a18fb816d7ebe01852a997c3e677e199
 <!DOCTYPE html>
 <html class=\" is-responsive\" lang=\"en\">
 <head>
-    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/> 
-    
+    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>
+
     <meta name=\"viewport\" content=\"width=device-width\"/>
 
     <title>Post a Project | Freelancer</title>
 
     <!-- css section -->
     <link href=\"https://cdn5.f-cdn.com/build/css/js-plugins/jquery.fileupload-ui.css?v=cd7ec3a496ae786928f334b389815dd4&amp;m=6\" type=\"text/css\" rel=\"stylesheet\" />
-    
+
     <link href=\"https://cdn2.f-cdn.com/build/css/flux/base.css?v=22d78e710e51c71919013de0d743d927&amp;m=6\" type=\"text/css\" rel=\"stylesheet\" />
-    
+
     <link href=\"https://cdn6.f-cdn.com/build/css/abtests/20150907/post-project.css?v=a6a02fc08c66041f6818cddd64960bc4&amp;m=6\" type=\"text/css\" rel=\"stylesheet\" />
 
     <link href=\"https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css\" rel=\"stylesheet\" />
-    
+
     <!-- Prevent FOUC by hiding the body. This is similar to ng-cloak however not all layouts have angularjs-yet -->
     <style type=\"text/css\">
     .no-fouc { display: none;}
     </style>
-    
+
     {% javascripts 'bundles/app/js/jquery.min.js'
     'bundles/app/js/bootstrap.min.js'
     'bundles/app/js/jquery-migrate.min.js'
@@ -706,7 +703,7 @@ class __TwigTemplate_1bc7197e97d46d72478a048d045a18fb816d7ebe01852a997c3e677e199
                                 </li>
                                 <li class=\"RadioTabs-item authTypeBtn\">
                                     <input type=\"radio\" value=\"userTypeReturning\" id=\"userTypeReturning\" name=\"userType\"
-                                    class=\"CustomRadio\" 
+                                    class=\"CustomRadio\"
                                     data-qtsb-label=\"click_To_Display_Login\">
                                     <label for=\"userTypeReturning\" class=\"CustomRadio\">
                                         <span class=\"CustomRadio-textLabel PostProject-stepLabel\">I am a returning User</span>
@@ -945,7 +942,7 @@ class __TwigTemplate_1bc7197e97d46d72478a048d045a18fb816d7ebe01852a997c3e677e199
                         <li class=\"form-step select2-form-step\">
                             <label for=\"project-skills\" class=\"PostProject-stepLabel\">What skills are required?
                             </label>
-                            
+
                             <select id=\"project-skills\" class=\"js-example-basic-multiple\" multiple=\"multiple\">
                                 <option>Algorithm</option>
                                 <option>Web design</option>
@@ -953,7 +950,7 @@ class __TwigTemplate_1bc7197e97d46d72478a048d045a18fb816d7ebe01852a997c3e677e199
                              <script type=\"text/javascript\">
                             \$(\".js-example-basic-multiple\").select2();
                             </script>
-                            
+
                             <div class=\"skill-suggestion-widget\">
                                 <header class=\"skill-suggestion-head\">Skill Suggestions (add 5 more)</header>
                                 <ul class=\"skill-suggestion-list\">
@@ -1176,9 +1173,6 @@ class __TwigTemplate_1bc7197e97d46d72478a048d045a18fb816d7ebe01852a997c3e677e199
 </div>
 </body>
 </html>
-
-
-
 ";
     }
 }

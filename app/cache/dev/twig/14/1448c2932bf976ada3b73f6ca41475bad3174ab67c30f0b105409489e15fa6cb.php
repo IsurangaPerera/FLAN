@@ -15,8 +15,8 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_699c01c399f0172d31e2837f508a7374d2060cdd082da9a4037ce4e9e69f44f9 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_699c01c399f0172d31e2837f508a7374d2060cdd082da9a4037ce4e9e69f44f9->enter($__internal_699c01c399f0172d31e2837f508a7374d2060cdd082da9a4037ce4e9e69f44f9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/proposal.html.twig"));
+        $__internal_18557c527d74de728c419a301cf6644534a418b903f3ffabc19cd8be9c51d5ec = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_18557c527d74de728c419a301cf6644534a418b903f3ffabc19cd8be9c51d5ec->enter($__internal_18557c527d74de728c419a301cf6644534a418b903f3ffabc19cd8be9c51d5ec_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/proposal.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -31,6 +31,15 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
 
     <meta http-equiv=\"x-dns-prefetch-control\" content=\"on\">
 
+    <style>
+    #prop_tr{
+      height: 30px;
+      background-color: red;
+    }
+
+
+    </style>
+
     <link rel=\"icon\" href=\"https://www.freelancer.com/favicon.ico\" type=\"image/ico\"/>
     <link rel=\"shortcut icon\" href=\"https://www.freelancer.com/favicon.ico\"/>
     <link rel=\"publisher\" href=\"http://plus.google.com/+Freelancer\"/>
@@ -44,19 +53,51 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
     <link href=\"https://cdn3.f-cdn.com/build/css/flux/LoggedInBase.css?v=50e5a05e57ee3ff4bd0fd457ba1b6ed3&amp;m=6\" type=\"text/css\" rel=\"stylesheet\" />
     <link href=\"https://cdn2.f-cdn.com/build/css/flux/layout/PageProjectView.css?v=0ea54547ee85298ed6d6fee2d18d22f6&amp;m=6\" type=\"text/css\" rel=\"stylesheet\" />
 
-
-
-      <script src=\"https://cdn5.f-cdn.com/js/jquery-1.10.2.min.js?v=628072e7212db1e8cdacb22b21752cda&m=6\" type=\"text/javascript\"></script>
-      <script src=\"https://cdn5.f-cdn.com/build/js/pinky/utils/jquery-ui.custom.min.js?v=67493e32a93c0398e34eaf319a35dc40&amp;m=6\" type=\"text/javascript\"></script>
-    <script src=\"https://cdn6.f-cdn.com/build/js/bootstrap/bootstrap.2-32.min.js?v=97642893d14d4a5ccb884dc5ac77f061&amp;m=6\" type=\"text/javascript\"></script>
-    <script src=\"https://cdn3.f-cdn.com/build/js/bootstrap-popover.js?v=9dd8971e38430339cfa88bfa1ca01c66&m=6\" type=\"text/javascript\"></script>
-    <!-- preloaded javascript libraries -->
-    <script src=\"https://cdn2.f-cdn.com/js/lib/backbone/underscore-min.js?v=479cbbe3b04152bf4b6c7531f6bf200d&m=6\" type=\"text/javascript\"></script>
-    <script src=\"https://cdn5.f-cdn.com/js/lib/backbone/backbone_0_5_3.js?v=f26e061c598879ffbbf60199b390549f&m=6\" type=\"text/javascript\"></script>
-    <script src=\"https://cdn3.f-cdn.com/build/js/modernizr2.6.2.min.js?v=a305adee51a11fae6bddfe9b5c296734&amp;m=6\" type=\"text/javascript\"></script>
-    <script src=\"https://cdn2.f-cdn.com/build/js/global.js?v=ccccc77b532be1867e485a4ecd049bcf&amp;m=6\" type=\"text/javascript\"></script>
-    <script src=\"https://cdn2.f-cdn.com/js/auto-increase-count.js?v=6fe941b9060d915a6211302a31df9d5d&m=6\" type=\"text/javascript\"></script>
-    <script src=\"https://cdn2.f-cdn.com/js/formTools/formTools.js?v=1e479643470201bf941da8648d5c1e46&m=6\" type=\"text/javascript\"></script>
+    ";
+        // line 35
+        if (isset($context['assetic']['debug']) && $context['assetic']['debug']) {
+            // asset "4bb0af4_0"
+            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_4bb0af4_0") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("_controller/js/4bb0af4_jquery.min_1.js");
+            // line 40
+            echo "    <script src=\"";
+            echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : $this->getContext($context, "asset_url")), "html", null, true);
+            echo "\"></script>
+    ";
+            // asset "4bb0af4_1"
+            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_4bb0af4_1") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("_controller/js/4bb0af4_bootstrap.min_2.js");
+            echo "    <script src=\"";
+            echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : $this->getContext($context, "asset_url")), "html", null, true);
+            echo "\"></script>
+    ";
+            // asset "4bb0af4_2"
+            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_4bb0af4_2") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("_controller/js/4bb0af4_jquery-migrate.min_3.js");
+            echo "    <script src=\"";
+            echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : $this->getContext($context, "asset_url")), "html", null, true);
+            echo "\"></script>
+    ";
+            // asset "4bb0af4_3"
+            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_4bb0af4_3") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("_controller/js/4bb0af4_font-awesome-icons_4.js");
+            echo "    <script src=\"";
+            echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : $this->getContext($context, "asset_url")), "html", null, true);
+            echo "\"></script>
+    ";
+            // asset "4bb0af4_4"
+            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_4bb0af4_4") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("_controller/js/4bb0af4_load-proposals_5.js");
+            echo "    <script src=\"";
+            echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : $this->getContext($context, "asset_url")), "html", null, true);
+            echo "\"></script>
+    ";
+        } else {
+            // asset "4bb0af4"
+            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("_assetic_4bb0af4") : $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("_controller/js/4bb0af4.js");
+            echo "    <script src=\"";
+            echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : $this->getContext($context, "asset_url")), "html", null, true);
+            echo "\"></script>
+    ";
+        }
+        unset($context["asset_url"]);
+        // line 42
+        echo "
 
   </head>
 
@@ -160,7 +201,7 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
                                       <!--if project type ==project-->
                                         <span class=\"primary-nav-project-name\">
                                             ";
-        // line 141
+        // line 145
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["myProject"]) ? $context["myProject"] : $this->getContext($context, "myProject")), 0, array(), "array"), "name", array()), "html", null, true);
         echo "
                                         </span>
@@ -168,7 +209,7 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
                                           <!--if project type ==project-->
                                         <span  class=\"primary-nav-project-name\">
                                             ";
-        // line 146
+        // line 150
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["myProject"]) ? $context["myProject"] : $this->getContext($context, "myProject")), 0, array(), "array"), "type", array()), "html", null, true);
         echo "
                                         </span>
@@ -659,16 +700,7 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
                 <fl-secondary-nav-item href=\"/api/docs/information\" label=\"Information\" title=\"Information\">
                     <nav class=\"primary-subnav\">
                         <div class=\"primary-subnav-group\">
-                            <ul class=\"primary-subnav-list\">
-                                <fl-secondary-subnav-item href=\"/api/docs/public_auth\" title=\"Authentication\"></fl-secondary-subnav-item>
-                                <fl-secondary-subnav-item href=\"/api/docs/rate_limiting\" title=\"Rate Limiting\"></fl-secondary-subnav-item>
-                                <fl-secondary-subnav-item href=\"/api/docs/input_formatting\" title=\"Input Formatting\"></fl-secondary-subnav-item>
-                                <fl-secondary-subnav-item href=\"/api/docs/output_formatting\" title=\"Output Formatting\"></fl-secondary-subnav-item>
-                                <fl-secondary-subnav-item href=\"/api/docs/python_sdk\" title=\"Python SDK\"></fl-secondary-subnav-item>
-                                <fl-secondary-subnav-item href=\"/api/docs/business_terminology\" title=\"Business Terminology\"></fl-secondary-subnav-item>
-                                <fl-secondary-subnav-item href=\"/api/docs/webhooks\" title=\"Webhooks\"></fl-secondary-subnav-item>
 
-                            </ul>
                         </div>
                     </nav>
                 </fl-secondary-nav-item>
@@ -689,14 +721,14 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
 </span>
                     Profile
                 </a>
-                <a class=\"sidebar-link\" fl-analytics=\"Membership\" href=\"/membership/index.php?ref=davinci_userlink\">
+                <a class=\"sidebar-link\" fl-analytics=\"Membership\" href=\"#\">
                     <span class=\"Icon Icon--light\"><svg class=\"Icon-image\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">
   <path d=\"M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM9 8c1.105 0 2 .896 2 2s-.895 2-2 2-2-.896-2-2 .897-2 2-2zm-3 8c0-1.84 1.16-3 3-3s3 1.16 3 3H6zm12 0h-4v-2h4v2zm0-3h-4v-2h4v2z\"/>
 </svg>
 </span>
                     Membership
                 </a>
-                <a class=\"sidebar-link\" fl-analytics=\"Settings\" href=\"/users/settings.php\">
+                <a class=\"sidebar-link\" fl-analytics=\"Settings\" href=\"#\">
                     <span class=\"Icon Icon--light\"><svg class=\"Icon-image\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">
   <path d=\"M19.868 13.38c-.876.395-1.845.62-2.868.62-3.865 0-7-3.134-7-7 0-1.022.225-1.99.62-2.867-1.217.216-2.35.694-3.18 1.307L6 4 4 6l1.44 1.44c-.454.617-.915 1.542-1.18 2.56H2v4h2.26c.266 1.018.727 1.943 1.18 2.56L4 18l2 2 1.44-1.44c.612.452 1.54.914 2.56 1.18V22h4v-2.26c1.02-.266 1.947-.73 2.56-1.18L18 20l2-2-1.44-1.44c.614-.833 1.09-1.963 1.308-3.18z\"/>
   <path d=\"M22 7.91V6.09h-1.492c-.08-.312-.203-.603-.358-.876l.94-.942L19.73 2.91l-.943.94c-.273-.156-.565-.277-.877-.358V2H16.09v1.492c-.31.08-.602.202-.875.358l-.942-.94L12.91 4.27l.94.942c-.154.272-.276.564-.358.876H12v1.818h1.49c.083.31.205.604.36.877l-.942.942 1.364 1.363.942-.94c.273.155.564.277.876.358V12h1.817v-1.49c.312-.083.604-.204.877-.36l.942.94L21.09 9.73l-.942-.942c.155-.273.277-.565.358-.877H22zM17 9c-1.106 0-2-.896-2-2s.894-2 2-2 2 .896 2 2-.895 2-2 2z\"/>
@@ -704,14 +736,14 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
 </span>
                     Settings
                 </a>
-                <a class=\"sidebar-link\" fl-analytics=\"Help\" href=\"/support\">
+                <a class=\"sidebar-link\" fl-analytics=\"Help\" href=\"#\">
                     <span class=\"Icon Icon--light\"><svg class=\"Icon-image\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">
   <path d=\"M12 2C6.486 2 2 6.487 2 12c0 5.515 4.486 10 10 10s10-4.485 10-10c0-5.513-4.486-10-10-10zm0 16.25c-.69 0-1.25-.56-1.25-1.25s.56-1.25 1.25-1.25 1.25.56 1.25 1.25-.56 1.25-1.25 1.25zm1-4.375V15h-2v-3h1c1.104 0 2-.897 2-2 0-1.104-.896-2-2-2s-2 .896-2 2H8c0-2.205 1.795-4 4-4s4 1.795 4 4c0 1.86-1.277 3.43-3 3.875z\"/>
 </svg>
 </span>
                     Get Support
                 </a>
-                <a class=\"sidebar-link\" fl-analytics=\"InviteFriends\" href=\"/invite/\">
+                <a class=\"sidebar-link\" fl-analytics=\"InviteFriends\" href=\"#\">
                     <span class=\"Icon Icon--light\"><svg class=\"Icon-image\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">
   <path d=\"M22 6h-3V3h-2v3h-3v2h3v3h2V8h3\"/>
   <circle cx=\"7.001\" cy=\"5\" r=\"3\"/>
@@ -754,13 +786,13 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
           <nav class=\"ProjectHeader-breadcrumbs Breadcrumbs\">
             <ul class=\"Breadcrumbs-list\">
               <li class=\"Breadcrumbs-item\">
-                <a href=\"/dashboard\" class=\"Breadcrumbs-link\">
+                <a href=\"#\" class=\"Breadcrumbs-link\">
                   Home
                 </a>
               </li>
 
               <li class=\"Breadcrumbs-item\">
-                <a href=\"/dashboard/projects.php\" class=\"Breadcrumbs-link\">
+                <a href=\"\" class=\"Breadcrumbs-link\">
                   My Projects
                 </a>
               </li>
@@ -777,7 +809,7 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
 
         <div class=\"ProjectHeader-row\">
           <h1 class=\"ProjectHeader-title\">";
-        // line 752
+        // line 747
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["myProject"]) ? $context["myProject"] : $this->getContext($context, "myProject")), 0, array(), "array"), "name", array()), "html", null, true);
         echo "</h1>
           <span class=\"ProjectHeader-info\">dfdgdfg
@@ -914,37 +946,35 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
                   </span>
                 </span>
               </span>
-                ";
-        // line 887
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["proposals"]) ? $context["proposals"] : $this->getContext($context, "proposals")));
-        foreach ($context['_seq'] as $context["_key"] => $context["proposal"]) {
-            // line 888
-            echo "              <div class=\"proposal-placeholder-details\">
 
-                <span class=\"proposal-placeholder-title\">
-                ";
-            // line 891
-            echo twig_escape_filter($this->env, $this->getAttribute($context["proposal"], "id", array()), "html", null, true);
-            echo "
-                </span>
-                <span class=\"proposal-placeholder-description\">
-                  ";
-            // line 894
-            echo twig_escape_filter($this->env, $this->getAttribute($context["proposal"], "description", array()), "html", null, true);
-            echo "</span>
+              <div class=\"proposal-placeholder-details\">
+                <table style=\"width: 100%; height: auto\">
+                <thead>
+                <th>dsfds</th>
+                <th>sfsdf</th>
+                </thead>
+                <tbody id=\"prop_content\">
 
+                </tbody>
+
+              </table>
               </div>
-                ";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['proposal'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 898
-        echo "            </section>
+
+            </section>
           </div>
           <aside class=\"project-view-aside\">
-            <div class=\"project-view-aside-inner\">gghfhf</div>
+            <div class=\"project-view-aside-inner\">
+              <br>
+                <button type=\"button\" class=\"btn btn-primary btn-block\">Award project</button>
+                <br/>
+                <p style=\"text-align:center\">
+                  We suggest awarding your project to deepbratt. Our analysis suggests they'll be the best freelancer to complete your project!
+                </p>
+
+                <button type=\"button\" class=\"btn btn-primary btn-block\" style=\"background-color:#fff\">Profile details</button>
+                <br><br>
+                <button type=\"button\" class=\"btn btn-primary btn-block\" style=\"background-color:#fff\">chat</button>
+            </div>
           </aside>
         </div>
         <div class=\"project-view-tab-content-wrapper\">
@@ -996,7 +1026,6 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
         <h6>
 
         </h6>
-        <img src=\"<%= cdn_url('/img/ajax-loader.gif') %>\" class=\"loading-img-change-preferred-method \" style=\"display:none\" />
         <span class=\"payment-source-option\">
             <span class=\"payment-source-icons\">
                 <span class=\"payment-logo-container paypal gatewayPP\"
@@ -1073,7 +1102,6 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
 
         <button type=\"button\" class=\"btn btn-info modal-btn-confirm-payment\"><%- customizedConfirm.buttonText %></button>
 
-    <img src=\"<%= cdn_url('/img/ajax-loader.gif') %>\" class=\"loading-img \" style=\"display:none\"/>
 
         <button type=\"button\" class=\"btn modal-btn-cancel-payment\"><%- customizedCancel.buttonText %></button>
 
@@ -1096,7 +1124,7 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
     <div class=\"section-inner\">
         <div class=\"SiteStats-inner\">
             <div class=\"SiteStats-twentyMillion\">
-                <a class=\"SiteStats-twentyMillion-link\" href=\"/about/quotes\"
+                <a class=\"SiteStats-twentyMillion-link\" href=\"#\"
                    data-qtsb-section=\"footer\"
                    data-qtsb-subsection=\"SiteStats\"
                    data-qtsb-label=\"GoToQuotes\">
@@ -1140,7 +1168,7 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
             <h3 class=\"fl-footer-site-nav-title\">Network</h3>
             <ul class=\"fl-footer-site-nav-group-items\">
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/jobs/1/\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"Network\"
                         data-qtsb-label=\"GoToProjects\">
@@ -1148,7 +1176,7 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/contest/\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"Network\"
                         data-qtsb-label=\"GoToContest\">
@@ -1156,7 +1184,7 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/sitemap\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"Network\"
                         data-qtsb-label=\"GoToSitemap\">
@@ -1164,7 +1192,7 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/project-directory/A\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"Network\"
                         data-qtsb-label=\"GoToProjectDirectory\">
@@ -1172,7 +1200,7 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/user-directory/A\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"Network\"
                         data-qtsb-label=\"GoToUserDirectory\">
@@ -1180,7 +1208,7 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/local?fromLinks=1\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"Network\"
                         data-qtsb-label=\"GoToFreelancerLocal\">
@@ -1188,7 +1216,7 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/services/\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"Network\"
                         data-qtsb-label=\"GoToServices\">
@@ -1226,7 +1254,7 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
             <h3 class=\"fl-footer-site-nav-title\">About</h3>
             <ul class=\"fl-footer-site-nav-group-items\">
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/about/overview.php\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"About\"
                         data-qtsb-label=\"GoToAboutUs\">
@@ -1234,7 +1262,7 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/info/how-it-works.php\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"About\"
                         data-qtsb-label=\"GoToHowItWorks\">
@@ -1242,7 +1270,7 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/about/team.php\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"About\"
                         data-qtsb-label=\"GoToTeam\">
@@ -1250,7 +1278,7 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/mobile\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"About\"
                         data-qtsb-label=\"GoToMobileApp\">
@@ -1266,7 +1294,7 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/about/security\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"About\"
                         data-qtsb-label=\"GoToSecurity\">
@@ -1284,7 +1312,7 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
 
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/feesandcharges/\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"About\"
                         data-qtsb-label=\"GoToFeesAndCharges\">
@@ -1292,7 +1320,7 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/about/investor.php\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"About\"
                         data-qtsb-label=\"GoToInvestor\">
@@ -1300,7 +1328,7 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/about/quotes.php\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"About\"
                         data-qtsb-label=\"GoToQuotes\" >
@@ -1313,7 +1341,7 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
             <h3 class=\"fl-footer-site-nav-title\">Press</h3>
             <ul class=\"fl-footer-site-nav-group-items\">
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/about/news.php\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"Press\"
                         data-qtsb-label=\"GoToInTheNews\">
@@ -1321,7 +1349,7 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/about/press.php\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"Press\"
                         data-qtsb-label=\"GoToPressReleases\">
@@ -1329,7 +1357,7 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/about/awards.php\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"Press\"
                         data-qtsb-label=\"GoToAwards\">
@@ -1337,7 +1365,7 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/info/testimonial.php\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"Press\"
                         data-qtsb-label=\"GoToTestimonials\">
@@ -1345,7 +1373,7 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/info/timeline.php\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"Press\"
                         data-qtsb-label=\"GoToTimeline\">
@@ -1358,7 +1386,7 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
             <h3 class=\"fl-footer-site-nav-title\">Get in Touch</h3>
             <ul class=\"fl-footer-site-nav-group-items\">
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/support\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"GetInTouch\"
                         data-qtsb-label=\"GoToSupportHQ\">
@@ -1366,7 +1394,7 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/info/advertise.php\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"GetInTouch\"
                         data-qtsb-label=\"GoToAdvertiseWithUs\">
@@ -1374,7 +1402,7 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/careers\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"GetInTouch\"
                         data-qtsb-label=\"GoToCareers\">
@@ -1382,7 +1410,7 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/community\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"GetInTouch\"
                         data-qtsb-label=\"GoToCommunity\">
@@ -1390,7 +1418,7 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/affiliates/\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"GetInTouch\"
                         data-qtsb-label=\"GoToAffiliateProgram\">
@@ -1398,7 +1426,7 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/merchandise/\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"GetInTouch\"
                         data-qtsb-label=\"GoToMerchandise\">
@@ -1407,7 +1435,7 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
                 </li>
                 <li>
                     <a class=\"fl-footer-site-nav-link\"
-                        href=\"/support?show_ticket_modal=true\"
+                        href=\"#\"
 
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"GetInTouch\"
@@ -1563,7 +1591,7 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
                 <nav class=\"fl-footer-corporate-nav\">
                     <ul>
                         <li class=\"fl-footer-corporate-nav-item\">
-                            <a rel=\"nofollow\" class=\"fl-footer-corporate-nav-link\" href=\"/about/privacy\"
+                            <a rel=\"nofollow\" class=\"fl-footer-corporate-nav-link\" href=\"#\"
                                 data-qtsb-section=\"footer\"
                                 data-qtsb-subsection=\"CorporateLinks\"
                                 data-qtsb-label=\"GoToPrivacyPolicy\">
@@ -1571,7 +1599,7 @@ class __TwigTemplate_7dab1711651fac26595c0ef4bebefb6e3a9f153f151965e1a401266bb89
                             </a>
                         </li>
                         <li class=\"fl-footer-corporate-nav-item\">
-                            <a rel=\"nofollow\" class=\"fl-footer-corporate-nav-link\" href=\"/about/terms\"
+                            <a rel=\"nofollow\" class=\"fl-footer-corporate-nav-link\" href=\"#\"
                                 data-qtsb-section=\"footer\"
                                 data-qtsb-subsection=\"CorporateLinks\"
                                 data-qtsb-label=\"GoToTermsAndConditions\">
@@ -1961,132 +1989,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          jQuery.curCSS = jQuery.css;
     </script>
 
-    <!-- misc stuffs ends -->
-    <script src=\"https://cdn2.f-cdn.com/build/js/ttref.js?v=0433115a599f92cf768376c04d7aaefc&amp;m=6\" type=\"text/javascript\"></script>
-    <script src=\"//d2werhn82xczly.cloudfront.net/20140328/main.min.js\" type=\"text/javascript\"></script>
-<script type=\"text/javascript\">
-        try {
-            _t = new Tracking(
-              '//t.freelancer.com/1px.gif',
-              flns.config.cookie_domain,
-              {'user_id': getCookie(flns.config.cookie_base + '_USER_ID')}
-            ).init(_t);
-            _lt = new LocalTracking().init(_lt);
-        } catch (err) {
-            if (console) { console.log(err); }
-        }
 
-        // Define the screen resolution and browser resolution parameters
-        // to the QTS page_view event
-        var p = {
-          screenHeight: window.screen.height,
-          screenWidth: window.screen.width,
-          windowInnerHeight: window.innerHeight,
-          windowInnerWidth: window.innerWidth,
-          language: 'en'
-        };
-
-        //Push the page view event with the defined screen and browser resolution parameters
-        _t.push(['page_view', p]);
-
-        if (Math.random() < 0.01) {
-            var start_latency = new Date().getTime();
-            jQuery.ajax({
-                url: '/pong.php',
-                success: function () {
-                    _t.push(['latency', {'latency': (new Date().getTime() - start_latency)}]);
-                }
-            });
-        }
-
-        if (typeof window.performance !== 'undefined') {
-            jQuery(window).load(function() {
-                try {
-                    var pt = window.performance.timing;
-                    _t.push(['page_performance_timings', {
-                        'navigationStart' : pt.navigationStart,
-                        'unloadEventStart' : pt.unloadEventStart,
-                        'unloadEventEnd' : pt.unloadEventEnd,
-                        'redirectStart' : pt.redirectStart,
-                        'redirectEnd' : pt.redirectEnd,
-                        'fetchStart' : pt.fetchStart,
-                        'domainLookupStart' : pt.domainLookupStart,
-                        'domainLookupEnd' : pt.domainLookupEnd,
-                        'connectStart' : pt.connectStart,
-                        'connectEnd' : pt.connectEnd,
-                        'responseStart' : pt.responseStart,
-                        'responseEnd' : pt.responseEnd,
-                        'domLoading' : pt.domLoading,
-                        'domInteractive' : pt.domInteractive,
-                        'domContentLoadedEventStart' : pt.domContentLoadedEventStart,
-                        'domContentLoadedEventEnd' : pt.domContentLoadedEventEnd,
-                        'domComplete' : pt.domComplete,
-                        'loadEventStart' : pt.loadEventStart,
-                        'loadEventEnd' : Date.now()
-                    }]);
-                } catch (err) {
-                    // quiet handle
-                }
-            });
-        }
-
-</script>
 <script src=\"https://cdn5.f-cdn.com/build/js/tracking/extra-tracking.js?v=592342356c13b9e5b3d56c75d5c2009e&amp;m=6\" type=\"text/javascript\"></script>
-
-    <script type=\"text/javascript\">
-(function() {
-    function hiremeTrack(e) {
-        if (window.allowHireMeTracking === true || window.allowHireMeTracking === undefined) {
-            var source = jQuery(e.target).attr('hireme-source'),
-                event = jQuery(e.target).attr('hireme-event');
-                label = jQuery(e.target).attr('hireme-label');
-
-            if (source || event) {
-                window.allowHireMeTracking = false;
-            }
-
-            if (source) {
-                window._ttref.push(
-                    ['_clearEntrypoint', 'ProjectHireMe'],
-                    ['_setCookie', 'ProjectHireMe_' + source]);
-            }
-
-            if (event) {
-                var data = ['_trackEvent', 'ProjectHireMe', event];
-                if (label) {
-                    data.push(label);
-                }
-                window._ttref.push(data);
-            }
-
-            setTimeout(function() { window.allowHireMeTracking = true; }, 100);
-        }
-    }
-
-    jQuery(document).ready(function() {
-        var selector = '[hireme-source],[hireme-event]',
-            observer,
-            MutationObserver = window.MutationObserver ||
-                window.WebKitMutationObserver ||
-                window.MozMutationObserver;
-
-        if (MutationObserver !== undefined) {
-            jQuery(selector).on('mousedown', hiremeTrack);
-
-            observer = new MutationObserver(function() {
-                jQuery(selector).off('mousedown', hiremeTrack);
-                jQuery(selector).on('mousedown', hiremeTrack);
-            });
-
-            observer.observe(document.body, {
-                childList: true,
-                subtree: true
-            });
-        }
-    });
-
-})();
-</script>
 
 
     <!-- This is to avoid event handlers to run twice if we load Bootstrap twice on the page
@@ -2156,45 +2060,8 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
       };
     }
   );
-  System.register(
-    'server-data/footer-feedback-portal', [], function(__export) {
-            var feedbackOptions;
-      return {
-        setters: [],
-        execute: function() {
-                    __export('feedbackOptions', [{\"name\":\"General Functionality\",\"value\":\"1\"},{\"name\":\"Security Vulnerabllity\",\"value\":\"2\"},{\"name\":\"Translation Issues\",\"value\":\"3\"}]);
-          }
-      };
-    }
-  );
-  System.register(
-    'server-data/footer-locale-selector', [], function(__export) {
-            var isAuth;
-      var currentRegion;
-      var currentDomain;
-      var currentLanguage;
-      return {
-        setters: [],
-        execute: function() {
-                    __export('isAuth', \"1\");
-          __export('currentRegion', \"North America\");
-          __export('currentDomain', \"US (International)\");
-          __export('currentLanguage', \"English\");
-          }
-      };
-    }
-  );
-  System.register(
-    'server-data/recruiter-robin', [], function(__export) {
-            var userCurrencyId;
-      return {
-        setters: [],
-        execute: function() {
-                    __export('userCurrencyId', 1);
-          }
-      };
-    }
-  );
+
+
   System.register(
     'server-data/flconfigs', [], function(__export) {
             var sslBaseUrl;
@@ -2230,19 +2097,7 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
       };
     }
   );
-  System.register(
-    'server-data/messaging', [], function(__export) {
-            var messagingABTests;
-      var hideContactList;
-      return {
-        setters: [],
-        execute: function() {
-                    __export('messagingABTests', {\"D39493\":1,\"MM1673\":1,\"MM1432\":0,\"MEM919\":2,\"T31969\":1});
-          __export('hideContactList', null);
-          }
-      };
-    }
-  );
+
 
   System.register(
     'angular-server-data/navigation',
@@ -2280,42 +2135,10 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
       };
     }
   );
-  System.register(
-    'angular-server-data/flconfigs',
-    ['angular'],
-    function(__export) {
-      var angular;
-      var messagingABTests;
-      var globalMatchmakingABTests;
-      return {
-        setters: [
-          function(ng) {
-            angular = ng;
-          }
-        ],
-        execute: function() {
-          angular.module('flconfigs/messagingABTests', []).constant(
-              'messagingABTests', {\"D39493\":1,\"MM1673\":1,\"MM1432\":0,\"MEM919\":2,\"T31969\":1}
-            );
-            __export('messagingABTests', 'flconfigs/messagingABTests');
-          angular.module('flconfigs/globalMatchmakingABTests', []).constant(
-              'globalMatchmakingABTests', {\"MM2149\":0}
-            );
-            __export('globalMatchmakingABTests', 'flconfigs/globalMatchmakingABTests');
-          }
-      };
-    }
-  );
+
 
   System.import('modules/navigation');
-  System.import('modules/project-view-employer');
-  System.import('modules/footer-site-stats');
-  System.import('modules/footer-feedback-portal');
-  System.import('modules/footer-locale-selector');
-  System.import('modules/messaging-chat');
-  System.import('modules/messaging-contacts-new');
-  System.import('modules/recruiter-robin');
-  System.import('modules/tracking-performance');
+
 });
 </script>
 
@@ -2326,7 +2149,7 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
 </html>
 ";
         
-        $__internal_699c01c399f0172d31e2837f508a7374d2060cdd082da9a4037ce4e9e69f44f9->leave($__internal_699c01c399f0172d31e2837f508a7374d2060cdd082da9a4037ce4e9e69f44f9_prof);
+        $__internal_18557c527d74de728c419a301cf6644534a418b903f3ffabc19cd8be9c51d5ec->leave($__internal_18557c527d74de728c419a301cf6644534a418b903f3ffabc19cd8be9c51d5ec_prof);
 
     }
 
@@ -2342,7 +2165,7 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
 
     public function getDebugInfo()
     {
-        return array (  944 => 898,  934 => 894,  928 => 891,  923 => 888,  919 => 887,  781 => 752,  172 => 146,  164 => 141,  22 => 1,);
+        return array (  813 => 747,  213 => 150,  205 => 145,  100 => 42,  62 => 40,  58 => 35,  22 => 1,);
     }
 
     public function getSource()
@@ -2359,6 +2182,15 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
 
     <meta http-equiv=\"x-dns-prefetch-control\" content=\"on\">
 
+    <style>
+    #prop_tr{
+      height: 30px;
+      background-color: red;
+    }
+
+
+    </style>
+
     <link rel=\"icon\" href=\"https://www.freelancer.com/favicon.ico\" type=\"image/ico\"/>
     <link rel=\"shortcut icon\" href=\"https://www.freelancer.com/favicon.ico\"/>
     <link rel=\"publisher\" href=\"http://plus.google.com/+Freelancer\"/>
@@ -2372,19 +2204,14 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
     <link href=\"https://cdn3.f-cdn.com/build/css/flux/LoggedInBase.css?v=50e5a05e57ee3ff4bd0fd457ba1b6ed3&amp;m=6\" type=\"text/css\" rel=\"stylesheet\" />
     <link href=\"https://cdn2.f-cdn.com/build/css/flux/layout/PageProjectView.css?v=0ea54547ee85298ed6d6fee2d18d22f6&amp;m=6\" type=\"text/css\" rel=\"stylesheet\" />
 
+    {% javascripts 'bundles/app/js/jquery.min.js'
+    'bundles/app/js/bootstrap.min.js'
+    'bundles/app/js/jquery-migrate.min.js'
+    'bundles/app/js/font-awesome-icons.js'
+    'bundles/app/js/load-proposals.js'%}
+    <script src=\"{{ asset_url }}\"></script>
+    {% endjavascripts %}
 
-
-      <script src=\"https://cdn5.f-cdn.com/js/jquery-1.10.2.min.js?v=628072e7212db1e8cdacb22b21752cda&m=6\" type=\"text/javascript\"></script>
-      <script src=\"https://cdn5.f-cdn.com/build/js/pinky/utils/jquery-ui.custom.min.js?v=67493e32a93c0398e34eaf319a35dc40&amp;m=6\" type=\"text/javascript\"></script>
-    <script src=\"https://cdn6.f-cdn.com/build/js/bootstrap/bootstrap.2-32.min.js?v=97642893d14d4a5ccb884dc5ac77f061&amp;m=6\" type=\"text/javascript\"></script>
-    <script src=\"https://cdn3.f-cdn.com/build/js/bootstrap-popover.js?v=9dd8971e38430339cfa88bfa1ca01c66&m=6\" type=\"text/javascript\"></script>
-    <!-- preloaded javascript libraries -->
-    <script src=\"https://cdn2.f-cdn.com/js/lib/backbone/underscore-min.js?v=479cbbe3b04152bf4b6c7531f6bf200d&m=6\" type=\"text/javascript\"></script>
-    <script src=\"https://cdn5.f-cdn.com/js/lib/backbone/backbone_0_5_3.js?v=f26e061c598879ffbbf60199b390549f&m=6\" type=\"text/javascript\"></script>
-    <script src=\"https://cdn3.f-cdn.com/build/js/modernizr2.6.2.min.js?v=a305adee51a11fae6bddfe9b5c296734&amp;m=6\" type=\"text/javascript\"></script>
-    <script src=\"https://cdn2.f-cdn.com/build/js/global.js?v=ccccc77b532be1867e485a4ecd049bcf&amp;m=6\" type=\"text/javascript\"></script>
-    <script src=\"https://cdn2.f-cdn.com/js/auto-increase-count.js?v=6fe941b9060d915a6211302a31df9d5d&m=6\" type=\"text/javascript\"></script>
-    <script src=\"https://cdn2.f-cdn.com/js/formTools/formTools.js?v=1e479643470201bf941da8648d5c1e46&m=6\" type=\"text/javascript\"></script>
 
   </head>
 
@@ -2981,16 +2808,7 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
                 <fl-secondary-nav-item href=\"/api/docs/information\" label=\"Information\" title=\"Information\">
                     <nav class=\"primary-subnav\">
                         <div class=\"primary-subnav-group\">
-                            <ul class=\"primary-subnav-list\">
-                                <fl-secondary-subnav-item href=\"/api/docs/public_auth\" title=\"Authentication\"></fl-secondary-subnav-item>
-                                <fl-secondary-subnav-item href=\"/api/docs/rate_limiting\" title=\"Rate Limiting\"></fl-secondary-subnav-item>
-                                <fl-secondary-subnav-item href=\"/api/docs/input_formatting\" title=\"Input Formatting\"></fl-secondary-subnav-item>
-                                <fl-secondary-subnav-item href=\"/api/docs/output_formatting\" title=\"Output Formatting\"></fl-secondary-subnav-item>
-                                <fl-secondary-subnav-item href=\"/api/docs/python_sdk\" title=\"Python SDK\"></fl-secondary-subnav-item>
-                                <fl-secondary-subnav-item href=\"/api/docs/business_terminology\" title=\"Business Terminology\"></fl-secondary-subnav-item>
-                                <fl-secondary-subnav-item href=\"/api/docs/webhooks\" title=\"Webhooks\"></fl-secondary-subnav-item>
 
-                            </ul>
                         </div>
                     </nav>
                 </fl-secondary-nav-item>
@@ -3011,14 +2829,14 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
 </span>
                     Profile
                 </a>
-                <a class=\"sidebar-link\" fl-analytics=\"Membership\" href=\"/membership/index.php?ref=davinci_userlink\">
+                <a class=\"sidebar-link\" fl-analytics=\"Membership\" href=\"#\">
                     <span class=\"Icon Icon--light\"><svg class=\"Icon-image\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">
   <path d=\"M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM9 8c1.105 0 2 .896 2 2s-.895 2-2 2-2-.896-2-2 .897-2 2-2zm-3 8c0-1.84 1.16-3 3-3s3 1.16 3 3H6zm12 0h-4v-2h4v2zm0-3h-4v-2h4v2z\"/>
 </svg>
 </span>
                     Membership
                 </a>
-                <a class=\"sidebar-link\" fl-analytics=\"Settings\" href=\"/users/settings.php\">
+                <a class=\"sidebar-link\" fl-analytics=\"Settings\" href=\"#\">
                     <span class=\"Icon Icon--light\"><svg class=\"Icon-image\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">
   <path d=\"M19.868 13.38c-.876.395-1.845.62-2.868.62-3.865 0-7-3.134-7-7 0-1.022.225-1.99.62-2.867-1.217.216-2.35.694-3.18 1.307L6 4 4 6l1.44 1.44c-.454.617-.915 1.542-1.18 2.56H2v4h2.26c.266 1.018.727 1.943 1.18 2.56L4 18l2 2 1.44-1.44c.612.452 1.54.914 2.56 1.18V22h4v-2.26c1.02-.266 1.947-.73 2.56-1.18L18 20l2-2-1.44-1.44c.614-.833 1.09-1.963 1.308-3.18z\"/>
   <path d=\"M22 7.91V6.09h-1.492c-.08-.312-.203-.603-.358-.876l.94-.942L19.73 2.91l-.943.94c-.273-.156-.565-.277-.877-.358V2H16.09v1.492c-.31.08-.602.202-.875.358l-.942-.94L12.91 4.27l.94.942c-.154.272-.276.564-.358.876H12v1.818h1.49c.083.31.205.604.36.877l-.942.942 1.364 1.363.942-.94c.273.155.564.277.876.358V12h1.817v-1.49c.312-.083.604-.204.877-.36l.942.94L21.09 9.73l-.942-.942c.155-.273.277-.565.358-.877H22zM17 9c-1.106 0-2-.896-2-2s.894-2 2-2 2 .896 2 2-.895 2-2 2z\"/>
@@ -3026,14 +2844,14 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
 </span>
                     Settings
                 </a>
-                <a class=\"sidebar-link\" fl-analytics=\"Help\" href=\"/support\">
+                <a class=\"sidebar-link\" fl-analytics=\"Help\" href=\"#\">
                     <span class=\"Icon Icon--light\"><svg class=\"Icon-image\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">
   <path d=\"M12 2C6.486 2 2 6.487 2 12c0 5.515 4.486 10 10 10s10-4.485 10-10c0-5.513-4.486-10-10-10zm0 16.25c-.69 0-1.25-.56-1.25-1.25s.56-1.25 1.25-1.25 1.25.56 1.25 1.25-.56 1.25-1.25 1.25zm1-4.375V15h-2v-3h1c1.104 0 2-.897 2-2 0-1.104-.896-2-2-2s-2 .896-2 2H8c0-2.205 1.795-4 4-4s4 1.795 4 4c0 1.86-1.277 3.43-3 3.875z\"/>
 </svg>
 </span>
                     Get Support
                 </a>
-                <a class=\"sidebar-link\" fl-analytics=\"InviteFriends\" href=\"/invite/\">
+                <a class=\"sidebar-link\" fl-analytics=\"InviteFriends\" href=\"#\">
                     <span class=\"Icon Icon--light\"><svg class=\"Icon-image\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">
   <path d=\"M22 6h-3V3h-2v3h-3v2h3v3h2V8h3\"/>
   <circle cx=\"7.001\" cy=\"5\" r=\"3\"/>
@@ -3076,13 +2894,13 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
           <nav class=\"ProjectHeader-breadcrumbs Breadcrumbs\">
             <ul class=\"Breadcrumbs-list\">
               <li class=\"Breadcrumbs-item\">
-                <a href=\"/dashboard\" class=\"Breadcrumbs-link\">
+                <a href=\"#\" class=\"Breadcrumbs-link\">
                   Home
                 </a>
               </li>
 
               <li class=\"Breadcrumbs-item\">
-                <a href=\"/dashboard/projects.php\" class=\"Breadcrumbs-link\">
+                <a href=\"\" class=\"Breadcrumbs-link\">
                   My Projects
                 </a>
               </li>
@@ -3233,21 +3051,35 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
                   </span>
                 </span>
               </span>
-                {% for proposal in proposals %}
+
               <div class=\"proposal-placeholder-details\">
+                <table style=\"width: 100%; height: auto\">
+                <thead>
+                <th>dsfds</th>
+                <th>sfsdf</th>
+                </thead>
+                <tbody id=\"prop_content\">
 
-                <span class=\"proposal-placeholder-title\">
-                {{ proposal.id }}
-                </span>
-                <span class=\"proposal-placeholder-description\">
-                  {{ proposal.description }}</span>
+                </tbody>
 
+              </table>
               </div>
-                {% endfor %}
+
             </section>
           </div>
           <aside class=\"project-view-aside\">
-            <div class=\"project-view-aside-inner\">gghfhf</div>
+            <div class=\"project-view-aside-inner\">
+              <br>
+                <button type=\"button\" class=\"btn btn-primary btn-block\">Award project</button>
+                <br/>
+                <p style=\"text-align:center\">
+                  We suggest awarding your project to deepbratt. Our analysis suggests they'll be the best freelancer to complete your project!
+                </p>
+
+                <button type=\"button\" class=\"btn btn-primary btn-block\" style=\"background-color:#fff\">Profile details</button>
+                <br><br>
+                <button type=\"button\" class=\"btn btn-primary btn-block\" style=\"background-color:#fff\">chat</button>
+            </div>
           </aside>
         </div>
         <div class=\"project-view-tab-content-wrapper\">
@@ -3299,7 +3131,6 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
         <h6>
 
         </h6>
-        <img src=\"<%= cdn_url('/img/ajax-loader.gif') %>\" class=\"loading-img-change-preferred-method \" style=\"display:none\" />
         <span class=\"payment-source-option\">
             <span class=\"payment-source-icons\">
                 <span class=\"payment-logo-container paypal gatewayPP\"
@@ -3376,7 +3207,6 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
 
         <button type=\"button\" class=\"btn btn-info modal-btn-confirm-payment\"><%- customizedConfirm.buttonText %></button>
 
-    <img src=\"<%= cdn_url('/img/ajax-loader.gif') %>\" class=\"loading-img \" style=\"display:none\"/>
 
         <button type=\"button\" class=\"btn modal-btn-cancel-payment\"><%- customizedCancel.buttonText %></button>
 
@@ -3399,7 +3229,7 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
     <div class=\"section-inner\">
         <div class=\"SiteStats-inner\">
             <div class=\"SiteStats-twentyMillion\">
-                <a class=\"SiteStats-twentyMillion-link\" href=\"/about/quotes\"
+                <a class=\"SiteStats-twentyMillion-link\" href=\"#\"
                    data-qtsb-section=\"footer\"
                    data-qtsb-subsection=\"SiteStats\"
                    data-qtsb-label=\"GoToQuotes\">
@@ -3443,7 +3273,7 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
             <h3 class=\"fl-footer-site-nav-title\">Network</h3>
             <ul class=\"fl-footer-site-nav-group-items\">
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/jobs/1/\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"Network\"
                         data-qtsb-label=\"GoToProjects\">
@@ -3451,7 +3281,7 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/contest/\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"Network\"
                         data-qtsb-label=\"GoToContest\">
@@ -3459,7 +3289,7 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/sitemap\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"Network\"
                         data-qtsb-label=\"GoToSitemap\">
@@ -3467,7 +3297,7 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/project-directory/A\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"Network\"
                         data-qtsb-label=\"GoToProjectDirectory\">
@@ -3475,7 +3305,7 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/user-directory/A\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"Network\"
                         data-qtsb-label=\"GoToUserDirectory\">
@@ -3483,7 +3313,7 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/local?fromLinks=1\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"Network\"
                         data-qtsb-label=\"GoToFreelancerLocal\">
@@ -3491,7 +3321,7 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/services/\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"Network\"
                         data-qtsb-label=\"GoToServices\">
@@ -3529,7 +3359,7 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
             <h3 class=\"fl-footer-site-nav-title\">About</h3>
             <ul class=\"fl-footer-site-nav-group-items\">
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/about/overview.php\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"About\"
                         data-qtsb-label=\"GoToAboutUs\">
@@ -3537,7 +3367,7 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/info/how-it-works.php\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"About\"
                         data-qtsb-label=\"GoToHowItWorks\">
@@ -3545,7 +3375,7 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/about/team.php\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"About\"
                         data-qtsb-label=\"GoToTeam\">
@@ -3553,7 +3383,7 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/mobile\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"About\"
                         data-qtsb-label=\"GoToMobileApp\">
@@ -3569,7 +3399,7 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/about/security\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"About\"
                         data-qtsb-label=\"GoToSecurity\">
@@ -3587,7 +3417,7 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
 
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/feesandcharges/\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"About\"
                         data-qtsb-label=\"GoToFeesAndCharges\">
@@ -3595,7 +3425,7 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/about/investor.php\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"About\"
                         data-qtsb-label=\"GoToInvestor\">
@@ -3603,7 +3433,7 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/about/quotes.php\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"About\"
                         data-qtsb-label=\"GoToQuotes\" >
@@ -3616,7 +3446,7 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
             <h3 class=\"fl-footer-site-nav-title\">Press</h3>
             <ul class=\"fl-footer-site-nav-group-items\">
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/about/news.php\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"Press\"
                         data-qtsb-label=\"GoToInTheNews\">
@@ -3624,7 +3454,7 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/about/press.php\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"Press\"
                         data-qtsb-label=\"GoToPressReleases\">
@@ -3632,7 +3462,7 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/about/awards.php\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"Press\"
                         data-qtsb-label=\"GoToAwards\">
@@ -3640,7 +3470,7 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/info/testimonial.php\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"Press\"
                         data-qtsb-label=\"GoToTestimonials\">
@@ -3648,7 +3478,7 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/info/timeline.php\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"Press\"
                         data-qtsb-label=\"GoToTimeline\">
@@ -3661,7 +3491,7 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
             <h3 class=\"fl-footer-site-nav-title\">Get in Touch</h3>
             <ul class=\"fl-footer-site-nav-group-items\">
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/support\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"GetInTouch\"
                         data-qtsb-label=\"GoToSupportHQ\">
@@ -3669,7 +3499,7 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/info/advertise.php\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"GetInTouch\"
                         data-qtsb-label=\"GoToAdvertiseWithUs\">
@@ -3677,7 +3507,7 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/careers\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"GetInTouch\"
                         data-qtsb-label=\"GoToCareers\">
@@ -3685,7 +3515,7 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/community\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"GetInTouch\"
                         data-qtsb-label=\"GoToCommunity\">
@@ -3693,7 +3523,7 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/affiliates/\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"GetInTouch\"
                         data-qtsb-label=\"GoToAffiliateProgram\">
@@ -3701,7 +3531,7 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
                     </a>
                 </li>
                 <li>
-                    <a class=\"fl-footer-site-nav-link\" href=\"/merchandise/\"
+                    <a class=\"fl-footer-site-nav-link\" href=\"#\"
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"GetInTouch\"
                         data-qtsb-label=\"GoToMerchandise\">
@@ -3710,7 +3540,7 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
                 </li>
                 <li>
                     <a class=\"fl-footer-site-nav-link\"
-                        href=\"/support?show_ticket_modal=true\"
+                        href=\"#\"
 
                         data-qtsb-section=\"footer\"
                         data-qtsb-subsection=\"GetInTouch\"
@@ -3866,7 +3696,7 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
                 <nav class=\"fl-footer-corporate-nav\">
                     <ul>
                         <li class=\"fl-footer-corporate-nav-item\">
-                            <a rel=\"nofollow\" class=\"fl-footer-corporate-nav-link\" href=\"/about/privacy\"
+                            <a rel=\"nofollow\" class=\"fl-footer-corporate-nav-link\" href=\"#\"
                                 data-qtsb-section=\"footer\"
                                 data-qtsb-subsection=\"CorporateLinks\"
                                 data-qtsb-label=\"GoToPrivacyPolicy\">
@@ -3874,7 +3704,7 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
                             </a>
                         </li>
                         <li class=\"fl-footer-corporate-nav-item\">
-                            <a rel=\"nofollow\" class=\"fl-footer-corporate-nav-link\" href=\"/about/terms\"
+                            <a rel=\"nofollow\" class=\"fl-footer-corporate-nav-link\" href=\"#\"
                                 data-qtsb-section=\"footer\"
                                 data-qtsb-subsection=\"CorporateLinks\"
                                 data-qtsb-label=\"GoToTermsAndConditions\">
@@ -4264,132 +4094,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          jQuery.curCSS = jQuery.css;
     </script>
 
-    <!-- misc stuffs ends -->
-    <script src=\"https://cdn2.f-cdn.com/build/js/ttref.js?v=0433115a599f92cf768376c04d7aaefc&amp;m=6\" type=\"text/javascript\"></script>
-    <script src=\"//d2werhn82xczly.cloudfront.net/20140328/main.min.js\" type=\"text/javascript\"></script>
-<script type=\"text/javascript\">
-        try {
-            _t = new Tracking(
-              '//t.freelancer.com/1px.gif',
-              flns.config.cookie_domain,
-              {'user_id': getCookie(flns.config.cookie_base + '_USER_ID')}
-            ).init(_t);
-            _lt = new LocalTracking().init(_lt);
-        } catch (err) {
-            if (console) { console.log(err); }
-        }
 
-        // Define the screen resolution and browser resolution parameters
-        // to the QTS page_view event
-        var p = {
-          screenHeight: window.screen.height,
-          screenWidth: window.screen.width,
-          windowInnerHeight: window.innerHeight,
-          windowInnerWidth: window.innerWidth,
-          language: 'en'
-        };
-
-        //Push the page view event with the defined screen and browser resolution parameters
-        _t.push(['page_view', p]);
-
-        if (Math.random() < 0.01) {
-            var start_latency = new Date().getTime();
-            jQuery.ajax({
-                url: '/pong.php',
-                success: function () {
-                    _t.push(['latency', {'latency': (new Date().getTime() - start_latency)}]);
-                }
-            });
-        }
-
-        if (typeof window.performance !== 'undefined') {
-            jQuery(window).load(function() {
-                try {
-                    var pt = window.performance.timing;
-                    _t.push(['page_performance_timings', {
-                        'navigationStart' : pt.navigationStart,
-                        'unloadEventStart' : pt.unloadEventStart,
-                        'unloadEventEnd' : pt.unloadEventEnd,
-                        'redirectStart' : pt.redirectStart,
-                        'redirectEnd' : pt.redirectEnd,
-                        'fetchStart' : pt.fetchStart,
-                        'domainLookupStart' : pt.domainLookupStart,
-                        'domainLookupEnd' : pt.domainLookupEnd,
-                        'connectStart' : pt.connectStart,
-                        'connectEnd' : pt.connectEnd,
-                        'responseStart' : pt.responseStart,
-                        'responseEnd' : pt.responseEnd,
-                        'domLoading' : pt.domLoading,
-                        'domInteractive' : pt.domInteractive,
-                        'domContentLoadedEventStart' : pt.domContentLoadedEventStart,
-                        'domContentLoadedEventEnd' : pt.domContentLoadedEventEnd,
-                        'domComplete' : pt.domComplete,
-                        'loadEventStart' : pt.loadEventStart,
-                        'loadEventEnd' : Date.now()
-                    }]);
-                } catch (err) {
-                    // quiet handle
-                }
-            });
-        }
-
-</script>
 <script src=\"https://cdn5.f-cdn.com/build/js/tracking/extra-tracking.js?v=592342356c13b9e5b3d56c75d5c2009e&amp;m=6\" type=\"text/javascript\"></script>
-
-    <script type=\"text/javascript\">
-(function() {
-    function hiremeTrack(e) {
-        if (window.allowHireMeTracking === true || window.allowHireMeTracking === undefined) {
-            var source = jQuery(e.target).attr('hireme-source'),
-                event = jQuery(e.target).attr('hireme-event');
-                label = jQuery(e.target).attr('hireme-label');
-
-            if (source || event) {
-                window.allowHireMeTracking = false;
-            }
-
-            if (source) {
-                window._ttref.push(
-                    ['_clearEntrypoint', 'ProjectHireMe'],
-                    ['_setCookie', 'ProjectHireMe_' + source]);
-            }
-
-            if (event) {
-                var data = ['_trackEvent', 'ProjectHireMe', event];
-                if (label) {
-                    data.push(label);
-                }
-                window._ttref.push(data);
-            }
-
-            setTimeout(function() { window.allowHireMeTracking = true; }, 100);
-        }
-    }
-
-    jQuery(document).ready(function() {
-        var selector = '[hireme-source],[hireme-event]',
-            observer,
-            MutationObserver = window.MutationObserver ||
-                window.WebKitMutationObserver ||
-                window.MozMutationObserver;
-
-        if (MutationObserver !== undefined) {
-            jQuery(selector).on('mousedown', hiremeTrack);
-
-            observer = new MutationObserver(function() {
-                jQuery(selector).off('mousedown', hiremeTrack);
-                jQuery(selector).on('mousedown', hiremeTrack);
-            });
-
-            observer.observe(document.body, {
-                childList: true,
-                subtree: true
-            });
-        }
-    });
-
-})();
-</script>
 
 
     <!-- This is to avoid event handlers to run twice if we load Bootstrap twice on the page
@@ -4459,45 +4165,8 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
       };
     }
   );
-  System.register(
-    'server-data/footer-feedback-portal', [], function(__export) {
-            var feedbackOptions;
-      return {
-        setters: [],
-        execute: function() {
-                    __export('feedbackOptions', [{\"name\":\"General Functionality\",\"value\":\"1\"},{\"name\":\"Security Vulnerabllity\",\"value\":\"2\"},{\"name\":\"Translation Issues\",\"value\":\"3\"}]);
-          }
-      };
-    }
-  );
-  System.register(
-    'server-data/footer-locale-selector', [], function(__export) {
-            var isAuth;
-      var currentRegion;
-      var currentDomain;
-      var currentLanguage;
-      return {
-        setters: [],
-        execute: function() {
-                    __export('isAuth', \"1\");
-          __export('currentRegion', \"North America\");
-          __export('currentDomain', \"US (International)\");
-          __export('currentLanguage', \"English\");
-          }
-      };
-    }
-  );
-  System.register(
-    'server-data/recruiter-robin', [], function(__export) {
-            var userCurrencyId;
-      return {
-        setters: [],
-        execute: function() {
-                    __export('userCurrencyId', 1);
-          }
-      };
-    }
-  );
+
+
   System.register(
     'server-data/flconfigs', [], function(__export) {
             var sslBaseUrl;
@@ -4533,19 +4202,7 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
       };
     }
   );
-  System.register(
-    'server-data/messaging', [], function(__export) {
-            var messagingABTests;
-      var hideContactList;
-      return {
-        setters: [],
-        execute: function() {
-                    __export('messagingABTests', {\"D39493\":1,\"MM1673\":1,\"MM1432\":0,\"MEM919\":2,\"T31969\":1});
-          __export('hideContactList', null);
-          }
-      };
-    }
-  );
+
 
   System.register(
     'angular-server-data/navigation',
@@ -4583,42 +4240,10 @@ document.getElementById('systemjs-config').addEventListener('load', function() {
       };
     }
   );
-  System.register(
-    'angular-server-data/flconfigs',
-    ['angular'],
-    function(__export) {
-      var angular;
-      var messagingABTests;
-      var globalMatchmakingABTests;
-      return {
-        setters: [
-          function(ng) {
-            angular = ng;
-          }
-        ],
-        execute: function() {
-          angular.module('flconfigs/messagingABTests', []).constant(
-              'messagingABTests', {\"D39493\":1,\"MM1673\":1,\"MM1432\":0,\"MEM919\":2,\"T31969\":1}
-            );
-            __export('messagingABTests', 'flconfigs/messagingABTests');
-          angular.module('flconfigs/globalMatchmakingABTests', []).constant(
-              'globalMatchmakingABTests', {\"MM2149\":0}
-            );
-            __export('globalMatchmakingABTests', 'flconfigs/globalMatchmakingABTests');
-          }
-      };
-    }
-  );
+
 
   System.import('modules/navigation');
-  System.import('modules/project-view-employer');
-  System.import('modules/footer-site-stats');
-  System.import('modules/footer-feedback-portal');
-  System.import('modules/footer-locale-selector');
-  System.import('modules/messaging-chat');
-  System.import('modules/messaging-contacts-new');
-  System.import('modules/recruiter-robin');
-  System.import('modules/tracking-performance');
+
 });
 </script>
 

@@ -1,0 +1,21 @@
+$(document).ready(function(){
+
+  $.ajax({
+		type: "GET",
+		url: "../proposal/show",
+	
+		success: function( data, textStatus, jQxhr ){
+			alert("Success");
+			// if(data.length>0){
+      //   $('.AnimatedLoader').hide();
+      // }
+		},
+		error: function( jqXhr, textStatus, errorThrown ){
+			alert( errorThrown );
+		}
+	});
+
+
+
+
+});
