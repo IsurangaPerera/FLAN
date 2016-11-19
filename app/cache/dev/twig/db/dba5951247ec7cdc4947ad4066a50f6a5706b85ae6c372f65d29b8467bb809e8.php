@@ -15,8 +15,8 @@ class __TwigTemplate_76cc1dec13759902917d88adc882372d119c0b587bf8e0f44ac1c3c2186
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_3edc0aec508e2f66e2f2d6b67723a8f10759378d8badc70ff129f2f5c5f66a37 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_3edc0aec508e2f66e2f2d6b67723a8f10759378d8badc70ff129f2f5c5f66a37->enter($__internal_3edc0aec508e2f66e2f2d6b67723a8f10759378d8badc70ff129f2f5c5f66a37_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/postProject.html.twig"));
+        $__internal_8b5f72bd2b2fa604dd32b4ed57d9a0ef8ace4fd85386aff1fcfe51455967e897 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_8b5f72bd2b2fa604dd32b4ed57d9a0ef8ace4fd85386aff1fcfe51455967e897->enter($__internal_8b5f72bd2b2fa604dd32b4ed57d9a0ef8ace4fd85386aff1fcfe51455967e897_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/postProject.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -104,7 +104,7 @@ class __TwigTemplate_76cc1dec13759902917d88adc882372d119c0b587bf8e0f44ac1c3c2186
                                             <select id=\"project-category\">
 
                                                 <option value=\"1\">
-                                                    Websites IT &amp; Software
+                                                    Websites IT Software
                                                 </option>
 
                                                 <option value=\"2\">
@@ -124,19 +124,19 @@ class __TwigTemplate_76cc1dec13759902917d88adc882372d119c0b587bf8e0f44ac1c3c2186
                                                 </option>
 
                                                 <option value=\"6\">
-                                                    Product Sourcing &amp; Manufacturing
+                                                    Product Sourcing Manufacturing
                                                 </option>
 
                                                 <option value=\"7\">
-                                                    Sales &amp; Marketing
+                                                    Sales Marketing
                                                 </option>
 
                                                 <option value=\"8\">
-                                                    Business, Accounting &amp; Legal
+                                                    Business, Accounting Legal
                                                 </option>
 
                                                 <option value=\"9\">
-                                                    Local Jobs &amp; Services
+                                                    Local Jobs Services
                                                 </option>
 
                                                 <option value=\"-2\">Customized (Select skills manually)</option>
@@ -433,7 +433,7 @@ class __TwigTemplate_76cc1dec13759902917d88adc882372d119c0b587bf8e0f44ac1c3c2186
 </html>
 ";
         
-        $__internal_3edc0aec508e2f66e2f2d6b67723a8f10759378d8badc70ff129f2f5c5f66a37->leave($__internal_3edc0aec508e2f66e2f2d6b67723a8f10759378d8badc70ff129f2f5c5f66a37_prof);
+        $__internal_8b5f72bd2b2fa604dd32b4ed57d9a0ef8ace4fd85386aff1fcfe51455967e897->leave($__internal_8b5f72bd2b2fa604dd32b4ed57d9a0ef8ace4fd85386aff1fcfe51455967e897_prof);
 
     }
 
@@ -502,7 +502,7 @@ class __TwigTemplate_76cc1dec13759902917d88adc882372d119c0b587bf8e0f44ac1c3c2186
                                             <select id=\"project-category\">
 
                                                 <option value=\"1\">
-                                                    Websites IT &amp; Software
+                                                    Websites IT Software
                                                 </option>
 
                                                 <option value=\"2\">
@@ -522,19 +522,19 @@ class __TwigTemplate_76cc1dec13759902917d88adc882372d119c0b587bf8e0f44ac1c3c2186
                                                 </option>
 
                                                 <option value=\"6\">
-                                                    Product Sourcing &amp; Manufacturing
+                                                    Product Sourcing Manufacturing
                                                 </option>
 
                                                 <option value=\"7\">
-                                                    Sales &amp; Marketing
+                                                    Sales Marketing
                                                 </option>
 
                                                 <option value=\"8\">
-                                                    Business, Accounting &amp; Legal
+                                                    Business, Accounting Legal
                                                 </option>
 
                                                 <option value=\"9\">
-                                                    Local Jobs &amp; Services
+                                                    Local Jobs Services
                                                 </option>
 
                                                 <option value=\"-2\">Customized (Select skills manually)</option>

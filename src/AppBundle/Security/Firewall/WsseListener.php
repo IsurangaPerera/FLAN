@@ -8,6 +8,8 @@ use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInt
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
 use Symfony\Component\Security\Http\Firewall\ListenerInterface;
 use AppBundle\Security\Authentication\Token\WsseUserToken;
+use Symfony\Component\HttpFoundation\Cookie;
+
 
 class WsseListener implements ListenerInterface
 {
@@ -22,6 +24,7 @@ class WsseListener implements ListenerInterface
 
     public function handle(GetResponseEvent $event)
     {
+        
         $request = $event->getRequest();
 
         $wsseRegex = '/UsernameToken Username="([^"]+)", PasswordDigest="([^"]+)", Nonce="([a-zA-Z0-9+\/]+={0,2})", Created="([^"]+)"/';
@@ -48,7 +51,7 @@ class WsseListener implements ListenerInterface
         }
 
         // By default deny authorization
-        $response = new Response($d);
+        $response = new Response();
         $response->setStatusCode(Response::HTTP_FORBIDDEN);
         $event->setResponse($response);
     }

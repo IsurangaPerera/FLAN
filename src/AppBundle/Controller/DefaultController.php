@@ -5,7 +5,10 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Cookie;
 use Symfony\Component\HttpFoundation\Session\Session;
+use Symfony\Component\HttpFoundation\Session\Attribute\AttributeBag;
+use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
 
 class DefaultController extends Controller
 {
@@ -34,9 +37,10 @@ class DefaultController extends Controller
      * @Route("login/", name="login")
      */
     public function login(Request $request)
-    {
+    {       
         $session = new Session();
-        $session->start();
-        return new Response($this->generateUrl('howitworks'));
+        $session->set('name', 'Isuranga');
+        
+        return new Response($session->getId());
     }
 }
