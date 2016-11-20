@@ -1,12 +1,14 @@
 <?php
-
 namespace AppBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-
+use Symfony\Component\HttpFoundation\Cookie;
+use Symfony\Component\HttpFoundation\Session\Session;
+use Symfony\Component\HttpFoundation\Session\Attribute\AttributeBag;
+use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
 
 class DefaultController extends Controller
 {
@@ -32,6 +34,7 @@ class DefaultController extends Controller
     }
 
     /**
+<<<<<<< HEAD
      * @Route("dashboard/", name="dashboard")
      */
     public function dashboard(Request $request)
@@ -41,4 +44,29 @@ class DefaultController extends Controller
 
 
 
+=======
+     * Matches /login/*
+     * @Route("login/{id}/", name="login")
+     */
+    public function login($id)
+    {       
+        $session = new Session();
+        $session->set('user_id', $id);
+
+        return new Response('200');
+    }
+
+    /**
+     * @Route("checksession/", name="sessionCheck")
+     */
+    public function sessionCheck()
+    {       
+        $session = new Session();
+        $user_id = $session->get('user_id');
+
+        if($user_id != '')
+            return new Response($user_id);
+        return new Response();
+    }
+>>>>>>> refs/remotes/origin/master
 }

@@ -281,7 +281,7 @@ function isodatetime() {
   if (minute <= 9) minute = "0" + minute;
   if (second <= 9) second = "0" + second;
   time = year + "-" + month + "-" + day + "T"
-  + hour + ":" + minute + ":" + second + timezone;
+  + hour + ":" + minute + ":" + second + "Z";
   return time;
 }
 
@@ -313,6 +313,6 @@ function wsse(Password) {
 
 function wsseHeader(Username, Password) {
   var w = wsse(Password);
-  var header = 'UsernameToken Username="' + Username + '", PasswordDigest="' + w[2] + '", Created="' + w[1] + '", Nonce="' + w[0] + '"';
+  var header = 'UsernameToken Username="' + Username + '", PasswordDigest="' + w[2] + '", Nonce="' + w[0] + '", Created="' + w[1] + '"';
   return header;
 }

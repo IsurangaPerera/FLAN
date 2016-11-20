@@ -22,7 +22,9 @@ filter='cssrewrite' %}
 'bundles/app/js/layerslider.transitions.js'
 'bundles/app/js/index_script.js'
 'bundles/app/js/greensock.js'
-'bundles/app/js/layerslider.kreaturamedia.jquery.js'%}
+'bundles/app/js/layerslider.kreaturamedia.jquery.js'
+'bundles/app/js/wsse.js'
+'bundles/app/js/loginAjax.js'%}
 <script src="{{ asset_url }}"></script>
 {% endjavascripts %}
 
@@ -44,10 +46,16 @@ filter='cssrewrite' %}
             <li><a target="_blank" class="skype" href="skype:#?add">skype</a></li>
           </ul>
         </div>
-        <div class="top-right">
+       
+        <div class="top-right" id="tright">
           <a href="#myModalR" role="button" class="register-top" data-toggle="modal"><i class="fa fa-lock" aria-hidden="true"></i> Register</a>
           <a href="#" id="login" role="button" class="login-top" data-toggle="modal"><i class="fa fa-key" aria-hidden="true"></i> Login</a>
         </div>
+
+        <div class="top-right" id="tright2" hidden>
+          <a href="#" id="user_name" role="button" class="login-top" data-toggle="modal"></a>
+        </div>
+      
       </div><!-- top right -->
     </div><!-- Container -->
 
@@ -118,11 +126,10 @@ filter='cssrewrite' %}
                                       <span>or</span>
                                     <div class="line r"></div>
                                 </div>
-                                <div class="error"></div>
                                 <div class="form loginBox">
                                     <form method="post" action="/login" accept-charset="UTF-8">
-                                    <input id="email" class="form-control" type="text" placeholder="Email" name="email">
-                                    <input id="password" class="form-control" type="password" placeholder="Password" name="password">
+                                    <input id="email1" class="form-control" type="text" placeholder="Email">
+                                    <input id="password1" class="form-control" type="password" placeholder="Password">
                                     <input class="btn btn-default btn-login" type="button" value="Login" onclick="loginAjax()">
                                     </form>
                                 </div>
@@ -197,7 +204,7 @@ $("#login").click(function(){
 
                 <h2 class="ls-l" style="top:351px;left:59px; text-transform: capitalize; font-weight:normal;width:;height:;padding-top:15px;padding-right:15px;padding-bottom:15px;padding-left:15px;border-top:;border-right:;border-bottom:;border-left:;font-family:;font-size:24px;line-height:;color:#ffffff;background:;border-radius:;white-space: nowrap;">Watch your dream become reality</h2>
 
-                <a href="#" target="_blank" class="ls-l" style="top:420px;left:72px; margin-right:0px;">
+                <a href="/post" target="_blank" class="ls-l" style="top:420px;left:72px; margin-right:0px;">
                   <p class="button-medium" style="text-shadow: rgba(0, 0, 0, 0.498039) 0px 0px 5px;width:;height:;padding-top:15px;padding-right:40px;padding-bottom:15px ;padding-left:40px;border-top:;border-right:;border-bottom:;border-left:;font-family:;font-size:14px;line-height:;color:;background:;border-radius:;white-space: nowrap;">
                     <i style="margin-right:5px" class="fa fa-th" aria-hidden="true"></i>I want to Hire
                   </p>

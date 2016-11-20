@@ -8,6 +8,8 @@ use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInt
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
 use Symfony\Component\Security\Http\Firewall\ListenerInterface;
 use AppBundle\Security\Authentication\Token\WsseUserToken;
+use Symfony\Component\HttpFoundation\Cookie;
+
 
 class WsseListener implements ListenerInterface
 {
@@ -22,6 +24,7 @@ class WsseListener implements ListenerInterface
 
     public function handle(GetResponseEvent $event)
     {
+        
         $request = $event->getRequest();
 
         $wsseRegex = '/UsernameToken Username="([^"]+)", PasswordDigest="([^"]+)", Nonce="([a-zA-Z0-9+\/]+={0,2})", Created="([^"]+)"/';
@@ -36,21 +39,15 @@ class WsseListener implements ListenerInterface
         $token->nonce    = $matches[3];
         $token->created  = $matches[4];
 
+        $d;
+
         try {
             $authToken = $this->authenticationManager->authenticate($token);
             $this->tokenStorage->setToken($authToken);
 
             return;
         } catch (AuthenticationException $failed) {
-            // ... you might log something here
 
-            // To deny the authentication clear the token. This will redirect to the login page.
-            // Make sure to only clear your token, not those of other authentication listeners.
-            // $token = $this->tokenStorage->getToken();
-            // if ($token instanceof WsseUserToken && $this->providerKey === $token->getProviderKey()) {
-            //     $this->tokenStorage->setToken(null);
-            // }
-            // return;
         }
 
         // By default deny authorization

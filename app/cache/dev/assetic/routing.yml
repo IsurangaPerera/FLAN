@@ -1,5 +1,0 @@
-_assetic:
-    resource: .
-    type: assetic
-_app:
-    resource: 'G:\projects\ongoing\flan_new\FLAN\app/config/routing_dev.yml'

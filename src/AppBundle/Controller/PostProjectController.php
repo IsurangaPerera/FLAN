@@ -6,6 +6,8 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Session\Session;
+
 use AppBundle\Entity\Project;
 
 class PostProjectController extends Controller
@@ -25,11 +27,14 @@ class PostProjectController extends Controller
      */
     public function postAction(Request $request)
     {
+        $session = new Session();
+
         $data = $request->getContent();
         $data =  json_decode($data, true);
 
         $project = new Project();
-        $project->setUserId(567);
+        
+        $project->setUserId($session->get('user_id'));
         $project->setType($data["project"][0]["type"]);
         $project->setName($data["project"][0]["name"]);
         $project->setDescription($data["project"][0]["description"]);
@@ -39,9 +44,14 @@ class PostProjectController extends Controller
     	$em->persist($project);
 
     	$em->flush();
+<<<<<<< HEAD
     	return new Response("os");
 
     }
 
 
+=======
+    	return new Response();  
+    }
+>>>>>>> refs/remotes/origin/master
 }

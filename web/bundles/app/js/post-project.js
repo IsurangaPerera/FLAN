@@ -41,6 +41,8 @@ function fillProject(){
 	else
 		type = $("#project-category option:selected").html();
 
+	type = type.replace(/^\s+|\s+$/g,'');
+
 	name = $("#project-name").val();
 	description = $("#project-description").val();
 
