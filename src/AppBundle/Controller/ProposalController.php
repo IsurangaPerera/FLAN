@@ -3,9 +3,11 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Proposal;
+use AppBundle\Entity\Project;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 /**
  * Proposal controller.
@@ -22,13 +24,33 @@ class ProposalController extends Controller
      */
     public function indexAction()
     {
-        $em = $this->getDoctrine()->getManager();
+      $em = $this->getDoctrine()->getManager();
 
-        $proposals = $em->getRepository('AppBundle:Proposal')->findAll();
 
-        return $this->render('default/proposal.html.twig', array(
-            'proposals' => $proposals,
-        ));
+      $project = $em->getRepository('AppBundle:Project')->findAll();
+
+      return $this->render('default/proposal.html.twig', array(
+          'myProject'=> $project,
+      ));
+
+    }
+
+
+    /**
+     * Lists all proposal entities.
+     *
+     * @Route("/show", name="view all")
+     * @Method("GET")
+     */
+    public function show(Request $request)
+    {
+
+      $em = $this->getDoctrine()->getManager();
+
+      $data = $em->getRepository('AppBundle:Proposal')->findAll();
+      $proposal=new Response(json_encode($data));
+      return $proposal;
+
     }
 
     /**

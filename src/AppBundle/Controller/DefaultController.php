@@ -34,6 +34,17 @@ class DefaultController extends Controller
     }
 
     /**
+<<<<<<< HEAD
+     * @Route("dashboard/", name="dashboard")
+     */
+    public function dashboard(Request $request)
+    {
+        return $this->render('default/dashboard.html.twig');
+    }
+
+
+
+=======
      * Matches /login/*
      * @Route("login/{id}/", name="login")
      */
@@ -57,4 +68,5 @@ class DefaultController extends Controller
             return new Response($user_id);
         return new Response();
     }
+>>>>>>> refs/remotes/origin/master
 }

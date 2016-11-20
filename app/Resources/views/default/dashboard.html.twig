@@ -12,29 +12,30 @@
 
     <style>
     #prop_tr{
-      height: 150px;
-      
+      height: 30px;
+      background-color: red;
+    }
+
+    .project-snapshot-add{
+      -webkit-box-pack: center;
+      justify-content: center;
+      overflow: hidden;
+      color: #75787d;
+      border: 1px dashed #DEDEDE;
+      background-color: #F7F7F7
     }
 
 
-    #prop_description{
-      width:400px;
-      text-align: left;
+    .proposal-placeholder-section{
+      padding-top:20px !important;
+      min-height: 300px;
     }
 
-    #prop_description button{
-      border: 1px solid #4fb55d;
-font-weight: 700;
-color: #F7F7F7;
-background: -webkit-linear-gradient(top,#5dc26a 0,#4fb55d 100%);
-background: linear-gradient(to bottom,#5dc26a 0,#4fb55d 100%);
-text-shadow: 0 -1px transparent;
-padding: 6px 13px;
-font-size: 14px;
-border-radius: 3px
+    .recent-projects-list li{
+        float:left;
+        width: 50%;
+        list-style: none;
     }
-
-
 
 
     </style>
@@ -46,11 +47,13 @@ border-radius: 3px
     <meta property="og:site_name" content="Freelancer"/>
     <meta property="og:image" content="https://www.f-cdn.com/img/facebook/default-1a9cd0e5.jpg"/>
 
+
     <!-- css section -->
     <link href="https://cdn5.f-cdn.com/build/css/js-plugins/jquery.fileupload-ui.css?v=cd7ec3a496ae786928f334b389815dd4&amp;m=6" type="text/css" rel="stylesheet" />
     <link href="https://cdn5.f-cdn.com/build/css/flux/base.css?v=41d319ef9e82be92b8f7d009a983711e&amp;m=6" type="text/css" rel="stylesheet" />
     <link href="https://cdn3.f-cdn.com/build/css/flux/LoggedInBase.css?v=50e5a05e57ee3ff4bd0fd457ba1b6ed3&amp;m=6" type="text/css" rel="stylesheet" />
     <link href="https://cdn2.f-cdn.com/build/css/flux/layout/PageProjectView.css?v=0ea54547ee85298ed6d6fee2d18d22f6&amp;m=6" type="text/css" rel="stylesheet" />
+
 
     {% javascripts 'bundles/app/js/jquery.min.js'
     'bundles/app/js/bootstrap.min.js'
@@ -153,22 +156,7 @@ border-radius: 3px
 
                             <li class="primary-subnav-item">
                                     <a class="primary-subnav-link">
-                                        <!--if project type ==project-->
-                                        <span>
-                                        </span>
-                                        <!--if project type ==project-->
-                                        <span>
-                                        </span>
 
-                                      <!--if project type ==project-->
-                                        <span class="primary-nav-project-name">
-                                            {{ myProject[0].name }}
-                                        </span>
-
-                                          <!--if project type ==project-->
-                                        <span  class="primary-nav-project-name">
-                                            {{ myProject[0].type }}
-                                        </span>
                                     </a>
                                 </li>
                             </fl-nav-group>
@@ -755,26 +743,12 @@ border-radius: 3px
             </ul>
           </nav>
 
-          <div class="ProjectHeader-status">
-            <div class="ProjectHeader-promotions">
-            </div>
 
-
-          </div>
         </div>
 
-        <div class="ProjectHeader-row">
-          <h1 class="ProjectHeader-title">{{myProject[0].name}}</h1>
-          <span class="ProjectHeader-info">dfdgdfg
-          </span>
-        </div>
 
-        <!-- START MM-1483 AB TEST -->
-        <div class="ProjectHeader-row">
-          <div class="ProjectHeader-inlineProjectCompletion">
-            <complete-details project="common.project"></complete-details>
-          </div>
-        </div>
+
+
         <!-- END MM-1483 AB TEST -->
 
         <div class="ProjectHeader-row">
@@ -869,15 +843,6 @@ border-radius: 3px
 
 
 
-          <a class="ProjectHeader-upgrade">
-            <span class="ProjectHeader-upgradeIcon">
-              <fl-svg src="/static/icons/flicon-arrow-up.svg"></fl-svg>
-            </span>
-
-            <span class="ProjectHeader-upgradeName">
-              Upgrade Project
-            </span>
-          </a>
         </div>
       </div>
     </header>
@@ -888,45 +853,95 @@ border-radius: 3px
     <section class="project-view-inner">
       <div class="project-view-wrapper is-loading">
         <div class="project-view-tab-content-wrapper">
-          <div class="project-view-proposals-tab">
-            <section class="proposal-placeholder-section">
-              <span class="AnimatedLoader">
-                <fl-svg src="/static/icons/flicon-other.svg"></fl-svg>
-                <span class="AnimatedLoader-inner">
-                  <span class="AnimatedLoader-container">
-                      <fl-svg src="/static/icons/flicon-upload-alt.svg"></fl-svg>
+          <div class="project-view-proposals-tab" style="clear:both;">
 
-                  </span>
-                </span>
-              </span>
+            <section class="proposal-placeholder-section">
+            <h1 style="text-align:left">Recent projects</h1>
 
               <div class="proposal-placeholder-details">
-                <table style="width: 100%; height: auto">
-                <thead>
-                <th>&nbsp;</th>
-                <th>&nbsp;</th>
-                </thead>
-                <tbody id="prop_content">
 
-                </tbody>
+                <ul class="recent-projects-list">
+                  <li class="project-snapshot project-snapshot-open">
+                    <div class="project-snapshot-content">
+                      <div class="project-snapshot-menu">
+                        <p class="project-snapshot-status project-snapshot-status-border">Award your project</p>
+                        <span class="icon">
+                        </span>
 
-              </table>
+                      </div>
+                      <h4 class="project-snapshot-heading">Build web site</h4>
+
+                      <div class="FreelancerBid">
+                        <div class="FreelancerBid-user">
+                          <span class="FreelancerBid-user-text">Recmmend bid</span>
+                          <a class="FreelancerBid-user-name">dds</a>
+                        </div>
+
+                      </div>
+
+
+                    </div>
+
+                  </li>
+
+                  <li class="project-snapshot project-snapshot-add is-vacant">
+                    <a href="#" class="project-snapshot-content">
+                      <span class="fl-icon-plus">
+
+                      </span>
+                      <h4 class="create-project-heading">create new project</h4>
+                      <p>Millions of talented freelancers are ready to help you do amazing things.</p>
+                    </a>
+
+                  </li>
+
+                </ul>
+
+
+
+              </div>
+
+            </section>
+
+            <section class="proposal-placeholder-section">
+            <h1 style="text-align:left">News feed</h1>
+
+              <div class="proposal-placeholder-details">
+
+                  fdgfd
+
               </div>
 
             </section>
           </div>
           <aside class="project-view-aside">
             <div class="project-view-aside-inner">
-              <br>
-                <button type="button" class="btn btn-primary btn-block">Award project</button>
-                <br/>
-                <p style="text-align:center">
-                  We suggest awarding your project to deepbratt. Our analysis suggests they'll be the best freelancer to complete your project!
-                </p>
+              <div class="user-details-wrap">
 
-                <button type="button" class="btn btn-primary btn-block" style="background-color:#fff">Profile details</button>
-                <br><br>
-                <button type="button" class="btn btn-primary btn-block" style="background-color:#fff">chat</button>
+                <div class="user-details Card PageDashboard-card">
+                  <figure class="ImageThumbnail ImageThumbnail--xlarge PageDashboard-avatar online">
+                    <a class="ImageThumbnail-link" href="#">
+                    </a>
+                  </figure>
+
+                  <div class="welcome-note">
+                    <h4 class="user-details-title">welcome back
+                    <em><a class="user-details-username">dulajsan</a></em>
+                    </h4>
+
+                    <a class="membership">
+                      <span>free member</span>
+                    </a>
+
+                    <a href="#" class="btn btn-success btn-small user-details-upgrade-btn">
+                        upgrade now
+                    </a>
+
+                  </div>
+
+                </div>
+
+              </div>
             </div>
           </aside>
         </div>
