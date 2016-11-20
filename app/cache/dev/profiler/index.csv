@@ -3084,3 +3084,13 @@ f40227,127.0.0.1,GET,http://127.0.0.1:8000/bundles/app/css/blank.gif,1479581506,
 455909,127.0.0.1,GET,http://127.0.0.1:8000/bundles/app/css/blank.gif,1479581506,,404
 8dc4fb,127.0.0.1,GET,http://127.0.0.1:8000/bundles/app/fonts/fontawesome-webfont.ttf?v=4.5.0,1479581506,cedf22,200
 cedf22,127.0.0.1,GET,http://127.0.0.1:8000/bundles/app/fonts/fontawesome-webfont.ttf?v=4.5.0,1479581506,,404
+066bc4,127.0.0.1,GET,http://127.0.0.1:8000/howitworks,1479581735,,301
+160f08,127.0.0.1,GET,http://127.0.0.1:8000/howitworks/,1479581735,,200
+608ac3,127.0.0.1,GET,http://127.0.0.1:8000/ajax/count-24h.php,1479581736,258e02,200
+258e02,127.0.0.1,GET,http://127.0.0.1:8000/ajax/count-24h.php,1479581736,,404
+b873d9,127.0.0.1,GET,http://127.0.0.1:8000/ajax/_general_vars.php,1479581737,875037,200
+875037,127.0.0.1,GET,http://127.0.0.1:8000/ajax/_general_vars.php,1479581737,,404
+14e2b0,127.0.0.1,GET,http://127.0.0.1:8000/ajax/count-24h.php,1479581737,088d18,200
+088d18,127.0.0.1,GET,http://127.0.0.1:8000/ajax/count-24h.php,1479581737,,404
+aeecff,127.0.0.1,GET,http://127.0.0.1:8000/buyers/create.php,1479581797,416209,200
+416209,127.0.0.1,GET,http://127.0.0.1:8000/buyers/create.php,1479581797,,404
