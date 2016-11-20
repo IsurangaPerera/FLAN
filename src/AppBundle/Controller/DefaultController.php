@@ -30,4 +30,15 @@ class DefaultController extends Controller
             'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
         ));
     }
+
+    /**
+     * @Route("dashboard/", name="dashboard")
+     */
+    public function dashboard(Request $request)
+    {
+        return $this->render('default/dashboard.html.twig');
+    }
+
+
+
 }

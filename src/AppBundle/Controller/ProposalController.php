@@ -45,21 +45,11 @@ class ProposalController extends Controller
     public function show(Request $request)
     {
 
-      $proposal = $this->getDoctrine()
-                    ->getManager()
-                   ->getRepository('AppBundle:Proposal')
-                   ->findAll();
-      $arrayCollection = array();
+      $em = $this->getDoctrine()->getManager();
 
-      foreach($proposal as $item) {
-          $arrayCollection[] = array(
-              'id' => $item->getId(),
-              'description'=> $item->getDescription(),
-
-          );
-      }
-
-      return new JsonResponse($arrayCollection);
+      $data = $em->getRepository('AppBundle:Proposal')->findAll();
+      $proposal=new Response(json_encode($data));
+      return $proposal;
 
     }
 
