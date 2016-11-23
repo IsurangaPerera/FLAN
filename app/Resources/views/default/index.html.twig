@@ -24,7 +24,8 @@ filter='cssrewrite' %}
 'bundles/app/js/greensock.js'
 'bundles/app/js/layerslider.kreaturamedia.jquery.js'
 'bundles/app/js/wsse.js'
-'bundles/app/js/loginAjax.js'%}
+'bundles/app/js/loginAjax.js'
+'bundles/app/js/registration.js'%}
 <script src="{{ asset_url }}"></script>
 {% endjavascripts %}
 
@@ -126,7 +127,7 @@ filter='cssrewrite' %}
                                       <span>or</span>
                                     <div class="line r"></div>
                                 </div>
-                                <div class="form loginBox">
+                                <div class="form loginBox" id="formLogin">
                                     <form method="post" action="/login" accept-charset="UTF-8">
                                     <input id="email1" class="form-control" type="text" placeholder="Email">
                                     <input id="password1" class="form-control" type="password" placeholder="Password">
@@ -136,13 +137,13 @@ filter='cssrewrite' %}
                              </div>
                         </div>
                         <div class="box">
-                            <div class="content registerBox" style="display:none;">
+                            <div class="content registerBox" id="formReg" hidden>
                              <div class="form">
-                                <form method="post" html="{:multipart=>true}" data-remote="true" action="/register" accept-charset="UTF-8">
+                                <form>
                                 <input id="email" class="form-control" type="text" placeholder="Email" name="email">
                                 <input id="password" class="form-control" type="password" placeholder="Password" name="password">
                                 <input id="password_confirmation" class="form-control" type="password" placeholder="Repeat Password" name="password_confirmation">
-                                <input class="btn btn-default btn-register" type="submit" value="Create account" name="commit">
+                                <input onclcik="doRegister()" class="btn btn-default btn-register" value="Create account" name="commit">
                                 </form>
                                 </div>
                             </div>
@@ -151,7 +152,7 @@ filter='cssrewrite' %}
                     <div class="modal-footer">
                         <div class="forgot login-footer">
                             <span>Looking to 
-                                 <a href="javascript: showRegisterForm();">create an account</a>
+                                 <a href="#" onclick="showRegistration()">create an account</a>
                             ?</span>
                         </div>
                         <div class="forgot register-footer" style="display:none">
