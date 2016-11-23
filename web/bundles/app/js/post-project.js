@@ -13,7 +13,6 @@ $(document).ready(function() {
 	});
 
 	$('input:radio[name="budget-type"]').change(function(){
-		alert("HRLL");
 		if($("#budget-hourly").is(":checked")) {
 			$("#project-duration-select-step").show(500);
 			$("#project-duration-hours-step").show(500);
@@ -62,7 +61,7 @@ function fillBudget(){
 	else
 		budget_type = "fixed";
 
-	duration = $("project-duration option:selected").html();
+	duration = $("#project-duration option:selected").html().trim();
 
 	var opt_min = {188 : 10, 5 : 30, 1 : 250, 2 : 750, 3 : 1500, 4 : 3000, 6 : 5000};
 	var opt_max = {188 : 30, 5 : 250, 1 : 750, 2 : 1500, 3 : 3000, 4 : 5000, 6 : 10000}
@@ -102,11 +101,15 @@ function doPost() {
 		url: "../project/post",
 		data: JSON.stringify(objectO),
 		success: function( data, textStatus, jQxhr ){
-			//alert("Success");
 			window.location.href='/proposal';
+			objectO.budget = [];
 		},
 		error: function( jqXhr, textStatus, errorThrown ){
-			alert( errorThrown );
+			objectO = {
+				"project" : [],
+				"skill"   : [],
+				"budget"  : []
+			};
 		}
 	});
 }

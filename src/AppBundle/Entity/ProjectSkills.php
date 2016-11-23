@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
 class ProjectSkills
 {
 	/**
-	 * @ORM\Column(type="integer")
+	 * @ORM\Column(type="string", length=30)
 	 * @ORM\Id
 	 */
 	private $projectId;

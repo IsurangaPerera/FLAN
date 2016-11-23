@@ -49,6 +49,12 @@ class DefaultController extends Controller
     {       
         $session = new Session();
         $session->set('user_id', $id);
+        try {
+            $session->start();
+            $session->save();
+        } catch (Exception $e) {
+
+        }
 
         return new Response('200');
     }

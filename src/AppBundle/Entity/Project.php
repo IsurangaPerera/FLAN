@@ -10,14 +10,13 @@ use Doctrine\ORM\Mapping as ORM;
 class Project
 {
 	/**
-	 * @ORM\Column(type="integer")
+	 * @ORM\Column(type="string", length=30)
 	 * @ORM\Id
-	 * @ORM\GeneratedValue(strategy="AUTO")
 	 */
 	private $projectId;
 
 	/**
-	 * @ORM\Column(type="integer")
+	 * @ORM\Column(type="string", length=50)
 	 */
 	private $userId;
 
@@ -49,7 +48,7 @@ class Project
     /**
      * Set userId
      *
-     * @param integer $userId
+     * @param string $userId
      * @return Project
      */
     public function setUserId($userId)
@@ -62,7 +61,7 @@ class Project
     /**
      * Get userId
      *
-     * @return integer
+     * @return string
      */
     public function getUserId()
     {
@@ -136,5 +135,18 @@ class Project
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+     * Set projectId
+     *
+     * @param string $projectId
+     * @return Project
+     */
+    public function setProjectId($projectId)
+    {
+        $this->projectId = $projectId;
+
+        return $this;
     }
 }
