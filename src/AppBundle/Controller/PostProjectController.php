@@ -9,6 +9,8 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\Session;
 
 use AppBundle\Entity\Project;
+use AppBundle\Entity\ProjectBudget;
+use AppBundle\Entity\ProjectSkills;
 
 class PostProjectController extends Controller
 {
@@ -17,7 +19,6 @@ class PostProjectController extends Controller
      */
     public function indexAction(Request $request)
     {
-        // replace this example code with whatever you need
         return $this->render('default/postProject.html.twig');
 
     }
@@ -27,13 +28,18 @@ class PostProjectController extends Controller
      */
     public function postAction(Request $request)
     {
-        $session = new Session();
+        $session = $request->getSession();
 
         $data = $request->getContent();
         $data =  json_decode($data, true);
+        $id = uniqid();
 
         $project = new Project();
 
+<<<<<<< HEAD
+=======
+        $project->setProjectId($id);
+>>>>>>> 666bdb15b596a5f113cb872cc1e922ce94f2bc44
         $project->setUserId($session->get('user_id'));
         $project->setType($data["project"][0]["type"]);
         $project->setName($data["project"][0]["name"]);
@@ -43,14 +49,42 @@ class PostProjectController extends Controller
 
     	$em->persist($project);
 
+<<<<<<< HEAD
     	$em->flush();
 
     	return new Response("os");
+=======
+        $budget = new ProjectBudget();
+>>>>>>> 666bdb15b596a5f113cb872cc1e922ce94f2bc44
 
+        $budget->setProjectId($id);
+        $budget->setType($data["budget"][0]["budget_type"]);
+        $budget->setCurrency($data["budget"][0]["currency"]);
+        $budget->setBudgetMin($data["budget"][0]["min_budget"]);
+        $budget->setBudgetMax($data["budget"][0]["max_budget"]);
+        $budget->setDuration($data["budget"][0]["duration"]);
+        $budget->setWorkHours($data["budget"][0]["commitment"]);
+        $budget->setCommitmentType($data["budget"][0]["commitment_type"]);
+
+        $em->persist($budget);
+
+        $skill = new ProjectSkills();
+        $skill->setProjectId($id);
+
+        foreach($data["skill"][0] as $x)
+        {
+            $skill->setSkill($x);
+            $em->persist($skill);
+        }
+  
+    	$em->flush();
+    	return new Response("os");
+
+<<<<<<< HEAD
+
+
+
+=======
     }
-
-
-
-
-
+>>>>>>> 666bdb15b596a5f113cb872cc1e922ce94f2bc44
 }

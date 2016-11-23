@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Userregistration</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ userRegistration.id }}</td>
+            </tr>
+            <tr>
+                <th>Emailaddress</th>
+                <td>{{ userRegistration.emailAddress }}</td>
+            </tr>
+            <tr>
+                <th>Username</th>
+                <td>{{ userRegistration.username }}</td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td>{{ userRegistration.password }}</td>
+            </tr>
+            <tr>
+                <th>Confirmpassword</th>
+                <td>{{ userRegistration.confirmPassword }}</td>
+            </tr>
+            <tr>
+                <th>Hire</th>
+                <td>{% if userRegistration.hire %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Work</th>
+                <td>{% if userRegistration.work %}Yes{% else %}No{% endif %}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('userregistration_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('userregistration_edit', { 'id': userRegistration.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

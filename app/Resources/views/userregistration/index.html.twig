@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Userregistrations list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Emailaddress</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Confirmpassword</th>
+                <th>Hire</th>
+                <th>Work</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for userRegistration in userRegistrations %}
+            <tr>
+                <td><a href="{{ path('userregistration_show', { 'id': userRegistration.id }) }}">{{ userRegistration.id }}</a></td>
+                <td>{{ userRegistration.emailAddress }}</td>
+                <td>{{ userRegistration.username }}</td>
+                <td>{{ userRegistration.password }}</td>
+                <td>{{ userRegistration.confirmPassword }}</td>
+                <td>{% if userRegistration.hire %}Yes{% else %}No{% endif %}</td>
+                <td>{% if userRegistration.work %}Yes{% else %}No{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('userregistration_show', { 'id': userRegistration.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('userregistration_edit', { 'id': userRegistration.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('userregistration_new') }}">Create a new userRegistration</a>
+        </li>
+    </ul>
+{% endblock %}

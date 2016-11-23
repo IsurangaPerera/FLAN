@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
 class ProjectBudget
 {
 	/**
-	 * @ORM\Column(type="integer")
+	 * @ORM\Column(type="string", length=30)
 	 * @ORM\Id
 	 */
 	private $projectId;
@@ -45,7 +45,10 @@ class ProjectBudget
 	 */
 	private $work_hours;
 
-
+    /**
+     * @ORM\Column(type="string", length=60)
+     */
+    private $commitment_type;
 
     /**
      * Set projectId
@@ -206,5 +209,28 @@ class ProjectBudget
     public function getWorkHours()
     {
         return $this->work_hours;
+    }
+
+    /**
+     * Set commitment_type
+     *
+     * @param string $commitmentType
+     * @return ProjectBudget
+     */
+    public function setCommitmentType($commitmentType)
+    {
+        $this->commitment_type = $commitmentType;
+
+        return $this;
+    }
+
+    /**
+     * Get commitment_type
+     *
+     * @return string 
+     */
+    public function getCommitmentType()
+    {
+        return $this->commitment_type;
     }
 }

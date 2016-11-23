@@ -3,10 +3,10 @@
 /app/config/config.yml
 /app/config/parameters.yml.dist
 /app/logs/*
+/app/cache/*
 !app/cache/.gitkeep
 !app/logs/.gitkeep
 /app/phpunit.xml
-/app/cache/dev/profiler
 /build/
 /vendor/
 /bin/
