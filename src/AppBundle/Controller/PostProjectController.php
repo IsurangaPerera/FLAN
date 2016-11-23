@@ -44,14 +44,7 @@ class PostProjectController extends Controller
     	$em->persist($project);
 
     	$em->flush();
-<<<<<<< HEAD
     	return new Response("os");
 
     }
-
-
-=======
-    	return new Response();  
-    }
->>>>>>> refs/remotes/origin/master
 }

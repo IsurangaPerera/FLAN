@@ -26,7 +26,7 @@ class DefaultController extends Controller
     /**
      * @Route("howitworks/", name="howitworks")
      */
-    public function test(Request $request)
+    public function howItWorks(Request $request)
     {
         return $this->render('default/howItWorks.html.twig', array(
             'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
@@ -34,7 +34,6 @@ class DefaultController extends Controller
     }
 
     /**
-<<<<<<< HEAD
      * @Route("dashboard/", name="dashboard")
      */
     public function dashboard(Request $request)
@@ -42,9 +41,7 @@ class DefaultController extends Controller
         return $this->render('default/dashboard.html.twig');
     }
 
-
-
-=======
+    /**
      * Matches /login/*
      * @Route("login/{id}/", name="login")
      */
@@ -68,5 +65,4 @@ class DefaultController extends Controller
             return new Response($user_id);
         return new Response();
     }
->>>>>>> refs/remotes/origin/master
 }

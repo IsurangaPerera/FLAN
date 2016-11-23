@@ -39,8 +39,6 @@ class WsseListener implements ListenerInterface
         $token->nonce    = $matches[3];
         $token->created  = $matches[4];
 
-        $d;
-
         try {
             $authToken = $this->authenticationManager->authenticate($token);
             $this->tokenStorage->setToken($authToken);
