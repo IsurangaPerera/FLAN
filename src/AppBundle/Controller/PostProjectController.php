@@ -33,7 +33,7 @@ class PostProjectController extends Controller
         $data =  json_decode($data, true);
 
         $project = new Project();
-        
+
         $project->setUserId($session->get('user_id'));
         $project->setType($data["project"][0]["type"]);
         $project->setName($data["project"][0]["name"]);
@@ -44,14 +44,13 @@ class PostProjectController extends Controller
     	$em->persist($project);
 
     	$em->flush();
-<<<<<<< HEAD
+
     	return new Response("os");
 
     }
 
 
-=======
-    	return new Response();  
-    }
->>>>>>> refs/remotes/origin/master
+
+
+
 }

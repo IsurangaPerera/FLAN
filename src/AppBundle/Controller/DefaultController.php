@@ -34,7 +34,7 @@ class DefaultController extends Controller
     }
 
     /**
-<<<<<<< HEAD
+
      * @Route("dashboard/", name="dashboard")
      */
     public function dashboard(Request $request)
@@ -44,12 +44,12 @@ class DefaultController extends Controller
 
 
 
-=======
-     * Matches /login/*
+
+     /**
      * @Route("login/{id}/", name="login")
      */
     public function login($id)
-    {       
+    {
         $session = new Session();
         $session->set('user_id', $id);
 
@@ -60,7 +60,7 @@ class DefaultController extends Controller
      * @Route("checksession/", name="sessionCheck")
      */
     public function sessionCheck()
-    {       
+    {
         $session = new Session();
         $user_id = $session->get('user_id');
 
@@ -68,5 +68,5 @@ class DefaultController extends Controller
             return new Response($user_id);
         return new Response();
     }
->>>>>>> refs/remotes/origin/master
+
 }

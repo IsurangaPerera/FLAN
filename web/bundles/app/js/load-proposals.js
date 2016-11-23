@@ -8,10 +8,11 @@ var prop=document.getElementById('prop_content');
 		data: 'project='+2,
 		success: function( data, textStatus, jQxhr ){
 			//alert("Success");
+      //alert(data[0].id);
 
-
-      var pr=jQuery.parseJSON(data);
-      alert(pr.length);
+      //var pr=jQuery.parseJSON(data);
+      //alert(pr.length);
+      var pr=data;
 
 			if(pr.length>0){
 
@@ -24,11 +25,18 @@ var prop=document.getElementById('prop_content');
                           tr.setAttribute("id","prop_tr")
                           var td1=tr.insertCell(0);
                           td1.setAttribute("id","prop_img");
-                          td1.innerHTML="fghfghf";
+                          td1.innerHTML=" <img src='{{'img/photo.jpg') }}' alt='Symfony!' /> ";
 
                           var td2=tr.insertCell(1);
                           td2.setAttribute("id","prop_description");
-                          td2.innerHTML=pr[0].id;
+                          td2.innerHTML=pr[0].description+"<br/><button>Award</button>&nbsp;<button>chat</button>";
+
+                          var td3=tr.insertCell(2);
+                          //td3.setAttribute("id","prop_description");
+                          td3.innerHTML="$ 25"+"<br/><hr/>";
+
+
+
 
           }
       }
