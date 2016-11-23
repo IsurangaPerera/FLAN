@@ -9,6 +9,8 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\Session;
 
 use AppBundle\Entity\Project;
+use AppBundle\Entity\ProjectBudget;
+use AppBundle\Entity\ProjectSkills;
 
 class PostProjectController extends Controller
 {
