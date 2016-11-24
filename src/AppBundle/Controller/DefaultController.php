@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\Cookie;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\HttpFoundation\Session\Attribute\AttributeBag;
 use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
+use AppBundle\Entity\User;
 
 class DefaultController extends Controller
 {
@@ -48,6 +49,38 @@ class DefaultController extends Controller
     public function login($id)
     {
         $session = new Session();
+        $session->set('user_id', $id);
+        try {
+            $session->start();
+            $session->save();
+        } catch (Exception $e) {
+
+        }
+
+        return new Response('200');
+    }
+
+    /**
+     * @Route("register/", name="login")
+     */
+    public function registerUser(Request $request)
+    {
+
+        $data = $request->getContent();
+        $data =  json_decode($data, true);
+
+        $user = new User();
+
+        $id = $data['user'][0]['user_name'];
+
+        $user->setUserName($data['user'][0]['user_name']);
+        $user->setPassword($data['user'][0]['password']);
+
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($user);
+        $em->flush();
+        
+        $session = $request->getSession();
         $session->set('user_id', $id);
         try {
             $session->start();
