@@ -46,7 +46,7 @@ class DefaultController extends Controller
      * @Route("login/{id}/", name="login")
      */
     public function login($id)
-    {       
+    {
         $session = new Session();
         $session->set('user_id', $id);
         try {
@@ -63,7 +63,7 @@ class DefaultController extends Controller
      * @Route("checksession/", name="sessionCheck")
      */
     public function sessionCheck()
-    {       
+    {
         $session = new Session();
         $user_id = $session->get('user_id');
 

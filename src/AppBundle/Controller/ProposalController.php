@@ -8,6 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 /**
  * Proposal controller.
@@ -45,11 +46,21 @@ class ProposalController extends Controller
     public function show(Request $request)
     {
 
-      $em = $this->getDoctrine()->getManager();
+      $proposal = $this->getDoctrine()
+                    ->getManager()
+                   ->getRepository('AppBundle:Proposal')
+                   ->findAll();
+      $arrayCollection = array();
 
-      $data = $em->getRepository('AppBundle:Proposal')->findAll();
-      $proposal=new Response(json_encode($data));
-      return $proposal;
+      foreach($proposal as $item) {
+          $arrayCollection[] = array(
+              'id' => $item->getId(),
+              'description'=> $item->getDescription(),
+
+          );
+      }
+
+      return new JsonResponse($arrayCollection);
 
     }
 
