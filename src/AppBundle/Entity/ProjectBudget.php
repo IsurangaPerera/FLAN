@@ -1,5 +1,5 @@
 <?php
-namespace AppBundle\Entity;
+ namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -232,5 +232,28 @@ class ProjectBudget
     public function getCommitmentType()
     {
         return $this->commitment_type;
+    }
+
+    /**
+     * Set project
+     *
+     * @param \AppBundle\Entity\ProjectBudget $project
+     * @return ProjectBudget
+     */
+    public function setProject(\AppBundle\Entity\ProjectBudget $project = null)
+    {
+        $this->project = $project;
+
+        return $this;
+    }
+
+    /**
+     * Get project
+     *
+     * @return \AppBundle\Entity\ProjectBudget 
+     */
+    public function getProject()
+    {
+        return $this->project;
     }
 }

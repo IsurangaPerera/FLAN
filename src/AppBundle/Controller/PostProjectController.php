@@ -1,6 +1,6 @@
 <?php
 
-namespace AppBundle\Controller;
+ namespace AppBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -44,8 +44,6 @@ class PostProjectController extends Controller
 
         $em = $this->getDoctrine()->getManager();
 
-    	$em->persist($project);
-
         $budget = new ProjectBudget();
 
         $budget->setProjectId($id);
@@ -57,19 +55,31 @@ class PostProjectController extends Controller
         $budget->setWorkHours($data["budget"][0]["commitment"]);
         $budget->setCommitmentType($data["budget"][0]["commitment_type"]);
 
-        $em->persist($budget);
-
-        $skill = new ProjectSkills();
-        $skill->setProjectId($id);
+        $project->setProjectBudget($budget);
+        
 
         foreach($data["skill"][0] as $x)
         {
+            $skill = new ProjectSkills();
+            $skill->setProjectId($id);
             $skill->setSkill($x);
+            $project->addProjectSkill($skill);
             $em->persist($skill);
         }
-  
-    	$em->flush();
-    	return new Response("os");
 
+        $em->persist($project);
+        $em->persist($budget);
+    	$em->flush();
+    	
+        return new Response();
+    }
+
+    /**
+     * @Route("/project/post2")
+     */
+    public function posttAction(Request $request)
+    {
+        $session = $request->getSession();
+        return new Response($session->get('user_id'));
     }
 }

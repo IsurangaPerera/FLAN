@@ -1,0 +1,475 @@
+
+<!DOCTYPE html>
+<html class=" is-responsive" lang="en">
+<head>  
+    <title>Jobs Matching My Skills  | Freelancer</title>
+
+    <!-- css section -->
+    <link href="https://cdn5.f-cdn.com/build/css/js-plugins/jquery.fileupload-ui.css?v=cd7ec3a496ae786928f334b389815dd4&amp;m=6" type="text/css" rel="stylesheet" />
+
+    <link href="https://cdn3.f-cdn.com/build/css/flux/base.css?v=69e0d7203cf8e359b866ccc2a76665d1&amp;m=6" type="text/css" rel="stylesheet" />
+    
+    <link href="https://cdn5.f-cdn.com/build/css/flux/LoggedInBase.css?v=0db47f86c3b86ab0df9195124d0a5115&amp;m=6" type="text/css" rel="stylesheet" />
+    
+    <link href="https://cdn5.f-cdn.com/build/css/flux/layout/PageBrowseProject.css?v=46907b227fc1f3f6bf39a686fe945813&amp;m=6" type="text/css" rel="stylesheet" />
+    
+    <link href="https://cdn5.f-cdn.com/build/css/flux/layout/PageBrowseProject.css?v=46907b227fc1f3f6bf39a686fe945813&amp;m=6" type="text/css" rel="stylesheet" />
+    
+    <link href="https://cdn6.f-cdn.com/build/css/flux/layout/PageMySkills.css?v=34f83d36c6f50e799dd1e216c6246f9a&amp;m=6" type="text/css" rel="stylesheet" />
+
+    {% javascripts 'bundles/app/js/jquery.min.js'
+    'bundles/app/js/bootstrap.min.js'
+    'bundles/app/js/jquery-migrate.min.js'
+    'bundles/app/js/font-awesome-icons.js'
+    'bundles/app/js/viewprojects.js'%}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+
+</head>
+<body>
+
+    <div class="pinky-template">
+        <div id="appp-banner"></div>
+    </div>
+
+    <div class="pinky-template" id="pinky-container">
+        <div id="global_modal_root">
+            <div id="message"></div>
+            <div id="notification"></div>
+            <div class="modal-backdrop is-hidden" data-target="modal-bg"></div>
+        </div>
+
+<div class="user-sidebar-container" fl-analytics-section="DaVinciNavigation">
+    <div class="sidebar user-sidebar">
+        <div class="user-sidebar-info"></div>
+        <nav class="sidebar-nav">
+            <a class="sidebar-link" fl-analytics="Profile" href="/me/">
+                <span class="Icon Icon--light"><svg class="Icon-image" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path d="M12.002 12.006c2.206 0 4-1.795 4-4s-1.794-4-4-4-4 1.795-4 4 1.795 4 4 4zM12.002 13.006c-4.71 0-8 2.467-8 6v1h16v-1c0-3.533-3.29-6-8-6z"/>
+              </svg>
+          </span>
+          Profile
+      </a>
+      <a class="sidebar-link" fl-analytics="Membership" href="/membership/index.php?ref=davinci_userlink">
+        <span class="Icon Icon--light"><svg class="Icon-image" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM9 8c1.105 0 2 .896 2 2s-.895 2-2 2-2-.896-2-2 .897-2 2-2zm-3 8c0-1.84 1.16-3 3-3s3 1.16 3 3H6zm12 0h-4v-2h4v2zm0-3h-4v-2h4v2z"/>
+      </svg>
+  </span>
+  Membership
+</a>
+<a class="sidebar-link" fl-analytics="Settings" href="/users/settings.php">
+    <span class="Icon Icon--light"><svg class="Icon-image" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+      <path d="M19.868 13.38c-.876.395-1.845.62-2.868.62-3.865 0-7-3.134-7-7 0-1.022.225-1.99.62-2.867-1.217.216-2.35.694-3.18 1.307L6 4 4 6l1.44 1.44c-.454.617-.915 1.542-1.18 2.56H2v4h2.26c.266 1.018.727 1.943 1.18 2.56L4 18l2 2 1.44-1.44c.612.452 1.54.914 2.56 1.18V22h4v-2.26c1.02-.266 1.947-.73 2.56-1.18L18 20l2-2-1.44-1.44c.614-.833 1.09-1.963 1.308-3.18z"/>
+      <path d="M22 7.91V6.09h-1.492c-.08-.312-.203-.603-.358-.876l.94-.942L19.73 2.91l-.943.94c-.273-.156-.565-.277-.877-.358V2H16.09v1.492c-.31.08-.602.202-.875.358l-.942-.94L12.91 4.27l.94.942c-.154.272-.276.564-.358.876H12v1.818h1.49c.083.31.205.604.36.877l-.942.942 1.364 1.363.942-.94c.273.155.564.277.876.358V12h1.817v-1.49c.312-.083.604-.204.877-.36l.942.94L21.09 9.73l-.942-.942c.155-.273.277-.565.358-.877H22zM17 9c-1.106 0-2-.896-2-2s.894-2 2-2 2 .896 2 2-.895 2-2 2z"/>
+  </svg>
+</span>
+Settings
+</a>
+<a class="sidebar-link" fl-analytics="Help" href="/support">
+    <span class="Icon Icon--light"><svg class="Icon-image" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+      <path d="M12 2C6.486 2 2 6.487 2 12c0 5.515 4.486 10 10 10s10-4.485 10-10c0-5.513-4.486-10-10-10zm0 16.25c-.69 0-1.25-.56-1.25-1.25s.56-1.25 1.25-1.25 1.25.56 1.25 1.25-.56 1.25-1.25 1.25zm1-4.375V15h-2v-3h1c1.104 0 2-.897 2-2 0-1.104-.896-2-2-2s-2 .896-2 2H8c0-2.205 1.795-4 4-4s4 1.795 4 4c0 1.86-1.277 3.43-3 3.875z"/>
+  </svg>
+</span>
+Get Support
+</a>
+<a class="sidebar-link" fl-analytics="InviteFriends" href="/invite/">
+    <span class="Icon Icon--light"><svg class="Icon-image" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+      <path d="M22 6h-3V3h-2v3h-3v2h3v3h2V8h3"/>
+      <circle cx="7.001" cy="5" r="3"/>
+      <path d="M7 8c-2.756 0-5 2.243-5 5v3c0 .552.45 1 1 1h1v4c0 .552.45 1 1 1h4c.553 0 1-.448 1-1v-4h1c.553 0 1-.448 1-1v-3c0-2.757-2.242-5-5-5z"/>
+  </svg>
+</span>
+Invite Friends
+</a>
+<a class="sidebar-link" fl-analytics="Logout" id="headerSignoutButton">
+    <span class="Icon Icon--light"><svg class="Icon-image" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+      <path d="M18 2H7c-1.103 0-2 .898-2 2v7h7.59l-2.297-2.292 1.413-1.416 4.708 4.7-4.706 4.714-1.416-1.412L12.582 13H5v7c0 1.103.897 2 2 2h11c1.103 0 2-.897 2-2V4c0-1.102-.897-2-2-2z"/>
+  </svg>
+</span>
+Logout
+</a>
+</nav>
+<span class="sidebar-close-alt">
+    <span class="Icon Icon--mid"><svg class="Icon-image" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+      <path d="M20.707 4.707l-1.414-1.414L12 10.586 4.707 3.293 3.293 4.707 10.586 12l-7.293 7.293 1.414 1.414L12 13.414l7.293 7.293 1.414-1.414L13.414 12"/>
+  </svg>
+</span>
+</span>
+</div>
+</div>
+</fl-navigation>
+
+
+</div> 
+
+<div class="pinky-template">
+    <div id="main" class="main-content" aria-label="Content">
+
+        <div class="section-inner">
+
+
+            <div id="myskills_page" class="margin-t10">
+                <h1 id="subTitle" style="display:inline-block" >Jobs Matching My Skills</h1>
+                <div>
+                    <div id="intertwined-table" class="featured_jobs_table">
+
+                        <div id="advanced-search-wrapper"><section class="ProjectFilters">
+
+                            <div class="ProjectFilters-section" id="searchDiv">
+
+                                <form class="fl-form ProjectFilters-row">
+                                    <label class="ProjectFilters-rowLabel">
+                                        Search
+                                    </label>
+                                    <div class="ProjectFilters-item">
+                                        <div class="input-icon">
+                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve" class="flicon-search">
+                                                <g>
+                                                    <circle fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="10.2" cy="10.9" r="8.1"></circle>
+                                                    <line fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="15.9" y1="16.6" x2="21.8" y2="22.5"></line>
+                                                </g>
+                                            </svg>
+                                            <input name="search" type="text" class="search-query default-input" placeholder="Search for projects and contests">
+                                        </div>
+                                        <div class="form-error"></div>
+                                    </div>
+                                </form>
+                            </div>
+
+
+                            <div class="ProjectFilters-section" id="skillsDiv">
+
+                                <form class="fl-form ProjectFilters-row">
+                                    <label class="ProjectFilters-rowLabel">
+                                        Skills
+                                    </label>
+                                    <div class="ProjectFilters-item">
+                                        <div class="select2-container select2-container-multi select2 search-panel-control" id="s2id_skills-select">    <ul class="select2-choices">  <li class="select2-search-field">    <input type="text" autocomplete="off" class="select2-input select2-default" id="s2id_autogen3" style="width: 947.778px;">  </li></ul><div class="select2-drop select2-drop-multi" style="display:none;">   <ul class="select2-results">   </ul></div></div><select id="skills-select" multiple="multiple" class="select2 search-panel-control select2-offscreen" placeholder="Type to filter projects and contests by skills ..." tabindex="-1">
+                                        <optgroup label="My Skills">
+
+                                            <option value="3">PHP</option>
+
+                                            <option value="17">Website Design</option>
+
+                                            <option value="69">WordPress</option>
+
+                                            <option value="305">MySQL</option>
+
+                                            <option value="7">Java</option>
+
+                                            <option value="20">Graphic Design</option>
+
+                                            <option value="335">HTML</option>
+
+                                            <option value="323">HTML5</option>
+
+                                            <option value="39">Data Entry</option>
+
+                                        </optgroup>
+
+
+                                        <optgroup label="More Skills">
+
+
+                                            <option value="15">.NET</option>
+
+                                            <option value="792">360-degree video</option>
+
+                                            <option value="395">3D Animation</option>
+
+                                            <option value="505">3D Design</option>
+
+                                            <option value="978">3D Model Maker</option>
+
+                                            <option value="394">3D Modelling</option>
+
+                                            <option value="630">3D Printing</option>
+
+                                            <option value="93">3D Rendering</option>
+
+                                        </optgroup>
+
+                                    </select>
+                                    <div class="form-error"></div>
+                                </div>
+                            </form>
+                        </div>
+
+
+                        <div class="ProjectFilters-section" id="jobTypesDiv">
+
+                            <form class="fl-form ProjectFilters-row ProjectFilters-row--filters">
+                                <label class="ProjectFilters-rowLabel">
+                                    Job Types
+                                </label>
+                                <div class="ProjectFilters-item">
+                                    <div class="ProjectFilters-row ProjectFilters-row--JobTypes">
+                                        <div class="ProjectFilters-item ProjectFilters-item--JobType">
+                                            <label class="ProjectFilters-checkbox" for="Fixed">
+                                              <input type="checkbox" id="Fixed" value="fixed" checked="true"> Fixed Price Projects
+                                          </label>
+                                      </div>
+                                      <div class="ProjectFilters-item ProjectFilters-item--JobType">
+                                        <label class="ProjectFilters-checkbox" for="Hourly">
+                                          <input type="checkbox" id="Hourly" value="hourly" checked="true"> Hourly Projects
+                                      </label>
+                                  </div>
+                                  <div class="ProjectFilters-item ProjectFilters-item--JobType">
+                                    <label class="ProjectFilters-checkbox" for="Contests">
+                                      <input type="checkbox" id="Contests" value="contests" checked="true"> Contests
+                                  </label>
+                              </div>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+
+              <div class="ProjectFilters-section filter-to-hide hide" id="languagesDiv">
+                <form class="fl-form ProjectFilters-row">
+                    <label class="ProjectFilters-rowLabel">
+                        Languages
+                    </label>
+                    <div class="ProjectFilters-item">
+                        <div class="select2-container select2-container-multi select2 search-panel-control" id="s2id_languages-select">    <ul class="select2-choices">  <li class="select2-search-choice">    <div>English</div>    <a href="#" onclick="return false;" class="select2-search-choice-close fl-icon-close" tabindex="-1"></a></li><li class="select2-search-choice">    <div>Suomi</div>    <a href="#" onclick="return false;" class="select2-search-choice-close fl-icon-close" tabindex="-1"></a></li><li class="select2-search-field">    <input type="text" autocomplete="off" class="select2-input select2-default" id="s2id_autogen6" style="width: 10px;">  </li></ul><div class="select2-drop select2-drop-multi" style="display:none;">   <ul class="select2-results">   </ul></div></div>
+                </div>
+            </form>
+        </div>
+
+
+        <div class="ProjectFilters-section filter-to-hide hide">
+
+            <form class="fl-form ProjectFilters-row">
+                <label class="ProjectFilters-rowLabel">
+
+                    Location
+
+                </label>
+                <div class="ProjectFilters-item">
+                    <div class="ProjectFilters-item-combo">
+                        <div class="input-btn-combo" action="">
+
+                            <input type="text" class="default-input location-query" id="user-location-input" placeholder="Type to filter project by location" autocomplete="off">
+                            <a id="btn-set-location" class="ProjectFilters-locationButton btn" type="button">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="4 -4 24 24" class="flicon-pin">
+                                  <path d="M16.4-3.5C11.5-3.7 7.3.1 7 5c-.2 7.1 8.5 14.5 8.5 14.5s9.2-6.4 9.5-13.8c.1-4.8-3.7-9-8.6-9.2zm4.7 8.6c-.1 2.8-2.5 4.8-5.3 4.8-2.8-.1-4.9-2.4-4.8-5.2s2.5-4.8 5.3-4.8c2.7.1 4.9 2.4 4.8 5.2z"></path>
+                              </svg>
+
+                          </a>
+
+                      </div>
+                  </div>
+              </div>
+          </form>
+      </div>
+
+      <div class="ProjectFilters-section">
+        <div class="ProjectFilters-row">
+         <div class="ProjectFilters-primaryControls">
+
+            <button class="ProjectFilters-optionsToggle btn" id="toggle-filter-btn" data-option-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="flicon-settings-alt">
+                  <path fill="#4a5362" d="M3 3h1v17H3V3z"></path>
+                  <path fill="#4a5362" d="M2 5h3v3H2V5zM9 3h1v17H9V3z"></path>
+                  <path fill="#4a5362" d="M8 11h3v3H8v-3zM15 3h1v17h-1V3z"></path>
+                  <path fill="#4a5362" d="M14 9h3v3h-3V9zM21 3h1v17h-1V3z"></path>
+                  <path fill="#4a5362" d="M20 9h3v3h-3V9z"></path>
+              </svg>
+              <span class="option-less hide">
+                Less Options
+            </span>
+            <span class="option-more">
+                More Options
+            </span>
+        </button>
+        <button id="clear-btn" class="ProjectFilters-clearButton btn">Clear Filters</button>
+
+    </div>
+
+    <div class="ProjectFilters-secondaryControls">
+        <div class="ProjectFilters-quantity">
+            <label for="filter-length" class="ProjectFilters-quantityLabel">Results per page</label>
+            <select name="filter-length" id="quantity-selector" class="ProjectFilters-quantitySelector default-input" data-id="filter-length">
+                <option selected="">20</option>
+                <option>50</option>
+                <option>100</option>
+            </select>
+        </div>
+
+        <div id="browse-projects-pagination" class="ProjectFilters-pagination dataTables_paginate paging_full_numbers browse-projects-pagination">
+            <ul class="Pagination">
+                <li class="Pagination-item">
+                    <a href="" id="pagination_top_first" class="btn first paginate_button Pagination-link disabled">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" class="flicon-pagination-first">
+                                <path d="M10 11L5 6l5-5M2.5 11c-.28 0-.5-.22-.5-.5v-9c0-.28.22-.5.5-.5s.5.22.5.5v9c0 .28-.22.5-.5.5z"></path>
+                            </svg>
+                        </span>
+                    </a>
+                </li>
+                <li class="Pagination-item">
+                    <a href="" id="pagination_top_prev" class="btn previous paginate_button Pagination-link disabled">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" class="flicon-pagination-prev">
+                                <path d="M8 11L3 6l5-5v10z"></path>
+                            </svg>
+                        </span>
+                    </a>
+                </li>
+
+                <li class="Pagination-item">
+                    <a href="" id="pagination_top_1" class="btn number paginate_button Pagination-link paginate_active">1</a>
+                </li>
+
+                <li class="Pagination-item">
+                    <a href="2/" id="pagination_top_2" class="btn number paginate_button Pagination-link">2</a>
+                </li>
+
+                <li class="Pagination-item">
+                    <a href="3/" id="pagination_top_3" class="btn number paginate_button Pagination-link">3</a>
+                </li>
+
+                <li class="Pagination-item">
+                    <a href="4/" id="pagination_top_4" class="btn number paginate_button Pagination-link">4</a>
+                </li>
+
+                <li class="Pagination-item">
+                    <a href="5/" id="pagination_top_5" class="btn number paginate_button Pagination-link">5</a>
+                </li>
+
+                <li class="Pagination-item">
+                    <a href="0/" id="pagination_top_next" class="btn next paginate_button Pagination-link">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" class="flicon-pagination-next">
+                                <path d="M4 1l5 5-5 5"></path>
+                            </svg>
+                        </span>
+                    </a>
+                </li>
+                <li class="Pagination-item">
+                    <a href="0/" id="pagination_top_last" class="btn last paginate_button Pagination-link">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" class="flicon-pagination-last">
+                                <path d="M2 1l5 5-5 5M9.5 1c.28 0 .5.22.5.5v9c0 .28-.22.5-.5.5s-.5-.22-.5-.5v-9c0-.28.22-.5.5-.5z"></path>
+                            </svg>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+</div>
+</div>
+</section>
+
+<div id="project-map-canvas" class="project-map-canvas">
+</div>
+</div>
+
+<div id="browse-project-table">
+    <div class="dataTables_wrapper" id="project_table_wrapper" style="display: block;"><div class="toolbar"></div><div class="clear"></div><div id="project_table_processing" class="dataTables_processing" style="visibility: hidden; display: none;"></div><table id="project_table" class="ProjectTable dataTable" cellpadding="0" cellspacing="0" style="opacity: 1;">
+    
+    <thead class="ProjectTable-head">
+        <tr>
+
+            <th class="ProjectTable-header sorting_disabled ProjectTable-cell ProjectTable-summaryColumn title-col">
+                Project/Contest
+            </th>
+    
+            <th class="ProjectTable-header ProjectTable-cell ProjectTable-bidsColumn bids-col sorting">
+                Bids/Entries<span class="fl-icon-chevron-up"></span>
+            </th>
+ 
+            <th class="ProjectTable-header ProjectTable-cell ProjectTable-startedColumn started-col sorting_desc">
+                Started<span class="fl-icon-chevron-up"></span>
+            </th>
+                 
+            <th class="ProjectTable-header ProjectTable-cell ProjectTable-endColumn end-col sorting" style="display: none;">
+                Ends<span class="fl-icon-chevron-up"></span>
+            </th>
+            
+            <th class="ProjectTable-header ProjectTable-cell ProjectTable-priceColumn price-col sorting">
+                Price (USD)<span class="fl-icon-chevron-up"></span>
+            </th>
+
+            <th class="ProjectTable-header sorting_disabled ProjectTable-cell ProjectTable-bookmarkColumn bookmark-col">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" class="flicon-bookmark"><path d="M2 1c-.55 0-1 .31-1 .7v8.94c0 .31.54.47.85.25l3.79-2.65c.2-.14.51-.14.71 0l3.79 2.65c.31.22.85.06.85-.25V1.7C11 1.31 10.55 1 10 1H2z"></path></svg>
+            </th>    
+        </tr>
+    </thead>
+    
+    <tbody class="ProjectTable-body" id="dtable">
+
+<tr class="odd ProjectTable-row project-details" project_id="12168661" bid_placed_check="1" id="12168661" style="cursor: pointer;">
+    <td class=" ProjectTable-cell ProjectTable-summaryColumn title-col"><ul class="promotion-flags promotions promotion-flags--small inverted"></ul>
+<h2 class="ProjectTable-title">
+    <span class="ProjectTable-titleIcon is-ProjectTable-titleIcon-project">
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.4 19.7" class="flicon-desktop">
+          <g fill="none">
+            <title>Desktop icon</title>
+            <path d="M21.8 15.7c0 .8-.6 1.5-1.4 1.5H2c-.8 0-1.4-.7-1.4-1.5V2.1C.6 1.3 1.2.6 2 .6h18.4c.8 0 1.4.7 1.4 1.5v13.6zM4.8 19h12.8M11.2 17.2V19"></path>
+            <circle cx="11.2" cy="15.3" r=".5"></circle>
+            <path d="M.6 13.5h21.2"></path>
+        </g>
+    </svg>
+</span>
+<a href="https://www.freelancer.com/projects/Graphic-Design/Design-project-12168661/">Design project</a>
+</h2>
+
+<p class="ProjectTable-description">I need a logo designed.</p>
+<span class="ProjectTable-skills"><a class="hiddenlink" href="https://www.freelancer.com/jobs/Graphic-Design/">Graphic Design</a>, <a class="hiddenlink" href="https://www.freelancer.com/jobs/Logo-Design/">Logo Design</a></span>
+
+</td><td class=" ProjectTable-cell ProjectTable-bidsColumn bids-col"><div class="bids-col-inner" data-bids="13">
+
+13
+
+</div>
+</td>
+
+<td class=" ProjectTable-cell ProjectTable-startedColumn started-col sorting_1">Today<small>6d 23h</small></td>
+<td class=" ProjectTable-cell ProjectTable-endColumn end-col" style="display: none;">Today<small>6d 23h</small></td><td class=" ProjectTable-cell ProjectTable-priceColumn price-col"><span class="average-bid">$289</span><div class="ProjectTable-status"><span class="status-label is-large is-success" data-toggle="popover" data-placement="left" data-content="Employer has a verified payment method" data-original-title="">$
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve" class="flicon-tick">
+    <g>
+        <polyline fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="23.5,0.5
+        7,23.5 0.5,17   "></polyline>
+    </g>
+</svg>
+
+</span></div><div class="ProjectTable-controls">
+<a class="btn btn-success btn-mini bid-now ProjectTable-control" href="/projects/view_new.php?id=12168661#placebid" data-id="12168661">
+    Bid Now
+</a>
+
+
+
+</div></td>
+<td class=" ProjectTable-cell ProjectTable-bookmarkColumn bookmark-col"><a class="bookmark" data-project-id="12168661" data-type="p" data-action="on"><div class="bookmark-inner"><span data-toggle="popover" href="javascript:void(0)" data-placement="left" data-content="Bookmark this project" data-original-title="">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" class="flicon-bookmark">
+    <path d="M2 1c-.55 0-1 .31-1 .7v8.94c0 .31.54.47.85.25l3.79-2.65c.2-.14.51-.14.71 0l3.79 2.65c.31.22.85.06.85-.25V1.7C11 1.31 10.55 1 10 1H2z"></path>
+</svg>
+
+</span></div></a>
+</td>
+</tr>
+
+</tbody></table><div class="dataTables_info" id="project_table_info">Showing 1 to 20 of 20,714 entries</div><div class="dataTables_paginate paging_bootstrap pagination"><ul><li class="first paginate_button table_paginate disabled"><a href="#"> <span class="fl-icon-first"></span> </a></li><li class="prev previous paginate_button table_paginate disabled"><a href="#" rel="prev"> <span class="fl-icon-prev"></span> </a></li><li id="pagination_bottom_1" class="active table_paginate number paginate_button"><a href="#">1</a></li><li id="pagination_bottom_2" class="number table_paginate paginate_button"><a href="#">2</a></li><li id="pagination_bottom_3" class="number table_paginate paginate_button"><a href="#">3</a></li><li id="pagination_bottom_4" class="number table_paginate paginate_button"><a href="#">4</a></li><li id="pagination_bottom_5" class="number table_paginate paginate_button"><a href="#">5</a></li><li class="next paginate_button table_paginate"><a href="#" rel="next"> <span class="fl-icon-next"></span> </a></li><li class="last paginate_button table_paginate"><a href="#"> <span class="fl-icon-last"></span> </a></li></ul></div></div>
+
+</div>
+
+
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<!-- misc stuffs ends -->
+<script src="https://cdn2.f-cdn.com/build/js/ttref.js?v=0433115a599f92cf768376c04d7aaefc&amp;m=6" type="text/javascript"></script>
+<script src="//d2werhn82xczly.cloudfront.net/20140328/main.min.js" type="text/javascript"></script>    
+</body>
+</html>
