@@ -43,7 +43,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * Matches /login/*
+     * Matches login/*
      * @Route("login/{id}/", name="login")
      */
     public function login($id)
@@ -61,7 +61,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("register/", name="login")
+     * @Route("register/", name="registerUser")
      */
     public function registerUser(Request $request)
     {
@@ -95,9 +95,9 @@ class DefaultController extends Controller
     /**
      * @Route("checksession/", name="sessionCheck")
      */
-    public function sessionCheck()
+    public function sessionCheck(Request $request)
     {
-        $session = new Session();
+        $session = $request->getSession();
         $user_id = $session->get('user_id');
 
         if($user_id != '')

@@ -13,7 +13,6 @@ function showLogin() {
 }
 
 function doRegister() {
-	alert(212);
 	$user_id = $("#email").val();
 	$pass = $("#password").val();
 	$conf = $("#password_confirmation").val();
