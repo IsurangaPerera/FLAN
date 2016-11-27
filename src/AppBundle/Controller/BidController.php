@@ -63,4 +63,12 @@ class BidController extends Controller
       }
       return new Response(json_encode($arrayCollection));
     }
+
+     /**
+     * @Route("/bid/{id}", name="bid")
+     */
+    public function bidProjects(Request $request, $id)
+    {
+      return $this->render('default/addBid.html.twig', array());
+    }
 }
