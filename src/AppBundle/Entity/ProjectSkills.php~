@@ -25,7 +25,7 @@ class ProjectSkills
      * @ORM\ManyToOne(targetEntity="Project", inversedBy="projectSkill")
      * @ORM\JoinColumn(name="product_id", referencedColumnName="project_id")
      */
-    private $project;
+    protected $project;
 
     /**
      * Set projectId

@@ -6,6 +6,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use AppBundle\Entity\Project;
 
 /**
@@ -28,12 +29,38 @@ class BidController extends Controller
      */
     public function getData(Request $request)
     {
-      $product = $this->getDoctrine()
+      $projects = $this->getDoctrine()
         ->getRepository('AppBundle:Project')
         ->findAllProjects();
 
-      print_r($product);
+      $arrayCollection = array();
 
-      return new Response(123);
+      foreach($projects as $project){
+        
+        $budget = $project->getProjectBudget();
+        $budget_min = $budget->getBudgetMin();
+        $budget_max = $budget->getBudgetMax();
+
+        $skills = $this->getDoctrine()
+          ->getRepository('AppBundle:ProjectSkills')
+          ->findByProjectId($project->getProjectId());
+        
+        $skill_array = array();
+
+        foreach($skills as $skill){
+          array_push($skill_array, $skill->getSkill());
+        } 
+
+        $arrayCollection[] = array(
+              'id' => $project->getProjectId(),
+              'name' => $project->getName(),
+              'description'=> $project->getDescription(),
+              'type' => $project->getType(),
+              'budget_min' => $budget_min,
+              'budget_max' => $budget_max,
+              'skills' => $skill_array
+          );
+      }
+      return new Response(json_encode($arrayCollection));
     }
 }

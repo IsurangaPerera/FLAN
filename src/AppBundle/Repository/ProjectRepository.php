@@ -17,7 +17,7 @@ class ProjectRepository extends EntityRepository
     {
         $query = $this->getEntityManager()
         	->createQuery(
-            	'SELECT p.name FROM AppBundle:Project p'
+            	'SELECT p FROM AppBundle:Project p'
         	);
 
     	try {
@@ -25,5 +25,16 @@ class ProjectRepository extends EntityRepository
     	} catch (\Doctrine\ORM\NoResultException $e) {
         	return null;
     	}
+    }
+
+    public function findAll()
+    {
+        $users = $this->getEntityManager()
+        ->createQueryBuilder()->select('u, i')
+        ->from('AppBundle:Project', 'u')
+        ->join('u.projectSkill', 'i')
+        ->getQuery()->getResult();
+
+        return $users;
     }
 }
