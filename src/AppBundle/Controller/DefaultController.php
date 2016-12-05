@@ -34,10 +34,7 @@ class DefaultController extends Controller
     }
 
     /**
-<<<<<<< HEAD
 
-=======
->>>>>>> 666bdb15b596a5f113cb872cc1e922ce94f2bc44
      * @Route("dashboard/", name="dashboard")
      */
     public function dashboard(Request $request)
@@ -45,15 +42,14 @@ class DefaultController extends Controller
         return $this->render('default/dashboard.html.twig');
     }
 
-<<<<<<< HEAD
+
 
 
 
      /**
-=======
-    /**
+
      * Matches /login/*
->>>>>>> 666bdb15b596a5f113cb872cc1e922ce94f2bc44
+
      * @Route("login/{id}/", name="login")
      */
     public function login($id)
@@ -82,8 +78,5 @@ class DefaultController extends Controller
             return new Response($user_id);
         return new Response();
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> 666bdb15b596a5f113cb872cc1e922ce94f2bc44
 }

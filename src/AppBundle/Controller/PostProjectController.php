@@ -36,10 +36,9 @@ class PostProjectController extends Controller
 
         $project = new Project();
 
-<<<<<<< HEAD
-=======
+
         $project->setProjectId($id);
->>>>>>> 666bdb15b596a5f113cb872cc1e922ce94f2bc44
+
         $project->setUserId($session->get('user_id'));
         $project->setType($data["project"][0]["type"]);
         $project->setName($data["project"][0]["name"]);
@@ -49,13 +48,13 @@ class PostProjectController extends Controller
 
     	$em->persist($project);
 
-<<<<<<< HEAD
+
     	$em->flush();
 
     	return new Response("os");
-=======
+
         $budget = new ProjectBudget();
->>>>>>> 666bdb15b596a5f113cb872cc1e922ce94f2bc44
+
 
         $budget->setProjectId($id);
         $budget->setType($data["budget"][0]["budget_type"]);
@@ -76,15 +75,15 @@ class PostProjectController extends Controller
             $skill->setSkill($x);
             $em->persist($skill);
         }
-  
+
     	$em->flush();
     	return new Response("os");
 
-<<<<<<< HEAD
 
 
 
-=======
+
+
     }
->>>>>>> 666bdb15b596a5f113cb872cc1e922ce94f2bc44
+
 }
