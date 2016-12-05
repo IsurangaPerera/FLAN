@@ -1,5 +1,5 @@
 <?php
-namespace AppBundle\Entity;
+ namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -34,6 +34,23 @@ class Project
 	 * @ORM\Column(type="string", length=100)
 	 */
 	private $description;
+
+    /**
+     * @ORM\OneToOne(targetEntity="ProjectBudget")
+     * @ORM\JoinColumn(name="project_id", referencedColumnName="project_id")
+     */
+    private $projectBudget;
+
+    /**
+     * @ORM\OneToMany(targetEntity="ProjectSkills", mappedBy="project")
+     * @ORM\JoinColumn(name="project_id", referencedColumnName="project_id")
+     */
+    protected $projectSkill;
+
+    public function __construct()
+    {
+        $this->projectSkill = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
      * Get projectId
@@ -148,5 +165,74 @@ class Project
         $this->projectId = $projectId;
 
         return $this;
+    }
+
+    /**
+     * Set projectSkill
+     *
+     * @param \AppBundle\Entity\projectSkills $projectSkill
+     * @return Project
+     */
+    public function setProjectSkill(\AppBundle\Entity\projectSkills $projectSkill = null)
+    {
+        $this->projectSkill = $projectSkill;
+
+        return $this;
+    }
+
+    /**
+     * Get projectSkill
+     *
+     * @return \AppBundle\Entity\projectSkills 
+     */
+    public function getProjectSkill()
+    {
+        return $this->projectSkill;
+    }
+
+    /**
+     * Set projectBudget
+     *
+     * @param \AppBundle\Entity\ProjectBudget $projectBudget
+     * @return Project
+     */
+    public function setProjectBudget(\AppBundle\Entity\ProjectBudget $projectBudget = null)
+    {
+        $this->projectBudget = $projectBudget;
+
+        return $this;
+    }
+
+    /**
+     * Get projectBudget
+     *
+     * @return \AppBundle\Entity\ProjectBudget 
+     */
+    public function getProjectBudget()
+    {
+        return $this->projectBudget;
+    }
+
+    /**
+     * Add projectSkill
+     *
+     * @param \AppBundle\Entity\ProjectSkills $projectSkill
+     * @return Project
+     */
+    public function addProjectSkill(\AppBundle\Entity\ProjectSkills $projectSkill)
+    {
+        if (!$this->projectSkill->contains($projectSkill)) {
+            $this->projectSkill->add($projectSkill);
+        }//return $this;
+    }
+
+    /**
+     * Remove projectSkill
+     *
+     * @param \AppBundle\Entity\ProjectSkills $projectSkill
+     */
+    public function removeProjectSkill(\AppBundle\Entity\ProjectSkills $projectSkill)
+    {
+        $this->projectSkill->removeElement($projectSkill);
     }
 }

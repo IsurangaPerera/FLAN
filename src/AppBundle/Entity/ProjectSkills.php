@@ -22,6 +22,12 @@ class ProjectSkills
 	private $skill;
 
     /**
+     * @ORM\ManyToOne(targetEntity="Project", inversedBy="projectSkill")
+     * @ORM\JoinColumn(name="product_id", referencedColumnName="project_id")
+     */
+    protected $project;
+
+    /**
      * Set projectId
      *
      * @param integer $projectId
@@ -65,5 +71,51 @@ class ProjectSkills
     public function getSkill()
     {
         return $this->skill;
+    }
+
+    /**
+     * Add project
+     *
+     * @param \AppBundle\Entity\ProjectSkills $project
+     * @return ProjectSkills
+     */
+    public function addProject(\AppBundle\Entity\ProjectSkills $project)
+    {
+        $this->project[] = $project;
+
+        return $this;
+    }
+
+    /**
+     * Remove project
+     *
+     * @param \AppBundle\Entity\ProjectSkills $project
+     */
+    public function removeProject(\AppBundle\Entity\ProjectSkills $project)
+    {
+        $this->project->removeElement($project);
+    }
+
+    /**
+     * Get project
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getProject()
+    {
+        return $this->project;
+    }
+
+    /**
+     * Set project
+     *
+     * @param \AppBundle\Entity\Project $project
+     * @return ProjectSkills
+     */
+    public function setProject(\AppBundle\Entity\Project $project = null)
+    {
+        $this->project = $project;
+
+        return $this;
     }
 }

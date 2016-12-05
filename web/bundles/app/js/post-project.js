@@ -21,6 +21,17 @@ $(document).ready(function() {
 			$("#project-duration-hours-step").hide(500);
 		}
 	});
+
+	$.ajax({
+		url: 'checksession/',
+		success: function(data) {
+        	if(data != '') {
+        		$("#nonAuthForm").prop("hidden", true);
+        	}
+    	}
+	});
+
+
 });
 
 var objectO = {

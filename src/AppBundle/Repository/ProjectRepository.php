@@ -13,4 +13,28 @@ use Doctrine\ORM\EntityRepository;
  */
 class ProjectRepository extends EntityRepository
 {
+	public function findAllProjects()
+    {
+        $query = $this->getEntityManager()
+        	->createQuery(
+            	'SELECT p FROM AppBundle:Project p'
+        	);
+
+    	try {
+        	return $query->getResult();
+    	} catch (\Doctrine\ORM\NoResultException $e) {
+        	return null;
+    	}
+    }
+
+    public function findAll()
+    {
+        $users = $this->getEntityManager()
+        ->createQueryBuilder()->select('u, i')
+        ->from('AppBundle:Project', 'u')
+        ->join('u.projectSkill', 'i')
+        ->getQuery()->getResult();
+
+        return $users;
+    }
 }

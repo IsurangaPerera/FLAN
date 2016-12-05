@@ -7,6 +7,11 @@ function showRegistration() {
 	$("#formReg").prop("hidden", false);
 }
 
+function showLogin() {
+	$("#formLogin").prop("hidden", false);
+	$("#formReg").prop("hidden", true);
+}
+
 function doRegister() {
 	$user_id = $("#email").val();
 	$pass = $("#password").val();
@@ -19,13 +24,13 @@ function doRegister() {
 
 	$.ajax({
 		type: "POST",
-		url: "../register",
+		url: "register/",
 		data: JSON.stringify(objectO),
 		success: function( data, textStatus, jQxhr ){
-			window.location.href='/';
+			showLogin();
 		},
 		error: function( jqXhr, textStatus, errorThrown ){
-			alert( errorThrown );
+
 		}
 	});
 }

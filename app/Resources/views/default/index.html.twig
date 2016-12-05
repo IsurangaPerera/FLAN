@@ -49,7 +49,7 @@ filter='cssrewrite' %}
         </div>
        
         <div class="top-right" id="tright">
-          <a href="#myModalR" role="button" class="register-top" data-toggle="modal"><i class="fa fa-lock" aria-hidden="true"></i> Register</a>
+          <a href="#" id="register" role="button" class="register-top" data-toggle="modal"><i class="fa fa-lock" aria-hidden="true"></i> Register</a>
           <a href="#" id="login" role="button" class="login-top" data-toggle="modal"><i class="fa fa-key" aria-hidden="true"></i> Login</a>
         </div>
 
@@ -143,7 +143,7 @@ filter='cssrewrite' %}
                                 <input id="email" class="form-control" type="text" placeholder="Email" name="email">
                                 <input id="password" class="form-control" type="password" placeholder="Password" name="password">
                                 <input id="password_confirmation" class="form-control" type="password" placeholder="Repeat Password" name="password_confirmation">
-                                <input onclcik="doRegister()" class="btn btn-default btn-register" value="Create account" name="commit">
+                                <input onclick="doRegister()" class="btn btn-default btn-register" value="Create account" name="commit">
                                 </form>
                                 </div>
                             </div>
@@ -171,6 +171,14 @@ filter='cssrewrite' %}
 <script type="text/javascript">
 
 $("#login").click(function(){
+  $("#formLogin").prop("hidden", false);
+  $("#formReg").prop("hidden", true);
+  $("#myModal").modal({backdrop: "static"});
+});
+
+$("#register").click(function(){
+  $("#formLogin").prop("hidden", true);
+  $("#formReg").prop("hidden", false);
   $("#myModal").modal({backdrop: "static"});
 });
 
@@ -211,7 +219,7 @@ $("#login").click(function(){
                   </p>
                 </a>
 
-                <a href="#" target="_blank" class="ls-l" style="top:420px;left:296px;margin-left:0px;">
+                <a href="/projects/show" target="_blank" class="ls-l" style="top:420px;left:296px;margin-left:0px;">
                   <p class="button-medium" style="text-shadow: rgba(0, 0, 0, 0) 0px 0px 5px;width:;height:;padding-top:15px;padding-right:40px;padding-bottom:15px ;padding-left:40px;border-top:;border-right:;border-bottom:;border-left:;font-family:;font-size:14px;line-height:;color:#333333;background:#e7e7e7;border-radius:;white-space: nowrap;">
                     <i style="margin-right:5px" class="fa fa-users" aria-hidden="true"></i>I want to Work
                   </p>
