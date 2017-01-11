@@ -17,7 +17,11 @@
     
     <link href="https://cdn6.f-cdn.com/build/css/flux/layout/PageMySkills.css?v=34f83d36c6f50e799dd1e216c6246f9a&amp;m=6" type="text/css" rel="stylesheet" />
 
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    {% stylesheets 'bundles/app/css/bootstrap/bootstrap.css'
+    'bundles/app/css/bootstrap/bootstrap-fixes.css'
+    filter='cssrewrite' %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
 
     {% javascripts 'bundles/app/js/jquery.min.js'
     'bundles/app/js/bootstrap.min.js'
