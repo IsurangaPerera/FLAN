@@ -37,4 +37,13 @@ class ProjectRepository extends EntityRepository
 
         return $users;
     }
+
+    public function findById($id)
+    {
+        $project = $this->getDoctrine()
+        ->getRepository('AppBundle:Project')
+        ->find($projectId);
+
+        return $project;
+    }
 }

@@ -64,11 +64,45 @@ class BidController extends Controller
       return new Response(json_encode($arrayCollection));
     }
 
-     /**
+    /**
      * @Route("/bid/{id}", name="bid")
      */
     public function bidProjects(Request $request, $id)
     {
-      return $this->render('default/addBid.html.twig', array());
+      $project = $this->getDoctrine()
+        ->getRepository('AppBundle:Project')
+        ->find($id);
+
+      $budget = $project->getProjectBudget();
+        $budget_min = $budget->getBudgetMin();
+        $budget_max = $budget->getBudgetMax();
+
+        $skills = $this->getDoctrine()
+          ->getRepository('AppBundle:ProjectSkills')
+          ->findByProjectId($project->getProjectId());
+        
+        $skill_array = array();
+
+        foreach($skills as $skill){
+          array_push($skill_array, $skill->getSkill());
+        } 
+
+        $obj = $this->getDoctrine()
+        ->getRepository('AppBundle:ProjectBid');
+        $avg_bid = $obj->getAverageBid($id);
+        $count = $obj->getBidCount($id);
+
+        $arrayCollection[] = array(
+              'id' => $project->getProjectId(),
+              'name' => $project->getName(),
+              'description'=> $project->getDescription(),
+              'type' => $project->getType(),
+              'budget_avg' => "$$budget_min - $$budget_max",
+              "average_bid" => (int)$avg_bid,
+              "count" => $count,
+              'skills' => $skill_array
+          );
+      //print_r($arrayCollection);
+      return $this->render('default/addBid.html.twig', $arrayCollection[0]);
     }
 }

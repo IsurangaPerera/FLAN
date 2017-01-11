@@ -9,41 +9,41 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class ProjectBudget
 {
-	/**
-	 * @ORM\Column(type="string", length=30)
-	 * @ORM\Id
-	 */
-	private $projectId;
+    /**
+     * @ORM\Column(type="string", length=30)
+     * @ORM\Id
+     */
+    private $projectId;
 
-	/**
-	 * @ORM\Column(type="string", length=10)
-	 */
-	private $type;
+    /**
+     * @ORM\Column(type="string", length=10)
+     */
+    private $type;
 
-	/**
-	 * @ORM\Column(type="string", length=10)
-	 */
-	private $currency;
+    /**
+     * @ORM\Column(type="string", length=10)
+     */
+    private $currency;
 
-	/**
-	 * @ORM\Column(type="float")
-	 */
-	private $budget_min;
+    /**
+     * @ORM\Column(type="float")
+     */
+    private $budget_min;
 
-	/**
-	 * @ORM\Column(type="float")
-	 */
-	private $budget_max;
+    /**
+     * @ORM\Column(type="float")
+     */
+    private $budget_max;
 
-	/**
-	 * @ORM\Column(type="string", length=50)
-	 */
-	private $duration;
+    /**
+     * @ORM\Column(type="string", length=50)
+     */
+    private $duration;
 
-	/**
-	 * @ORM\Column(type="string", length=60)
-	 */
-	private $work_hours;
+    /**
+     * @ORM\Column(type="string", length=60)
+     */
+    private $work_hours;
 
     /**
      * @ORM\Column(type="string", length=60)

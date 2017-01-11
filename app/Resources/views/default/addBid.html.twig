@@ -543,7 +543,7 @@
             
             <div id="projectHeader">
                 <div class="project-header-controls span8">
-                    <h1 class="project_name largest bold margin-b5 span12">Write an Android application</h1>
+                    <h1 class="project_name largest bold margin-b5 span12">{{name}}</h1>
                     <div class="span12 margin-0">
                     </div>
                 </div>
@@ -621,7 +621,7 @@ HOT
                 <p>Bids</p>
                 <div id="num-bids" class="text-blue larger bold">
                     
-                        21
+                        {{count}}
                     
                     
                 </div>
@@ -629,7 +629,7 @@ HOT
             <div style="display:inline-block" class="align-c padding-l10 padding-r10 border-r border-l project-view-status">
                 <p>Avg Bid (USD)</p>
                 <div class="text-blue larger bold">
-                            $<span id="avg-bid">489</span>   
+                            $<span id="avg-bid">{{average_bid}}</span>   
                 </div>
             </div>
             <div style="display:inline-block" class="align-c padding-l10 padding-r5 project-view-status " >
@@ -640,7 +640,7 @@ HOT
                     
                      (USD)</p>
                 <div class="text-blue larger bold project-budget">                         
-                                $250 - $750   
+                                {{budget_avg}}   
                 </div>
             </div>
 
@@ -899,19 +899,6 @@ HOT
                     
                 </div>
 
-                <div class="span4 margin-l10" id="proposal-sidebar" style="margin-top: 74px; border: 1px solid #ccc;display:none;">
-                    <div class="well padding-10 margin-b5"><strong>Provide your Best Proposal!</strong></div>
-                    <div class="padding-l5">
-                        <p>Your proposal is your first (and perhaps only) chance to make a good first impression to the employer!</p>
-                        <strong>Ensure that you:</strong>
-                        <ul>
-                            <li class="margin-b10">Understand their project needs.</li>
-                            <li class="margin-b10">Explain how your skills and experience make you the right freelancer for the job.</li>
-                            <li class="margin-b10">Outline how you plan to complete their project and techniques you will use.</li>
-                            <li class="margin-b10">Invite them to contact you to discuss further details.</li>
-                        </ul>
-                    </div>
-                </div>
             </div>
 
             <div class="clear"></div>
@@ -970,7 +957,7 @@ HOT
                             Project Description
                 </h2>
                 
-                <p>Need someone who can make android app like Sea Battle 2 with different design and options like this game, of course not the same, waiting for offers.</p>
+                <p>{{description}}</p>
                 
                 
             </p>
@@ -1102,10 +1089,10 @@ HOT
             </div>
             <span class="span8 margin-0 margin-b10">
                 <h2 class="project-brief-subheading">Skills required </h2>
-                
-                    <a href="/jobs/Android/" class="skills-required" data-job-id="59">Android</a>, 
-                
-                    <a href="/jobs/Mobile-Phone/" class="skills-required" data-job-id="44">Mobile Phone</a>
+
+                    {% for item in skills %}
+                        <a href="#" class="skills-required">{{item}} </a>
+                    {% endfor %}
                 
             </span>
             
