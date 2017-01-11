@@ -29,15 +29,13 @@
     
         <link href="https://cdn5.f-cdn.com/build/css/js-plugins/jquery.fileupload-ui.css?v=cd7ec3a496ae786928f334b389815dd4&amp;m=6" type="text/css" rel="stylesheet" />
     
-        <script src="https://cdn5.f-cdn.com/js/jquery-1.10.2.min.js?v=628072e7212db1e8cdacb22b21752cda&m=6" type="text/javascript"></script>
-        
-        
-          <!-- load the jquery migrate plugin, this plugin is not available for pure pinky pages -->
-          <script src="https://cdn5.f-cdn.com/build/js/pinky/utils/jquery-migrate-1.2.1.min.js?v=650d4d4ea2618238dc8fa4471275d7d7&amp;m=6" type="text/javascript"></script>
-            <script src="https://cdn5.f-cdn.com/build/js/pinky/utils/jquery-ui.custom.min.js?v=67493e32a93c0398e34eaf319a35dc40&amp;m=6" type="text/javascript"></script>
-    <script src="https://cdn6.f-cdn.com/build/js/bootstrap/bootstrap.2-32.min.js?v=97642893d14d4a5ccb884dc5ac77f061&amp;m=6" type="text/javascript"></script>
-
-    <script src="https://cdn3.f-cdn.com/build/js/bootstrap-popover.js?v=9dd8971e38430339cfa88bfa1ca01c66&m=6" type="text/javascript"></script>
+    {% javascripts 'bundles/app/js/jquery.min.js'
+    'bundles/app/js/bootstrap.min.js'
+    'bundles/app/js/jquery-migrate.min.js'
+    'bundles/app/js/font-awesome-icons.js'
+    'bundles/app/js/viewprojects.js'%}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
 
   </head>
   <body>
@@ -63,6 +61,389 @@
                 <a class="fl-logo" href="/dashboard/" fl-analytics="PrimaryLogo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 72.449" class="flicon-logo-fullcolor"><title>Freelancer Logo</title><g fill="#29B2FE"><path d="M56.897 0l6.624 9.29L97.036 0M22.075 72.333l18.13-17.725-10.912-11.71M54.152 0l-9.69 8.738 16.298.608M16.482 0l3.48 7.133 19.18 1.195M26.75 36.986l14.17-26.434L-.23 8.328M28.4 38.662L41.785 53.04 56.55 38.567l4.582-26.957-17.993-.918"/></g><path fill="#161F2B" d="M85.22 33.902h-3.67l-3.214 20.286c-.084.532-.587.966-1.12.966h-7.34c-.532 0-.897-.434-.813-.966l4.506-28.45c1.14-7.195 4.772-8.79 9.747-8.79 1.545 0 3.164.146 4.43.387.564.097.945.435.86.966l-.727 4.59c-.084.53-.58.917-1.16.917h-2.027c-1.207 0-1.622.482-1.85 1.932l-.207 1.303h3.67c.532 0 .897.434.813.967l-.78 4.926c-.086.532-.59.966-1.12.966zM103.54 34.24h-.675c-2.077 0-4.103.29-5.73 1.11l-2.968 18.74c-.084.533-.555 1.063-1.135 1.063h-7.244c-.58 0-.978-.53-.894-1.062l4.13-26.08c.085-.533.443-.968 1.12-.968h6.954c.676 0 .928.242.813.967l-.183 1.158c2.533-2.27 4.31-2.512 6.87-2.512.82 0 .934.193.812.967l-.934 5.892c-.09.58-.307.725-.935.725zM127.806 43.707h-15.02l-.014.096c-.406 2.56.405 4.153 3.93 4.153 2.56 0 7.33-.24 9.237-.387.78-.05 1.046.095.93.82l-.687 4.348c-.122.773-.37 1.11-1.18 1.353-3.252 1.016-6.66 1.498-10.717 1.498-6.52 0-12.013-3.43-10.552-12.654l.505-3.188c1.345-8.5 7.005-13.137 14.926-13.137 8.452 0 11.514 5.36 10.283 13.136l-.46 2.9c-.1.626-.605 1.06-1.184 1.06zm-7.038-5.265c.46-2.898-.425-4.637-2.84-4.637-2.318 0-3.848 1.74-4.307 4.637l-.022.145h7.147l.023-.145zM154.538 43.707h-15.02l-.014.096c-.406 2.56.405 4.153 3.93 4.153 2.56 0 7.33-.24 9.237-.387.78-.05 1.048.095.933.82l-.688 4.348c-.122.773-.37 1.11-1.18 1.353-3.252 1.016-6.66 1.498-10.717 1.498-6.52 0-12.013-3.43-10.552-12.654l.505-3.188c1.347-8.5 7.007-13.137 14.928-13.137 8.452 0 11.514 5.36 10.283 13.136l-.458 2.9c-.1.626-.605 1.06-1.184 1.06zm-7.04-5.265c.46-2.898-.424-4.637-2.838-4.637-2.318 0-3.85 1.74-4.308 4.637l-.023.145h7.146l.023-.145zM164.34 55.154h-7.292c-.532 0-.978-.53-.894-1.062l5.592-35.308c.084-.53.684-.965 1.215-.965h7.293c.532 0 .897.433.813.964l-5.592 35.308c-.084.53-.603 1.062-1.134 1.062zM190.007 55.154h-6.713c-.53 0-.897-.434-.813-.966l.162-1.014c-2.05 1.352-4.632 2.414-7.288 2.414-3.815 0-7.922-2.125-6.89-8.645l.092-.58c.918-5.796 5.642-7.873 13.707-7.873h2.077l.222-1.4c.375-2.366-.33-2.8-2.744-2.8-2.705 0-7.09.24-8.458.338-.828.048-1-.387-.91-.967l.743-4.684c.115-.724.54-.965 1.15-1.16 1.67-.482 5.93-1.16 9.022-1.16 7.003 0 11.724 2.513 10.47 10.434l-2.708 17.098c-.085.532-.59.966-1.12.966zm-6.173-11.64h-2.366c-2.415 0-3.503.773-3.824 2.8l-.077.484c-.26 1.643.774 2.126 2.126 2.126 1.16 0 2.517-.34 3.4-.724l.74-4.686zM217.898 55.154h-7.244c-.58 0-.978-.53-.894-1.062l2.593-16.374c.405-2.56-.285-3.38-2.46-3.38-1.11 0-2.58.433-3.782 1.014l-2.967 18.74c-.084.532-.555 1.062-1.135 1.062h-7.244c-.58 0-.978-.53-.894-1.062L198 28.01c.085-.532.588-.967 1.12-.967h6.713c.532 0 .897.434.813.967l-.176 1.11c2.865-1.932 5.654-2.464 8.36-2.464 7.58 0 7.706 5.313 6.796 11.06l-2.593 16.375c-.085.533-.556 1.064-1.135 1.064zM239.323 54.816c-1.703.386-3.89.772-6.738.772-7.39 0-10.793-4.733-9.538-12.654l.574-3.622c1.248-7.873 6.166-12.703 13.555-12.703 2.85 0 5.195.433 6.494.77.604.146.904.388.804 1.016l-.864 5.458c-.092.58-.45 1.014-1.16.917-1.62-.143-3.134-.337-5.5-.337-2.076 0-3.49 1.305-4.056 4.88l-.574 3.62c-.566 3.575.443 4.83 2.52 4.83 2.365 0 3.926-.096 5.6-.29.74-.095.968.29.87.918l-.858 5.41c-.1.63-.477.87-1.13 1.016zM267.67 43.707h-15.02l-.015.096c-.406 2.56.405 4.153 3.93 4.153 2.56 0 7.33-.24 9.237-.387.78-.05 1.047.095.933.82l-.69 4.348c-.12.773-.368 1.11-1.18 1.353-3.25 1.016-6.66 1.498-10.716 1.498-6.52 0-12.014-3.43-10.553-12.654l.505-3.188c1.346-8.5 7.006-13.137 14.927-13.137 8.45 0 11.514 5.36 10.282 13.136l-.46 2.9c-.1.626-.604 1.06-1.183 1.06zm-7.04-5.265c.46-2.898-.424-4.637-2.84-4.637-2.317 0-3.848 1.74-4.307 4.637l-.023.145h7.147l.023-.145zM282.857 27.043l-4.3 27.048c-.084.533-.555 1.063-1.135 1.063h-7.244c-.58 0-.978-.53-.894-1.062l2.854-17.894 10.72-9.153z"/><path fill="#29B2FE" d="M285.326 27.043l-1.484 9.28 15.93-9.28"/></svg>
 </a>
             </div>
+
+           <nav class="primary-navigation">
+              <div class="primary-navigation-inner">
+                <fl-primary-nav ng-hide="ctrl.simpleHeader" ng-mouseover="ctrl.init()">
+    <ul class="primary-navigation-list">
+      <ng-transclude>
+                    <fl-primary-nav-item class="fl-primary-nav-item" title="Hire Freelancers" href="/post-project" label="hire">
+    <!-- ngIf: PrimaryNavItem.isVisible --><li ng-if="PrimaryNavItem.isVisible" class="primary-navigation-item">
+      <a ng-href="/post-project" fl-analytics="hire" class="primary-navigation-link" href="/post-project">
+          <span>Hire Freelancers</span>
+      </a>
+      <ng-transclude>
+                        <nav class="DropDown DropDown--arrowed fl-header-dropdown">
+                            <div class="DropDown-section">
+                                <fl-nav-group title="Find a freelancer">
+    <div class="DropDown-section-header">
+      <h6 class="DropDown-section-header-heading">
+        Find a freelancer
+      </h6>
+      <ul class="DropDown-list">
+          <ng-transclude>
+                                    <fl-primary-subnav-item title="Start a Project" label="StartAProject" href="/post-project">
+    <li class="DropDown-list-item">
+      <div class="DropDown-list-item-inner">
+        <a ng-href="/post-project" class="DropDown-list-item-link" fl-analytics="StartAProject" href="/post-project">
+          Start a Project
+        </a>
+      </div>
+    </li></fl-primary-subnav-item>
+                                    <fl-primary-subnav-item title="Start a Contest" label="GoToPostContest" href="/contest/create.php">
+    <li class="DropDown-list-item">
+      <div class="DropDown-list-item-inner">
+        <a ng-href="/contest/create.php" class="DropDown-list-item-link" fl-analytics="GoToPostContest" href="/contest/create.php">
+          Start a Contest
+        </a>
+      </div>
+    </li></fl-primary-subnav-item>
+                                    <fl-primary-subnav-item title="Post a Local Job" label="postALocalJob" href="/local">
+    <li class="DropDown-list-item">
+      <div class="DropDown-list-item-inner">
+        <a ng-href="/local" class="DropDown-list-item-link" fl-analytics="postALocalJob" href="/local">
+          Post a Local Job
+        </a>
+      </div>
+    </li></fl-primary-subnav-item>
+                                    <fl-primary-subnav-item title="Get a Recruiter" label="GoToRecruiterLanding" href="/recruiter">
+    <li class="DropDown-list-item">
+      <div class="DropDown-list-item-inner">
+        <a ng-href="/recruiter" class="DropDown-list-item-link" fl-analytics="GoToRecruiterLanding" href="/recruiter">
+          Get a Recruiter
+        </a>
+      </div>
+    </li></fl-primary-subnav-item>
+                                </ng-transclude>
+      </ul>
+    </div>
+  </fl-nav-group>
+                                <hr class="DropDown-divider">
+                                <fl-nav-group title="Discover">
+    <div class="DropDown-section-header">
+      <h6 class="DropDown-section-header-heading">
+        Discover
+      </h6>
+      <ul class="DropDown-list">
+          <ng-transclude>
+                                    <fl-primary-subnav-item title="Showcase" label="AllShowcase" href="/showcase">
+    <li class="DropDown-list-item">
+      <div class="DropDown-list-item-inner">
+        <a ng-href="/showcase" class="DropDown-list-item-link" fl-analytics="AllShowcase" href="/showcase">
+          Showcase
+        </a>
+      </div>
+    </li></fl-primary-subnav-item>
+                                    <fl-primary-subnav-item title="Browse Directory" label="GoToFreelancers" href="/freelancers/">
+    <li class="DropDown-list-item">
+      <div class="DropDown-list-item-inner">
+        <a ng-href="/freelancers/" class="DropDown-list-item-link" fl-analytics="GoToFreelancers" href="/freelancers/">
+          Browse Directory
+        </a>
+      </div>
+    </li></fl-primary-subnav-item>
+                                    <fl-primary-subnav-item title="Community" label="GoToCommunity" href="/community/">
+    <li class="DropDown-list-item">
+      <div class="DropDown-list-item-inner">
+        <a ng-href="/community/" class="DropDown-list-item-link" fl-analytics="GoToCommunity" href="/community/">
+          Community
+        </a>
+      </div>
+    </li></fl-primary-subnav-item>
+
+                                </ng-transclude>
+      </ul>
+    </div>
+  </fl-nav-group>
+                            </div>
+                        </nav>
+                    </ng-transclude>
+    </li><!-- end ngIf: PrimaryNavItem.isVisible --></fl-primary-nav-item>
+
+                    <fl-primary-nav-item class="fl-primary-nav-item" title="Work" href="/jobs/myskills/" label="work">
+    <!-- ngIf: PrimaryNavItem.isVisible --><li ng-if="PrimaryNavItem.isVisible" class="primary-navigation-item">
+      <a ng-href="/jobs/myskills/" fl-analytics="work" class="primary-navigation-link" href="/jobs/myskills/">
+          <span>Work</span>
+      </a>
+      <ng-transclude>
+                        <nav class="DropDown DropDown--arrowed fl-header-dropdown">
+                            <div class="DropDown-section">
+                                <fl-nav-group title="Find Work">
+    <div class="DropDown-section-header">
+      <h6 class="DropDown-section-header-heading">
+        Find Work
+      </h6>
+      <ul class="DropDown-list">
+          <ng-transclude>
+                                    <fl-primary-subnav-item title="Projects with My Skills" label="MySkillsProjects" href="/jobs/myskills/">
+    <li class="DropDown-list-item">
+      <div class="DropDown-list-item-inner">
+        <a ng-href="/jobs/myskills/" class="DropDown-list-item-link" fl-analytics="MySkillsProjects" href="/jobs/myskills/">
+          Projects with My Skills
+        </a>
+      </div>
+    </li></fl-primary-subnav-item>
+                                    <fl-primary-subnav-item title="Browse Projects" label="LatestJobs" href="/jobs/">
+    <li class="DropDown-list-item">
+      <div class="DropDown-list-item-inner">
+        <a ng-href="/jobs/" class="DropDown-list-item-link" fl-analytics="LatestJobs" href="/jobs/">
+          Browse Projects
+        </a>
+      </div>
+    </li></fl-primary-subnav-item>
+                                    <fl-primary-subnav-item title="Browse Contests" label="LatestContests" href="/contest/browse/">
+    <li class="DropDown-list-item">
+      <div class="DropDown-list-item-inner">
+        <a ng-href="/contest/browse/" class="DropDown-list-item-link" fl-analytics="LatestContests" href="/contest/browse/">
+          Browse Contests
+        </a>
+      </div>
+    </li></fl-primary-subnav-item>
+                                    <fl-primary-subnav-item title="Browse Local Jobs" label="LocalJobsProjects" href="/jobs/localjobs/">
+    <li class="DropDown-list-item">
+      <div class="DropDown-list-item-inner">
+        <a ng-href="/jobs/localjobs/" class="DropDown-list-item-link" fl-analytics="LocalJobsProjects" href="/jobs/localjobs/">
+          Browse Local Jobs
+        </a>
+      </div>
+    </li></fl-primary-subnav-item>
+                                    <fl-primary-subnav-item title="Browse Categories" label="JobCategories" href="/job/">
+    <li class="DropDown-list-item">
+      <div class="DropDown-list-item-inner">
+        <a ng-href="/job/" class="DropDown-list-item-link" fl-analytics="JobCategories" href="/job/">
+          Browse Categories
+        </a>
+      </div>
+    </li></fl-primary-subnav-item>
+                                    <fl-primary-subnav-item title="Bookmarks" label="BookmarkedProjects" href="/jobs/bookmark/">
+    <li class="DropDown-list-item">
+      <div class="DropDown-list-item-inner">
+        <a ng-href="/jobs/bookmark/" class="DropDown-list-item-link" fl-analytics="BookmarkedProjects" href="/jobs/bookmark/">
+          Bookmarks
+        </a>
+      </div>
+    </li></fl-primary-subnav-item>
+                                    <fl-primary-subnav-item title="Get Certified" label="GetCertified" href="/exam/exams/index.php?ttref=Exams_DaVinciWork">
+    <li class="DropDown-list-item">
+      <div class="DropDown-list-item-inner">
+        <a ng-href="/exam/exams/index.php?ttref=Exams_DaVinciWork" class="DropDown-list-item-link" fl-analytics="GetCertified" href="/exam/exams/index.php?ttref=Exams_DaVinciWork">
+          Get Certified
+        </a>
+      </div>
+    </li></fl-primary-subnav-item>
+                                </ng-transclude>
+      </ul>
+    </div>
+  </fl-nav-group>
+                            </div>
+                        </nav>
+                    </ng-transclude>
+    </li><!-- end ngIf: PrimaryNavItem.isVisible --></fl-primary-nav-item>
+
+                    <fl-primary-nav-item class="fl-primary-nav-item" title="My Projects" href="/dashboard/projects.php" label="myprojects_v6">
+    <!-- ngIf: PrimaryNavItem.isVisible --><li ng-if="PrimaryNavItem.isVisible" class="primary-navigation-item">
+      <a ng-href="/dashboard/projects.php" fl-analytics="myprojects_v6" class="primary-navigation-link" href="/dashboard/projects.php">
+          <span>My Projects</span>
+      </a>
+      <ng-transclude>
+                        <nav class="DropDown DropDown--arrowed fl-header-dropdown">
+                            <div class="DropDown-section">
+                                <fl-nav-group title="My Projects" ng-hide="ctrl.myProjectsLoadStatus === 'loading' || ctrl.myProjectsLoadStatus === 'unloaded' || ctrl.hideMyProjects" class="">
+    <div class="DropDown-section-header">
+      <h6 class="DropDown-section-header-heading">
+        My Projects
+      </h6>
+      <ul class="DropDown-list">
+          <ng-transclude>
+                                    <!-- ngRepeat: myProject in ctrl.myProjects --><li class="DropDown-list-item primary-subnav-item" ng-repeat="myProject in ctrl.myProjects">
+                                        <div class="DropDown-list-item-inner">
+                                            <a class="primary-subnav-link" ng-mousedown="ctrl.pushTtrefRecentProjectAward(myProject.id,myProject.href)">
+                                                <!-- ngIf: myProject.type == 'project' --><span ng-if="myProject.type == 'project'">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.4 19.7" class="flicon-desktop">
+  <g fill="none">
+    <title>Desktop icon</title>
+    <path d="M21.8 15.7c0 .8-.6 1.5-1.4 1.5H2c-.8 0-1.4-.7-1.4-1.5V2.1C.6 1.3 1.2.6 2 .6h18.4c.8 0 1.4.7 1.4 1.5v13.6zM4.8 19h12.8M11.2 17.2V19"></path>
+    <circle cx="11.2" cy="15.3" r=".5"></circle>
+    <path d="M.6 13.5h21.2"></path>
+  </g>
+</svg>
+
+                                                </span><!-- end ngIf: myProject.type == 'project' -->
+                                                <!-- ngIf: myProject.type == 'contest' -->
+                                                <!-- ngIf: myProject.type == 'project' --><span ng-if="myProject.type == 'project'" class="primary-nav-project-name">
+                                                    Help with Garden Maintenance 
+                                                </span><!-- end ngIf: myProject.type == 'project' -->
+                                                <!-- ngIf: myProject.type == 'contest' -->
+                                            </a>
+                                        </div>
+                                    </li><!-- end ngRepeat: myProject in ctrl.myProjects -->
+                                </ng-transclude>
+      </ul>
+    </div>
+  </fl-nav-group>
+                                <hr ng-hide="ctrl.myProjectsLoadStatus === 'loading' || ctrl.myProjectsLoadStatus === 'unloaded' || ctrl.hideMyProjects" class="DropDown-divider">
+                                <fl-nav-group title="Manage">
+    <div class="DropDown-section-header">
+      <h6 class="DropDown-section-header-heading">
+        Manage
+      </h6>
+      <ul class="DropDown-list">
+          <ng-transclude>
+                                    <fl-primary-subnav-item title="My Projects" label="GoToProjects" href="/dashboard/projects.php">
+    <li class="DropDown-list-item">
+      <div class="DropDown-list-item-inner">
+        <a ng-href="/dashboard/projects.php" class="DropDown-list-item-link" fl-analytics="GoToProjects" href="/dashboard/projects.php">
+          My Projects
+        </a>
+      </div>
+    </li></fl-primary-subnav-item>
+                                    <fl-primary-subnav-item title="Dashboard" label="GoToDashboard" href="/dashboard/">
+    <li class="DropDown-list-item">
+      <div class="DropDown-list-item-inner">
+        <a ng-href="/dashboard/" class="DropDown-list-item-link" fl-analytics="GoToDashboard" href="/dashboard/">
+          Dashboard
+        </a>
+      </div>
+    </li></fl-primary-subnav-item>
+                                    <fl-primary-subnav-item title="Inbox" label="GoToInbox" href="/messages">
+    <li class="DropDown-list-item">
+      <div class="DropDown-list-item-inner">
+        <a ng-href="/messages" class="DropDown-list-item-link" fl-analytics="GoToInbox" href="/messages">
+          Inbox
+        </a>
+      </div>
+    </li></fl-primary-subnav-item>
+                                    <fl-primary-subnav-item title="Feedback" label="GoToFeedback" href="/dashboard/feedback.php">
+    <li class="DropDown-list-item">
+      <div class="DropDown-list-item-inner">
+        <a ng-href="/dashboard/feedback.php" class="DropDown-list-item-link" fl-analytics="GoToFeedback" href="/dashboard/feedback.php">
+          Feedback
+        </a>
+      </div>
+    </li></fl-primary-subnav-item>
+                                </ng-transclude>
+      </ul>
+    </div>
+  </fl-nav-group>
+                            </div>
+                        </nav>
+                    </ng-transclude>
+    </li><!-- end ngIf: PrimaryNavItem.isVisible --></fl-primary-nav-item>
+
+                    <fl-primary-nav-item class="fl-primary-nav-item" title="Help" href="/support" label="help">
+    <!-- ngIf: PrimaryNavItem.isVisible --><li ng-if="PrimaryNavItem.isVisible" class="primary-navigation-item">
+      <a ng-href="/support" fl-analytics="help" class="primary-navigation-link" href="/support">
+          <span>Help</span>
+      </a>
+      <ng-transclude>
+                        <nav class="DropDown DropDown--arrowed fl-header-dropdown">
+                            <div class="DropDown-section">
+                                <fl-nav-group title="Get Help">
+    <div class="DropDown-section-header">
+      <h6 class="DropDown-section-header-heading">
+        Get Help
+      </h6>
+      <ul class="DropDown-list">
+          <ng-transclude>
+                                    <fl-primary-subnav-item title="Get Support" label="SupportHQ" href="/support">
+    <li class="DropDown-list-item">
+      <div class="DropDown-list-item-inner">
+        <a ng-href="/support" class="DropDown-list-item-link" fl-analytics="SupportHQ" href="/support">
+          Get Support
+        </a>
+      </div>
+    </li></fl-primary-subnav-item>
+                                    <fl-primary-subnav-item title="How Freelancer.com Works" label="HowItWorks" href="/info/how-it-works.php">
+    <li class="DropDown-list-item">
+      <div class="DropDown-list-item-inner">
+        <a ng-href="/info/how-it-works.php" class="DropDown-list-item-link" fl-analytics="HowItWorks" href="/info/how-it-works.php">
+          How Freelancer.com Works
+        </a>
+      </div>
+    </li></fl-primary-subnav-item>
+                                    <fl-primary-subnav-item title="Frequently Asked Questions" label="FAQs" href="/faq/view.php">
+    <li class="DropDown-list-item">
+      <div class="DropDown-list-item-inner">
+        <a ng-href="/faq/view.php" class="DropDown-list-item-link" fl-analytics="FAQs" href="/faq/view.php">
+          Frequently Asked Questions
+        </a>
+      </div>
+    </li></fl-primary-subnav-item>
+                                    <fl-primary-subnav-item title="Fees and Charges" label="GoToFees" href="/feesandcharges/">
+    <li class="DropDown-list-item">
+      <div class="DropDown-list-item-inner">
+        <a ng-href="/feesandcharges/" class="DropDown-list-item-link" fl-analytics="GoToFees" href="/feesandcharges/">
+          Fees and Charges
+        </a>
+      </div>
+    </li></fl-primary-subnav-item>
+                                    <fl-primary-subnav-item title="Disputes" label="Disputes" href="/dispute/disputeslist.php">
+    <li class="DropDown-list-item">
+      <div class="DropDown-list-item-inner">
+        <a ng-href="/dispute/disputeslist.php" class="DropDown-list-item-link" fl-analytics="Disputes" href="/dispute/disputeslist.php">
+          Disputes
+        </a>
+      </div>
+    </li></fl-primary-subnav-item>
+                                </ng-transclude>
+      </ul>
+    </div>
+  </fl-nav-group>
+                            </div>
+                        </nav>
+                    </ng-transclude>
+    </li><!-- end ngIf: PrimaryNavItem.isVisible --></fl-primary-nav-item>
+                </ng-transclude>
+
+      <!-- ngIf: PrimaryNav.hiddenItems.length > 0 -->
+    </ul></fl-primary-nav>
+
+
+                <!-- Search -->
+
+                <div class="nav-search-link-container" ng-hide="ctrl.simpleHeader">
+                    <a href="/search" class="nav-search-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="flicon-search">
+                            <circle fill="none" stroke-linecap="round" stroke-miterlimit="10" cx="10.5" cy="10.5" r="7"></circle>
+                            <path fill="none" stroke-linecap="round" stroke-miterlimit="10" d="M21 21l-5.6-5.6"></path>
+                        </svg>
+                    </a>
+                </div>
+
+                <div id="nav-search-container" class="nav-search-container header-search NavSearch" title="Search" ng-hide="ctrl.simpleHeader">
+                    <button class="nav-search-trigger" data-target="header-search-bt" id="header-search-trigger">
+                        <span class="Icon">
+                            <svg class="Icon-image" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <path d="M21.71 20.29l-5.4-5.39a8 8 0 0 0-12-10.56 8 8 0 0 0 10.56 12l5.39 5.39 1.41-1.41zM10 16a6 6 0 1 1 4.24-1.76A6 6 0 0 1 10 16z"></path>
+</svg>
+
+                        </span>
+                    </button>
+                    <form class="nav-search-form is-active                                                   ng-pristine ng-valid" id="nav_search_form_submit" data-target="header-search">
+                        <div class="bucket-search-wrapper"><input id="navigation-search" type="search" class="nav-search-input bucket-search-input empty" data-target="header-search-input" placeholder="Search" autocomplete="off" role="search" maxlength="1000"><div class="bucket-search-drop empty is-empty" style="opacity: 0; visibility: hidden;"><ul class="results"><li class="bucket-search-heading hidden" data-bucket="recent-searches" style="display: none;"><strong class="bucket-search-images project"></strong><span class="bucket-search-heading-name">Recent Searches</span></li><li class="bucket-search-heading hidden" data-bucket="my-contacts-" style="display: none;"><strong class="bucket-search-images contact"></strong><span class="bucket-search-heading-name">My Contacts:</span></li><li class="bucket-search-heading hidden" data-bucket="top-freelancers" style="display: none;"><strong class="bucket-search-images contact"></strong><span class="bucket-search-heading-name">Top Freelancers</span><span class="ns_right pull-right see_more_search"><a class="ns_link" src="/users/search/">View</a></span></li><li class="bucket-search-heading hidden" data-bucket="my-active-projects" style="display: none;"><strong class="bucket-search-images project"></strong><span class="bucket-search-heading-name">My Active Projects</span></li><li class="bucket-search-heading hidden" data-bucket="projects" style="display: none;"><strong class="bucket-search-images project"></strong><span class="bucket-search-heading-name">Projects</span><span class="ns_right pull-right see_more_search"><a class="ns_link" src="/search/search.php">View</a></span></li><li class="bucket-search-heading hidden" data-bucket="contests" style="display: none;"><strong class="bucket-search-images contest"></strong><span class="bucket-search-heading-name">Contests</span><span class="ns_right pull-right see_more_search"><a class="ns_link" src="/contest/browse/">View</a></span></li></ul><div id="nav-search-footer" class="NavSearch-footer" style="display: none;"><a class="NavSearch-footerLink"><div class="NavSearch-footerInner"><span id="nav-search-footer-icon" class="NavSearch-footerIcon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="flicon-search">
+    <circle fill="none" stroke-linecap="round" stroke-miterlimit="10" cx="10.5" cy="10.5" r="7"></circle>
+    <path fill="none" stroke-linecap="round" stroke-miterlimit="10" d="M21 21l-5.6-5.6"></path>
+</svg>
+</span><span id="nav-search-footer-text" class="NavSearch-footerText"></span></div></a></div></div></div>
+                    </form>
+                    <div id="nav-search-icon-search" class="hide"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="flicon-search">
+    <circle fill="none" stroke-linecap="round" stroke-miterlimit="10" cx="10.5" cy="10.5" r="7"></circle>
+    <path fill="none" stroke-linecap="round" stroke-miterlimit="10" d="M21 21l-5.6-5.6"></path>
+</svg>
+</div>
+                    <div id="nav-search-icon-contest" class="hide"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="flicon-contest"><g fill="none"><path d="M11.968 3.5l1 2h2L13.35 6.735 13.97 9l-2-1.5-2 1.5.794-2.265L8.968 5.5h2M5.125 10.5c-5 0-4.622-6.62-4.622-8h2.534M18.847 10.5c5 0 4.65-6.62 4.65-8l-2.548.008"></path><path d="M21.003.5h-18c0 15.434 7.965 11.054 7.965 16.5-.062 3.5-1.704 4.5-4.465 4.5v2h11v-2c-2.762 0-4.535-1-4.535-4.5 0-5.453 8.035-1.13 8.035-16.5z"></path></g></svg></div>
+                    <div id="nav-search-icon-project" class="hide"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.4 19.7" class="flicon-desktop">
+  <g fill="none">
+    <title>Desktop icon</title>
+    <path d="M21.8 15.7c0 .8-.6 1.5-1.4 1.5H2c-.8 0-1.4-.7-1.4-1.5V2.1C.6 1.3 1.2.6 2 .6h18.4c.8 0 1.4.7 1.4 1.5v13.6zM4.8 19h12.8M11.2 17.2V19"></path>
+    <circle cx="11.2" cy="15.3" r=".5"></circle>
+    <path d="M.6 13.5h21.2"></path>
+  </g>
+</svg>
+</div>
+                </div>
+              </div>
+            </nav>
 
         </div>
     </div>
