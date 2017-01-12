@@ -615,15 +615,10 @@ HOT
         <div class="ribbons-container span3">
         </div>
         <div class="well white silver span padding-5 align-c margin-t10 margin-l10 margin-b10">
-          
-          
             <div style="display:inline-block" class="align-c padding-r10 padding-l5 project-view-status">
                 <p>Bids</p>
                 <div id="num-bids" class="text-blue larger bold">
-                    
                         {{count}}
-                    
-                    
                 </div>
             </div>
             <div style="display:inline-block" class="align-c padding-l10 padding-r10 border-r border-l project-view-status">
@@ -634,8 +629,6 @@ HOT
             </div>
             <div style="display:inline-block" class="align-c padding-l10 padding-r5 project-view-status " >
                 <p>
-                    
-                    
                         Project Budget
                     
                      (USD)</p>
@@ -643,10 +636,9 @@ HOT
                                 {{budget_avg}}   
                 </div>
             </div>
-
         </div>
     </div>
-    <div class="user-bid-extension span12" style="display:none;">
+    <div class="user-bid-extension span12" style="display:;">
         <div class="alert alert-success">
             Great! Your bid has been placed successfully! Good job!
         </div>
@@ -671,8 +663,6 @@ HOT
             <strong>You are almost out of bids.</strong> Upgrade your membership to receive more bids.
             <a href="/membership/index.php?ref=placebid_unsuccessful" class="btn btn-primary" data-target="membershipBidUpsell" data-callout-placement="BOTTOM_RIGHT" id="membership-bid-warning-cta">Upgrade Membership</a>
         </div>
-    
-
 </div>
                 <div class="recruiter-fee-structure hide span11 alert alert-block alert-info margin-0 margin-b20">
                     <strong>IMPORTANT:</strong> On Recruiter projects you will be charged the Freelancer.com fee <strong>per</strong> Milestone Payment and <strong>only once it is released to you</strong>, not upon accepting the project.
@@ -751,36 +741,6 @@ HOT
                             </div>
                         </div>
                     </div>
-                    <div id="milestone" class="span3 margin-0 inline-bid-columns" style="display:none;">
-                        <strong class="regular">
-                            Request Milestone
-                        </strong>
-                        <span class="popover_el" id="milestone_tip" rel="popover" data-trigger="hover" data-placement="right" data-original-title="Request Milestone" data-content="Request the amount you would like the Employer to deposit before you begin work. You can request to have this payment released to you as you complete the project.">
-                            <img src="https://cdn5.f-cdn.com/static/css/images/pages/post-project/question.png">
-                        </span>
-                        <br>
-                        
-                            <div class="control-group">
-                                <div class="input-append margin-0 span3">
-                                    <input class="margin-b0 margin-l0 input-mini milestone_percentage" value="100" name="milestone_percentage" type="text">
-                                    <span class="add-on">
-                                        
-                                            %
-                                        
-                                    </span>
-                                    <span class="small help-inline"></span>
-                                </div>
-                            </div>
-                        
-                        <div style="font-size: 13px; margin-top: 5px; display: inline-block;">
-                            $
-                            <span id="milestone_price">555</span> USD
-                        </div>
-
-                    </div>
-
-                    
-
                     <div class="clear margin-5">
                     Note: Freelancer Project Fee will only be charged when you get awarded and accept the project
                     </div>
@@ -796,14 +756,6 @@ HOT
       <div class="control-group control-label margin-0 align-c bid-left-container">
           <span class="largest bids-left">7</span>/<span class="bid-limit">8</span>
           <br><span class="small bid-label">BIDS LEFT</span>
-      </div>
-      <div class="control-group margin-0 align-r margin-r10 margin-b5 normal bids-left-button-container" style="display: none;">
-          
-          <a href="/jobs/myskills/" class="btn btn-small margin-t5 more-bid-left" style="display: inline-block;">View Projects</a>
-          <a href="/membership/index.php?ref=dashboard_bids" class="btn btn-primary btn-mini margin-t5 zero-bid-left" style="display: none;">
-              Upgrade Membership
-          </a>
-          
       </div>
   </div>
   
@@ -874,29 +826,7 @@ HOT
                             <span id="descr_count">1500</span> characters left
                         </span>
                     </div>
-
-                    
-                    <div id="proposal-milestones" class="milestone-proposal-wrapper" style="display:none;">
-                        <strong>Proposed Milestones: <span class="label label-important">NEW</span></strong>
-                        <p>Define the tasks that you will complete for this employer's project</p>
-                        <ol id="milestone-proposal-list" class="milestone-proposal-list">
-                        </ol>
-
-                        <p id="milestone-error" class="text-red"></p>
-
-                        <a id="add-milestone-proposal" href="" class="milestone-proposal-link">
-                            <span class="fl-icon-plus-sign"></span>
-                            <span class="milestone-link-text">Add a Milestone</span>
-                        </a>
-                        <strong class="milestone-proposal-total">
-                            Milestone Total:
-                            $
-                            <span id="milestone-total">0</span>
-                            USD
-                        </strong>
-                        <br>
-                    </div>
-                    
+      
                 </div>
 
             </div>
@@ -1135,34 +1065,6 @@ HOT
     </div>
 </div>
 
-        <!--Awarded Bids Box Start-->
-        <div class="span3" id="award-bids-title"style="display:none;"></div>
-<div class="margin-t10 span12 padding-t5 padding-b5 bid-list-awarded"
-style="display:none;"
-id="awarded-bid-list-header">
-    <div class="bid-user-info-header padding-t5 padding-b5 margin-l0">
-        <a href="#" onclick="return false;" class="text-white bold margin-l5">
-            
-            
-                Freelancers Awarded
-            
-            <i class="disable-temp icon-white"></i>
-        </a>
-    </div>
-        <div class="bid-reputation-header padding-t5 padding-b5 align-c" data-sort="down">
-        <a href="#" onclick="return false;" class="text-white bold">
-            Reputation
-            <span class="Icon"><svg class="Icon-image" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <path d="M12 16c-.3 0-.5-.1-.7-.3l-6-6 1.4-1.4 5.3 5.3 5.3-5.3 1.4 1.4-6 6c-.2.2-.4.3-.7.3z"/>
-</svg>
-</span>
-        </a>
-    </div>
-    <div class="bid-sum-header padding-t5 padding-b5 align-c">
-        <a href="#" onclick="return false;" class="text-white bold">Bid(USD)<i class="disable-temp icon-white"></i>
-        </a>
-    </div>
-</div>
 <div class="clear"></div>
 
 </div>
