@@ -1,295 +1,296 @@
 
 <!DOCTYPE html>
 <html class=" is-responsive" lang="en">
-  <head>
-    <!-- css section -->
-    <link href="https://cdn5.f-cdn.com/build/css/js-plugins/jquery.fileupload-ui.css?v=cd7ec3a496ae786928f334b389815dd4&amp;m=6" type="text/css" rel="stylesheet" />
-    
-    
-        
-          <link href="https://cdn5.f-cdn.com/build/css/bootstrap/bootstrap-legacy.css?v=5c231f718d66adbfd80af35a1cc9e99b&amp;m=6" type="text/css" rel="stylesheet" />
-            <link href="https://cdn5.f-cdn.com/build/css/skin/styles/global.css?v=2f8459065d9c9c56e465704a7640f7d8&amp;m=6" type="text/css" rel="stylesheet" />
-        
-    
+<head>
+  <!-- css section -->
+  <link href="https://cdn5.f-cdn.com/build/css/js-plugins/jquery.fileupload-ui.css?v=cd7ec3a496ae786928f334b389815dd4&amp;m=6" type="text/css" rel="stylesheet" />
 
-    
-        <link href="https://cdn2.f-cdn.com/build/css/flux/base.css?v=bd758ccaf182bd34a6b6f8b4a64e67d5&amp;m=6" type="text/css" rel="stylesheet" />
-    
 
-    
-        <link href="https://cdn5.f-cdn.com/build/css/flux/LoggedInBase.css?v=0db47f86c3b86ab0df9195124d0a5115&amp;m=6" type="text/css" rel="stylesheet" />
 
-        <link href="https://cdn2.f-cdn.com/build/css/skin/project-view.css?v=48d0c13bdd7ad61f295c295b8ade607c&amp;m=6" type="text/css" rel="stylesheet" />
-    
-        <link href="https://cdn3.f-cdn.com/build/css/skin/complete-profile.css?v=127253e2243f6cff1e9db08a5baf6fd5&amp;m=6" type="text/css" rel="stylesheet" />
-    
+  <link href="https://cdn5.f-cdn.com/build/css/bootstrap/bootstrap-legacy.css?v=5c231f718d66adbfd80af35a1cc9e99b&amp;m=6" type="text/css" rel="stylesheet" />
+  <link href="https://cdn5.f-cdn.com/build/css/skin/styles/global.css?v=2f8459065d9c9c56e465704a7640f7d8&amp;m=6" type="text/css" rel="stylesheet" />
 
-    
-        <link href="https://cdn2.f-cdn.com/build/css/../../css/project_view/jquery-ui-1.8.16.custom.css?v=de0239b3882e356c6b047dbc214e8d66&amp;m=6" type="text/css" rel="stylesheet" />
-    
-        <link href="https://cdn5.f-cdn.com/build/css/js-plugins/jquery.fileupload-ui.css?v=cd7ec3a496ae786928f334b389815dd4&amp;m=6" type="text/css" rel="stylesheet" />
-    
-    {% javascripts 'bundles/app/js/jquery.min.js'
-    'bundles/app/js/bootstrap.min.js'
-    'bundles/app/js/jquery-migrate.min.js'
-    'bundles/app/js/font-awesome-icons.js'
-    'bundles/app/js/viewprojects.js'%}
-    <script src="{{ asset_url }}"></script>
-    {% endjavascripts %}
 
-  </head>
-  <body>
 
-    <div id="fb_pixel"></div>
 
-    <div class="pinky-template" id="pinky-container">
-<fl-navigation class="fl-header"
-        role="banner"
-        fl-translation-crawler
-        ng-controller="appController as ctrl"
-        data-target="primary-header-container"
-        ng-class="{'no-subnav': ctrl.hideSubnav}"
-        ng-strict-di>
+  <link href="https://cdn2.f-cdn.com/build/css/flux/base.css?v=bd758ccaf182bd34a6b6f8b4a64e67d5&amp;m=6" type="text/css" rel="stylesheet" />
+
+
+
+  <link href="https://cdn5.f-cdn.com/build/css/flux/LoggedInBase.css?v=0db47f86c3b86ab0df9195124d0a5115&amp;m=6" type="text/css" rel="stylesheet" />
+
+  <link href="https://cdn2.f-cdn.com/build/css/skin/project-view.css?v=48d0c13bdd7ad61f295c295b8ade607c&amp;m=6" type="text/css" rel="stylesheet" />
+
+  <link href="https://cdn3.f-cdn.com/build/css/skin/complete-profile.css?v=127253e2243f6cff1e9db08a5baf6fd5&amp;m=6" type="text/css" rel="stylesheet" />
+
+
+
+  <link href="https://cdn2.f-cdn.com/build/css/../../css/project_view/jquery-ui-1.8.16.custom.css?v=de0239b3882e356c6b047dbc214e8d66&amp;m=6" type="text/css" rel="stylesheet" />
+
+  <link href="https://cdn5.f-cdn.com/build/css/js-plugins/jquery.fileupload-ui.css?v=cd7ec3a496ae786928f334b389815dd4&amp;m=6" type="text/css" rel="stylesheet" />
+
+  {% javascripts 'bundles/app/js/jquery.min.js'
+  'bundles/app/js/bootstrap.min.js'
+  'bundles/app/js/jquery-migrate.min.js'
+  'bundles/app/js/font-awesome-icons.js'
+  'bundles/app/js/bid-project.js'
+  'bundles/app/js/viewprojects.js'%}
+  <script src="{{ asset_url }}"></script>
+  {% endjavascripts %}
+
+</head>
+<body>
+
+  <div id="fb_pixel"></div>
+
+  <div class="pinky-template" id="pinky-container">
+    <fl-navigation class="fl-header"
+    role="banner"
+    fl-translation-crawler
+    ng-controller="appController as ctrl"
+    data-target="primary-header-container"
+    ng-class="{'no-subnav': ctrl.hideSubnav}"
+    ng-strict-di>
 
     <div class="primary-navigation-section"
     data-target="primary-header" fl-analytics-section="DaVinciNavigation">
-        <div class="navigation-section-inner">
+    <div class="navigation-section-inner">
 
-            <!-- Logo container-->
+      <!-- Logo container-->
 
-            <div class="fl-logo-container">
-                <a class="fl-logo" href="/dashboard/" fl-analytics="PrimaryLogo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 72.449" class="flicon-logo-fullcolor"><title>Freelancer Logo</title><g fill="#29B2FE"><path d="M56.897 0l6.624 9.29L97.036 0M22.075 72.333l18.13-17.725-10.912-11.71M54.152 0l-9.69 8.738 16.298.608M16.482 0l3.48 7.133 19.18 1.195M26.75 36.986l14.17-26.434L-.23 8.328M28.4 38.662L41.785 53.04 56.55 38.567l4.582-26.957-17.993-.918"/></g><path fill="#161F2B" d="M85.22 33.902h-3.67l-3.214 20.286c-.084.532-.587.966-1.12.966h-7.34c-.532 0-.897-.434-.813-.966l4.506-28.45c1.14-7.195 4.772-8.79 9.747-8.79 1.545 0 3.164.146 4.43.387.564.097.945.435.86.966l-.727 4.59c-.084.53-.58.917-1.16.917h-2.027c-1.207 0-1.622.482-1.85 1.932l-.207 1.303h3.67c.532 0 .897.434.813.967l-.78 4.926c-.086.532-.59.966-1.12.966zM103.54 34.24h-.675c-2.077 0-4.103.29-5.73 1.11l-2.968 18.74c-.084.533-.555 1.063-1.135 1.063h-7.244c-.58 0-.978-.53-.894-1.062l4.13-26.08c.085-.533.443-.968 1.12-.968h6.954c.676 0 .928.242.813.967l-.183 1.158c2.533-2.27 4.31-2.512 6.87-2.512.82 0 .934.193.812.967l-.934 5.892c-.09.58-.307.725-.935.725zM127.806 43.707h-15.02l-.014.096c-.406 2.56.405 4.153 3.93 4.153 2.56 0 7.33-.24 9.237-.387.78-.05 1.046.095.93.82l-.687 4.348c-.122.773-.37 1.11-1.18 1.353-3.252 1.016-6.66 1.498-10.717 1.498-6.52 0-12.013-3.43-10.552-12.654l.505-3.188c1.345-8.5 7.005-13.137 14.926-13.137 8.452 0 11.514 5.36 10.283 13.136l-.46 2.9c-.1.626-.605 1.06-1.184 1.06zm-7.038-5.265c.46-2.898-.425-4.637-2.84-4.637-2.318 0-3.848 1.74-4.307 4.637l-.022.145h7.147l.023-.145zM154.538 43.707h-15.02l-.014.096c-.406 2.56.405 4.153 3.93 4.153 2.56 0 7.33-.24 9.237-.387.78-.05 1.048.095.933.82l-.688 4.348c-.122.773-.37 1.11-1.18 1.353-3.252 1.016-6.66 1.498-10.717 1.498-6.52 0-12.013-3.43-10.552-12.654l.505-3.188c1.347-8.5 7.007-13.137 14.928-13.137 8.452 0 11.514 5.36 10.283 13.136l-.458 2.9c-.1.626-.605 1.06-1.184 1.06zm-7.04-5.265c.46-2.898-.424-4.637-2.838-4.637-2.318 0-3.85 1.74-4.308 4.637l-.023.145h7.146l.023-.145zM164.34 55.154h-7.292c-.532 0-.978-.53-.894-1.062l5.592-35.308c.084-.53.684-.965 1.215-.965h7.293c.532 0 .897.433.813.964l-5.592 35.308c-.084.53-.603 1.062-1.134 1.062zM190.007 55.154h-6.713c-.53 0-.897-.434-.813-.966l.162-1.014c-2.05 1.352-4.632 2.414-7.288 2.414-3.815 0-7.922-2.125-6.89-8.645l.092-.58c.918-5.796 5.642-7.873 13.707-7.873h2.077l.222-1.4c.375-2.366-.33-2.8-2.744-2.8-2.705 0-7.09.24-8.458.338-.828.048-1-.387-.91-.967l.743-4.684c.115-.724.54-.965 1.15-1.16 1.67-.482 5.93-1.16 9.022-1.16 7.003 0 11.724 2.513 10.47 10.434l-2.708 17.098c-.085.532-.59.966-1.12.966zm-6.173-11.64h-2.366c-2.415 0-3.503.773-3.824 2.8l-.077.484c-.26 1.643.774 2.126 2.126 2.126 1.16 0 2.517-.34 3.4-.724l.74-4.686zM217.898 55.154h-7.244c-.58 0-.978-.53-.894-1.062l2.593-16.374c.405-2.56-.285-3.38-2.46-3.38-1.11 0-2.58.433-3.782 1.014l-2.967 18.74c-.084.532-.555 1.062-1.135 1.062h-7.244c-.58 0-.978-.53-.894-1.062L198 28.01c.085-.532.588-.967 1.12-.967h6.713c.532 0 .897.434.813.967l-.176 1.11c2.865-1.932 5.654-2.464 8.36-2.464 7.58 0 7.706 5.313 6.796 11.06l-2.593 16.375c-.085.533-.556 1.064-1.135 1.064zM239.323 54.816c-1.703.386-3.89.772-6.738.772-7.39 0-10.793-4.733-9.538-12.654l.574-3.622c1.248-7.873 6.166-12.703 13.555-12.703 2.85 0 5.195.433 6.494.77.604.146.904.388.804 1.016l-.864 5.458c-.092.58-.45 1.014-1.16.917-1.62-.143-3.134-.337-5.5-.337-2.076 0-3.49 1.305-4.056 4.88l-.574 3.62c-.566 3.575.443 4.83 2.52 4.83 2.365 0 3.926-.096 5.6-.29.74-.095.968.29.87.918l-.858 5.41c-.1.63-.477.87-1.13 1.016zM267.67 43.707h-15.02l-.015.096c-.406 2.56.405 4.153 3.93 4.153 2.56 0 7.33-.24 9.237-.387.78-.05 1.047.095.933.82l-.69 4.348c-.12.773-.368 1.11-1.18 1.353-3.25 1.016-6.66 1.498-10.716 1.498-6.52 0-12.014-3.43-10.553-12.654l.505-3.188c1.346-8.5 7.006-13.137 14.927-13.137 8.45 0 11.514 5.36 10.282 13.136l-.46 2.9c-.1.626-.604 1.06-1.183 1.06zm-7.04-5.265c.46-2.898-.424-4.637-2.84-4.637-2.317 0-3.848 1.74-4.307 4.637l-.023.145h7.147l.023-.145zM282.857 27.043l-4.3 27.048c-.084.533-.555 1.063-1.135 1.063h-7.244c-.58 0-.978-.53-.894-1.062l2.854-17.894 10.72-9.153z"/><path fill="#29B2FE" d="M285.326 27.043l-1.484 9.28 15.93-9.28"/></svg>
+      <div class="fl-logo-container">
+        <a class="fl-logo" href="/dashboard/" fl-analytics="PrimaryLogo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 72.449" class="flicon-logo-fullcolor"><title>Freelancer Logo</title><g fill="#29B2FE"><path d="M56.897 0l6.624 9.29L97.036 0M22.075 72.333l18.13-17.725-10.912-11.71M54.152 0l-9.69 8.738 16.298.608M16.482 0l3.48 7.133 19.18 1.195M26.75 36.986l14.17-26.434L-.23 8.328M28.4 38.662L41.785 53.04 56.55 38.567l4.582-26.957-17.993-.918"/></g><path fill="#161F2B" d="M85.22 33.902h-3.67l-3.214 20.286c-.084.532-.587.966-1.12.966h-7.34c-.532 0-.897-.434-.813-.966l4.506-28.45c1.14-7.195 4.772-8.79 9.747-8.79 1.545 0 3.164.146 4.43.387.564.097.945.435.86.966l-.727 4.59c-.084.53-.58.917-1.16.917h-2.027c-1.207 0-1.622.482-1.85 1.932l-.207 1.303h3.67c.532 0 .897.434.813.967l-.78 4.926c-.086.532-.59.966-1.12.966zM103.54 34.24h-.675c-2.077 0-4.103.29-5.73 1.11l-2.968 18.74c-.084.533-.555 1.063-1.135 1.063h-7.244c-.58 0-.978-.53-.894-1.062l4.13-26.08c.085-.533.443-.968 1.12-.968h6.954c.676 0 .928.242.813.967l-.183 1.158c2.533-2.27 4.31-2.512 6.87-2.512.82 0 .934.193.812.967l-.934 5.892c-.09.58-.307.725-.935.725zM127.806 43.707h-15.02l-.014.096c-.406 2.56.405 4.153 3.93 4.153 2.56 0 7.33-.24 9.237-.387.78-.05 1.046.095.93.82l-.687 4.348c-.122.773-.37 1.11-1.18 1.353-3.252 1.016-6.66 1.498-10.717 1.498-6.52 0-12.013-3.43-10.552-12.654l.505-3.188c1.345-8.5 7.005-13.137 14.926-13.137 8.452 0 11.514 5.36 10.283 13.136l-.46 2.9c-.1.626-.605 1.06-1.184 1.06zm-7.038-5.265c.46-2.898-.425-4.637-2.84-4.637-2.318 0-3.848 1.74-4.307 4.637l-.022.145h7.147l.023-.145zM154.538 43.707h-15.02l-.014.096c-.406 2.56.405 4.153 3.93 4.153 2.56 0 7.33-.24 9.237-.387.78-.05 1.048.095.933.82l-.688 4.348c-.122.773-.37 1.11-1.18 1.353-3.252 1.016-6.66 1.498-10.717 1.498-6.52 0-12.013-3.43-10.552-12.654l.505-3.188c1.347-8.5 7.007-13.137 14.928-13.137 8.452 0 11.514 5.36 10.283 13.136l-.458 2.9c-.1.626-.605 1.06-1.184 1.06zm-7.04-5.265c.46-2.898-.424-4.637-2.838-4.637-2.318 0-3.85 1.74-4.308 4.637l-.023.145h7.146l.023-.145zM164.34 55.154h-7.292c-.532 0-.978-.53-.894-1.062l5.592-35.308c.084-.53.684-.965 1.215-.965h7.293c.532 0 .897.433.813.964l-5.592 35.308c-.084.53-.603 1.062-1.134 1.062zM190.007 55.154h-6.713c-.53 0-.897-.434-.813-.966l.162-1.014c-2.05 1.352-4.632 2.414-7.288 2.414-3.815 0-7.922-2.125-6.89-8.645l.092-.58c.918-5.796 5.642-7.873 13.707-7.873h2.077l.222-1.4c.375-2.366-.33-2.8-2.744-2.8-2.705 0-7.09.24-8.458.338-.828.048-1-.387-.91-.967l.743-4.684c.115-.724.54-.965 1.15-1.16 1.67-.482 5.93-1.16 9.022-1.16 7.003 0 11.724 2.513 10.47 10.434l-2.708 17.098c-.085.532-.59.966-1.12.966zm-6.173-11.64h-2.366c-2.415 0-3.503.773-3.824 2.8l-.077.484c-.26 1.643.774 2.126 2.126 2.126 1.16 0 2.517-.34 3.4-.724l.74-4.686zM217.898 55.154h-7.244c-.58 0-.978-.53-.894-1.062l2.593-16.374c.405-2.56-.285-3.38-2.46-3.38-1.11 0-2.58.433-3.782 1.014l-2.967 18.74c-.084.532-.555 1.062-1.135 1.062h-7.244c-.58 0-.978-.53-.894-1.062L198 28.01c.085-.532.588-.967 1.12-.967h6.713c.532 0 .897.434.813.967l-.176 1.11c2.865-1.932 5.654-2.464 8.36-2.464 7.58 0 7.706 5.313 6.796 11.06l-2.593 16.375c-.085.533-.556 1.064-1.135 1.064zM239.323 54.816c-1.703.386-3.89.772-6.738.772-7.39 0-10.793-4.733-9.538-12.654l.574-3.622c1.248-7.873 6.166-12.703 13.555-12.703 2.85 0 5.195.433 6.494.77.604.146.904.388.804 1.016l-.864 5.458c-.092.58-.45 1.014-1.16.917-1.62-.143-3.134-.337-5.5-.337-2.076 0-3.49 1.305-4.056 4.88l-.574 3.62c-.566 3.575.443 4.83 2.52 4.83 2.365 0 3.926-.096 5.6-.29.74-.095.968.29.87.918l-.858 5.41c-.1.63-.477.87-1.13 1.016zM267.67 43.707h-15.02l-.015.096c-.406 2.56.405 4.153 3.93 4.153 2.56 0 7.33-.24 9.237-.387.78-.05 1.047.095.933.82l-.69 4.348c-.12.773-.368 1.11-1.18 1.353-3.25 1.016-6.66 1.498-10.716 1.498-6.52 0-12.014-3.43-10.553-12.654l.505-3.188c1.346-8.5 7.006-13.137 14.927-13.137 8.45 0 11.514 5.36 10.282 13.136l-.46 2.9c-.1.626-.604 1.06-1.183 1.06zm-7.04-5.265c.46-2.898-.424-4.637-2.84-4.637-2.317 0-3.848 1.74-4.307 4.637l-.023.145h7.147l.023-.145zM282.857 27.043l-4.3 27.048c-.084.533-.555 1.063-1.135 1.063h-7.244c-.58 0-.978-.53-.894-1.062l2.854-17.894 10.72-9.153z"/><path fill="#29B2FE" d="M285.326 27.043l-1.484 9.28 15.93-9.28"/></svg>
+        </a>
+      </div>
+
+      <nav class="primary-navigation">
+        <div class="primary-navigation-inner">
+          <fl-primary-nav ng-hide="ctrl.simpleHeader" ng-mouseover="ctrl.init()">
+          <ul class="primary-navigation-list">
+            <ng-transclude>
+            <fl-primary-nav-item class="fl-primary-nav-item" title="Hire Freelancers" href="/post-project" label="hire">
+            <!-- ngIf: PrimaryNavItem.isVisible --><li ng-if="PrimaryNavItem.isVisible" class="primary-navigation-item">
+            <a ng-href="/post-project" fl-analytics="hire" class="primary-navigation-link" href="/post-project">
+              <span>Hire Freelancers</span>
+            </a>
+            <ng-transclude>
+            <nav class="DropDown DropDown--arrowed fl-header-dropdown">
+              <div class="DropDown-section">
+                <fl-nav-group title="Find a freelancer">
+                <div class="DropDown-section-header">
+                  <h6 class="DropDown-section-header-heading">
+                    Find a freelancer
+                  </h6>
+                  <ul class="DropDown-list">
+                    <ng-transclude>
+                    <fl-primary-subnav-item title="Start a Project" label="StartAProject" href="/post-project">
+                    <li class="DropDown-list-item">
+                      <div class="DropDown-list-item-inner">
+                        <a ng-href="/post-project" class="DropDown-list-item-link" fl-analytics="StartAProject" href="/post-project">
+                          Start a Project
+                        </a>
+                      </div>
+                    </li></fl-primary-subnav-item>
+                    <fl-primary-subnav-item title="Start a Contest" label="GoToPostContest" href="/contest/create.php">
+                    <li class="DropDown-list-item">
+                      <div class="DropDown-list-item-inner">
+                        <a ng-href="/contest/create.php" class="DropDown-list-item-link" fl-analytics="GoToPostContest" href="/contest/create.php">
+                          Start a Contest
+                        </a>
+                      </div>
+                    </li></fl-primary-subnav-item>
+                    <fl-primary-subnav-item title="Post a Local Job" label="postALocalJob" href="/local">
+                    <li class="DropDown-list-item">
+                      <div class="DropDown-list-item-inner">
+                        <a ng-href="/local" class="DropDown-list-item-link" fl-analytics="postALocalJob" href="/local">
+                          Post a Local Job
+                        </a>
+                      </div>
+                    </li></fl-primary-subnav-item>
+                    <fl-primary-subnav-item title="Get a Recruiter" label="GoToRecruiterLanding" href="/recruiter">
+                    <li class="DropDown-list-item">
+                      <div class="DropDown-list-item-inner">
+                        <a ng-href="/recruiter" class="DropDown-list-item-link" fl-analytics="GoToRecruiterLanding" href="/recruiter">
+                          Get a Recruiter
+                        </a>
+                      </div>
+                    </li></fl-primary-subnav-item>
+                  </ng-transclude>
+                </ul>
+              </div>
+            </fl-nav-group>
+            <hr class="DropDown-divider">
+            <fl-nav-group title="Discover">
+            <div class="DropDown-section-header">
+              <h6 class="DropDown-section-header-heading">
+                Discover
+              </h6>
+              <ul class="DropDown-list">
+                <ng-transclude>
+                <fl-primary-subnav-item title="Showcase" label="AllShowcase" href="/showcase">
+                <li class="DropDown-list-item">
+                  <div class="DropDown-list-item-inner">
+                    <a ng-href="/showcase" class="DropDown-list-item-link" fl-analytics="AllShowcase" href="/showcase">
+                      Showcase
+                    </a>
+                  </div>
+                </li></fl-primary-subnav-item>
+                <fl-primary-subnav-item title="Browse Directory" label="GoToFreelancers" href="/freelancers/">
+                <li class="DropDown-list-item">
+                  <div class="DropDown-list-item-inner">
+                    <a ng-href="/freelancers/" class="DropDown-list-item-link" fl-analytics="GoToFreelancers" href="/freelancers/">
+                      Browse Directory
+                    </a>
+                  </div>
+                </li></fl-primary-subnav-item>
+                <fl-primary-subnav-item title="Community" label="GoToCommunity" href="/community/">
+                <li class="DropDown-list-item">
+                  <div class="DropDown-list-item-inner">
+                    <a ng-href="/community/" class="DropDown-list-item-link" fl-analytics="GoToCommunity" href="/community/">
+                      Community
+                    </a>
+                  </div>
+                </li></fl-primary-subnav-item>
+
+              </ng-transclude>
+            </ul>
+          </div>
+        </fl-nav-group>
+      </div>
+    </nav>
+  </ng-transclude>
+</li><!-- end ngIf: PrimaryNavItem.isVisible --></fl-primary-nav-item>
+
+<fl-primary-nav-item class="fl-primary-nav-item" title="Work" href="/jobs/myskills/" label="work">
+<!-- ngIf: PrimaryNavItem.isVisible --><li ng-if="PrimaryNavItem.isVisible" class="primary-navigation-item">
+<a ng-href="/jobs/myskills/" fl-analytics="work" class="primary-navigation-link" href="/jobs/myskills/">
+  <span>Work</span>
 </a>
-            </div>
-
-           <nav class="primary-navigation">
-              <div class="primary-navigation-inner">
-                <fl-primary-nav ng-hide="ctrl.simpleHeader" ng-mouseover="ctrl.init()">
-    <ul class="primary-navigation-list">
-      <ng-transclude>
-                    <fl-primary-nav-item class="fl-primary-nav-item" title="Hire Freelancers" href="/post-project" label="hire">
-    <!-- ngIf: PrimaryNavItem.isVisible --><li ng-if="PrimaryNavItem.isVisible" class="primary-navigation-item">
-      <a ng-href="/post-project" fl-analytics="hire" class="primary-navigation-link" href="/post-project">
-          <span>Hire Freelancers</span>
-      </a>
-      <ng-transclude>
-                        <nav class="DropDown DropDown--arrowed fl-header-dropdown">
-                            <div class="DropDown-section">
-                                <fl-nav-group title="Find a freelancer">
-    <div class="DropDown-section-header">
-      <h6 class="DropDown-section-header-heading">
-        Find a freelancer
-      </h6>
-      <ul class="DropDown-list">
-          <ng-transclude>
-                                    <fl-primary-subnav-item title="Start a Project" label="StartAProject" href="/post-project">
-    <li class="DropDown-list-item">
-      <div class="DropDown-list-item-inner">
-        <a ng-href="/post-project" class="DropDown-list-item-link" fl-analytics="StartAProject" href="/post-project">
-          Start a Project
-        </a>
-      </div>
-    </li></fl-primary-subnav-item>
-                                    <fl-primary-subnav-item title="Start a Contest" label="GoToPostContest" href="/contest/create.php">
-    <li class="DropDown-list-item">
-      <div class="DropDown-list-item-inner">
-        <a ng-href="/contest/create.php" class="DropDown-list-item-link" fl-analytics="GoToPostContest" href="/contest/create.php">
-          Start a Contest
-        </a>
-      </div>
-    </li></fl-primary-subnav-item>
-                                    <fl-primary-subnav-item title="Post a Local Job" label="postALocalJob" href="/local">
-    <li class="DropDown-list-item">
-      <div class="DropDown-list-item-inner">
-        <a ng-href="/local" class="DropDown-list-item-link" fl-analytics="postALocalJob" href="/local">
-          Post a Local Job
-        </a>
-      </div>
-    </li></fl-primary-subnav-item>
-                                    <fl-primary-subnav-item title="Get a Recruiter" label="GoToRecruiterLanding" href="/recruiter">
-    <li class="DropDown-list-item">
-      <div class="DropDown-list-item-inner">
-        <a ng-href="/recruiter" class="DropDown-list-item-link" fl-analytics="GoToRecruiterLanding" href="/recruiter">
-          Get a Recruiter
-        </a>
-      </div>
-    </li></fl-primary-subnav-item>
-                                </ng-transclude>
-      </ul>
-    </div>
-  </fl-nav-group>
-                                <hr class="DropDown-divider">
-                                <fl-nav-group title="Discover">
-    <div class="DropDown-section-header">
-      <h6 class="DropDown-section-header-heading">
-        Discover
-      </h6>
-      <ul class="DropDown-list">
-          <ng-transclude>
-                                    <fl-primary-subnav-item title="Showcase" label="AllShowcase" href="/showcase">
-    <li class="DropDown-list-item">
-      <div class="DropDown-list-item-inner">
-        <a ng-href="/showcase" class="DropDown-list-item-link" fl-analytics="AllShowcase" href="/showcase">
-          Showcase
-        </a>
-      </div>
-    </li></fl-primary-subnav-item>
-                                    <fl-primary-subnav-item title="Browse Directory" label="GoToFreelancers" href="/freelancers/">
-    <li class="DropDown-list-item">
-      <div class="DropDown-list-item-inner">
-        <a ng-href="/freelancers/" class="DropDown-list-item-link" fl-analytics="GoToFreelancers" href="/freelancers/">
-          Browse Directory
-        </a>
-      </div>
-    </li></fl-primary-subnav-item>
-                                    <fl-primary-subnav-item title="Community" label="GoToCommunity" href="/community/">
-    <li class="DropDown-list-item">
-      <div class="DropDown-list-item-inner">
-        <a ng-href="/community/" class="DropDown-list-item-link" fl-analytics="GoToCommunity" href="/community/">
-          Community
-        </a>
-      </div>
-    </li></fl-primary-subnav-item>
-
-                                </ng-transclude>
-      </ul>
-    </div>
-  </fl-nav-group>
-                            </div>
-                        </nav>
-                    </ng-transclude>
-    </li><!-- end ngIf: PrimaryNavItem.isVisible --></fl-primary-nav-item>
-
-                    <fl-primary-nav-item class="fl-primary-nav-item" title="Work" href="/jobs/myskills/" label="work">
-    <!-- ngIf: PrimaryNavItem.isVisible --><li ng-if="PrimaryNavItem.isVisible" class="primary-navigation-item">
-      <a ng-href="/jobs/myskills/" fl-analytics="work" class="primary-navigation-link" href="/jobs/myskills/">
-          <span>Work</span>
-      </a>
-      <ng-transclude>
-                        <nav class="DropDown DropDown--arrowed fl-header-dropdown">
-                            <div class="DropDown-section">
-                                <fl-nav-group title="Find Work">
+<ng-transclude>
+<nav class="DropDown DropDown--arrowed fl-header-dropdown">
+  <div class="DropDown-section">
+    <fl-nav-group title="Find Work">
     <div class="DropDown-section-header">
       <h6 class="DropDown-section-header-heading">
         Find Work
       </h6>
       <ul class="DropDown-list">
-          <ng-transclude>
-                                    <fl-primary-subnav-item title="Projects with My Skills" label="MySkillsProjects" href="/jobs/myskills/">
-    <li class="DropDown-list-item">
-      <div class="DropDown-list-item-inner">
-        <a ng-href="/jobs/myskills/" class="DropDown-list-item-link" fl-analytics="MySkillsProjects" href="/jobs/myskills/">
-          Projects with My Skills
-        </a>
-      </div>
-    </li></fl-primary-subnav-item>
-                                    <fl-primary-subnav-item title="Browse Projects" label="LatestJobs" href="/jobs/">
-    <li class="DropDown-list-item">
-      <div class="DropDown-list-item-inner">
-        <a ng-href="/jobs/" class="DropDown-list-item-link" fl-analytics="LatestJobs" href="/jobs/">
-          Browse Projects
-        </a>
-      </div>
-    </li></fl-primary-subnav-item>
-                                    <fl-primary-subnav-item title="Browse Contests" label="LatestContests" href="/contest/browse/">
-    <li class="DropDown-list-item">
-      <div class="DropDown-list-item-inner">
-        <a ng-href="/contest/browse/" class="DropDown-list-item-link" fl-analytics="LatestContests" href="/contest/browse/">
-          Browse Contests
-        </a>
-      </div>
-    </li></fl-primary-subnav-item>
-                                    <fl-primary-subnav-item title="Browse Local Jobs" label="LocalJobsProjects" href="/jobs/localjobs/">
-    <li class="DropDown-list-item">
-      <div class="DropDown-list-item-inner">
-        <a ng-href="/jobs/localjobs/" class="DropDown-list-item-link" fl-analytics="LocalJobsProjects" href="/jobs/localjobs/">
-          Browse Local Jobs
-        </a>
-      </div>
-    </li></fl-primary-subnav-item>
-                                    <fl-primary-subnav-item title="Browse Categories" label="JobCategories" href="/job/">
-    <li class="DropDown-list-item">
-      <div class="DropDown-list-item-inner">
-        <a ng-href="/job/" class="DropDown-list-item-link" fl-analytics="JobCategories" href="/job/">
-          Browse Categories
-        </a>
-      </div>
-    </li></fl-primary-subnav-item>
-                                    <fl-primary-subnav-item title="Bookmarks" label="BookmarkedProjects" href="/jobs/bookmark/">
-    <li class="DropDown-list-item">
-      <div class="DropDown-list-item-inner">
-        <a ng-href="/jobs/bookmark/" class="DropDown-list-item-link" fl-analytics="BookmarkedProjects" href="/jobs/bookmark/">
-          Bookmarks
-        </a>
-      </div>
-    </li></fl-primary-subnav-item>
-                                    <fl-primary-subnav-item title="Get Certified" label="GetCertified" href="/exam/exams/index.php?ttref=Exams_DaVinciWork">
-    <li class="DropDown-list-item">
-      <div class="DropDown-list-item-inner">
-        <a ng-href="/exam/exams/index.php?ttref=Exams_DaVinciWork" class="DropDown-list-item-link" fl-analytics="GetCertified" href="/exam/exams/index.php?ttref=Exams_DaVinciWork">
-          Get Certified
-        </a>
-      </div>
-    </li></fl-primary-subnav-item>
-                                </ng-transclude>
-      </ul>
-    </div>
-  </fl-nav-group>
-                            </div>
-                        </nav>
-                    </ng-transclude>
-    </li><!-- end ngIf: PrimaryNavItem.isVisible --></fl-primary-nav-item>
+        <ng-transclude>
+        <fl-primary-subnav-item title="Projects with My Skills" label="MySkillsProjects" href="/jobs/myskills/">
+        <li class="DropDown-list-item">
+          <div class="DropDown-list-item-inner">
+            <a ng-href="/jobs/myskills/" class="DropDown-list-item-link" fl-analytics="MySkillsProjects" href="/jobs/myskills/">
+              Projects with My Skills
+            </a>
+          </div>
+        </li></fl-primary-subnav-item>
+        <fl-primary-subnav-item title="Browse Projects" label="LatestJobs" href="/jobs/">
+        <li class="DropDown-list-item">
+          <div class="DropDown-list-item-inner">
+            <a ng-href="/jobs/" class="DropDown-list-item-link" fl-analytics="LatestJobs" href="/jobs/">
+              Browse Projects
+            </a>
+          </div>
+        </li></fl-primary-subnav-item>
+        <fl-primary-subnav-item title="Browse Contests" label="LatestContests" href="/contest/browse/">
+        <li class="DropDown-list-item">
+          <div class="DropDown-list-item-inner">
+            <a ng-href="/contest/browse/" class="DropDown-list-item-link" fl-analytics="LatestContests" href="/contest/browse/">
+              Browse Contests
+            </a>
+          </div>
+        </li></fl-primary-subnav-item>
+        <fl-primary-subnav-item title="Browse Local Jobs" label="LocalJobsProjects" href="/jobs/localjobs/">
+        <li class="DropDown-list-item">
+          <div class="DropDown-list-item-inner">
+            <a ng-href="/jobs/localjobs/" class="DropDown-list-item-link" fl-analytics="LocalJobsProjects" href="/jobs/localjobs/">
+              Browse Local Jobs
+            </a>
+          </div>
+        </li></fl-primary-subnav-item>
+        <fl-primary-subnav-item title="Browse Categories" label="JobCategories" href="/job/">
+        <li class="DropDown-list-item">
+          <div class="DropDown-list-item-inner">
+            <a ng-href="/job/" class="DropDown-list-item-link" fl-analytics="JobCategories" href="/job/">
+              Browse Categories
+            </a>
+          </div>
+        </li></fl-primary-subnav-item>
+        <fl-primary-subnav-item title="Bookmarks" label="BookmarkedProjects" href="/jobs/bookmark/">
+        <li class="DropDown-list-item">
+          <div class="DropDown-list-item-inner">
+            <a ng-href="/jobs/bookmark/" class="DropDown-list-item-link" fl-analytics="BookmarkedProjects" href="/jobs/bookmark/">
+              Bookmarks
+            </a>
+          </div>
+        </li></fl-primary-subnav-item>
+        <fl-primary-subnav-item title="Get Certified" label="GetCertified" href="/exam/exams/index.php?ttref=Exams_DaVinciWork">
+        <li class="DropDown-list-item">
+          <div class="DropDown-list-item-inner">
+            <a ng-href="/exam/exams/index.php?ttref=Exams_DaVinciWork" class="DropDown-list-item-link" fl-analytics="GetCertified" href="/exam/exams/index.php?ttref=Exams_DaVinciWork">
+              Get Certified
+            </a>
+          </div>
+        </li></fl-primary-subnav-item>
+      </ng-transclude>
+    </ul>
+  </div>
+</fl-nav-group>
+</div>
+</nav>
+</ng-transclude>
+</li><!-- end ngIf: PrimaryNavItem.isVisible --></fl-primary-nav-item>
 
-                    <fl-primary-nav-item class="fl-primary-nav-item" title="My Projects" href="/dashboard/projects.php" label="myprojects_v6">
-    <!-- ngIf: PrimaryNavItem.isVisible --><li ng-if="PrimaryNavItem.isVisible" class="primary-navigation-item">
-      <a ng-href="/dashboard/projects.php" fl-analytics="myprojects_v6" class="primary-navigation-link" href="/dashboard/projects.php">
-          <span>My Projects</span>
-      </a>
-      <ng-transclude>
-                        <nav class="DropDown DropDown--arrowed fl-header-dropdown">
-                            <div class="DropDown-section">
-                                <fl-nav-group title="My Projects" ng-hide="ctrl.myProjectsLoadStatus === 'loading' || ctrl.myProjectsLoadStatus === 'unloaded' || ctrl.hideMyProjects" class="">
+<fl-primary-nav-item class="fl-primary-nav-item" title="My Projects" href="/dashboard/projects.php" label="myprojects_v6">
+<!-- ngIf: PrimaryNavItem.isVisible --><li ng-if="PrimaryNavItem.isVisible" class="primary-navigation-item">
+<a ng-href="/dashboard/projects.php" fl-analytics="myprojects_v6" class="primary-navigation-link" href="/dashboard/projects.php">
+  <span>My Projects</span>
+</a>
+<ng-transclude>
+<nav class="DropDown DropDown--arrowed fl-header-dropdown">
+  <div class="DropDown-section">
+    <fl-nav-group title="My Projects" ng-hide="ctrl.myProjectsLoadStatus === 'loading' || ctrl.myProjectsLoadStatus === 'unloaded' || ctrl.hideMyProjects" class="">
     <div class="DropDown-section-header">
       <h6 class="DropDown-section-header-heading">
         My Projects
       </h6>
       <ul class="DropDown-list">
-          <ng-transclude>
-                                    <!-- ngRepeat: myProject in ctrl.myProjects --><li class="DropDown-list-item primary-subnav-item" ng-repeat="myProject in ctrl.myProjects">
-                                        <div class="DropDown-list-item-inner">
-                                            <a class="primary-subnav-link" ng-mousedown="ctrl.pushTtrefRecentProjectAward(myProject.id,myProject.href)">
-                                                <!-- ngIf: myProject.type == 'project' --><span ng-if="myProject.type == 'project'">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.4 19.7" class="flicon-desktop">
-  <g fill="none">
-    <title>Desktop icon</title>
-    <path d="M21.8 15.7c0 .8-.6 1.5-1.4 1.5H2c-.8 0-1.4-.7-1.4-1.5V2.1C.6 1.3 1.2.6 2 .6h18.4c.8 0 1.4.7 1.4 1.5v13.6zM4.8 19h12.8M11.2 17.2V19"></path>
-    <circle cx="11.2" cy="15.3" r=".5"></circle>
-    <path d="M.6 13.5h21.2"></path>
-  </g>
-</svg>
+        <ng-transclude>
+        <!-- ngRepeat: myProject in ctrl.myProjects --><li class="DropDown-list-item primary-subnav-item" ng-repeat="myProject in ctrl.myProjects">
+        <div class="DropDown-list-item-inner">
+          <a class="primary-subnav-link" ng-mousedown="ctrl.pushTtrefRecentProjectAward(myProject.id,myProject.href)">
+            <!-- ngIf: myProject.type == 'project' --><span ng-if="myProject.type == 'project'">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.4 19.7" class="flicon-desktop">
+              <g fill="none">
+                <title>Desktop icon</title>
+                <path d="M21.8 15.7c0 .8-.6 1.5-1.4 1.5H2c-.8 0-1.4-.7-1.4-1.5V2.1C.6 1.3 1.2.6 2 .6h18.4c.8 0 1.4.7 1.4 1.5v13.6zM4.8 19h12.8M11.2 17.2V19"></path>
+                <circle cx="11.2" cy="15.3" r=".5"></circle>
+                <path d="M.6 13.5h21.2"></path>
+              </g>
+            </svg>
 
-                                                </span><!-- end ngIf: myProject.type == 'project' -->
-                                                <!-- ngIf: myProject.type == 'contest' -->
-                                                <!-- ngIf: myProject.type == 'project' --><span ng-if="myProject.type == 'project'" class="primary-nav-project-name">
-                                                    Help with Garden Maintenance 
-                                                </span><!-- end ngIf: myProject.type == 'project' -->
-                                                <!-- ngIf: myProject.type == 'contest' -->
-                                            </a>
-                                        </div>
-                                    </li><!-- end ngRepeat: myProject in ctrl.myProjects -->
-                                </ng-transclude>
-      </ul>
+          </span><!-- end ngIf: myProject.type == 'project' -->
+          <!-- ngIf: myProject.type == 'contest' -->
+          <!-- ngIf: myProject.type == 'project' --><span ng-if="myProject.type == 'project'" class="primary-nav-project-name">
+          Help with Garden Maintenance 
+        </span><!-- end ngIf: myProject.type == 'project' -->
+        <!-- ngIf: myProject.type == 'contest' -->
+      </a>
     </div>
-  </fl-nav-group>
-                                <hr ng-hide="ctrl.myProjectsLoadStatus === 'loading' || ctrl.myProjectsLoadStatus === 'unloaded' || ctrl.hideMyProjects" class="DropDown-divider">
-                                <fl-nav-group title="Manage">
-    <div class="DropDown-section-header">
-      <h6 class="DropDown-section-header-heading">
-        Manage
-      </h6>
-      <ul class="DropDown-list">
-          <ng-transclude>
-                                    <fl-primary-subnav-item title="My Projects" label="GoToProjects" href="/dashboard/projects.php">
+  </li><!-- end ngRepeat: myProject in ctrl.myProjects -->
+</ng-transclude>
+</ul>
+</div>
+</fl-nav-group>
+<hr ng-hide="ctrl.myProjectsLoadStatus === 'loading' || ctrl.myProjectsLoadStatus === 'unloaded' || ctrl.hideMyProjects" class="DropDown-divider">
+<fl-nav-group title="Manage">
+<div class="DropDown-section-header">
+  <h6 class="DropDown-section-header-heading">
+    Manage
+  </h6>
+  <ul class="DropDown-list">
+    <ng-transclude>
+    <fl-primary-subnav-item title="My Projects" label="GoToProjects" href="/dashboard/projects.php">
     <li class="DropDown-list-item">
       <div class="DropDown-list-item-inner">
         <a ng-href="/dashboard/projects.php" class="DropDown-list-item-link" fl-analytics="GoToProjects" href="/dashboard/projects.php">
@@ -297,7 +298,7 @@
         </a>
       </div>
     </li></fl-primary-subnav-item>
-                                    <fl-primary-subnav-item title="Dashboard" label="GoToDashboard" href="/dashboard/">
+    <fl-primary-subnav-item title="Dashboard" label="GoToDashboard" href="/dashboard/">
     <li class="DropDown-list-item">
       <div class="DropDown-list-item-inner">
         <a ng-href="/dashboard/" class="DropDown-list-item-link" fl-analytics="GoToDashboard" href="/dashboard/">
@@ -305,7 +306,7 @@
         </a>
       </div>
     </li></fl-primary-subnav-item>
-                                    <fl-primary-subnav-item title="Inbox" label="GoToInbox" href="/messages">
+    <fl-primary-subnav-item title="Inbox" label="GoToInbox" href="/messages">
     <li class="DropDown-list-item">
       <div class="DropDown-list-item-inner">
         <a ng-href="/messages" class="DropDown-list-item-link" fl-analytics="GoToInbox" href="/messages">
@@ -313,7 +314,7 @@
         </a>
       </div>
     </li></fl-primary-subnav-item>
-                                    <fl-primary-subnav-item title="Feedback" label="GoToFeedback" href="/dashboard/feedback.php">
+    <fl-primary-subnav-item title="Feedback" label="GoToFeedback" href="/dashboard/feedback.php">
     <li class="DropDown-list-item">
       <div class="DropDown-list-item-inner">
         <a ng-href="/dashboard/feedback.php" class="DropDown-list-item-link" fl-analytics="GoToFeedback" href="/dashboard/feedback.php">
@@ -321,118 +322,118 @@
         </a>
       </div>
     </li></fl-primary-subnav-item>
-                                </ng-transclude>
-      </ul>
-    </div>
-  </fl-nav-group>
-                            </div>
-                        </nav>
-                    </ng-transclude>
-    </li><!-- end ngIf: PrimaryNavItem.isVisible --></fl-primary-nav-item>
+  </ng-transclude>
+</ul>
+</div>
+</fl-nav-group>
+</div>
+</nav>
+</ng-transclude>
+</li><!-- end ngIf: PrimaryNavItem.isVisible --></fl-primary-nav-item>
 
-                    <fl-primary-nav-item class="fl-primary-nav-item" title="Help" href="/support" label="help">
-    <!-- ngIf: PrimaryNavItem.isVisible --><li ng-if="PrimaryNavItem.isVisible" class="primary-navigation-item">
-      <a ng-href="/support" fl-analytics="help" class="primary-navigation-link" href="/support">
-          <span>Help</span>
-      </a>
-      <ng-transclude>
-                        <nav class="DropDown DropDown--arrowed fl-header-dropdown">
-                            <div class="DropDown-section">
-                                <fl-nav-group title="Get Help">
+<fl-primary-nav-item class="fl-primary-nav-item" title="Help" href="/support" label="help">
+<!-- ngIf: PrimaryNavItem.isVisible --><li ng-if="PrimaryNavItem.isVisible" class="primary-navigation-item">
+<a ng-href="/support" fl-analytics="help" class="primary-navigation-link" href="/support">
+  <span>Help</span>
+</a>
+<ng-transclude>
+<nav class="DropDown DropDown--arrowed fl-header-dropdown">
+  <div class="DropDown-section">
+    <fl-nav-group title="Get Help">
     <div class="DropDown-section-header">
       <h6 class="DropDown-section-header-heading">
         Get Help
       </h6>
       <ul class="DropDown-list">
-          <ng-transclude>
-                                    <fl-primary-subnav-item title="Get Support" label="SupportHQ" href="/support">
-    <li class="DropDown-list-item">
-      <div class="DropDown-list-item-inner">
-        <a ng-href="/support" class="DropDown-list-item-link" fl-analytics="SupportHQ" href="/support">
-          Get Support
-        </a>
-      </div>
-    </li></fl-primary-subnav-item>
-                                    <fl-primary-subnav-item title="How Freelancer.com Works" label="HowItWorks" href="/info/how-it-works.php">
-    <li class="DropDown-list-item">
-      <div class="DropDown-list-item-inner">
-        <a ng-href="/info/how-it-works.php" class="DropDown-list-item-link" fl-analytics="HowItWorks" href="/info/how-it-works.php">
-          How Freelancer.com Works
-        </a>
-      </div>
-    </li></fl-primary-subnav-item>
-                                    <fl-primary-subnav-item title="Frequently Asked Questions" label="FAQs" href="/faq/view.php">
-    <li class="DropDown-list-item">
-      <div class="DropDown-list-item-inner">
-        <a ng-href="/faq/view.php" class="DropDown-list-item-link" fl-analytics="FAQs" href="/faq/view.php">
-          Frequently Asked Questions
-        </a>
-      </div>
-    </li></fl-primary-subnav-item>
-                                    <fl-primary-subnav-item title="Fees and Charges" label="GoToFees" href="/feesandcharges/">
-    <li class="DropDown-list-item">
-      <div class="DropDown-list-item-inner">
-        <a ng-href="/feesandcharges/" class="DropDown-list-item-link" fl-analytics="GoToFees" href="/feesandcharges/">
-          Fees and Charges
-        </a>
-      </div>
-    </li></fl-primary-subnav-item>
-                                    <fl-primary-subnav-item title="Disputes" label="Disputes" href="/dispute/disputeslist.php">
-    <li class="DropDown-list-item">
-      <div class="DropDown-list-item-inner">
-        <a ng-href="/dispute/disputeslist.php" class="DropDown-list-item-link" fl-analytics="Disputes" href="/dispute/disputeslist.php">
-          Disputes
-        </a>
-      </div>
-    </li></fl-primary-subnav-item>
-                                </ng-transclude>
-      </ul>
-    </div>
-  </fl-nav-group>
-                            </div>
-                        </nav>
-                    </ng-transclude>
-    </li><!-- end ngIf: PrimaryNavItem.isVisible --></fl-primary-nav-item>
-                </ng-transclude>
+        <ng-transclude>
+        <fl-primary-subnav-item title="Get Support" label="SupportHQ" href="/support">
+        <li class="DropDown-list-item">
+          <div class="DropDown-list-item-inner">
+            <a ng-href="/support" class="DropDown-list-item-link" fl-analytics="SupportHQ" href="/support">
+              Get Support
+            </a>
+          </div>
+        </li></fl-primary-subnav-item>
+        <fl-primary-subnav-item title="How Freelancer.com Works" label="HowItWorks" href="/info/how-it-works.php">
+        <li class="DropDown-list-item">
+          <div class="DropDown-list-item-inner">
+            <a ng-href="/info/how-it-works.php" class="DropDown-list-item-link" fl-analytics="HowItWorks" href="/info/how-it-works.php">
+              How Freelancer.com Works
+            </a>
+          </div>
+        </li></fl-primary-subnav-item>
+        <fl-primary-subnav-item title="Frequently Asked Questions" label="FAQs" href="/faq/view.php">
+        <li class="DropDown-list-item">
+          <div class="DropDown-list-item-inner">
+            <a ng-href="/faq/view.php" class="DropDown-list-item-link" fl-analytics="FAQs" href="/faq/view.php">
+              Frequently Asked Questions
+            </a>
+          </div>
+        </li></fl-primary-subnav-item>
+        <fl-primary-subnav-item title="Fees and Charges" label="GoToFees" href="/feesandcharges/">
+        <li class="DropDown-list-item">
+          <div class="DropDown-list-item-inner">
+            <a ng-href="/feesandcharges/" class="DropDown-list-item-link" fl-analytics="GoToFees" href="/feesandcharges/">
+              Fees and Charges
+            </a>
+          </div>
+        </li></fl-primary-subnav-item>
+        <fl-primary-subnav-item title="Disputes" label="Disputes" href="/dispute/disputeslist.php">
+        <li class="DropDown-list-item">
+          <div class="DropDown-list-item-inner">
+            <a ng-href="/dispute/disputeslist.php" class="DropDown-list-item-link" fl-analytics="Disputes" href="/dispute/disputeslist.php">
+              Disputes
+            </a>
+          </div>
+        </li></fl-primary-subnav-item>
+      </ng-transclude>
+    </ul>
+  </div>
+</fl-nav-group>
+</div>
+</nav>
+</ng-transclude>
+</li><!-- end ngIf: PrimaryNavItem.isVisible --></fl-primary-nav-item>
+</ng-transclude>
 
-      <!-- ngIf: PrimaryNav.hiddenItems.length > 0 -->
-    </ul></fl-primary-nav>
+<!-- ngIf: PrimaryNav.hiddenItems.length > 0 -->
+</ul></fl-primary-nav>
 
 
-                <!-- Search -->
+<!-- Search -->
 
-                <div class="nav-search-link-container" ng-hide="ctrl.simpleHeader">
-                    <a href="/search" class="nav-search-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="flicon-search">
-                            <circle fill="none" stroke-linecap="round" stroke-miterlimit="10" cx="10.5" cy="10.5" r="7"></circle>
-                            <path fill="none" stroke-linecap="round" stroke-miterlimit="10" d="M21 21l-5.6-5.6"></path>
-                        </svg>
-                    </a>
-                </div>
+<div class="nav-search-link-container" ng-hide="ctrl.simpleHeader">
+  <a href="/search" class="nav-search-link">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="flicon-search">
+      <circle fill="none" stroke-linecap="round" stroke-miterlimit="10" cx="10.5" cy="10.5" r="7"></circle>
+      <path fill="none" stroke-linecap="round" stroke-miterlimit="10" d="M21 21l-5.6-5.6"></path>
+    </svg>
+  </a>
+</div>
 
-                <div id="nav-search-container" class="nav-search-container header-search NavSearch" title="Search" ng-hide="ctrl.simpleHeader">
-                    <button class="nav-search-trigger" data-target="header-search-bt" id="header-search-trigger">
-                        <span class="Icon">
-                            <svg class="Icon-image" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <path d="M21.71 20.29l-5.4-5.39a8 8 0 0 0-12-10.56 8 8 0 0 0 10.56 12l5.39 5.39 1.41-1.41zM10 16a6 6 0 1 1 4.24-1.76A6 6 0 0 1 10 16z"></path>
-</svg>
+<div id="nav-search-container" class="nav-search-container header-search NavSearch" title="Search" ng-hide="ctrl.simpleHeader">
+  <button class="nav-search-trigger" data-target="header-search-bt" id="header-search-trigger">
+    <span class="Icon">
+      <svg class="Icon-image" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M21.71 20.29l-5.4-5.39a8 8 0 0 0-12-10.56 8 8 0 0 0 10.56 12l5.39 5.39 1.41-1.41zM10 16a6 6 0 1 1 4.24-1.76A6 6 0 0 1 10 16z"></path>
+      </svg>
 
-                        </span>
-                    </button>
-                    <form class="nav-search-form is-active                                                   ng-pristine ng-valid" id="nav_search_form_submit" data-target="header-search">
-                        <div class="bucket-search-wrapper"><input id="navigation-search" type="search" class="nav-search-input bucket-search-input empty" data-target="header-search-input" placeholder="Search" autocomplete="off" role="search" maxlength="1000"><div class="bucket-search-drop empty is-empty" style="opacity: 0; visibility: hidden;"><ul class="results"><li class="bucket-search-heading hidden" data-bucket="recent-searches" style="display: none;"><strong class="bucket-search-images project"></strong><span class="bucket-search-heading-name">Recent Searches</span></li><li class="bucket-search-heading hidden" data-bucket="my-contacts-" style="display: none;"><strong class="bucket-search-images contact"></strong><span class="bucket-search-heading-name">My Contacts:</span></li><li class="bucket-search-heading hidden" data-bucket="top-freelancers" style="display: none;"><strong class="bucket-search-images contact"></strong><span class="bucket-search-heading-name">Top Freelancers</span><span class="ns_right pull-right see_more_search"><a class="ns_link" src="/users/search/">View</a></span></li><li class="bucket-search-heading hidden" data-bucket="my-active-projects" style="display: none;"><strong class="bucket-search-images project"></strong><span class="bucket-search-heading-name">My Active Projects</span></li><li class="bucket-search-heading hidden" data-bucket="projects" style="display: none;"><strong class="bucket-search-images project"></strong><span class="bucket-search-heading-name">Projects</span><span class="ns_right pull-right see_more_search"><a class="ns_link" src="/search/search.php">View</a></span></li><li class="bucket-search-heading hidden" data-bucket="contests" style="display: none;"><strong class="bucket-search-images contest"></strong><span class="bucket-search-heading-name">Contests</span><span class="ns_right pull-right see_more_search"><a class="ns_link" src="/contest/browse/">View</a></span></li></ul><div id="nav-search-footer" class="NavSearch-footer" style="display: none;"><a class="NavSearch-footerLink"><div class="NavSearch-footerInner"><span id="nav-search-footer-icon" class="NavSearch-footerIcon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="flicon-search">
-    <circle fill="none" stroke-linecap="round" stroke-miterlimit="10" cx="10.5" cy="10.5" r="7"></circle>
-    <path fill="none" stroke-linecap="round" stroke-miterlimit="10" d="M21 21l-5.6-5.6"></path>
-</svg>
-</span><span id="nav-search-footer-text" class="NavSearch-footerText"></span></div></a></div></div></div>
-                    </form>
-                    <div id="nav-search-icon-search" class="hide"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="flicon-search">
-    <circle fill="none" stroke-linecap="round" stroke-miterlimit="10" cx="10.5" cy="10.5" r="7"></circle>
-    <path fill="none" stroke-linecap="round" stroke-miterlimit="10" d="M21 21l-5.6-5.6"></path>
+    </span>
+  </button>
+  <form class="nav-search-form is-active                                                   ng-pristine ng-valid" id="nav_search_form_submit" data-target="header-search">
+    <div class="bucket-search-wrapper"><input id="navigation-search" type="search" class="nav-search-input bucket-search-input empty" data-target="header-search-input" placeholder="Search" autocomplete="off" role="search" maxlength="1000"><div class="bucket-search-drop empty is-empty" style="opacity: 0; visibility: hidden;"><ul class="results"><li class="bucket-search-heading hidden" data-bucket="recent-searches" style="display: none;"><strong class="bucket-search-images project"></strong><span class="bucket-search-heading-name">Recent Searches</span></li><li class="bucket-search-heading hidden" data-bucket="my-contacts-" style="display: none;"><strong class="bucket-search-images contact"></strong><span class="bucket-search-heading-name">My Contacts:</span></li><li class="bucket-search-heading hidden" data-bucket="top-freelancers" style="display: none;"><strong class="bucket-search-images contact"></strong><span class="bucket-search-heading-name">Top Freelancers</span><span class="ns_right pull-right see_more_search"><a class="ns_link" src="/users/search/">View</a></span></li><li class="bucket-search-heading hidden" data-bucket="my-active-projects" style="display: none;"><strong class="bucket-search-images project"></strong><span class="bucket-search-heading-name">My Active Projects</span></li><li class="bucket-search-heading hidden" data-bucket="projects" style="display: none;"><strong class="bucket-search-images project"></strong><span class="bucket-search-heading-name">Projects</span><span class="ns_right pull-right see_more_search"><a class="ns_link" src="/search/search.php">View</a></span></li><li class="bucket-search-heading hidden" data-bucket="contests" style="display: none;"><strong class="bucket-search-images contest"></strong><span class="bucket-search-heading-name">Contests</span><span class="ns_right pull-right see_more_search"><a class="ns_link" src="/contest/browse/">View</a></span></li></ul><div id="nav-search-footer" class="NavSearch-footer" style="display: none;"><a class="NavSearch-footerLink"><div class="NavSearch-footerInner"><span id="nav-search-footer-icon" class="NavSearch-footerIcon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="flicon-search">
+      <circle fill="none" stroke-linecap="round" stroke-miterlimit="10" cx="10.5" cy="10.5" r="7"></circle>
+      <path fill="none" stroke-linecap="round" stroke-miterlimit="10" d="M21 21l-5.6-5.6"></path>
+    </svg>
+  </span><span id="nav-search-footer-text" class="NavSearch-footerText"></span></div></a></div></div></div>
+</form>
+<div id="nav-search-icon-search" class="hide"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="flicon-search">
+  <circle fill="none" stroke-linecap="round" stroke-miterlimit="10" cx="10.5" cy="10.5" r="7"></circle>
+  <path fill="none" stroke-linecap="round" stroke-miterlimit="10" d="M21 21l-5.6-5.6"></path>
 </svg>
 </div>
-                    <div id="nav-search-icon-contest" class="hide"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="flicon-contest"><g fill="none"><path d="M11.968 3.5l1 2h2L13.35 6.735 13.97 9l-2-1.5-2 1.5.794-2.265L8.968 5.5h2M5.125 10.5c-5 0-4.622-6.62-4.622-8h2.534M18.847 10.5c5 0 4.65-6.62 4.65-8l-2.548.008"></path><path d="M21.003.5h-18c0 15.434 7.965 11.054 7.965 16.5-.062 3.5-1.704 4.5-4.465 4.5v2h11v-2c-2.762 0-4.535-1-4.535-4.5 0-5.453 8.035-1.13 8.035-16.5z"></path></g></svg></div>
-                    <div id="nav-search-icon-project" class="hide"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.4 19.7" class="flicon-desktop">
+<div id="nav-search-icon-contest" class="hide"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="flicon-contest"><g fill="none"><path d="M11.968 3.5l1 2h2L13.35 6.735 13.97 9l-2-1.5-2 1.5.794-2.265L8.968 5.5h2M5.125 10.5c-5 0-4.622-6.62-4.622-8h2.534M18.847 10.5c5 0 4.65-6.62 4.65-8l-2.548.008"></path><path d="M21.003.5h-18c0 15.434 7.965 11.054 7.965 16.5-.062 3.5-1.704 4.5-4.465 4.5v2h11v-2c-2.762 0-4.535-1-4.535-4.5 0-5.453 8.035-1.13 8.035-16.5z"></path></g></svg></div>
+<div id="nav-search-icon-project" class="hide"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.4 19.7" class="flicon-desktop">
   <g fill="none">
     <title>Desktop icon</title>
     <path d="M21.8 15.7c0 .8-.6 1.5-1.4 1.5H2c-.8 0-1.4-.7-1.4-1.5V2.1C.6 1.3 1.2.6 2 .6h18.4c.8 0 1.4.7 1.4 1.5v13.6zM4.8 19h12.8M11.2 17.2V19"></path>
@@ -441,597 +442,559 @@
   </g>
 </svg>
 </div>
-                </div>
-              </div>
-            </nav>
+</div>
+</div>
+</nav>
 
-        </div>
-    </div>
+</div>
+</div>
 
 </fl-navigation>
-        
-    </div>
 
-    <fl-modal-container class="pinky-template"></fl-modal-container>
+</div>
 
-    
-    <div class="gaf-container main-container ">
-        <div class="sub-navigation"></div>
-        
-        
-        <div id="main" class="container" aria-label="Content">
+<fl-modal-container class="pinky-template"></fl-modal-container>
 
-<div id="projectViewContainer" class="row">
-    <div class="span12" id="recommendedFreelancers">
-    </div>
-     
-    
-        <!-- guide widget start -->
-        <div class="span12" id="guide-widget-container">
+
+<div class="gaf-container main-container ">
+  <div class="sub-navigation"></div>
+
+
+  <div id="main" class="container" aria-label="Content">
+
+    <div id="projectViewContainer" class="row">
+      <div class="span12" id="recommendedFreelancers">
+      </div>
+
+
+      <!-- guide widget start -->
+      <div class="span12" id="guide-widget-container">
+      </div>
+      <!-- guide widget ends -->
+      <!-- Generic error modal Start -->
+      <div id="error-pop" class="modal hide">
+        <div class="modal-header">
+          <a class="close" data-dismiss="modal">&times;</a>
+          <h3 class="error_title"></h3>
         </div>
-        <!-- guide widget ends -->
-        <!-- Generic error modal Start -->
-        <div id="error-pop" class="modal hide">
-            <div class="modal-header">
-                <a class="close" data-dismiss="modal">&times;</a>
-                <h3 class="error_title"></h3>
-            </div>
-            <div class="modal-body">
-                <p class="error_body"></p>
-            </div>
-            <div class="modal-footer">
-                <a href="#" class="btn cancel" data-dismiss="modal">OK</a>
-            </div>
+        <div class="modal-body">
+          <p class="error_body"></p>
         </div>
-        <!-- Generic error modal End -->
-        <div id="confirm-pop" class="modal hide">
-            <div class="modal-header">
-                <a class="close" data-dismiss="modal">&times;</a>
-                <h3 class="title"></h3>
-            </div>
-            <div class="modal-body">
-                <p class="message"></p>
-            </div>
-            <div class="modal-footer">
-                <a href="#" class="btn btn-success confirm" data-dismiss="modal">Yes</a>
-                <a href="#" class="btn cancel" data-dismiss="modal">No</a>
-            </div>
+        <div class="modal-footer">
+          <a href="#" class="btn cancel" data-dismiss="modal">OK</a>
         </div>
-        <!-- Generic error modal End -->
-        <div id="sponsored-bid-fee-confirm-fee" class="modal hide">
-            <div class="modal-header">
-                <a class="close" data-dismiss="modal">&times;</a>
-                <h3 class="title"></h3>
-            </div>
-            <div class="modal-body">
-                <p></p>
-                <p>You have chosen to sponsor your bid for <span class="sbidAmt"></span></p>
-                <p class="message">
-                    The payment will be deducted from your <a href="#" id="hoverText" data-toggle="tooltip" data-title="Payment will be deducted from your available currency balances, then if required, we will attempt to process this payment from your verified payment sources.">best available payment source.</a>
-                </p>
-            </div>
-            <div class="modal-footer">
-                <a href="#" class="btn btn-info confirm" data-dismiss="modal">Yes! Place My Bid Now</a>
-                <a href="#" class="btn cancel" data-dismiss="modal">Cancel</a>
-            </div>
+      </div>
+      <!-- Generic error modal End -->
+      <div id="confirm-pop" class="modal hide">
+        <div class="modal-header">
+          <a class="close" data-dismiss="modal">&times;</a>
+          <h3 class="title"></h3>
         </div>
-        <div id="hourly-project-desktop-app-modal" class="modal hide" data-backdrop="static" data-keyboard="false"></div>
-
-        <!--Project Notices Start-->
-        <div id="project-notices" class="span12">
+        <div class="modal-body">
+          <p class="message"></p>
         </div>
-        <!--Project Notices End-->
-        <div id="project-recommend-notice" class="span12">
+        <div class="modal-footer">
+          <a href="#" class="btn btn-success confirm" data-dismiss="modal">Yes</a>
+          <a href="#" class="btn cancel" data-dismiss="modal">No</a>
         </div>
+      </div>
+      <!-- Generic error modal End -->
+      <div id="sponsored-bid-fee-confirm-fee" class="modal hide">
+        <div class="modal-header">
+          <a class="close" data-dismiss="modal">&times;</a>
+          <h3 class="title"></h3>
+        </div>
+        <div class="modal-body">
+          <p></p>
+          <p>You have chosen to sponsor your bid for <span class="sbidAmt"></span></p>
+          <p class="message">
+            The payment will be deducted from your <a href="#" id="hoverText" data-toggle="tooltip" data-title="Payment will be deducted from your available currency balances, then if required, we will attempt to process this payment from your verified payment sources.">best available payment source.</a>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn btn-info confirm" data-dismiss="modal">Yes! Place My Bid Now</a>
+          <a href="#" class="btn cancel" data-dismiss="modal">Cancel</a>
+        </div>
+      </div>
+      <div id="hourly-project-desktop-app-modal" class="modal hide" data-backdrop="static" data-keyboard="false"></div>
 
-        <!--Project Details Start-->
-        <link href="https://cdn6.f-cdn.com/build/css/js-plugins/select2/select2-v3.4.2.css?v=7e430254696bce10a1090a5f34be3a76&amp;m=6" type="text/css" rel="stylesheet" />
-<script src="https://cdn5.f-cdn.com/build/js/select2-v3.4.2.js?v=4caaa3e89fee4c83c6ef41cf7805ad10&amp;m=6" type="text/javascript"></script>
+      <!--Project Notices Start-->
+      <div id="project-notices" class="span12">
+      </div>
+      <!--Project Notices End-->
+      <div id="project-recommend-notice" class="span12">
+      </div>
 
-<div id="projectDetailsContainer"
-     projectID="12207595" currencySign="$"
-     currencyCode="USD" currencyID="1" buyerID="3271903">
+      <!--Project Details Start-->
+      <link href="https://cdn6.f-cdn.com/build/css/js-plugins/select2/select2-v3.4.2.css?v=7e430254696bce10a1090a5f34be3a76&amp;m=6" type="text/css" rel="stylesheet" />
+      <script src="https://cdn5.f-cdn.com/build/js/select2-v3.4.2.js?v=4caaa3e89fee4c83c6ef41cf7805ad10&amp;m=6" type="text/javascript"></script>
 
-    <div class="margin-b10 margin-t30 alerts-container">
+      <div id="projectDetailsContainer"
+      projectID="12207595" currencySign="$"
+      currencyCode="USD" currencyID="1" buyerID="3271903">
 
-            <div class="upsell-banner wrapper" id="upsell-banners-anchor"></div>
+      <div class="margin-b10 margin-t30 alerts-container">
+
+        <div class="upsell-banner wrapper" id="upsell-banners-anchor"></div>
 
         <!-- complete profile form -->
         <div id="complete-profile-parent" class="hide"></div>
         
         <div class="span12">
-            
-            <div id="projectHeader">
-                <div class="project-header-controls span8">
-                    <h1 class="project_name largest bold margin-b5 span12">{{name}}</h1>
-                    <div class="span12 margin-0">
-                    </div>
-                </div>
 
-                <div class="clear"></div>
-
-            </div>
-            <div class="span12 margin-0">
-            
-            </div>
-        </div>
-    </div>
-
-    
-
-    <div class="project-view-info-bar well span12">
-        <div class='pull-right'>
-            <a class="custom-icon bookmark bookmark-btn" data-project-id="12207595" data-action="on" title="Bookmark Project"></a>
-        </div>
-        <div class="project-view-info-bar-status well white silver span3 right align-c margin-t10 margin-r10 margin-b10 padding-5">
-            <div style="display:inline-block">
-                <div class="text-green margin-b5 small" id="bid_time_left"><p></p></div>
-                
-                    <div class="text-green larger bold" id="project_status" data-desc="Project is open for bidding.">OPEN</div>
-                
-                
+          <div id="projectHeader">
+            <div class="project-header-controls span8">
+              <h1 class="project_name largest bold margin-b5 span12">{{name}}</h1>
+              <div class="span12 margin-0">
+              </div>
             </div>
 
-            <div style="position:relative">
-                 <div id="project_status-tip" class="project-status-tip project-status-single-line span3 custom-hover right padding-0 well black white">
-                    <div class="relative">
-                        <div class="tip"></div>
-                        <div class="pad">
-                            <span align="left margin-b0" id="project_status-tip-text"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="hot-project-pvp"
-     class="project-view-info-bar-status hot-project is-hidden"
-     data-toggle="tooltip"
-     data-original-title="Place your bid for FREE while the project is hot"
-     data-placement="bottom">
-    <div class="project-view-info-bar-inner">
-        <div class="project-view-info-bar-timer">
-            <p><span id="free-bids-until"></span> left</p>
-        </div>
-        <div id="project_status"
-             class="project-view-info-bar-state">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    x="0px" y="0px" viewBox="0 0 12.6 19"
-    enable-background="new 0 0 12.6 19"
-    xml:space="preserve"
-    class="flicon-fire">
-    <g>
-        <path fill="none" stroke-linejoin="round" stroke-miterlimit="10"
-        d="M4.1,0.5c2.1,2.8,2.2,7.4,0,9.8c-0.6-0.7-1-1.4-1.2-2.4c-4.6,3.3-2.2,10.6,3.5,10.6C15,18.5,13.4,4.2,4.1,0.5z"/>
-        <path fill="none" stroke-linejoin="round" stroke-miterlimit="10"
-        d="M6.8,11.5c0.8,1.4-1.2,3.4-2.3,3.1c0.2,0.9,1,1.6,1.9,1.6c1.1,0,1.9-0.9,2-2C8.4,13,8,11.5,6.8,11.5z"/>
-    </g>
-</svg>
-HOT
-        </div>
-    </div>
-</div>
-
-        <div class="ribbons-container span3">
-        </div>
-        <div class="well white silver span padding-5 align-c margin-t10 margin-l10 margin-b10">
-            <div style="display:inline-block" class="align-c padding-r10 padding-l5 project-view-status">
-                <p>Bids</p>
-                <div id="num-bids" class="text-blue larger bold">
-                        {{count}}
-                </div>
-            </div>
-            <div style="display:inline-block" class="align-c padding-l10 padding-r10 border-r border-l project-view-status">
-                <p>Avg Bid (USD)</p>
-                <div class="text-blue larger bold">
-                            $<span id="avg-bid">{{average_bid}}</span>   
-                </div>
-            </div>
-            <div style="display:inline-block" class="align-c padding-l10 padding-r5 project-view-status " >
-                <p>
-                        Project Budget
-                    
-                     (USD)</p>
-                <div class="text-blue larger bold project-budget">                         
-                                {{budget_avg}}   
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="user-bid-extension span12" style="display:;">
-        <div class="alert alert-success">
-            Great! Your bid has been placed successfully! Good job!
-        </div>
-    </div>
-    <div id="inline-bids-container"><div class="span12 hide padding-0" id="inline-bids" style="display: block;">
-    
-        <form id="frm_place_bid" novalidate="novalidate">
-            <div class="row margin-l20">
-                <br>
-                <input type="hidden" name="id" value="12207595">
-                <div id="error-messages" class="span8 hide alert alert-block alert-error margin-0 margin-b5"></div>
-                <div class="new-user-intro hide span11 alert alert-block alert-info margin-0 margin-b20">
-                    
-                        As a new freelancer, get started by bidding on <b>two (2)</b> projects.
-                    
-                    Be as detailed as possible when filling your proposal to increase your chances of being awarded the project. Check out our <a href="/support/project/10-tips-for-writing-an-effective-bid" target="_blank">Ten Tips for Writing an Effective Bid</a> article to help you get started.
-
-                </div>
-                <div id="membership-low-bids-alert">
-    
-        <div class="upgrade-membership hide span11 alert alert-block alert-warning margin-0 margin-b20" data-target="membershipNoBidsAlert">
-            <strong>You are almost out of bids.</strong> Upgrade your membership to receive more bids.
-            <a href="/membership/index.php?ref=placebid_unsuccessful" class="btn btn-primary" data-target="membershipBidUpsell" data-callout-placement="BOTTOM_RIGHT" id="membership-bid-warning-cta">Upgrade Membership</a>
-        </div>
-</div>
-                <div class="recruiter-fee-structure hide span11 alert alert-block alert-info margin-0 margin-b20">
-                    <strong>IMPORTANT:</strong> On Recruiter projects you will be charged the Freelancer.com fee <strong>per</strong> Milestone Payment and <strong>only once it is released to you</strong>, not upon accepting the project.
-                </div>
-                <div id="bid-stats" class="span9 margin-0 margin-b5">
-                    <div id="pricing" class="span4 margin-0 margin-b5 inline-bid-note ">
-                        <strong class="regular">
-                            Bid:
-                        </strong><br>
-                        <div class="control-group margin-l0">
-                            <div class="input-prepend input-append margin-0">
-                                <span class="span margin-0 padding-t5 inline-bid-title">Paid to you:</span>
-                                <div style="padding-left:80px">
-                                    <span class="add-on" id="bid-currency-sign">$</span>
-                                    <input id="bamount" class="margin-b0 margin-l0 input-mini earnedSum" type="text" value="500" onchange="makeChange();"
-                                    onkeyup="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();">
-                                    <input class="sum actualBidAmount" type="hidden" id="bidSSum" name="sum" value="555.56">
-                                    <span class="add-on" id="bid-currency-code">
-                                        USD
-                                    </span>
-                                    <span class="small help-inline"></span>
-                                </div>
-
-                                <script type="text/javascript">
-                                  function makeChange(){
-                                    amount = parseInt($("#bamount").val());
-                                    $("#freelancerFee").html((amount*0.1).toFixed(2));
-                                    $("#bidSum").html((amount*1.1).toFixed(2));
-                                    $("#bidSSum").val((amount*1.1).toFixed(2));
-                                  }
-                                </script>
-                            </div>
-                            <div class="input-prepend input-append margin-0 padding-t5">
-                                <span class="span margin-0 inline-bid-title">Freelancer Project Fee:</span>
-                                <b class="regular" style="display: inline-block;min-width: 16px;padding-right: 5px;text-align: center;">
-                                    $
-                                </b>
-                                <span class="input-mini inline-bid-currency">
-                                    <b class="regular" id="freelancerFee">55.56</b>
-                                    <b class="regular">
-                                        USD
-                                        
-                                    </b>
-                                </span>
-                            </div>
-                            <div class="input-prepend input-append margin-0 padding-t5">
-                                <span class="span margin-0 inline-bid-title">Your bid:</span>
-                                <b class="regular" style="display: inline-block;min-width: 16px;padding-right: 5px;text-align: center;">$</b>
-                                <span class="input-mini inline-bid-currency">
-                                    <b class="regular" id="bidSum">555.56</b>
-                                    <b class="regular">
-                                        USD   
-                                    </b>
-                                </span>
-                                <span class="bidsum_tip" style="position:relative;">
-                                    <img src="https://cdn5.f-cdn.com/static/css/images/pages/post-project/question.png">
-                                    <div class="bidSumTipContent span3 custom-hover left padding-0 well black left" style="position: absolute; top: -12px; left: -6px; display: none; background: rgb(255, 255, 255);">
-                                        <div class="relative">
-                                            <div class="tip" style="top:24px;"></div>
-                                            <div class="pad">
-                                                <span align="left margin-b0">Includes  10% Freelancer fee</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="delivery" class="span3 margin-0 inline-bid-columns">
-                        <strong class="regular">
-                                Deliver in: <br>
-                        </strong>
-                        <div class="control-group">
-                        <div class="input-append margin-0">
-                                <input class="margin-b0 margin-l0 input-mini period" name="period" type="text" value="10">
-                                <span class="add-on">
-                                    
-                                        Days
-                                    
-                                </span>
-                                <span class="small help-inline"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="clear margin-5">
-                    Note: Freelancer Project Fee will only be charged when you get awarded and accept the project
-                    </div>
-                    <div class="section margin-b10 clear"></div>
-                </div>
-                <div id="bid-ticker" class="pull-right"><div>
-
-<div class="bid-ticker ticker">
-  <h3 class="access">Bid Counter</h3>
-  <div class="form-horizontal">
-      <div class="control-group control-label margin-0 align-c bid-left-container">
-          <span class="largest bids-left">7</span>/<span class="bid-limit">8</span>
-          <br><span class="small bid-label">BIDS LEFT</span>
-      </div>
-  </div>
-  
-  <div class="clear"></div>
-</div>
-</div></div>
-                <div id="bid-ranker" class="span9 margin-0 margin-b5">
-                    <div class="bid-upgrades-loader" style="display: none;"><div class="loadingImage"><img src="https://cdn2.f-cdn.com/img/ajax-loader.gif?v=62d3d0c60d4c33ef23dcefb9bc63e3a2&amp;m=6"></div></div>
-                    <div class="BidUpgrade">
-                        <h4 class="BidUpgrade-title">Supercharge your bid and beat your competition!</h4>
-                        <ul class="BidUpgrade-list">
-                            <li class="BidUpgrade-list-item BidUpgrade-list-item--sponsored"><span class="BidUpgrade-list-icon">
-        <input id="SponsorBid" type="checkbox" name="chkbx_sb" data-cost="10.99" class="sponsor-bid-checkbox">
-    </span>
-    <div class="BidUpgrade-list-content">
-        <div class="BidUpgrade-list-header">
-            <label class="BidUpgrade-list-title" for="SponsorBid">Sponsor My Bid</label>
-            <span class="BidUpgrade-list-warning">Only one per project!</span>
-        </div>
-        <p class="BidUpgrade-list-desc">
-            Bids that are sponsored are <strong>70 to 100 times more likely to be awarded.</strong>
-            Stand out from the rest of the freelancers and be the first person bid that the employer sees.
-        </p>
-    </div>
-    <div class="BidUpgrade-list-price">
-        $10.99 USD
-    </div></li>
-                            <li class="BidUpgrade-list-item BidUpgrade-list-item--highlight"><span class="BidUpgrade-list-icon">
-    <input id="HighlightBid" name="chkbx_hb" type="checkbox" data-cost="1" class="highlight-bid-checkbox">
-    </span>
-    <div class="BidUpgrade-list-content">
-        <div class="BidUpgrade-list-header">
-            <label class="BidUpgrade-list-title" for="HighlightBid">Highlight My Bid</label>
-        </div>
-        <p class="BidUpgrade-list-desc">
-            Attract more attention. Highlight your bid to stand out from the pack.
-        </p>
-    </div>
-    <div class="BidUpgrade-list-price">
-        $1 USD
-</div></li>
-                        </ul>
-                    </div>
-                </div>
-                <div id="bidSeparator" class="section span9 margin-0 margin-b5"></div>
-                <div class="clear"></div>
-
-                <div class="span8 margin-0" style="display:none;" id="proposal-panel">
-
-                    
-                    <div class="span10 margin-0 alert alert-success">
-                        <strong>Your bid was placed successfully!</strong> Provide your proposal below to complete your bid.
-                    </div>
-                    
-
-                    <div class="span9 margin-0">
-                        <p class="margin-0 margin-t10"><strong>Proposal</strong>: This will not be displayed to other freelancers (only to the employer).</p>
-                    </div>
-                    <div class="clear"></div>
-
-                    <div class="control-group margin-t10">
-                        <textarea class="span8 margin-0 descr" rows="8" name="descr" id="proposalDescription" placeholder="What makes you the best candidate for this project?"></textarea>
-                        <span class="small help-inline"></span>
-                        <span class="right text-vlight italic">
-                            <span id="descr_count">1500</span> characters left
-                        </span>
-                    </div>
-                </div>
-            </div>
             <div class="clear"></div>
 
-            <footer class="row margin-l20 form-controls BidProposal-footer span9">
+          </div>
+          <div class="span12 margin-0">
 
-<div class="BidProposal-footer-row">
-    <div class="BidProposal-footer-details hide" id="upgrade-total-price">
-        <span class="BidProposal-footer-price">Total: <strong>$<span class="upgrade-total">0.00</span> USD</strong></span>
-        <p class="BidProposal-footer-note">
-            The payment will be deducted from your best available payment source.
-        </p>
-    </div>
-    <div class="BidProposal-footer-action">
-        
-            
-                <a href="/membership/index.php?ref=placebid_unsuccessful" class="btn btn-info btn-large is-hidden" data-target="membershipBidUpsell" id="membership-upgrade-cta">
-                     Get More Bids
-                </a>
-        <a class="btn btn-info btn-large " id="place-bid">Place Bid</a>
-    </div>
-</div>
-</footer>
-            <div class="row margin-l20 form-controls-step2" style="display:none;"> 
-                <button type="submit" class="btn btn-info btn-small" id="place-bid-step2">Submit Proposal</button>
-                <a href="" class="margin-l15" id="cancel-bid-step2">Cancel</a>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="project-view-info-bar well span12">
+        <div class='pull-right'>
+          <a class="custom-icon bookmark bookmark-btn" data-project-id="12207595" data-action="on" title="Bookmark Project"></a>
+        </div>
+        <div class="project-view-info-bar-status well white silver span3 right align-c margin-t10 margin-r10 margin-b10 padding-5">
+          <div style="display:inline-block">
+            <div class="text-green margin-b5 small" id="bid_time_left"><p></p></div>
+
+            <div class="text-green larger bold" id="project_status" data-desc="Project is open for bidding.">OPEN</div>
+
+
+          </div>
+
+          <div style="position:relative">
+           <div id="project_status-tip" class="project-status-tip project-status-single-line span3 custom-hover right padding-0 well black white">
+            <div class="relative">
+              <div class="tip"></div>
+              <div class="pad">
+                <span align="left margin-b0" id="project_status-tip-text"></span>
+              </div>
             </div>
-            <span id="place-bid-loading" class="hide" style="display: none;"><div class="loadingImage"><img src="https://cdn2.f-cdn.com/img/ajax-loader.gif?v=62d3d0c60d4c33ef23dcefb9bc63e3a2&amp;m=6"></div></span>
-        </form>
-    
-</div>
-</div>
-    <div class="nda_unsigned alert alert-info span margin-b0 margin-t20   hide ">
-        <span class="text-dark"> Freelancers must sign a <a href="/NDA/NDAcreator.php?project_id=12207595"> Non-Disclosure Agreement</a> to work on this project.</span>
+          </div>
+        </div>
+      </div>
+      <div id="hot-project-pvp"
+      class="project-view-info-bar-status hot-project is-hidden"
+      data-toggle="tooltip"
+      data-original-title="Place your bid for FREE while the project is hot"
+      data-placement="bottom">
+      <div class="project-view-info-bar-inner">
+        <div class="project-view-info-bar-timer">
+          <p><span id="free-bids-until"></span> left</p>
+        </div>
+        <div id="project_status"
+        class="project-view-info-bar-state">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px" y="0px" viewBox="0 0 12.6 19"
+        enable-background="new 0 0 12.6 19"
+        xml:space="preserve"
+        class="flicon-fire">
+        <g>
+          <path fill="none" stroke-linejoin="round" stroke-miterlimit="10"
+          d="M4.1,0.5c2.1,2.8,2.2,7.4,0,9.8c-0.6-0.7-1-1.4-1.2-2.4c-4.6,3.3-2.2,10.6,3.5,10.6C15,18.5,13.4,4.2,4.1,0.5z"/>
+          <path fill="none" stroke-linejoin="round" stroke-miterlimit="10"
+          d="M6.8,11.5c0.8,1.4-1.2,3.4-2.3,3.1c0.2,0.9,1,1.6,1.9,1.6c1.1,0,1.9-0.9,2-2C8.4,13,8,11.5,6.8,11.5z"/>
+        </g>
+      </svg>
+      HOT
     </div>
-    <div class="nda_signed alert alert-success span margin-b0 margin-t20  hide   hide ">
-        <span class="text-dark"> You have agreed to and signed the <a href="/NDA/NDA-print-contract.php?project_id=12207595"> Non-Disclosure Agreement</a>.</span>
+  </div>
+</div>
+
+<div class="ribbons-container span3">
+</div>
+<div class="well white silver span padding-5 align-c margin-t10 margin-l10 margin-b10">
+  <div style="display:inline-block" class="align-c padding-r10 padding-l5 project-view-status">
+    <p>Bids</p>
+    <div id="num-bids" class="text-blue larger bold">
+      {{count}}
     </div>
+  </div>
+  <div style="display:inline-block" class="align-c padding-l10 padding-r10 border-r border-l project-view-status">
+    <p>Avg Bid (USD)</p>
+    <div class="text-blue larger bold">
+      $<span id="avg-bid">{{average_bid}}</span>   
+    </div>
+  </div>
+  <div style="display:inline-block" class="align-c padding-l10 padding-r5 project-view-status " >
+    <p>
+      Project Budget
 
-    <div id="projectBrief">
-        
-        <div class="project-brief span8 margin-t20">
+      (USD)</p>
+      <div class="text-blue larger bold project-budget">                         
+        {{budget_avg}}   
+      </div>
+    </div>
+  </div>
+</div>
+<div class="user-bid-extension span12" id="sucmsg" style="display:none;">
+  <div class="alert alert-success">
+    Great! Your bid has been placed successfully! Good job!
+  </div>
+</div>
+<div id="inline-bids-container"><div class="span12 hide padding-0" id="inline-bids" style="display: block;">
 
-            <p class="span8 margin-0 margin-b10" style="word-wrap: break-word;">
-                <h2 class="project-brief-subheading bold margin-b5">
-                            Project Description
-                </h2>
-                
-                <p>{{description}}</p>
-            </p>
-            <div class="user-wrap buyerWrapper">
-                <h2 class="project-brief-subheading bolduser-profile-row user-profile-label">
-                  About the employer
-                </h2>
-                
-                <div class="user-profile-row user-profile-reviews">
-                    <div class="buyer-reputation-stars left">
-                        <span class="Rating Rating--labeled"
-                              data-star_rating="0.0">
-                            <span class="Rating-total">
-                                <span class="Rating-progress"></span>
-                            </span>
-                        </span>
-                        <div class="span8 padding-0 buyer-reputation-container well white align-l custom-hover black top" style="display:none;">
-                        </div>
+  <form id="frm_place_bid" novalidate="novalidate">
+    <div class="row margin-l20">
+      <br>
+      <input type="hidden" name="id" value="12207595">
+      <div id="error-messages" class="span8 hide alert alert-block alert-error margin-0 margin-b5"></div>
+      <div class="new-user-intro hide span11 alert alert-block alert-info margin-0 margin-b20">
+
+        As a new freelancer, get started by bidding on <b>two (2)</b> projects.
+
+        Be as detailed as possible when filling your proposal to increase your chances of being awarded the project. Check out our <a href="/support/project/10-tips-for-writing-an-effective-bid" target="_blank">Ten Tips for Writing an Effective Bid</a> article to help you get started.
+
+      </div>
+      <div id="membership-low-bids-alert">
+
+        <div class="upgrade-membership hide span11 alert alert-block alert-warning margin-0 margin-b20" data-target="membershipNoBidsAlert">
+          <strong>You are almost out of bids.</strong> Upgrade your membership to receive more bids.
+          <a href="/membership/index.php?ref=placebid_unsuccessful" class="btn btn-primary" data-target="membershipBidUpsell" data-callout-placement="BOTTOM_RIGHT" id="membership-bid-warning-cta">Upgrade Membership</a>
+        </div>
+      </div>
+      <div class="recruiter-fee-structure hide span11 alert alert-block alert-info margin-0 margin-b20">
+        <strong>IMPORTANT:</strong> On Recruiter projects you will be charged the Freelancer.com fee <strong>per</strong> Milestone Payment and <strong>only once it is released to you</strong>, not upon accepting the project.
+      </div>
+      <div id="bid-stats" class="span9 margin-0 margin-b5">
+        <div id="pricing" class="span4 margin-0 margin-b5 inline-bid-note ">
+          <strong class="regular">
+            Bid:
+          </strong><br>
+          <div class="control-group margin-l0">
+            <div class="input-prepend input-append margin-0">
+              <span class="span margin-0 padding-t5 inline-bid-title">Paid to you:</span>
+              <div style="padding-left:80px">
+                <span class="add-on" id="bid-currency-sign">$</span>
+                <input id="bamount" class="margin-b0 margin-l0 input-mini earnedSum" type="text" value="500" onchange="makeChange();"
+                onkeyup="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();">
+                <input class="sum actualBidAmount" type="hidden" id="bidSSum" name="sum" value="555.56">
+                <span class="add-on" id="bid-currency-code">
+                  USD
+                </span>
+                <span class="small help-inline"></span>
+              </div>
+
+              <script type="text/javascript">
+              function makeChange(){
+                amount = parseFloat($("#bamount").val());
+                $("#freelancerFee").html((amount*0.1).toFixed(2));
+                $("#bidSum").html((amount*1.1).toFixed(2));
+                $("#bidSSum").val((amount*1.1).toFixed(2));
+              }
+              </script>
+            </div>
+            <div class="input-prepend input-append margin-0 padding-t5">
+              <span class="span margin-0 inline-bid-title">Freelancer Project Fee:</span>
+              <b class="regular" style="display: inline-block;min-width: 16px;padding-right: 5px;text-align: center;">
+                $
+              </b>
+              <span class="input-mini inline-bid-currency">
+                <b class="regular" id="freelancerFee">55.56</b>
+                <b class="regular">
+                  USD
+
+                </b>
+              </span>
+            </div>
+            <div class="input-prepend input-append margin-0 padding-t5">
+              <span class="span margin-0 inline-bid-title">Your bid:</span>
+              <b class="regular" style="display: inline-block;min-width: 16px;padding-right: 5px;text-align: center;">$</b>
+              <span class="input-mini inline-bid-currency">
+                <b class="regular" id="bidSum">555.56</b>
+                <b class="regular">
+                  USD   
+                </b>
+              </span>
+              <span class="bidsum_tip" style="position:relative;">
+                <img src="https://cdn5.f-cdn.com/static/css/images/pages/post-project/question.png">
+                <div class="bidSumTipContent span3 custom-hover left padding-0 well black left" style="position: absolute; top: -12px; left: -6px; display: none; background: rgb(255, 255, 255);">
+                  <div class="relative">
+                    <div class="tip" style="top:24px;"></div>
+                    <div class="pad">
+                      <span align="left margin-b0">Includes  10% Freelancer fee</span>
                     </div>
-                    
-                    <span class="small margin-l5 left">
-                        <a 
-                           data-user-id="" class="showdataemployer">
-                            <span>
-                                (0 Reviews)
-                            </span>
-                        </a>
-                    </span>
-                        <span class="margin-l5 user-flag user-icons">
-                            <img src="https://cdn5.f-cdn.com/img/flags/png/lv.png?v=6c40d32919a0b082014e34d07b4bb7ec&m=6"
-                                 alt="Latvia" title="Latvia"
-                                 aria-label="Latvia">
-                        </span>
                   </div>
-                    
-                    <div class="verified-status-wrapper">
-                        <span class="verified-payment ">
-                            <span class="custom-icon badge-icon"></span>
-                            <span class="tab">Verified</span>
-                            <div class="verified-payment_tip span3 custom-hover left padding-0 well black white left verified-payment-badge_tip">
-                                <div class="relative">
-                                    <div class="tip"></div>
-                                    <div class="pad">
-                                        <span align="left margin-b0">
-                                            
-                                                This user has verified their Payment method
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </span>
-                        <span class="verified-icon-deposit is-verified verified-payment">
-                            <div class="verified-payment_tip span3 custom-hover left padding-0 well black white left">
-                                <div class="relative">
-                                    <div class="tip"></div>
-                                    <div class="pad">
-                                        <span align="left margin-b0">
-                                              Has made a deposit.
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </span>
-                        <span class="verified-icon-email
-                                     is-verified verified-payment">
-                            <div class="verified-payment_tip span3 custom-hover left padding-0 well black white left">
-                                <div class="relative">
-                                    <div class="tip"></div>
-                                    <div class="pad">
-                                        <span align="left margin-b0">
-                                              Has verified their email address. 
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </span>
-                        <span class="verified-icon-profile
-                                     is-verified verified-payment">
-                            <div class="verified-payment_tip span3 custom-hover left padding-0 well black white left ">
-                                <div class="relative">
-                                    <div class="tip"></div>
-                                    <div class="pad">
-                                        <span align="left margin-b0">
-                                              Has completed their profile.
-                                            
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </span>
-                        <span class="verified-icon-phone
-                                     is-verified verified-payment">
-                            <div class="verified-payment_tip span3 custom-hover left padding-0 well black white left">
-                                <div class="relative">
-                                    <div class="tip"></div>
-                                    <div class="pad">
-                                        <span align="left margin-b0">
-                                              Has verified their secure phone number.
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </span>
-                    </div>      
+                </div>
+              </span>
             </div>
-            <span class="span8 margin-0 margin-b10">
-                <h2 class="project-brief-subheading">Skills required </h2>
+          </div>
+        </div>
+        <div id="delivery" class="span3 margin-0 inline-bid-columns">
+          <strong class="regular">
+            Deliver in: <br>
+          </strong>
+          <div class="control-group">
+            <div class="input-append margin-0">
+              <input class="margin-b0 margin-l0 input-mini period" id="perioddel" type="text" value="10">
+              <span class="add-on">
+                Days
+              </span>
+              <span class="small help-inline"></span>
+            </div>
+          </div>
+        </div>
+        <div class="clear margin-5">
+          Note: Freelancer Project Fee will only be charged when you get awarded and accept the project
+        </div>
+        <div class="section margin-b10 clear"></div>
+      </div>
+      <div id="bid-ticker" class="pull-right"><div>
 
-                    {% for item in skills %}
-                        <a href="#" class="skills-required">{{item}} </a>
-                    {% endfor %}
-                
+        <div class="bid-ticker ticker">
+          <h3 class="access">Bid Counter</h3>
+          <div class="form-horizontal">
+            <div class="control-group control-label margin-0 align-c bid-left-container">
+              <span class="largest bids-left">7</span>/<span class="bid-limit">8</span>
+              <br><span class="small bid-label">BIDS LEFT</span>
+            </div>
+          </div>
+
+          <div class="clear"></div>
+        </div>
+      </div></div>
+      <div id="bid-ranker" class="span9 margin-0 margin-b5">
+        <div class="BidUpgrade">
+          <h4 class="BidUpgrade-title">Supercharge your bid and beat your competition!</h4>
+          <ul class="BidUpgrade-list">
+            <li class="BidUpgrade-list-item BidUpgrade-list-item--sponsored"><span class="BidUpgrade-list-icon">
+              <input id="SponsorBid" type="checkbox" id="chkbx_sb" data-cost="10.99" class="sponsor-bid-checkbox">
             </span>
-            
-            <div class="prepaid-brief">
+            <div class="BidUpgrade-list-content">
+              <div class="BidUpgrade-list-header">
+                <label class="BidUpgrade-list-title" for="SponsorBid">Sponsor My Bid</label>
+                <span class="BidUpgrade-list-warning">Only one per project!</span>
+              </div>
+              <p class="BidUpgrade-list-desc">
+                Bids that are sponsored are <strong>70 to 100 times more likely to be awarded.</strong>
+                Stand out from the rest of the freelancers and be the first person bid that the employer sees.
+              </p>
             </div>
+            <div class="BidUpgrade-list-price">
+              $10.99 USD
+            </div></li>
+            <li class="BidUpgrade-list-item BidUpgrade-list-item--highlight"><span class="BidUpgrade-list-icon">
+              <input id="HighlightBid" id="chkbx_hb" type="checkbox" data-cost="1" class="highlight-bid-checkbox">
+            </span>
+            <div class="BidUpgrade-list-content">
+              <div class="BidUpgrade-list-header">
+                <label class="BidUpgrade-list-title" for="HighlightBid">Highlight My Bid</label>
+              </div>
+              <p class="BidUpgrade-list-desc">
+                Attract more attention. Highlight your bid to stand out from the pack.
+              </p>
+            </div>
+            <div class="BidUpgrade-list-price">
+              $1 USD
+            </div></li>
+
+
+          </ul>
         </div>
-        <div class="project-sidebar">
-             
-    <div class="margin-0 right alert span4 padding-10 margin-b10 ubpCheckContainer" style="display:none"></div>
-        <a class="btn btn-info btn-large bidButton"
-           data-project-id= "12207595"
-            href="/sellers/placebid.php?id=12207595"
-            
-            style="display:none">Bid on This Project</a>
-        
-
-
-
-        </div>
-        <div class="span12 project-brief-cta">
-            <div class="ProjectReport"><span>Project ID: </span><span class="normal">12207595</span>
-                <a class="ProjectReport-link" href="#" onclick="return false" id="reportProjectLink">Report Project</a>
-        </div>
-
-            
-                
-                
-                
-                    
-                    <a href="/buyers/repost.php?id=12207595" class="btn btn-large btn-primary align-c margin-t10 repostProjectButton"
-                       onClick="qtsv.push('PostProject', '/buyers/repost.php?id=12207595');return false;" data-qtsb-section="PVP" data-qtsb-subsection="LoggedIn" data-qtsb-label="GoToPostProject">
-                        Post a Project like this
-                    </a>
-                    
-                
-                
-            
-
-        </div>
+      </div>
+      <div id="bidSeparator" class="section span9 margin-0 margin-b5"></div>
+      <div class="clear"></div>
     </div>
+    <div class="clear"></div>
+
+    <footer class="row margin-l20 form-controls BidProposal-footer span9">
+
+      <div class="BidProposal-footer-row">
+        <div class="BidProposal-footer-details hide" id="upgrade-total-price">
+          <span class="BidProposal-footer-price">Total: <strong>$<span class="upgrade-total">0.00</span> USD</strong></span>
+          <p class="BidProposal-footer-note">
+            The payment will be deducted from your best available payment source.
+          </p>
+        </div>
+        <div class="BidProposal-footer-action">
+
+
+          <a href="/membership/index.php?ref=placebid_unsuccessful" class="btn btn-info btn-large is-hidden" data-target="membershipBidUpsell" id="membership-upgrade-cta">
+           Get More Bids
+         </a>
+         <a class="btn btn-info btn-large " id="place-bid" onclick="postProjectBid();">Place Bid</a>
+       </div>
+     </div>
+   </footer>
+ </form>
+
+</div>
+</div>
+
+<div class="nda_unsigned alert alert-info span margin-b0 margin-t20   hide ">
+  <span class="text-dark"> Freelancers must sign a <a href="/NDA/NDAcreator.php?project_id=12207595"> Non-Disclosure Agreement</a> to work on this project.</span>
+</div>
+<div class="nda_signed alert alert-success span margin-b0 margin-t20  hide   hide ">
+  <span class="text-dark"> You have agreed to and signed the <a href="/NDA/NDA-print-contract.php?project_id=12207595"> Non-Disclosure Agreement</a>.</span>
+</div>
+
+<div id="projectBrief">
+
+  <div class="project-brief span8 margin-t20">
+
+    <p class="span8 margin-0 margin-b10" style="word-wrap: break-word;">
+      <h2 class="project-brief-subheading bold margin-b5">
+        Project Description
+      </h2>
+
+      <p>{{description}}</p>
+    </p>
+    <div class="user-wrap buyerWrapper">
+      <h2 class="project-brief-subheading bolduser-profile-row user-profile-label">
+        About the employer
+      </h2>
+
+      <div class="user-profile-row user-profile-reviews">
+        <div class="buyer-reputation-stars left">
+          <span class="Rating Rating--labeled"
+          data-star_rating="0.0">
+          <span class="Rating-total">
+            <span class="Rating-progress"></span>
+          </span>
+        </span>
+        <div class="span8 padding-0 buyer-reputation-container well white align-l custom-hover black top" style="display:none;">
+        </div>
+      </div>
+
+      <span class="small margin-l5 left">
+        <a 
+        data-user-id="" class="showdataemployer">
+        <span>
+          (0 Reviews)
+        </span>
+      </a>
+    </span>
+    <span class="margin-l5 user-flag user-icons">
+      <img src="https://cdn5.f-cdn.com/img/flags/png/lv.png?v=6c40d32919a0b082014e34d07b4bb7ec&m=6"
+      alt="Latvia" title="Latvia"
+      aria-label="Latvia">
+    </span>
+  </div>
+
+  <div class="verified-status-wrapper">
+    <span class="verified-payment ">
+      <span class="custom-icon badge-icon"></span>
+      <span class="tab">Verified</span>
+      <div class="verified-payment_tip span3 custom-hover left padding-0 well black white left verified-payment-badge_tip">
+        <div class="relative">
+          <div class="tip"></div>
+          <div class="pad">
+            <span align="left margin-b0">
+
+              This user has verified their Payment method
+            </span>
+          </div>
+        </div>
+      </div>
+    </span>
+    <span class="verified-icon-deposit is-verified verified-payment">
+      <div class="verified-payment_tip span3 custom-hover left padding-0 well black white left">
+        <div class="relative">
+          <div class="tip"></div>
+          <div class="pad">
+            <span align="left margin-b0">
+              Has made a deposit.
+            </span>
+          </div>
+        </div>
+      </div>
+    </span>
+    <span class="verified-icon-email
+    is-verified verified-payment">
+    <div class="verified-payment_tip span3 custom-hover left padding-0 well black white left">
+      <div class="relative">
+        <div class="tip"></div>
+        <div class="pad">
+          <span align="left margin-b0">
+            Has verified their email address. 
+          </span>
+        </div>
+      </div>
+    </div>
+  </span>
+  <span class="verified-icon-profile
+  is-verified verified-payment">
+  <div class="verified-payment_tip span3 custom-hover left padding-0 well black white left ">
+    <div class="relative">
+      <div class="tip"></div>
+      <div class="pad">
+        <span align="left margin-b0">
+          Has completed their profile.
+
+        </span>
+      </div>
+    </div>
+  </div>
+</span>
+<span class="verified-icon-phone
+is-verified verified-payment">
+<div class="verified-payment_tip span3 custom-hover left padding-0 well black white left">
+  <div class="relative">
+    <div class="tip"></div>
+    <div class="pad">
+      <span align="left margin-b0">
+        Has verified their secure phone number.
+      </span>
+    </div>
+  </div>
+</div>
+</span>
+</div>      
+</div>
+<span class="span8 margin-0 margin-b10">
+  <h2 class="project-brief-subheading">Skills required </h2>
+
+  {% for item in skills %}
+  <a href="#" class="skills-required">{{item}} </a>
+  {% endfor %}
+
+</span>
+
+<div class="prepaid-brief">
+</div>
+</div>
+<div class="project-sidebar">
+
+  <div class="margin-0 right alert span4 padding-10 margin-b10 ubpCheckContainer" style="display:none"></div>
+  <a class="btn btn-info btn-large bidButton"
+  data-project-id= "12207595"
+  href="/sellers/placebid.php?id=12207595"
+
+  style="display:none">Bid on This Project</a>
+
+
+
+
+</div>
+<div class="span12 project-brief-cta">
+  <div class="ProjectReport"><span>Project ID: </span><span class="normal" id="pppid">{{id}}</span>
+    <a class="ProjectReport-link" href="#" onclick="return false" id="reportProjectLink">Report Project</a>
+  </div>
+  <a href="../../post" class="btn btn-large btn-primary align-c margin-t10 repostProjectButton"
+  onClick="qtsv.push('PostProject', '/buyers/repost.php?id=12207595');return false;" data-qtsb-section="PVP" data-qtsb-subsection="LoggedIn" data-qtsb-label="GoToPostProject">
+  Post a Project like this
+</a>
+</div>
+</div>
 </div>
 
 <div class="clear"></div>
 
 </div>
-            <div class="clearfix"></div>
-        </div>
-    </div> <!-- end of gaf-container -->
-  </body>
+<div class="clearfix"></div>
+</div>
+</div> <!-- end of gaf-container -->
+</body>
 </html>

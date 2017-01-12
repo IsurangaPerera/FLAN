@@ -8,6 +8,8 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use AppBundle\Entity\Project;
+use AppBundle\Entity\ProjectBid;
+
 
 /**
  * Bid controller.
@@ -104,5 +106,33 @@ class BidController extends Controller
           );
       //print_r($arrayCollection);
       return $this->render('default/addBid.html.twig', $arrayCollection[0]);
+    }
+
+    /**
+     * @Route("/post")
+     */
+    public function postAction(Request $request)
+    {
+        $session = $request->getSession();
+
+        $data = $request->getContent();
+        $data =  json_decode($data, true);
+        $id = uniqid();
+
+        $project = new ProjectBid();
+
+        $project->setBidId($id);
+        $project->setBidAmount($data["project_bid"][0]["amount"]);
+        $project->setCurrency($data["project_bid"][0]["currency"]);
+        $project->setIsSponsored($data["project_bid"][0]["is_sponsored"]);
+        $project->setDeliverIn($data["project_bid"][0]["deliver_in"]);
+        $project->setIsHighlighted($data["project_bid"][0]["is_highlighted"]);
+        $project->setProjectId($data["project_bid"][0]["project_id"]);
+
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($project);
+        $em->flush();
+
+        return new Response();
     }
 }

@@ -35,7 +35,6 @@ class DefaultController extends Controller
     }
 
     /**
-
      * @Route("dashboard/", name="dashboard")
      */
     public function dashboard(Request $request)
@@ -45,12 +44,8 @@ class DefaultController extends Controller
 
 
      /**
-
      * Matches /login/*
-
-
      * Matches login/*
-
      * @Route("login/{id}/", name="login")
      */
     public function login($id)
