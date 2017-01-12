@@ -677,14 +677,23 @@ HOT
                                 <span class="span margin-0 padding-t5 inline-bid-title">Paid to you:</span>
                                 <div style="padding-left:80px">
                                     <span class="add-on" id="bid-currency-sign">$</span>
-                                    <input class="margin-b0 margin-l0 input-mini earnedSum" name="sum" type="text" value="500">
-                                    <input class="sum actualBidAmount" type="hidden" name="sum" value="555.56">
+                                    <input id="bamount" class="margin-b0 margin-l0 input-mini earnedSum" type="text" value="500" onchange="makeChange();"
+                                    onkeyup="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();">
+                                    <input class="sum actualBidAmount" type="hidden" id="bidSSum" name="sum" value="555.56">
                                     <span class="add-on" id="bid-currency-code">
                                         USD
-                                        
                                     </span>
                                     <span class="small help-inline"></span>
                                 </div>
+
+                                <script type="text/javascript">
+                                  function makeChange(){
+                                    amount = parseInt($("#bamount").val());
+                                    $("#freelancerFee").html((amount*0.1).toFixed(2));
+                                    $("#bidSum").html((amount*1.1).toFixed(2));
+                                    $("#bidSSum").val((amount*1.1).toFixed(2));
+                                  }
+                                </script>
                             </div>
                             <div class="input-prepend input-append margin-0 padding-t5">
                                 <span class="span margin-0 inline-bid-title">Freelancer Project Fee:</span>
@@ -705,8 +714,7 @@ HOT
                                 <span class="input-mini inline-bid-currency">
                                     <b class="regular" id="bidSum">555.56</b>
                                     <b class="regular">
-                                        USD
-                                        
+                                        USD   
                                     </b>
                                 </span>
                                 <span class="bidsum_tip" style="position:relative;">
@@ -725,9 +733,7 @@ HOT
                     </div>
                     <div id="delivery" class="span3 margin-0 inline-bid-columns">
                         <strong class="regular">
-                            
                                 Deliver in: <br>
-                            
                         </strong>
                         <div class="control-group">
                         <div class="input-append margin-0">
@@ -744,8 +750,6 @@ HOT
                     <div class="clear margin-5">
                     Note: Freelancer Project Fee will only be charged when you get awarded and accept the project
                     </div>
-
-
                     <div class="section margin-b10 clear"></div>
                 </div>
                 <div id="bid-ticker" class="pull-right"><div>
@@ -761,10 +765,7 @@ HOT
   
   <div class="clear"></div>
 </div>
-
-
 </div></div>
-
                 <div id="bid-ranker" class="span9 margin-0 margin-b5">
                     <div class="bid-upgrades-loader" style="display: none;"><div class="loadingImage"><img src="https://cdn2.f-cdn.com/img/ajax-loader.gif?v=62d3d0c60d4c33ef23dcefb9bc63e3a2&amp;m=6"></div></div>
                     <div class="BidUpgrade">
@@ -826,11 +827,8 @@ HOT
                             <span id="descr_count">1500</span> characters left
                         </span>
                     </div>
-      
                 </div>
-
             </div>
-
             <div class="clear"></div>
 
             <footer class="row margin-l20 form-controls BidProposal-footer span9">
@@ -848,19 +846,11 @@ HOT
                 <a href="/membership/index.php?ref=placebid_unsuccessful" class="btn btn-info btn-large is-hidden" data-target="membershipBidUpsell" id="membership-upgrade-cta">
                      Get More Bids
                 </a>
-            
-        
         <a class="btn btn-info btn-large " id="place-bid">Place Bid</a>
     </div>
 </div>
-
-
-
-
 </footer>
-
-            <div class="row margin-l20 form-controls-step2" style="display:none;">
-                
+            <div class="row margin-l20 form-controls-step2" style="display:none;"> 
                 <button type="submit" class="btn btn-info btn-small" id="place-bid-step2">Submit Proposal</button>
                 <a href="" class="margin-l15" id="cancel-bid-step2">Cancel</a>
             </div>
@@ -869,8 +859,6 @@ HOT
     
 </div>
 </div>
-    
-
     <div class="nda_unsigned alert alert-info span margin-b0 margin-t20   hide ">
         <span class="text-dark"> Freelancers must sign a <a href="/NDA/NDAcreator.php?project_id=12207595"> Non-Disclosure Agreement</a> to work on this project.</span>
     </div>
@@ -888,11 +876,7 @@ HOT
                 </h2>
                 
                 <p>{{description}}</p>
-                
-                
             </p>
-            
-            
             <div class="user-wrap buyerWrapper">
                 <h2 class="project-brief-subheading bolduser-profile-row user-profile-label">
                   About the employer
@@ -918,16 +902,11 @@ HOT
                             </span>
                         </a>
                     </span>
-                    
-                
-                    
                         <span class="margin-l5 user-flag user-icons">
                             <img src="https://cdn5.f-cdn.com/img/flags/png/lv.png?v=6c40d32919a0b082014e34d07b4bb7ec&m=6"
                                  alt="Latvia" title="Latvia"
                                  aria-label="Latvia">
                         </span>
-                    
-                
                   </div>
                     
                     <div class="verified-status-wrapper">
@@ -941,8 +920,6 @@ HOT
                                         <span align="left margin-b0">
                                             
                                                 This user has verified their Payment method
-                                            
-                                            
                                         </span>
                                     </div>
                                 </div>
@@ -954,11 +931,7 @@ HOT
                                     <div class="tip"></div>
                                     <div class="pad">
                                         <span align="left margin-b0">
-                                            
-
-                                            
                                               Has made a deposit.
-                                            
                                         </span>
                                     </div>
                                 </div>
@@ -971,11 +944,7 @@ HOT
                                     <div class="tip"></div>
                                     <div class="pad">
                                         <span align="left margin-b0">
-                                            
-
-                                            
-                                              Has verified their email address.
-                                            
+                                              Has verified their email address. 
                                         </span>
                                     </div>
                                 </div>
@@ -988,9 +957,6 @@ HOT
                                     <div class="tip"></div>
                                     <div class="pad">
                                         <span align="left margin-b0">
-                                            
-
-                                            
                                               Has completed their profile.
                                             
                                         </span>
@@ -1005,11 +971,7 @@ HOT
                                     <div class="tip"></div>
                                     <div class="pad">
                                         <span align="left margin-b0">
-                                            
-
-                                            
                                               Has verified their secure phone number.
-                                            
                                         </span>
                                     </div>
                                 </div>
