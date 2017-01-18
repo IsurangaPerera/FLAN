@@ -16,10 +16,21 @@ class DefaultController extends Controller
     /**
      * @Route("/", name="homepage")
      */
-    public function indexAction(Request $request)
+    /*public function indexAction(Request $request)
     {
         // replace this example code with whatever you need
         return $this->render('default/index.html.twig', array(
+            'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
+        ));
+    }*/
+
+    /**
+     * @Route("/", name="homepage2")
+     */
+    public function indexAction2(Request $request)
+    {
+        // replace this example code with whatever you need
+        return $this->render('default/index2.html.twig', array(
             'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
         ));
     }
@@ -30,6 +41,16 @@ class DefaultController extends Controller
     public function howItWorks(Request $request)
     {
         return $this->render('default/howItWorks.html.twig', array(
+            'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
+        ));
+    }
+
+    /**
+     * @Route("browse_jobs/", name="browse_jobs")
+     */
+    public function browseJobs(Request $request)
+    {
+        return $this->render('default/browseJobs.html.twig', array(
             'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
         ));
     }
@@ -62,21 +83,52 @@ class DefaultController extends Controller
         return new Response('200');
     }
 
+     /**
+     * @Route("login_ex/{id}/{password}", name="login_ex")
+     */
+    public function login_ex($id, $password)
+    {
+
+        $user = $this->getDoctrine()
+        ->getRepository('AppBundle:User')
+        ->find($id);
+
+        if(!$user)
+            return new Response('403');
+
+        if($password == $user->getPassword())
+        {
+            $session = new Session();
+            $session->set('user_id', $id);
+            try {
+                $session->start();
+                $session->save();
+            } catch (Exception $e) {
+
+            }
+
+            return new Response('200');
+        } else {
+            return new Response('403');
+        }
+        
+    }
+
     /**
      * @Route("register/", name="registerUser")
      */
     public function registerUser(Request $request)
     {
-
-        $data = $request->getContent();
-        $data =  json_decode($data, true);
+        $email    = $request->get('newemail');
+        print_r($email);
+        $username = $request->get('newusername');
+        $password = $request->get('newuserpasswd');
 
         $user = new User();
 
-        $id = $data['user'][0]['user_name'];
-
-        $user->setUserName($data['user'][0]['user_name']);
-        $user->setPassword($data['user'][0]['password']);
+        $user->setUserName($username);
+        $user->setPassword($password);
+        $user->setEmail($email);
 
         $em = $this->getDoctrine()->getManager();
         $em->persist($user);

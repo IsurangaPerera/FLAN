@@ -1,24 +1,26 @@
 function loginAjax(){
-	email = $("#email1").val();
-	password = $("#password1").val();
 
-	var w = wsseHeader(email, password);
+	email = $("#user_login789934").val();
+	password = $("#user_pass789934").val();
+
+	//var w = wsseHeader(email, password);
 
 	$.ajax({
-		url: 'login/'+email+'/',
-		headers: { 'x-wsse': w },
+		url: 'login_ex/'+email+'/'+password,
+		//headers: { 'x-wsse': w },
 		success: function(data) {
         	if(data == '200') {
-        		$("#myModal").modal('hide');
-        		$("#tright").prop("hidden", true);
-        		$("#user_name").html('<i class="fa fa-desktop" aria-hidden="true"></i>' + email);
-        		$("#tright2").prop("hidden", false);
+                $("#sign-in").modal('hide');
+                window.location.href = "/dashboard";
         	}
-    	}
+    	},
+        error: function(jqXhr) {
+            console.log(jqXhr.status);
+        }
 	});
 }
 
-$(document).ready(function(){
+/*$(document).ready(function(){
 	$.ajax({
 		url: 'checksession/',
 		success: function(data) {
@@ -29,4 +31,4 @@ $(document).ready(function(){
         	}
     	}
 	});
-})
+})*/

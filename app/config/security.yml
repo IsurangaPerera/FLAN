@@ -16,7 +16,7 @@ security:
 
     firewalls:
         wsse_secured:
-            pattern:   ^/login/
+            pattern:   ^/loginn/
             wsse:      true
             provider: our_db_provider
         dev:
@@ -30,4 +30,4 @@ security:
             #provider: our_db_provider
             anonymous: ~
     access_control:
-        - { path: ^/login/, roles: ROLE_USER }
+        - { path: ^/loginn/, roles: ROLE_USER }
